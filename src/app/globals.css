@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-color: #000; /* Color del texto predeterminado */
+  --background-start-color: #dcd6da; /* Color de inicio del fondo */
+  --background-end-color: #ffffff; /* Color de fin del fondo */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-color: #fff; /* Color del texto en modo oscuro */
+    --background-start-color: #000; /* Color de inicio del fondo en modo oscuro */
+    --background-end-color: #000; /* Color de fin del fondo en modo oscuro */
+  }
+}
+
+body {
+  color: var(--foreground-color); /* Aplicar el color del texto */
+  background: linear-gradient(to bottom, var(--background-start-color), var(--background-end-color)); /* Aplicar el gradiente de fondo */
+}
