@@ -7,6 +7,7 @@ import "./globals.css";
 //css
 
 import "./css/estructura.css";
+import './css/animaciones.css';
 
 //image
 
@@ -82,15 +83,157 @@ export default function Home() {
           </div>
 
           <div className="contenedor2">
-            <div className="h-1/2">a</div>
-            <div className=" horizontal  h-1/2   ">
-            <div className=" centrar text-4xl font-BebasNeue text-lime-100  w-1/2 border-2 border-gray-900 border-lime-100   ">
-            DISEÑOS A PRECIOS ECONOMICOS
+            <div className=" flex  h-1/2 max-h-full items-center justify-center ">
+              <div className="  w-28 h-28 flex  items-center justify-center">
+                {/*                       items  servicios                         */}
+
+                <div className="grid2 box-border">
+                  {/*items servicios*/}
+
+                  <div className="imagen animacion_1">
+                    <img
+                      src="/DiseñoWeb/servicios.png"
+                      alt="Logo"
+                      className="w-full h-full object-fill  "
+                    />
+                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                      Diseño Ambiental
+                    </div>
+                  </div>
+
+                  {/*items servicios*/}
+                  <div className="imagen animacion_2">
+                    <img
+                      src="/DiseñoWeb/servicios.png"
+                      alt="Logo"
+                      className="w-full h-full object-fill"
+                    />
+                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                      Modelado 3D
+                    </div>
+                  </div>
+
+                  {/*items servicios*/}
+                  <div className="imagen imagen animacion_3">
+                    <img
+                      src="/DiseñoWeb/servicios.png"
+                      alt="Logo"
+                      className="w-full h-full object-fill"
+                    />
+                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                      Superficies Duras
+                    </div>
+                  </div>
+                  {/*items servicios*/}
+                  <div className="imagen">
+                    <img
+                      src="/DiseñoWeb/servicios.png"
+                      alt="Logo"
+                      className="w-full h-full object-fill"
+                    />
+                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                      Unity/Unreal Engine
+                    </div>
+                  </div>
+                  {/*items servicios*/}
+                  <div className="imagen">
+                    <img
+                      src="/DiseñoWeb/servicios.png"
+                      alt="Logo"
+                      className="w-full h-full object-fill"
+                    />
+                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                      Escultura 3D
+                    </div>
+                  </div>
+                  {/*items servicios*/}
+                  <div className="imagen">
+                    <img
+                      src="/DiseñoWeb/servicios.png"
+                      alt="Logo"
+                      className="w-full h-full object-fill"
+                    />
+                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                      Plano Arquitectonico
+                    </div>
+                  </div>
+                  {/*items servicios*/}
+                  <div className="imagen">
+                    <img
+                      src="/DiseñoWeb/servicios.png"
+                      alt="Logo"
+                      className="w-full h-full object-fill"
+                    />
+                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                      Mobilarios
+                    </div>
+                  </div>
+                  {/*items servicios*/}
+                  <div className="imagen">
+                    <img
+                      src="/DiseñoWeb/servicios.png"
+                      alt="Logo"
+                      className="w-full h-full object-fill"
+                    />
+                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                      Diseño Niveles
+                    </div>
+                  </div>
+                  {/*items servicios*/}
+                  <div className="imagen">
+                    <img
+                      src="/DiseñoWeb/servicios.png"
+                      alt="Logo"
+                      className="w-full h-full object-fill"
+                    />
+                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                      Objetos
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/*                    FIN-items  servicios                         */}
+
+            <div className="   justify-center   flex h-1/2  w-full  ">
+              <div>
+                <div className="  box-border  p-5 flex items-center justify-center flex-col  h-full w-full text-4xl font-BebasNeue text-lime-100  border-2  border-lime-100   ">
+                  <div className="text-5xl ">
+                    DISEÑOS <br /> PRECIOS <br />
+                    ECONOMICOS
+                  </div>
+                  <div className="text-9xl">50%</div>
+                </div>
               </div>
 
-              <div className="w-1/2" >b</div>
-
-
+              <div className=" max-w-40 text-xs  text-lime-100 box-border items-center justify-center flex-col h-full   p-5 overflow-hidden">
+                <span className="break-words">
+                  <p>
+                    Ofrecemos precios justos y equitativos adaptados al
+                    proyecto. Nos enfocamos en ayudar a pequeños emprendedores
+                    con productos económicos que cumplen sus necesidades.
+                  </p>
+                  <p className="font-BebasNeue text-2xl">Incluye:</p>
+                  <ul>
+                    <li className="text-teal-500">
+                      - Modelado 3D de [objetos/arquitectura/productos].
+                    </li>
+                    <li className="text-teal-500">
+                      - Texturización y materiales realistas.
+                    </li>
+                    <li className="text-teal-500">
+                      - Renderizado de alta calidad.
+                    </li>
+                    <li className="text-teal-500">
+                      - Revisión y ajustes según tu retroalimentación.
+                    </li>
+                    <li className="text-teal-500">
+                      - Entrega en formatos estándar para fácil integración.
+                    </li>
+                  </ul>
+                </span>
+              </div>
             </div>
           </div>
         </section>
