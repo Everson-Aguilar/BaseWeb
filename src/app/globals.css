@@ -1,9 +1,68 @@
+@font-face {
+  font-family: 'Acme-Regular';
+  src: url('./fuentes/MiConv.com__Acme-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BebasNeue-Regular';
+  src: url('./fuentes/MiConv.com__BebasNeue-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jacquard12-Regular';
+  src: url('./fuentes/MiConv.com__Jacquard12-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LibreBarcode128-Regular';
+  src: url('./fuentes/MiConv.com__LibreBarcode128-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'NotoEmoji-VariableFont_wght';
+  src: url('./fuentes/MiConv.com__NotoEmoji-VariableFont_wght.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PermanentMarker-Regular';
+  src: url('./fuentes/MiConv.com__PermanentMarker-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SixCaps-Regular';
+  src: url('./fuentes/MiConv.com__SixCaps-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Staatliches-Regular';
+  src: url('./fuentes/MiConv.com__Staatliches-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-color: #000; /* Color del texto predeterminado */
+  --foreground-color: #9e9e9e; /* Color del texto predeterminado */
   --background-start-color: #dcd6da; /* Color de inicio del fondo */
   --background-end-color: #ffffff; /* Color de fin del fondo */
 }
@@ -16,7 +75,10 @@
   }
 }
 
+
+
+
 body {
-  color: var(--foreground-color); /* Aplicar el color del texto */
-  background: linear-gradient(to bottom, var(--background-start-color), var(--background-end-color)); /* Aplicar el gradiente de fondo */
+
+
 }
