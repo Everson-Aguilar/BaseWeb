@@ -7,7 +7,7 @@ import "./globals.css";
 //css
 
 import "./css/estructura.css";
-import './css/animaciones.css';
+import "./css/animaciones.css";
 
 //image
 
@@ -238,8 +238,83 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="base">
-          <div className="contenedor"></div>
+        <section className="base     ">
+          <div className=" contenedor grid3   ">
+            <div className="  w-full flex-row justify-center items-center overflow-hidden">
+              <div className=" h-full text-sm  bg-zinc-800 p-3">
+                <p>
+                  <strong className=" tracking-wide font-Staatliches text-xl text-neutral-500">
+                    PASOS PARA CREAR ACCESORIOS COMO ARTISTA DIGITAL:
+                  </strong>
+                </p>
+                <ul className="font-BebasNeue text-1xl text-teal-500  ">
+                  <li>*Conceptualizaci&oacute;n y Referencias Visuales</li>
+                  <li>*Modelado 3D de Alto Pol&iacute;gono</li>
+                  <li>*Retopolog&iacute;a del Modelo</li>
+                  <li>*UV Mapping</li>
+                  <li>*Creaci&oacute;n de Texturas</li>
+                  <li>*Aplicaci&oacute;n de Texturas</li>
+                  <li>*Iluminaci&oacute;n y Renderizado</li>
+                  <li>*Ajustes y Optimizaci&oacute;n</li>
+                  <li>*Pruebas y Evaluaci&oacute;n</li>
+                  <li>*Entrega Final</li>
+                </ul>
+              </div>
+            </div>
+            <div className=" w-full flex-row justify-center  items-center  overflow-hidden ">
+              <span className="font-Staatliches text-4xl text-lime-100  ">
+                DISEÑO <br /> PRODUCTOS
+              </span>
+              <div className=" h-full w-full ">
+                <img
+                  src="/DiseñoWeb/producto.jpg"
+                  alt="Logo"
+                  className="w-full h-full object-fill"
+                />
+              </div>
+            </div>
+            <div className=" w-full  text-end  overflow-hidden border-r-lime-100 border-r-2">
+              <span className="font-BebasNeue text-4xl text-lime-100">
+                TECNOLOGIAS
+              </span>
+              <div className=" h-full p-3 box-border ">
+                <div className=" h-1/2 p-2">
+                  <ul className="text-xs text-lime-100 font-PermanentMarker">
+                    <li>- Autodesk Maya</li>
+                    <li>- Blender</li>
+                    <li>- Autodesk 3ds Max</li>
+                    <li>- ZBrush</li>
+                    <li>- Substance Painter</li>
+                    <li>- Unity 3D / Unreal Engine</li>
+                    <li>- Adobe After Effects</li>
+                  </ul>
+                </div>
+                <div className=" h-1/2 flex justify-center  ">
+                  <img
+                    src="/DiseñoWeb/herramientas.png"
+                    alt="Logo"
+                    className="w-40 h-full object-fill"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="  box-border flex-row overflow-hidden  items-center justify-center text-center ">
+              <span className="font-BebasNeue text-2xl text-lime-100">
+                GRATIS
+                <br /> PARA TI !
+              </span>
+              <div className=" p-5 max-full text-xs text-teal-500 font-PermanentMarker">
+                <span className=" text-2xl text-lime-100">"</span> En nuestra
+                sección gratuita, ofrecemos consejos prácticos y accesibles para
+                mejorar tus espacios con soluciones de diseño funcional y
+                estético. Desde ideas básicas hasta avanzadas, buscamos
+                inspirarte y proporcionarte herramientas prácticas para
+                transformar tus entornos fácilmente
+                <span className=" text-2xl text-lime-100">."</span>
+              </div>
+            </div>
+          </div>
+
           <div className="contenedor"></div>
 
           <div className="contenedor">
@@ -254,7 +329,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="w-full text-slate-400">
+      <footer className="w-full text-slate-400 bg-zinc-900">
         <section className="container mx-auto px-4">
           <h2>Contacto</h2>
           <address>

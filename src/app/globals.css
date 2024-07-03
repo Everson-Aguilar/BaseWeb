@@ -1,61 +1,59 @@
 @font-face {
-  font-family: 'Acme-Regular';
-  src: url('./fuentes/MiConv.com__Acme-Regular.woff') format('woff');
+  font-family: "Acme-Regular";
+  src: url("./fuentes/MiConv.com__Acme-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'BebasNeue-Regular';
-  src: url('./fuentes/MiConv.com__BebasNeue-Regular.woff') format('woff');
+  font-family: "BebasNeue-Regular";
+  src: url("./fuentes/MiConv.com__BebasNeue-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Jacquard12-Regular';
-  src: url('./fuentes/MiConv.com__Jacquard12-Regular.woff') format('woff');
+  font-family: "Jacquard12-Regular";
+  src: url("./fuentes/MiConv.com__Jacquard12-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'LibreBarcode128-Regular';
-  src: url('./fuentes/MiConv.com__LibreBarcode128-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-
-@font-face {
-  font-family: 'NotoEmoji-VariableFont_wght';
-  src: url('./fuentes/MiConv.com__NotoEmoji-VariableFont_wght.woff') format('woff');
+  font-family: "LibreBarcode128-Regular";
+  src: url("./fuentes/MiConv.com__LibreBarcode128-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PermanentMarker-Regular';
-  src: url('./fuentes/MiConv.com__PermanentMarker-Regular.woff') format('woff');
+  font-family: "NotoEmoji-VariableFont_wght";
+  src: url("./fuentes/MiConv.com__NotoEmoji-VariableFont_wght.woff")
+    format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'SixCaps-Regular';
-  src: url('./fuentes/MiConv.com__SixCaps-Regular.woff') format('woff');
+  font-family: "PermanentMarker-Regular";
+  src: url("./fuentes/MiConv.com__PermanentMarker-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Staatliches-Regular';
-  src: url('./fuentes/MiConv.com__Staatliches-Regular.woff') format('woff');
+  font-family: "SixCaps-Regular";
+  src: url("./fuentes/MiConv.com__SixCaps-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Staatliches-Regular";
+  src: url("./fuentes/MiConv.com__Staatliches-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
@@ -75,29 +73,5 @@
   }
 }
 
-
-
-/* Estilo del scrollbar */
 body {
-  scrollbar-width: thin; /* Ancho del scrollbar */
-  scrollbar-color: var(--foreground-color) var(--background-end-color); /* Color del scrollbar */
-
-  /* Estilo específico para navegadores WebKit (Chrome, Safari) */
-  scrollbar-track-color: var(--background-end-color);
-  scrollbar-thumb-color: var(--foreground-color);
 }
-
-/* Estilo específico para navegadores WebKit (Chrome, Safari) */
-body::-webkit-scrollbar {
-  width: 10px; /* Ancho del scrollbar */
-}
-
-body::-webkit-scrollbar-track {
-  background: var(--background-end-color); /* Color de la pista del scrollbar */
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: var(--foreground-color); /* Color del pulgar del scrollbar */
-  border-radius: 10px; /* Radio de borde del pulgar del scrollbar */
-}
-
