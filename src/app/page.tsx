@@ -1,5 +1,9 @@
 import Head from "next/head";
 
+//componente
+
+import galeria_grid from "./components/galeria_grid";
+
 //fuentes
 
 import "./globals.css";
@@ -10,6 +14,8 @@ import "./css/estructura.css";
 import "./css/animaciones.css";
 
 //image
+
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -34,52 +40,68 @@ export default function Home() {
       <main>
         <section className="base">
           <div className="contenedor1">
-            <div className=" absolute font-SixCaps text-8xl text-cyan-700   z-10 top-3/4 right-1/3">
+            <div className=" absolute mx-10 font-SixCaps text-8xl text-cyan-700   z-10 top-3/4 right-1/3">
               3Dscape
             </div>
 
-            <div className="absolute  text-5xl z-10    text-cyan-700 p-4 h-2/5 w-2/3 ">
-              <img
+            <div className="absolute  text-5xl z-10   text-cyan-700 p-4 h-2/5 w-2/3 ">
+              <Image
                 src="/DiseñoWeb/logoazul.svg"
                 alt="Logo"
-                className="w-15 h-15 mb-5"
+                width={300} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
+                height={300} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
               />
 
-              <h1 className="font-Staatliches text-7xl text-cyan-700">
+              <h1 className="font-Staatliches text-7xl text-cyan-700 mt-4">
                 3D DISEÑO ENTORNO PLAN:
               </h1>
 
               <div>
                 <ul className="text-5xl font-SixCaps text-cyan-700  ">
-                  <li>+ Terreno</li>
-                  <li>+ Construcción</li>
-                  <li>+ Accesorios</li>
+                  <li>
+                    {" "}
+                    <span className="bg-yellow-400">+</span> Terreno
+                  </li>
+                  <li>
+                    <span className="bg-yellow-400">+</span>Construcción
+                  </li>
+                  <li>
+                    <span className="bg-yellow-400">+</span> Accesorios
+                  </li>
                 </ul>
               </div>
             </div>
 
-            <div className="absolute  font-Acme  box-border p-3  z-10 text-green-950 w-1/3 h-2/3 right-0 text-1xl">
-              <span className="text-8xl">D</span>escubre nuestros servicios en
-              diseño 3D para entornos, planos de construcción y accesorios. En
-              3Dscape, convertimos ideas en realidad con modelos virtuales
-              detallados y visualizaciones realistas. Servimos a diversas
-              industrias, incluyendo arquitectura, cine, videojuegos y más,
-              ofreciendo soluciones personalizadas que combinan creatividad,
-              precisión y sostenibilidad. Confía en nuestra experiencia en
-              diseño 3D para llevar tu proyecto al siguiente nivel.
+            <div className="absolute  font-Acme bg-slate-300 bg-opacity-20 backdrop-blur-sm box-border p-3 z-20 text-cyan-700 w-1/3 h-full right-0 text-1xl">
+              <span className=" relative text-5xl ">D</span>escubre nuestros
+              servicios en diseño 3D para entornos, planos de construcción y
+              accesorios. En 3Dscape, convertimos ideas en realidad con modelos
+              virtuales detallados y visualizaciones realistas. Servimos a
+              diversas industrias, incluyendo arquitectura, cine, videojuegos y
+              más, ofreciendo soluciones personalizadas que combinan
+              creatividad, precisión y sostenibilidad. Confía en nuestra
+              experiencia en diseño 3D para llevar tu proyecto al siguiente
+              nivel.
             </div>
 
             <div className="imagen relative">
-              <img
+              <Image
                 src="/DiseñoWeb/panel_01.jpg"
-                alt="Logo"
-                className="w-full h-full object-fill"
+                alt="Diseño Ambiental"
+                layout="fill" // Ajusta la imagen para llenar todo el contenedor
+                objectFit="cover" // Ajusta la imagen para cubrir el contenedor sin distorsión
               />
             </div>
           </div>
 
-          <div className="contenedor">
-            <div className="bg-gray-950 h-full w-full flex relative p-4  "></div>
+          <div className=" portada w-full box-border overflow-hidden  ">
+            <div className="bg-slate-500 h-full ">
+              <img
+                src="/DiseñoWeb/panel_04.jpg"
+                alt="Logo"
+                className="w-full  h-full  min-w-96"
+              />
+            </div>
           </div>
 
           <div className="contenedor2">
@@ -91,102 +113,111 @@ export default function Home() {
                   {/*items servicios*/}
 
                   <div className="imagen animacion_1">
-                    <img
+                    <Image
                       src="/DiseñoWeb/servicios.png"
-                      alt="Logo"
-                      className="w-full h-full object-fill  "
+                      alt="environment3D"
+                      layout="fill" // Ajusta la imagen para llenar todo el contenedor
+                      objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
                       Diseño Ambiental
                     </div>
                   </div>
 
                   {/*items servicios*/}
                   <div className="imagen animacion_2">
-                    <img
+                    <Image
                       src="/DiseñoWeb/servicios.png"
-                      alt="Logo"
-                      className="w-full h-full object-fill"
+                      alt="modelado3d"
+                      layout="fill" // Ajusta la imagen para llenar todo el contenedor
+                      objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
                       Modelado 3D
                     </div>
                   </div>
 
                   {/*items servicios*/}
                   <div className="imagen imagen animacion_3">
-                    <img
+                    <Image
                       src="/DiseñoWeb/servicios.png"
-                      alt="Logo"
-                      className="w-full h-full object-fill"
+                      alt="superficies duras 3d"
+                      layout="fill" // Ajusta la imagen para llenar todo el contenedor
+                      objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
                       Superficies Duras
                     </div>
                   </div>
                   {/*items servicios*/}
                   <div className="imagen">
-                    <img
+                    <Image
                       src="/DiseñoWeb/servicios.png"
-                      alt="Logo"
-                      className="w-full h-full object-fill"
+                      alt="unity unreal engine"
+                      layout="fill" // Ajusta la imagen para llenar todo el contenedor
+                      objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
                       Unity/Unreal Engine
                     </div>
                   </div>
                   {/*items servicios*/}
                   <div className="imagen">
-                    <img
+                    <Image
                       src="/DiseñoWeb/servicios.png"
-                      alt="Logo"
-                      className="w-full h-full object-fill"
+                      alt="escultura 3d"
+                      layout="fill" // Ajusta la imagen para llenar todo el contenedor
+                      objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
                       Escultura 3D
                     </div>
                   </div>
                   {/*items servicios*/}
                   <div className="imagen">
-                    <img
+                    <Image
                       src="/DiseñoWeb/servicios.png"
-                      alt="Logo"
-                      className="w-full h-full object-fill"
+                      alt="plano arquitectonico"
+                      layout="fill" // Ajusta la imagen para llenar todo el contenedor
+                      objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
                       Plano Arquitectonico
                     </div>
                   </div>
                   {/*items servicios*/}
                   <div className="imagen">
-                    <img
+                    <Image
                       src="/DiseñoWeb/servicios.png"
-                      alt="Logo"
-                      className="w-full h-full object-fill"
+                      alt="mobilarios"
+                      layout="fill" // Ajusta la imagen para llenar todo el contenedor
+                      objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14  font-Acme text-1xl text-lime-100 flex items-center justify-center">
                       Mobilarios
                     </div>
                   </div>
                   {/*items servicios*/}
                   <div className="imagen">
-                    <img
+                    <Image
                       src="/DiseñoWeb/servicios.png"
-                      alt="Logo"
-                      className="w-full h-full object-fill"
+                      alt="diseño niveles"
+                      layout="fill" // Ajusta la imagen para llenar todo el contenedor
+                      objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
                       Diseño Niveles
                     </div>
                   </div>
                   {/*items servicios*/}
                   <div className="imagen">
-                    <img
+                    <Image
                       src="/DiseñoWeb/servicios.png"
-                      alt="Logo"
-                      className="w-full h-full object-fill"
+                      alt="diseño objetos 3d"
+                      layout="fill" // Ajusta la imagen para llenar todo el contenedor
+                      objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className="  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className="  mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
                       Objetos
                     </div>
                   </div>
@@ -238,8 +269,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="base     ">
-          <div className=" contenedor grid3   ">
+        <section className="base">
+          <div className=" grid3">
             <div className="  w-full flex-row justify-center items-center overflow-hidden">
               <div className=" h-full text-sm  bg-zinc-800 p-3">
                 <p>
@@ -266,10 +297,11 @@ export default function Home() {
                 DISEÑO <br /> PRODUCTOS
               </span>
               <div className=" h-full w-full ">
-                <img
+                <Image
                   src="/DiseñoWeb/producto.jpg"
-                  alt="Logo"
-                  className="w-full h-full object-fill"
+                  alt="diseño construcciones 3d"
+                  width={1000} // Ancho deseado en píxeles
+                  height={1000} // Alto deseado en píxeles
                 />
               </div>
             </div>
@@ -280,21 +312,22 @@ export default function Home() {
               <div className=" h-full p-3 box-border ">
                 <div className=" h-1/2 p-2">
                   <ul className="text-xs text-lime-100 font-PermanentMarker">
-                    <li>- Autodesk Maya</li>
-                    <li>- Blender</li>
-                    <li>- Autodesk 3ds Max</li>
-                    <li>- ZBrush</li>
-                    <li>- Substance Painter</li>
-                    <li>- Unity 3D / Unreal Engine</li>
-                    <li>- Adobe After Effects</li>
+                    <li>+ Autodesk Maya</li>
+                    <li>+ Blender</li>
+                    <li>+ Autodesk 3ds Max</li>
+                    <li>+ ZBrush</li>
+                    <li>+ Substance Painter</li>
+                    <li>+ Unity 3D / Unreal Engine</li>
+                    <li>+ Adobe After Effects</li>
                   </ul>
                 </div>
                 <div className=" h-1/2 flex justify-center  ">
-                  <img
-                    src="/DiseñoWeb/herramientas.png"
-                    alt="Logo"
-                    className="w-40 h-full object-fill"
-                  />
+                <Image
+        src="/DiseñoWeb/herramientas.png"
+        alt="software 3d"
+        width={200} // Ancho deseado en píxeles
+        height={200} // Alto deseado en píxeles
+      />
                 </div>
               </div>
             </div>
@@ -315,9 +348,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="contenedor"></div>
+          <div>! No Afectaaaaaaaaaaaaaaaaaaaaaaaaa</div>
 
-          <div className="contenedor">
+          <div>
             <div className="imagen">
               <img
                 src="/DiseñoWeb/panel_02.jpg"
