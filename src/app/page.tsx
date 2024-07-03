@@ -337,13 +337,13 @@ export default function Home() {
                 <br /> PARA TI !
               </span>
               <div className=" p-5 max-full text-xs text-teal-500 font-PermanentMarker">
-                <span className=" text-2xl text-lime-100">"</span> En nuestra
+                <span className=" text-2xl text-lime-100">!</span> En nuestra
                 sección gratuita, ofrecemos consejos prácticos y accesibles para
                 mejorar tus espacios con soluciones de diseño funcional y
                 estético. Desde ideas básicas hasta avanzadas, buscamos
                 inspirarte y proporcionarte herramientas prácticas para
                 transformar tus entornos fácilmente
-                <span className=" text-2xl text-lime-100">."</span>
+                <span className=" text-2xl text-lime-100">.</span>
               </div>
             </div>
           </div>
