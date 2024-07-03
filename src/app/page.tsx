@@ -38,6 +38,10 @@ export default function Home() {
       </Head>
 
       <main>
+
+        
+
+
         <section className="base">
           <div className="contenedor1">
             <div className=" absolute mx-10 font-SixCaps text-8xl text-cyan-700   z-10 top-3/4 right-1/3">
@@ -106,7 +110,7 @@ export default function Home() {
 
           <div className="contenedor2">
             <div className=" flex  h-1/2 max-h-full items-center justify-center ">
-              <div className="  w-28 h-28 flex  items-center justify-center">
+              <div className="  flex  items-center justify-center">
                 {/*                       items  servicios                         */}
 
                 <div className="grid2 box-border">
@@ -362,8 +366,11 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="w-full text-slate-400 bg-zinc-900">
-        <section className="container mx-auto px-4">
+      <footer className=" footer w-full  text-slate-400 bg-zinc-900">
+       
+       <div className="ml-5">
+       
+        <section >
           <h2>Contacto</h2>
           <address>
             <p>Dirección: COLOMBIA</p>
@@ -378,7 +385,7 @@ export default function Home() {
             </p>
           </address>
         </section>
-        <section className="container mx-auto px-4 mt-4">
+        <section >
           <h2>Redes Sociales</h2>
           <ul className="flex space-x-4">
             <li>
@@ -398,12 +405,22 @@ export default function Home() {
             </li>
           </ul>
         </section>
-        <section className="container mx-auto px-4 mt-4">
+        <section >
           <p className="text-center">
             © 2024 3Dscape. Todos los derechos reservados. Diseñado por 3Dscape.
           </p>
         </section>
+        </div>
       </footer>
     </div>
   );
 }
+
+
+//git add .
+//git commit -m "subir"
+//git pull origin main
+//git push origin main
+
+
+

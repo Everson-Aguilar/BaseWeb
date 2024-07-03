@@ -6,24 +6,17 @@
   grid-template-rows: 1fr;
   gap: 5px 5px;
   grid-auto-flow: row;
+  min-width: 412px;
   background-color: #1d242c;
-
-  
-  
-  
  
 }
 
 
-
 @media screen and (max-width: 850px) {
-    .base {
-      grid-template-columns: 1fr ;
-    }
+  .base {
+    grid-template-columns: 1fr;
   }
-  
-
-
+}
 
 .contenedor1 {
   position: relative;
@@ -33,20 +26,13 @@
   min-width: 412px;
   height: 915px;
   margin-bottom: 12vh;
-  background-color: #94C7FF;
+  background-color: #94c7ff;
   flex-direction: column;
-  
-  
 }
 
-.portada{
-
+.portada {
   height: 915px;
-
-
 }
-
-
 
 .contenedor2 {
   position: relative;
@@ -56,18 +42,18 @@
   min-width: 412px;
   height: 915px;
   margin-bottom: 12vh;
-  background-color: #1d242c;;
+  background-color: #1d242c;
   justify-content: center;
   flex-direction: column;
-
-
 }
 
+.footer{
 
+  min-width: 412px;
+  background-color: #131414;
 
-
-
-
+  
+}
 
 .grid2 {
   display: grid;
@@ -79,7 +65,8 @@
 
 /* Define la animación */
 @keyframes agrandarYReducir {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -90,7 +77,9 @@
 /* Aplica la animación a cada celda */
 .grid2 > * {
   animation: agrandarYReducir 3s ease-in-out infinite alternate;
-  animation-delay: calc(var(--row) * 0.2s + var(--col) * 0.2s); /* Calcula el retraso para la animación */
+  animation-delay: calc(
+    var(--row) * 0.2s + var(--col) * 0.2s
+  ); /* Calcula el retraso para la animación */
 }
 
 /* Establece las variables --row y --col para cada celda */
@@ -139,12 +128,7 @@
   --col: 2;
 }
 
-
-
-
-.grid3 {  
-
-
+.grid3 {
   max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -152,27 +136,9 @@
   gap: 5px 0px;
   grid-auto-flow: row;
   margin-left: 10px;
-  
-  
- 
 }
 
-
-
-.imagen{
-
-
+.imagen {
   height: 100%;
   width: 100%;
-  
-  
-  
 }
-
-
-
-
-
-
-
-
