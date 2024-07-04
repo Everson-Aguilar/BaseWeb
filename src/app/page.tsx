@@ -2,7 +2,7 @@ import Head from "next/head";
 
 //componente
 
-import galeria_grid from "./components/galeria_grid";
+import Galeria_grid from "./components/galeria_grid";
 
 //fuentes
 
@@ -38,10 +38,6 @@ export default function Home() {
       </Head>
 
       <main>
-
-        
-
-
         <section className="base">
           <div className="contenedor1">
             <div className=" absolute mx-10 font-SixCaps text-8xl text-cyan-700   z-10 top-3/4 right-1/3">
@@ -109,11 +105,24 @@ export default function Home() {
           </div>
 
           <div className="contenedor2">
+
+            
+ 
+          <div className="flex  justify-center">
+          <div className="bg-yellow-400 text-cyan-700  h-auto w-2/3 text-center justify-center text-3xl  font-Staatliches ">servicios disponibles</div>
+          </div>
+          
+
+
             <div className=" flex  h-1/2 max-h-full items-center justify-center ">
               <div className="  flex  items-center justify-center">
                 {/*                       items  servicios                         */}
 
+                
+
                 <div className="grid2 box-border">
+
+            
                   {/*items servicios*/}
 
                   <div className="imagen animacion_1">
@@ -273,8 +282,14 @@ export default function Home() {
           </div>
         </section>
 
+        {/*separador*/}
+
+        <div className=" text-center font-LibreBarcode128 h-full bg-zinc-900 text-lime-100 text-5xl ">
+          design environment 3d, design game, diseÑo realista 3d
+        </div>
+
         <section className="base">
-          <div className=" grid3">
+          <div className=" grid3 ">
             <div className="  w-full flex-row justify-center items-center overflow-hidden">
               <div className=" h-full text-sm  bg-zinc-800 p-3">
                 <p>
@@ -297,7 +312,7 @@ export default function Home() {
               </div>
             </div>
             <div className=" w-full flex-row justify-center  items-center  overflow-hidden ">
-              <span className="font-Staatliches text-4xl text-lime-100  ">
+              <span className="font-Staatliches text-3xl text-lime-100  ">
                 DISEÑO <br /> PRODUCTOS
               </span>
               <div className=" h-full w-full ">
@@ -310,28 +325,47 @@ export default function Home() {
               </div>
             </div>
             <div className=" w-full  text-end  overflow-hidden border-r-lime-100 border-r-2">
-              <span className="font-BebasNeue text-4xl text-lime-100">
+              <span className="font-BebasNeue text-3xl text-lime-100">
                 TECNOLOGIAS
               </span>
               <div className=" h-full p-3 box-border ">
                 <div className=" h-1/2 p-2">
                   <ul className="text-xs text-lime-100 font-PermanentMarker">
-                    <li>+ Autodesk Maya</li>
-                    <li>+ Blender</li>
-                    <li>+ Autodesk 3ds Max</li>
-                    <li>+ ZBrush</li>
-                    <li>+ Substance Painter</li>
-                    <li>+ Unity 3D / Unreal Engine</li>
-                    <li>+ Adobe After Effects</li>
+                    <li>
+                      Autodesk Maya <br />+
+                    </li>
+                    <li>
+                      Blender
+                      <br />+
+                    </li>
+                    <li>
+                      Autodesk 3ds Max
+                      <br />+
+                    </li>
+                    <li>
+                      ZBrush
+                      <br />+
+                    </li>
+                    <li>
+                      Substance Painter
+                      <br />+
+                    </li>
+                    <li>
+                      Unity 3D / Unreal <br />+
+                    </li>
+                    <li>
+                      Adobe After Effects
+                      <br />+
+                    </li>
                   </ul>
                 </div>
                 <div className=" h-1/2 flex justify-center  ">
-                <Image
-        src="/DiseñoWeb/herramientas.png"
-        alt="software 3d"
-        width={200} // Ancho deseado en píxeles
-        height={200} // Alto deseado en píxeles
-      />
+                  <Image
+                    src="/DiseñoWeb/herramientas.png"
+                    alt="software 3d"
+                    width={200} // Ancho deseado en píxeles
+                    height={200} // Alto deseado en píxeles
+                  />
                 </div>
               </div>
             </div>
@@ -352,75 +386,76 @@ export default function Home() {
             </div>
           </div>
 
-          <div>! No Afectaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+          <div>
+            <div className=" text-lime-100 text-7xl font-PermanentMarker">
+              PORTFOLIO
+            </div>
+            <Galeria_grid />
+          </div>
 
           <div>
-            <div className="imagen">
+            <div className="imagen ">
               <img
                 src="/DiseñoWeb/panel_02.jpg"
                 alt="Logo"
-                className="w-full h-full object-fill"
+                className=" min-w-96 h-4/5 "
               />
             </div>
           </div>
         </section>
       </main>
 
-      <footer className=" footer w-full  text-slate-400 bg-zinc-900">
-       
-       <div className="ml-5">
-       
-        <section >
-          <h2>Contacto</h2>
-          <address>
-            <p>Dirección: COLOMBIA</p>
-            <p>
-              Email:{" "}
-              <a href="mailto:aguilar3dstudio@gmail.com">
-                aguilar3dstudio@gmail.com
-              </a>
+      <footer className=" footer w-full  text-lime-100 bg-zinc-900">
+        <div className="ml-5">
+          <section>
+            <h2>Contacto</h2>
+            <address>
+              <p>Dirección: COLOMBIA</p>
+              <p>
+                Email:{" "}
+                <a href="mailto:aguilar3dstudio@gmail.com">
+                  aguilar3dstudio@gmail.com
+                </a>
+              </p>
+              <p>
+                Teléfono: <a href="tel:+573052158161">+57 305 215 81 61</a>
+              </p>
+            </address>
+          </section>
+          <section>
+            <h2>Redes Sociales</h2>
+            <ul className="flex space-x-4">
+              <li>
+                <a href="#">Facebook</a>
+              </li>
+              <li>
+                <a href="#">Twitter</a>
+              </li>
+              <li>
+                <a href="#">Instagram</a>
+              </li>
+              <li>
+                <a href="#">LinkedIn</a>
+              </li>
+              <li>
+                <a href="#">YouTube</a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <p className="text-center">
+              © 2024 3Dscape. Todos los derechos reservados. Diseñado por
+              3Dscape.
             </p>
-            <p>
-              Teléfono: <a href="tel:+573052158161">+57 305 215 81 61</a>
-            </p>
-          </address>
-        </section>
-        <section >
-          <h2>Redes Sociales</h2>
-          <ul className="flex space-x-4">
-            <li>
-              <a href="#">Facebook</a>
-            </li>
-            <li>
-              <a href="#">Twitter</a>
-            </li>
-            <li>
-              <a href="#">Instagram</a>
-            </li>
-            <li>
-              <a href="#">LinkedIn</a>
-            </li>
-            <li>
-              <a href="#">YouTube</a>
-            </li>
-          </ul>
-        </section>
-        <section >
-          <p className="text-center">
-            © 2024 3Dscape. Todos los derechos reservados. Diseñado por 3Dscape.
-          </p>
-        </section>
+          </section>
         </div>
       </footer>
     </div>
   );
 }
 
-
+// * git-hub pasos para guardar
 //git add .
 //git commit -m "subir"
 //git pull origin main
 //git push origin main
-
-
-

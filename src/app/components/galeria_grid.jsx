@@ -1,10 +1,25 @@
-// /components/MyComponent.js
+
+import '../css/galeria.css'
 
 const MyComponent = () => {
     return (
-        <div>
-           aaaaaaaaaaaaa 
+
+       
+        <div className= '  galeria   w-full h-full '>
+           <div>Contenido </div>
+           <div>Contenido </div>
+           <div>Contenido </div>
+           <div>Contenido </div>
+           <div>Contenido </div>
+           <div>Contenido </div>
+           <div>Contenido </div>
+           <div>Contenido </div>
+           <div>Contenido </div>
+           <div>Contenido </div>
+           <div>Contenido </div>
+           <div>Contenido </div>
         </div>
+       
     );
 }
 

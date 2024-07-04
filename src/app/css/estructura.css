@@ -8,6 +8,7 @@
   grid-auto-flow: row;
   min-width: 412px;
   background-color: #1d242c;
+  overflow: hidden;
  
 }
 
@@ -136,7 +137,14 @@
   gap: 5px 0px;
   grid-auto-flow: row;
   margin-left: 10px;
+  min-width: 25vw;
+ 
 }
+
+/* Media query para pantallas aún más pequeñas */
+
+
+
 
 .imagen {
   height: 100%;
