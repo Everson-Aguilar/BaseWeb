@@ -109,7 +109,7 @@ export default function Home() {
             
  
           <div className="flex  justify-center">
-          <div className="bg-yellow-400 text-cyan-700  h-auto w-2/3 text-center justify-center text-3xl  font-Staatliches ">servicios disponibles</div>
+          <div className="bg-neutral-800  text-gray-300  h-auto w-2/3 text-center justify-center text-3xl  font-Staatliches ">servicios disponibles</div>
           </div>
           
 
@@ -242,7 +242,7 @@ export default function Home() {
 
             <div className="   justify-center   flex h-1/2  w-full  ">
               <div>
-                <div className="  box-border  p-5 flex items-center justify-center flex-col  h-full w-full text-4xl font-BebasNeue text-lime-100  border-2  border-lime-100   ">
+                <div className="  box-border  p-5 flex items-center justify-center flex-col  h-4/5 w-full text-4xl font-BebasNeue text-lime-100  border-2  border-lime-100 mt-20  ">
                   <div className="text-5xl ">
                     DISEÑOS <br /> PRECIOS <br />
                     ECONOMICOS
@@ -284,14 +284,14 @@ export default function Home() {
 
         {/*separador*/}
 
-        <div className=" text-center font-LibreBarcode128 h-full bg-zinc-900 text-lime-100 text-5xl ">
+        <div className=" text-center font-LibreBarcode128 h-full bg-neutral-800 text-lime-100 text-5xl ">
           design environment 3d, design game, diseÑo realista 3d
         </div>
 
         <section className="base">
           <div className=" grid3 ">
             <div className="  w-full flex-row justify-center items-center overflow-hidden">
-              <div className=" h-full text-sm  bg-zinc-800 p-3">
+              <div className=" h-full text-sm  bg-neutral-800 p-3">
                 <p>
                   <strong className=" tracking-wide font-Staatliches text-xl text-neutral-500">
                     PASOS PARA CREAR ACCESORIOS COMO ARTISTA DIGITAL:
