@@ -454,8 +454,8 @@ export default function Home() {
   );
 }
 
-// * git-hub pasos para guardar
-//git add .
-//git commit -m "subir"
-//git pull origin main
-//git push origin main
+/* git-hub pasos para guardar
+git add .
+git commit -m "subir"
+git pull origin main
+git push origin main */
