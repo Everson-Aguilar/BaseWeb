@@ -58,13 +58,13 @@ export default function Home() {
                 <ul className="text-5xl font-SixCaps text-stone-600   ">
                   <li>
                     {" "}
-                    <span className="bg-yellow-400">+</span> Terreno
+                    <span className="bg-neutral-300">+</span> 
                   </li>
                   <li>
-                    <span className="bg-yellow-400">+</span>Construcción
+                    <span className="bg-neutral-300">+</span>Construcción
                   </li>
                   <li>
-                    <span className="bg-yellow-400">+</span> Accesorios
+                    <span className="bg-neutral-300">+</span> Accesorios
                   </li>
                 </ul>
               </div>
@@ -84,7 +84,7 @@ export default function Home() {
 
             <div className="imagen relative">
               <Image
-                src="/DiseñoWeb/panel_01.jpg"
+                src="/DiseñoWeb/panel_01gris.jpg"
                 alt="Diseño Ambiental"
                 layout="fill" // Ajusta la imagen para llenar todo el contenedor
                 objectFit="cover" // Ajusta la imagen para cubrir el contenedor sin distorsión
