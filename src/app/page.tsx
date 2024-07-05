@@ -58,7 +58,7 @@ export default function Home() {
                 <ul className="text-5xl font-SixCaps text-stone-600   ">
                   <li>
                     {" "}
-                    <span className="bg-neutral-300">+</span> 
+                    <span className="bg-neutral-300">+</span> Terreno
                   </li>
                   <li>
                     <span className="bg-neutral-300">+</span>Construcción
