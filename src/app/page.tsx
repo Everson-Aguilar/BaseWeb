@@ -3,6 +3,7 @@ import Head from "next/head";
 //componente
 
 import Galeria_grid from "./components/galeria_grid";
+import Header from "./components/header";
 
 //fuentes
 
@@ -21,10 +22,7 @@ export default function Home() {
   return (
     <div className="App">
       <Head>
-        <title>
-          SERVICIOS DE DISEÑO DE ENTORNO 3D, PLANIFICACION DE CONSTRUCCION Y
-          ACCESORIOS OPTIMIZADO-3Dscape
-        </title>
+        <title>SERVICIO DE DISEÑO DE ENTORNO 3D</title>
 
         <meta
           name="description"
@@ -37,11 +35,16 @@ export default function Home() {
         {/* Otras meta etiquetas según sea necesario */}
       </Head>
 
+      <header>
+        <Header />
+      </header>
+
       <main>
+
+        <div className="h-[60px] min-w-[412px] bg-neutral-600"></div>
+        
         <section className="base">
           <div className="contenedor1">
-           
-
             <div className="absolute  text-5xl z-10   text-stone-600  p-4 h-2/5 w-2/3 ">
               <Image
                 src="/DiseñoWeb/logogrisoscuro.svg"
@@ -57,29 +60,26 @@ export default function Home() {
               <div>
                 <ul className="text-5xl font-SixCaps text-stone-600   ">
                   <li>
-                    {" "}
-                    <span className="bg-neutral-300">+</span> Terreno
+                    
+                    + Terreno
                   </li>
                   <li>
-                    <span className="bg-neutral-300">+</span>Construcción
+                    +Construcción
                   </li>
                   <li>
-                    <span className="bg-neutral-300">+</span> Accesorios
+                    + Accesorios
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div className="absolute  font-Acme bg-slate-300 bg-opacity-50 backdrop-blur-sm box-border p-3 z-20 text-stone-600  w-1/3 h-full right-0 text-1xl">
-              <span className=" relative text-5xl ">D</span>escubre nuestros
-              servicios en diseño 3D para entornos, planos de construcción y
-              accesorios. En 3Dscape, convertimos ideas en realidad con modelos
-              virtuales detallados y visualizaciones realistas. Servimos a
+            <div className="absolute  font-Acme bg-slate-300 bg-opacity-10 backdrop-blur-md box-border p-3 z-20 text-stone-600  w-1/3 h-full right-0 text-1xl">
+              <span className=" relative text-5xl ">E</span>n 3Dscape,
+              transformamos ideas en realidad mediante modelos virtuales
+              detallados y visualizaciones realistas. Nuestra experiencia abarca
               diversas industrias, incluyendo arquitectura, cine, videojuegos y
-              más, ofreciendo soluciones personalizadas que combinan
-              creatividad, precisión y sostenibilidad. Confía en nuestra
-              experiencia en diseño 3D para llevar tu proyecto al siguiente
-              nivel.
+              más. Ofrecemos soluciones personalizadas que combinan creatividad,
+              precisión y sostenibilidad.
             </div>
 
             <div className="imagen relative">
@@ -251,19 +251,11 @@ export default function Home() {
                   </p>
                   <p className="font-BebasNeue text-2xl">Incluye:</p>
                   <ul className="text-stone-400 ">
+                    <li>- Modelado 3D de [objetos/arquitectura/productos].</li>
+                    <li>- Texturización y materiales realistas.</li>
+                    <li>- Renderizado de alta calidad.</li>
+                    <li>- Revisión y ajustes según tu retroalimentación.</li>
                     <li>
-                      - Modelado 3D de [objetos/arquitectura/productos].
-                    </li>
-                    <li >
-                      - Texturización y materiales realistas.
-                    </li>
-                    <li >
-                      - Renderizado de alta calidad.
-                    </li>
-                    <li >
-                      - Revisión y ajustes según tu retroalimentación.
-                    </li>
-                    <li >
                       - Entrega en formatos estándar para fácil integración.
                     </li>
                   </ul>
@@ -275,11 +267,9 @@ export default function Home() {
 
         {/*separador*/}
 
-       
-
         <section className="base">
           <div className=" grid3 ">
-            <div className="  w-full flex-row justify-center items-center ">
+            <div className="  w-full flex-row justify-center items-center text-end ">
               <div className=" h-1/2 text-sm  p-3">
                 <p>
                   <strong className=" tracking-wide  font-Acme  text-neutral-300 text-xl">
@@ -300,19 +290,14 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className=" w-full flex-row justify-center  items-center   ">
-          
-              <div className=" h-full w-full flex items-center bg-neutral-600 p-5 ">
-
-              <Image
-                src="/DiseñoWeb/logogris.svg"
-                alt="Logo"
-                width={300} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
-                height={300} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
-              />
-
-              
-
+            <div className=" w-full flex-row justify-center  items-center  bg-neutral-500 ">
+              <div className=" h-full w-full flex items-center text-stone-600  p-5 ">
+                <Image
+                  src="/DiseñoWeb/logogris.svg"
+                  alt="Logo"
+                  width={300} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
+                  height={300} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
+                />
               </div>
             </div>
             <div className=" w-full  text-end  overflow-hidden border-r-neutral-400     border-r-2">
@@ -343,8 +328,7 @@ export default function Home() {
             </div>
             <div className="  box-border flex-row overflow-hidden  items-center justify-center text-center ">
               <span className="font-Acme  text-neutral-300 text-xl ">
-                GRATIS
-                <br /> PARA TI !
+                GRATIS PARA TI !
               </span>
               <div className=" p-5 max-full text-xs text-neutral-400 font-PermanentMarker">
                 <span className=" text-2xl text-neutral-200">!</span> En nuestra
@@ -368,7 +352,7 @@ export default function Home() {
           <div>
             <div className="imagen ">
               <img
-                src="/DiseñoWeb/panel_02.jpg"
+                src="/DiseñoWeb/panel_03.jpg"
                 alt="paisaje"
                 className=" min-w-96 h-4/5 "
               />

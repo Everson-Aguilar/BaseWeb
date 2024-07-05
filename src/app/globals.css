@@ -1,9 +1,11 @@
+/* Definición de la fuente Quicksand */
 @font-face {
-  font-family: "Acme-Regular";
-  src: url("./fuentes/MiConv.com__Acme-Regular.woff") format("woff");
-  font-weight: 400;
+  font-family: "Quicksand";
+  src: url("./fuentes/MiConv.com__Quicksand-VariableFont_wght.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
 }
+
 
 @font-face {
   font-family: "BebasNeue-Regular";

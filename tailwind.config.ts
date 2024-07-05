@@ -20,6 +20,7 @@ const config: Config = {
         'PermanentMarker': ['PermanentMarker-Regular', 'sans-serif'],
         'SixCaps': ['SixCaps-Regular', 'sans-serif'],
         'Staatliches': ['Staatliches-Regular', 'sans-serif'],
+        'Quicksand': ['Quicksand', 'sans-serif'],
       },
     },
   },
