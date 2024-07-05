@@ -40,24 +40,22 @@ export default function Home() {
       <main>
         <section className="base">
           <div className="contenedor1">
-            <div className=" absolute mx-10 font-SixCaps text-8xl text-cyan-700   z-10 top-3/4 right-1/3">
-              3Dscape
-            </div>
+           
 
-            <div className="absolute  text-5xl z-10   text-cyan-700 p-4 h-2/5 w-2/3 ">
+            <div className="absolute  text-5xl z-10   text-stone-600  p-4 h-2/5 w-2/3 ">
               <Image
-                src="/DiseñoWeb/logoazul.svg"
+                src="/DiseñoWeb/logogrisoscuro.svg"
                 alt="Logo"
                 width={300} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
                 height={300} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
               />
 
-              <h1 className="font-Staatliches text-7xl text-cyan-700 mt-4">
+              <h1 className="font-Staatliches text-7xl text-stone-600  mt-4">
                 3D DISEÑO ENTORNO PLAN:
               </h1>
 
               <div>
-                <ul className="text-5xl font-SixCaps text-cyan-700  ">
+                <ul className="text-5xl font-SixCaps text-stone-600   ">
                   <li>
                     {" "}
                     <span className="bg-yellow-400">+</span> Terreno
@@ -72,7 +70,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="absolute  font-Acme bg-slate-300 bg-opacity-20 backdrop-blur-sm box-border p-3 z-20 text-cyan-700 w-1/3 h-full right-0 text-1xl">
+            <div className="absolute  font-Acme bg-slate-300 bg-opacity-50 backdrop-blur-sm box-border p-3 z-20 text-stone-600  w-1/3 h-full right-0 text-1xl">
               <span className=" relative text-5xl ">D</span>escubre nuestros
               servicios en diseño 3D para entornos, planos de construcción y
               accesorios. En 3Dscape, convertimos ideas en realidad con modelos
@@ -105,24 +103,17 @@ export default function Home() {
           </div>
 
           <div className="contenedor2">
-
-            
- 
-          <div className="flex  justify-center">
-          <div className="bg-neutral-800  text-gray-300  h-auto w-2/3 text-center justify-center text-3xl  font-Staatliches ">servicios disponibles</div>
-          </div>
-          
-
+            <div className="flex  justify-center">
+              <div className="  text-neutral-300 h-auto w-2/3 text-center justify-center text-3xl  font-Staatliches ">
+                servicios disponibles
+              </div>
+            </div>
 
             <div className=" flex  h-1/2 max-h-full items-center justify-center ">
               <div className="  flex  items-center justify-center">
                 {/*                       items  servicios                         */}
 
-                
-
                 <div className="grid2 box-border">
-
-            
                   {/*items servicios*/}
 
                   <div className="imagen animacion_1">
@@ -132,7 +123,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className=" mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
                       Diseño Ambiental
                     </div>
                   </div>
@@ -145,7 +136,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className=" mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
                       Modelado 3D
                     </div>
                   </div>
@@ -158,7 +149,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className=" mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
                       Superficies Duras
                     </div>
                   </div>
@@ -170,7 +161,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className=" mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
                       Unity/Unreal Engine
                     </div>
                   </div>
@@ -182,7 +173,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className=" mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
                       Escultura 3D
                     </div>
                   </div>
@@ -194,7 +185,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className=" mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
                       Plano Arquitectonico
                     </div>
                   </div>
@@ -206,7 +197,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className=" mt-14  font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14  font-Acme text-1xl text-neutral-300 flex items-center justify-center">
                       Mobilarios
                     </div>
                   </div>
@@ -218,7 +209,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className=" mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
                       Diseño Niveles
                     </div>
                   </div>
@@ -230,7 +221,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className="  mt-14 font-Acme text-1xl text-lime-100 flex items-center justify-center">
+                    <div className="  mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
                       Objetos
                     </div>
                   </div>
@@ -242,7 +233,7 @@ export default function Home() {
 
             <div className="   justify-center   flex h-1/2  w-full  ">
               <div>
-                <div className="  box-border  p-5 flex items-center justify-center flex-col  h-4/5 w-full text-4xl font-BebasNeue text-lime-100  border-2  border-lime-100 mt-20  ">
+                <div className="  box-border  p-5 flex items-center justify-center flex-col  h-4/5 w-full text-4xl font-BebasNeue text-neutral-300  border-2  border-neutral-300 mt-20  ">
                   <div className="text-5xl ">
                     DISEÑOS <br /> PRECIOS <br />
                     ECONOMICOS
@@ -251,7 +242,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className=" max-w-40 text-xs  text-lime-100 box-border items-center justify-center flex-col h-full   p-5 overflow-hidden">
+              <div className=" max-w-40 text-xs  text-neutral-300 box-border items-center justify-center flex-col h-full   p-5 overflow-hidden">
                 <span className="break-words">
                   <p>
                     Ofrecemos precios justos y equitativos adaptados al
@@ -259,20 +250,20 @@ export default function Home() {
                     con productos económicos que cumplen sus necesidades.
                   </p>
                   <p className="font-BebasNeue text-2xl">Incluye:</p>
-                  <ul>
-                    <li className="text-teal-500">
+                  <ul className="text-stone-400 ">
+                    <li>
                       - Modelado 3D de [objetos/arquitectura/productos].
                     </li>
-                    <li className="text-teal-500">
+                    <li >
                       - Texturización y materiales realistas.
                     </li>
-                    <li className="text-teal-500">
+                    <li >
                       - Renderizado de alta calidad.
                     </li>
-                    <li className="text-teal-500">
+                    <li >
                       - Revisión y ajustes según tu retroalimentación.
                     </li>
-                    <li className="text-teal-500">
+                    <li >
                       - Entrega en formatos estándar para fácil integración.
                     </li>
                   </ul>
@@ -284,20 +275,18 @@ export default function Home() {
 
         {/*separador*/}
 
-        <div className=" text-center font-LibreBarcode128 h-full bg-neutral-800 text-lime-100 text-5xl ">
-          design environment 3d, design game, diseÑo realista 3d
-        </div>
+       
 
         <section className="base">
           <div className=" grid3 ">
-            <div className="  w-full flex-row justify-center items-center overflow-hidden">
-              <div className=" h-full text-sm  bg-neutral-800 p-3">
+            <div className="  w-full flex-row justify-center items-center ">
+              <div className=" h-1/2 text-sm  p-3">
                 <p>
-                  <strong className=" tracking-wide font-Staatliches text-xl text-neutral-500">
+                  <strong className=" tracking-wide  font-Acme  text-neutral-300 text-xl">
                     PASOS PARA CREAR ACCESORIOS COMO ARTISTA DIGITAL:
                   </strong>
                 </p>
-                <ul className="font-BebasNeue text-1xl text-teal-500  ">
+                <ul className="font-BebasNeue text-1xl text-neutral-400  ">
                   <li>*Conceptualizaci&oacute;n y Referencias Visuales</li>
                   <li>*Modelado 3D de Alto Pol&iacute;gono</li>
                   <li>*Retopolog&iacute;a del Modelo</li>
@@ -311,52 +300,35 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className=" w-full flex-row justify-center  items-center  overflow-hidden ">
-              <span className="font-Staatliches text-3xl text-lime-100  ">
-                DISEÑO <br /> PRODUCTOS
-              </span>
-              <div className=" h-full w-full ">
-                <Image
-                  src="/DiseñoWeb/producto.jpg"
-                  alt="diseño construcciones 3d"
-                  width={1000} // Ancho deseado en píxeles
-                  height={1000} // Alto deseado en píxeles
-                />
+            <div className=" w-full flex-row justify-center  items-center   ">
+          
+              <div className=" h-full w-full flex items-center bg-neutral-600 p-5 ">
+
+              <Image
+                src="/DiseñoWeb/logogris.svg"
+                alt="Logo"
+                width={300} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
+                height={300} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
+              />
+
+              
+
               </div>
             </div>
-            <div className=" w-full  text-end  overflow-hidden border-r-lime-100 border-r-2">
-              <span className="font-BebasNeue text-3xl text-lime-100">
+            <div className=" w-full  text-end  overflow-hidden border-r-neutral-400     border-r-2">
+              <span className=" font-Acme  text-neutral-300 text-xl ">
                 TECNOLOGIAS
               </span>
               <div className=" h-full p-3 box-border ">
                 <div className=" h-1/2 p-2">
-                  <ul className="text-xs text-lime-100 font-PermanentMarker">
-                    <li>
-                      Autodesk Maya <br />+
-                    </li>
-                    <li>
-                      Blender
-                      <br />+
-                    </li>
-                    <li>
-                      Autodesk 3ds Max
-                      <br />+
-                    </li>
-                    <li>
-                      ZBrush
-                      <br />+
-                    </li>
-                    <li>
-                      Substance Painter
-                      <br />+
-                    </li>
-                    <li>
-                      Unity 3D / Unreal <br />+
-                    </li>
-                    <li>
-                      Adobe After Effects
-                      <br />+
-                    </li>
+                  <ul className="text-xs text-neutral-400 font-PermanentMarker">
+                    <li>Autodesk Maya</li>
+                    <li>Blender</li>
+                    <li>Autodesk 3ds Max</li>
+                    <li>ZBrush</li>
+                    <li>Substance Painter</li>
+                    <li>Unity 3D / Unreal</li>
+                    <li>Adobe After Effects</li>
                   </ul>
                 </div>
                 <div className=" h-1/2 flex justify-center  ">
@@ -370,24 +342,24 @@ export default function Home() {
               </div>
             </div>
             <div className="  box-border flex-row overflow-hidden  items-center justify-center text-center ">
-              <span className="font-BebasNeue text-2xl text-lime-100">
+              <span className="font-Acme  text-neutral-300 text-xl ">
                 GRATIS
                 <br /> PARA TI !
               </span>
-              <div className=" p-5 max-full text-xs text-teal-500 font-PermanentMarker">
-                <span className=" text-2xl text-lime-100">!</span> En nuestra
+              <div className=" p-5 max-full text-xs text-neutral-400 font-PermanentMarker">
+                <span className=" text-2xl text-neutral-200">!</span> En nuestra
                 sección gratuita, ofrecemos consejos prácticos y accesibles para
                 mejorar tus espacios con soluciones de diseño funcional y
                 estético. Desde ideas básicas hasta avanzadas, buscamos
                 inspirarte y proporcionarte herramientas prácticas para
                 transformar tus entornos fácilmente
-                <span className=" text-2xl text-lime-100">.</span>
+                <span className=" text-2xl text-neutral-200">.</span>
               </div>
             </div>
           </div>
 
           <div>
-            <div className=" text-lime-100 text-7xl font-PermanentMarker">
+            <div className=" text-neutral-300 text-8xl font-BebasNeue">
               PORTFOLIO
             </div>
             <Galeria_grid />
@@ -397,7 +369,7 @@ export default function Home() {
             <div className="imagen ">
               <img
                 src="/DiseñoWeb/panel_02.jpg"
-                alt="Logo"
+                alt="paisaje"
                 className=" min-w-96 h-4/5 "
               />
             </div>
@@ -405,7 +377,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className=" footer w-full  text-lime-100 bg-zinc-900">
+      <footer className=" footer w-full  text-neutral-400 ">
         <div className="ml-5">
           <section>
             <h2>Contacto</h2>
