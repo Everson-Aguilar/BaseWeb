@@ -1,4 +1,7 @@
 import Head from "next/head";
+import Image from "next/image";
+
+
 
 //componente
 
@@ -16,7 +19,17 @@ import "./css/animaciones.css";
 
 //image
 
-import Image from "next/image";
+
+
+//enrutamiento base
+
+
+//fin enrutamiento base
+
+
+
+
+
 
 export default function Home() {
   return (

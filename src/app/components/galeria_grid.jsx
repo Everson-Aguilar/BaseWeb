@@ -1,17 +1,10 @@
 "use client";
-
+import { useState } from "react";
 import Image from "next/image";
-import "../css/galeria.css"; // Asumiendo que este es tu archivo de 
+import Link from "next/link";
+import "../css/galeria.css"; // Archivo de estilos CSS
 
-
-
-
-
-
-
-
-{/*  imagen portada miniatura */}
-const images = [ 
+const images = [
   "/DiseñoWeb/portfolio/g1.jpg",
   "/DiseñoWeb/portfolio/g2.jpg",
   "/DiseñoWeb/portfolio/g3.jpg",
@@ -26,46 +19,56 @@ const images = [
   "/DiseñoWeb/portfolio/g12.jpg",
 ];
 
-const galeria = () => {
-  // Función para manejar el clic en el botón
+const Galeria = () => {
+  const [error, setError] = useState(null);
+  const [confirmation, setConfirmation] = useState(false); // Estado para la confirmación
+  const [componentName, setComponentName] = useState(""); // Estado para el nombre del componente importado
+
   const handleClick = (id) => {
-    console.log(`Se hizo clic en el botón ${id}`);
+    const buttonNumber = parseInt(id.substring(1));
+    const componentName = `pack_${buttonNumber}.jsx`; // Asegúrate de incluir la extensión .jsx
+
+    import(`./biblioteca/${componentName}`)
+      .then((module) => {
+        setConfirmation(true);
+        setComponentName(componentName);
+        console.log("Componente importado:", componentName); // Mensaje de impresión en la consola
+      })
+      .catch((error) => {
+        console.error(`Error al importar ${componentName}`, error);
+        setError(error);
+      });
   };
 
-  // Generar los IDs de los botones
   const ids = images.map((_, index) => `b${index + 1}`);
 
   return (
-
-    
-
-
     <div>
-
-
-    <div className="galeria w-full h-full grid grid-cols-4 gap-4">
-      {/* Renderizamos cada imagen de manera individual */}
-      {images.map((image, index) => (
-        <div key={index} className="relative rounded-lg overflow-hidden">
-          <Image src={image} alt={`Imagen ${index + 1}`} width={400} height={400} />
-          <button
-            key={index}
-            id={ids[index]}
-            className="absolute h-5 w-auto top-2 right-2 bg-neutral-800 text-black px-3 py-1 rounded-md shadow-md"
-            onClick={() => handleClick(ids[index])} // Manejador de evento onClick
-          >
-            <Image
-              src="/DiseñoWeb/ver.svg"
-              alt="ver"
-              layout="fill"
-              objectFit="fill"
-            />
-          </button>
-        </div>
-      ))}
-    </div>
+      {error && <div>Error al cargar el componente: {error.message}</div>}
+      {confirmation && <div>Componente importado correctamente.</div>}
+      <div className="galeria w-full h-full grid grid-cols-4 gap-4">
+        {images.map((image, index) => (
+          <div key={index} className="relative rounded-lg overflow-hidden">
+            <Image src={image} alt={`Imagen ${index + 1}`} width={400} height={400} />
+            <Link href={`./biblioteca/${componentName}`} passHref>
+              <button
+                id={ids[index]}
+                className="absolute h-5 w-auto top-2 right-2 bg-neutral-800 text-black px-3 py-1 rounded-md shadow-md"
+                onClick={() => handleClick(ids[index])}
+              >
+                <Image
+                  src="/DiseñoWeb/ver.svg"
+                  alt="ver"
+                  layout="fill"
+                  objectFit="fill"
+                />
+              </button>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default galeria;
+export default Galeria;
