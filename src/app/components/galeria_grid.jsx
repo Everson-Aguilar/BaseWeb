@@ -1,9 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import "../css/galeria.css"; // Asumiendo que este es tu archivo de estilos
+import "../css/galeria.css"; // Asumiendo que este es tu archivo de 
 
-const images = [
+
+
+
+
+
+
+
+{/*  imagen portada miniatura */}
+const images = [ 
   "/DiseñoWeb/portfolio/g1.jpg",
   "/DiseñoWeb/portfolio/g2.jpg",
   "/DiseñoWeb/portfolio/g3.jpg",
@@ -28,6 +36,13 @@ const galeria = () => {
   const ids = images.map((_, index) => `b${index + 1}`);
 
   return (
+
+    
+
+
+    <div>
+
+
     <div className="galeria w-full h-full grid grid-cols-4 gap-4">
       {/* Renderizamos cada imagen de manera individual */}
       {images.map((image, index) => (
@@ -48,6 +63,7 @@ const galeria = () => {
           </button>
         </div>
       ))}
+    </div>
     </div>
   );
 };

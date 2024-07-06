@@ -316,14 +316,7 @@ export default function Home() {
                     <li>Adobe After Effects</li>
                   </ul>
                 </div>
-                <div className=" h-1/2 flex justify-center  ">
-                  <Image
-                    src="/DiseñoWeb/herramientas.png"
-                    alt="software 3d"
-                    width={200} // Ancho deseado en píxeles
-                    height={200} // Alto deseado en píxeles
-                  />
-                </div>
+                
               </div>
             </div>
             <div className="  box-border flex-row overflow-hidden  items-center justify-center text-center ">
