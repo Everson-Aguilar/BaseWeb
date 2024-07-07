@@ -46,23 +46,24 @@ export default function Home() {
   const [error, setError] = useState(null);
   const [confirmation, setConfirmation] = useState(false); // Estado para la confirmación
   const [componentName, setComponentName] = useState(""); // Estado para el nombre del componente importado
-  /*
+
   const handleClick = (id) => {
     const buttonNumber = parseInt(id.substring(1));
-    const componentName = `pack_${buttonNumber}.jsx`; // Asegúrate de incluir la extensión .jsx
+    const componentName = `lote${buttonNumber}/page`; // Nombre de la carpeta y archivo
 
-    import(`./biblioteca/${componentName}`)    //       /${componentName}
+    import(`./biblioteca/${componentName}`)
       .then((module) => {
         setConfirmation(true);
         setComponentName(componentName);
         console.log("Componente importado:", componentName); // Mensaje de impresión en la consola
       })
       .catch((error) => {
-        console.error(`Error al importar ${componentName}`, error);
+        console.error(`Error al importar ${componentName}`, error); // Mensaje de alerta en la consola
         setError(error);
+        alert(`Error al importar ${componentName}: ${error.message}`); // Alerta al usuario con el mensaje de error
       });
   };
-  */
+
   const ids = images.map((_, index) => `b${index + 1}`);
 
   // fin galeria funciones
@@ -384,8 +385,7 @@ export default function Home() {
             <div>
               {error && (
                 <div>Error al cargar el componente: {error.message}</div>
-              )}{" "}
-              {/* errores marcado por falta de activar el funcionamiento de verificacion, se soluciona arriba */}
+              )}
               {confirmation && <div>Componente importado correctamente.</div>}
               <div className="galeria w-full h-full grid grid-cols-4 gap-4">
                 {images.map((image, index) => (
@@ -399,11 +399,11 @@ export default function Home() {
                       width={400}
                       height={400}
                     />
-                    <Link href={"/biblioteca"} passHref>
+                    <Link href={`/biblioteca/lote${index + 1}`} passHref>
                       <button
                         id={ids[index]}
                         className="absolute h-5 w-auto top-2 right-2 bg-neutral-800 text-black px-3 py-1 rounded-md shadow-md"
-                        onClick={() => handleClick(ids[index])} // errores marcado por falta de activar el funcionamiento de verificacion, se soluciona arriba
+                        onClick={() => handleClick(ids[index])}
                       >
                         <Image
                           src="/DiseñoWeb/ver.svg"
