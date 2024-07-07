@@ -20,15 +20,17 @@ const images = [
 ];
 
 const Galeria = () => {
+
+  
   const [error, setError] = useState(null);
   const [confirmation, setConfirmation] = useState(false); // Estado para la confirmación
   const [componentName, setComponentName] = useState(""); // Estado para el nombre del componente importado
-
+  /*
   const handleClick = (id) => {
     const buttonNumber = parseInt(id.substring(1));
     const componentName = `pack_${buttonNumber}.jsx`; // Asegúrate de incluir la extensión .jsx
 
-    import(`./biblioteca/${componentName}`)
+    import(`./biblioteca/${componentName}`)    //       /${componentName}
       .then((module) => {
         setConfirmation(true);
         setComponentName(componentName);
@@ -39,7 +41,7 @@ const Galeria = () => {
         setError(error);
       });
   };
-
+  */
   const ids = images.map((_, index) => `b${index + 1}`);
 
   return (
@@ -50,7 +52,7 @@ const Galeria = () => {
         {images.map((image, index) => (
           <div key={index} className="relative rounded-lg overflow-hidden">
             <Image src={image} alt={`Imagen ${index + 1}`} width={400} height={400} />
-            <Link href={`./biblioteca/${componentName}`} passHref>
+            <Link href={"/biblioteca/${componentName}"} passHref>
               <button
                 id={ids[index]}
                 className="absolute h-5 w-auto top-2 right-2 bg-neutral-800 text-black px-3 py-1 rounded-md shadow-md"
@@ -67,6 +69,11 @@ const Galeria = () => {
           </div>
         ))}
       </div>
+
+      <Link href="/test">test</Link>
+
+
+
     </div>
   );
 };

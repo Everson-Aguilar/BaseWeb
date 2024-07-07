@@ -1,11 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-
-
+import Link from "next/link";
 
 //componente
 
-import Galeria_grid from "./components/galeria_grid";
 import Header from "./components/header";
 
 //fuentes
@@ -16,22 +17,56 @@ import "./globals.css";
 
 import "./css/estructura.css";
 import "./css/animaciones.css";
+import "./css/galeria.css";
 
-//image
+//image galeria
 
-
+const images = [
+  "/DiseñoWeb/portfolio/g1.jpg",
+  "/DiseñoWeb/portfolio/g2.jpg",
+  "/DiseñoWeb/portfolio/g3.jpg",
+  "/DiseñoWeb/portfolio/g4.jpg",
+  "/DiseñoWeb/portfolio/g5.jpg",
+  "/DiseñoWeb/portfolio/g6.jpg",
+  "/DiseñoWeb/portfolio/g7.jpg",
+  "/DiseñoWeb/portfolio/g8.jpg",
+  "/DiseñoWeb/portfolio/g9.jpg",
+  "/DiseñoWeb/portfolio/g10.jpg",
+  "/DiseñoWeb/portfolio/g11.jpg",
+  "/DiseñoWeb/portfolio/g12.jpg",
+];
 
 //enrutamiento base
 
-
 //fin enrutamiento base
 
-
-
-
-
-
 export default function Home() {
+  // galeria funciones
+
+  const [error, setError] = useState(null);
+  const [confirmation, setConfirmation] = useState(false); // Estado para la confirmación
+  const [componentName, setComponentName] = useState(""); // Estado para el nombre del componente importado
+  /*
+  const handleClick = (id) => {
+    const buttonNumber = parseInt(id.substring(1));
+    const componentName = `pack_${buttonNumber}.jsx`; // Asegúrate de incluir la extensión .jsx
+
+    import(`./biblioteca/${componentName}`)    //       /${componentName}
+      .then((module) => {
+        setConfirmation(true);
+        setComponentName(componentName);
+        console.log("Componente importado:", componentName); // Mensaje de impresión en la consola
+      })
+      .catch((error) => {
+        console.error(`Error al importar ${componentName}`, error);
+        setError(error);
+      });
+  };
+  */
+  const ids = images.map((_, index) => `b${index + 1}`);
+
+  // fin galeria funciones
+
   return (
     <div className="App">
       <Head>
@@ -53,9 +88,8 @@ export default function Home() {
       </header>
 
       <main>
-
         <div className="h-[60px] min-w-[412px] bg-neutral-600"></div>
-        
+
         <section className="base">
           <div className="contenedor1">
             <div className="absolute  text-5xl z-10   text-stone-600  p-4 h-2/5 w-2/3 ">
@@ -72,16 +106,9 @@ export default function Home() {
 
               <div>
                 <ul className="text-5xl font-SixCaps text-stone-600   ">
-                  <li>
-                    
-                    + Terreno
-                  </li>
-                  <li>
-                    +Construcción
-                  </li>
-                  <li>
-                    + Accesorios
-                  </li>
+                  <li>+ Terreno</li>
+                  <li>+Construcción</li>
+                  <li>+ Accesorios</li>
                 </ul>
               </div>
             </div>
@@ -329,7 +356,6 @@ export default function Home() {
                     <li>Adobe After Effects</li>
                   </ul>
                 </div>
-                
               </div>
             </div>
             <div className="  box-border flex-row overflow-hidden  items-center justify-center text-center ">
@@ -352,7 +378,47 @@ export default function Home() {
             <div className=" text-neutral-300 text-8xl font-BebasNeue">
               PORTFOLIO
             </div>
-            <Galeria_grid />
+
+            {/* galeria */}
+
+            <div>
+              {error && (
+                <div>Error al cargar el componente: {error.message}</div>
+              )}{" "}
+              {/* errores marcado por falta de activar el funcionamiento de verificacion, se soluciona arriba */}
+              {confirmation && <div>Componente importado correctamente.</div>}
+              <div className="galeria w-full h-full grid grid-cols-4 gap-4">
+                {images.map((image, index) => (
+                  <div
+                    key={index}
+                    className="relative rounded-lg overflow-hidden"
+                  >
+                    <Image
+                      src={image}
+                      alt={`Imagen ${index + 1}`}
+                      width={400}
+                      height={400}
+                    />
+                    <Link href={"/biblioteca"} passHref>
+                      <button
+                        id={ids[index]}
+                        className="absolute h-5 w-auto top-2 right-2 bg-neutral-800 text-black px-3 py-1 rounded-md shadow-md"
+                        onClick={() => handleClick(ids[index])} // errores marcado por falta de activar el funcionamiento de verificacion, se soluciona arriba
+                      >
+                        <Image
+                          src="/DiseñoWeb/ver.svg"
+                          alt="ver"
+                          layout="fill"
+                          objectFit="fill"
+                        />
+                      </button>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* fin galeria */}
           </div>
 
           <div>
