@@ -109,7 +109,7 @@ export default function Home() {
 
       <main>
         {/*Ajuste Base Aplicacion 00  */}
-        <div className="bg-neutral-600"></div>
+        <div className="bg-neutral-600 h-16"></div>
         {/*Base Ajuste Aplicacion 00  */}
         {/*********************************************************************************
          **********************************************************************************
