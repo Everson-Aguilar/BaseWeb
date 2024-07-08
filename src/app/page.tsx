@@ -1,5 +1,7 @@
 "use client";
 
+///////////////////////////////// ALMACENAMIENTO
+
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
@@ -36,11 +38,13 @@ const images = [
   "/DiseñoWeb/portfolio/g12.jpg",
 ];
 
-//enrutamiento base
-
-//fin enrutamiento base
+///////////////////////////////// ALMACENAMIENTO
 
 export default function Home() {
+  {
+    /*   FUNCIONES DE LA APLICACION & REGLAS - MENU  03 */
+  }
+
   // galeria funciones
 
   const [error, setError] = useState(null);
@@ -50,7 +54,7 @@ export default function Home() {
   const handleClick = (id: string) => {
     const buttonNumber = parseInt(id.substring(1));
     const componentName = `lote${buttonNumber}/page`; // Nombre de la carpeta y archivo
-  
+
     import(`./biblioteca/${componentName}`)
       .then((module) => {
         setConfirmation(true);
@@ -68,8 +72,14 @@ export default function Home() {
 
   // fin galeria funciones
 
+  {
+    /* EXIT FUNCIONES DE LA APLICACION & REGLAS - MENU 03*/
+  }
+
   return (
     <div className="App">
+      {/* PANEL DE RESULTAD DE BUSCADORES     */}
+
       <Head>
         <title>SERVICIO DE DISEÑO DE ENTORNO 3D</title>
 
@@ -84,12 +94,30 @@ export default function Home() {
         {/* Otras meta etiquetas según sea necesario */}
       </Head>
 
+      {/* FIN   DE RESULTAD DE BUSCADORES     */}
+
+      {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!       NAVEGACION APLICACION*/}
+
       <header>
         <Header />
       </header>
 
+      {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! EXIT  NAVEGACION APLICACION*/}
+
+      {/*       v              ENTER MAIN            v          */}
+      {/* INFORMACION:   esta es la parte donde estan lo elementos grandes de la aplicacion!*/}
+
       <main>
-        <div className="h-[60px] min-w-[412px] bg-neutral-600"></div>
+        {/*Ajuste Base Aplicacion 00  */}
+        <div className="bg-neutral-600"></div>
+        {/*Base Ajuste Aplicacion 00  */}
+        {/*********************************************************************************
+         **********************************************************************************
+         **********************************************************************************
+         **********************************************************************************
+         **********************************************************************************
+         **********************************************************************************/}
+        {/*presentacion y servicios    01-----------------------------------------------------*/}
 
         <section className="base">
           <div className="contenedor1">
@@ -306,8 +334,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/*separador*/}
-
+        {/*FIN presentacion y servicio 01=================================================*/}
+        {/*********************************************************************************
+         **********************************************************************************
+         **********************************************************************************
+         **********************************************************************************
+         **********************************************************************************
+         **********************************************************************************/}
+        {/*portfolio y explicacion tecnica artistica     03-------------------------------*/}
         <section className="base">
           <div className=" grid3 ">
             <div className="  w-full flex-row justify-center items-center text-end ">
@@ -347,7 +381,7 @@ export default function Home() {
               </span>
               <div className=" h-full p-3 box-border ">
                 <div className=" h-1/2 p-2">
-                  <ul className="text-xs text-neutral-400 font-PermanentMarker">
+                  <ul className="text-xs text-neutral-400 font-BebasNeue">
                     <li>Autodesk Maya</li>
                     <li>Blender</li>
                     <li>Autodesk 3ds Max</li>
@@ -363,7 +397,7 @@ export default function Home() {
               <span className="font-Acme  text-neutral-300 text-xl ">
                 GRATIS PARA TI !
               </span>
-              <div className=" p-5 max-full text-xs text-neutral-400 font-PermanentMarker">
+              <div className=" p-5 max-full text-xs text-neutral-400 font-BebasNeue">
                 <span className=" text-2xl text-neutral-200">!</span> En nuestra
                 sección gratuita, ofrecemos consejos prácticos y accesibles para
                 mejorar tus espacios con soluciones de diseño funcional y
@@ -383,7 +417,6 @@ export default function Home() {
             {/* galeria */}
 
             <div>
-             
               {confirmation && <div>Componente importado correctamente.</div>}
               <div className="galeria w-full h-full grid grid-cols-4 gap-4">
                 {images.map((image, index) => (
@@ -429,7 +462,18 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/*FIN portfolio y explicacion tecnica artistica 03-------------------------------*/}
+        {/*********************************************************************************
+         **********************************************************************************
+         **********************************************************************************
+         **********************************************************************************
+         **********************************************************************************
+         **********************************************************************************/}
       </main>
+
+      {/*       v              EXIT MAIN            v          */}
+
+      {/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$--POLITICA--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */}
 
       <footer className=" footer w-full  text-neutral-400 ">
         <div className="ml-5">
@@ -476,11 +520,16 @@ export default function Home() {
           </section>
         </div>
       </footer>
+
+      {/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$--FIN   POLITICA--$$$$$$$$$$$$$$$$$$$$$$$$$ */}
     </div>
   );
 }
 
-/* git-hub pasos para guardar
+{
+  /*  GUARDAR Y SUBIR APLICACION   */
+}
+/* git-hub pasos para guardar CONSOLA
 git add .
 git commit -m "subir"
 git pull origin main
