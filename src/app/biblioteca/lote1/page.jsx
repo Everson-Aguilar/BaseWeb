@@ -1,12 +1,63 @@
-// pages/Componente.js
+// trabaja solamente con archivo jsx
 
-const Componente = () => {
-    return (
-      <div>
-        <h1>A</h1>
-      </div>
-    );
-  };
-  
-  export default Componente;
-  
+"use client";
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link'; // Importar Link de next/link
+
+// Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'
+const imageNames = [
+  'g1.jpg',
+  'g2.jpg',
+  'g3.jpg',
+  'g4.jpg',
+  'g5.jpg',
+  'g6.jpg',
+  'g7.jpg',
+  'g8.jpg',
+  'g9.jpg',
+  'g10.jpg',
+  'g11.jpg',
+  'g12.jpg',
+];
+
+// Título y descripción globales para todas las imágenes
+const globalTitle = 'Título Global';
+const globalDescription = 'Descripción Global';
+
+const Pack = () => {
+  // Directorio base de las imágenes
+  const basePath = '/DiseñoWeb/portfolio/g1/';
+
+  return (
+    <div className="relative bg-neutral-600 h-screen box pr-3 pl-3 overflow-scroll">
+      {/* Usar Link para el enlace */}
+      <header className="fixed z-30 bg-neutral-500 bg-opacity-20 backdrop-blur-md flex text-neutral-100 font-Quicksand items-center justify-center w-screen h-14">
+        <Link href="/">
+          <div className="hover:text-pink-600 cursor-pointer text-2xl">
+            Inicio
+          </div>
+        </Link>
+      </header>
+
+      <div className="h-20"></div>
+
+      {/* Mapeo de las imágenes */}
+      {imageNames.map((imageName, index) => (
+        <div key={index} className="bg-neutral-800 h-full relative mb-5" style={{ minHeight: '400px' }}>
+          <Image src={`${basePath}${imageName}`} alt={`Imagen ${index + 1}`} layout="fill" objectFit="cover" />
+          <div className="absolute w-full h-28 text-neutral-100 p-3 z-20 flex font-BebasNeue text-7xl">
+            <Image src="/DiseñoWeb/logoblanco.svg" alt="Logo" width={300} height={300} />
+            <div>
+              <div className="text-7xl text-neutral-100">{globalTitle}</div>
+              <p className="text-xl font-Quicksand">{globalDescription}</p>
+            </div>
+          </div>
+          <div className="bg-neutral-800 absolute opacity-60 text-neutral-100 w-full h-32 flex p-2"></div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Pack;
