@@ -47,10 +47,10 @@ export default function Home() {
   const [confirmation, setConfirmation] = useState(false); // Estado para la confirmación
   const [componentName, setComponentName] = useState(""); // Estado para el nombre del componente importado
 
-  const handleClick = (id) => {
+  const handleClick = (id: string) => {
     const buttonNumber = parseInt(id.substring(1));
     const componentName = `lote${buttonNumber}/page`; // Nombre de la carpeta y archivo
-
+  
     import(`./biblioteca/${componentName}`)
       .then((module) => {
         setConfirmation(true);
@@ -383,9 +383,7 @@ export default function Home() {
             {/* galeria */}
 
             <div>
-              {error && (
-                <div>Error al cargar el componente: {error.message}</div>
-              )}
+             
               {confirmation && <div>Componente importado correctamente.</div>}
               <div className="galeria w-full h-full grid grid-cols-4 gap-4">
                 {images.map((image, index) => (
