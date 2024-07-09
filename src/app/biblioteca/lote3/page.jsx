@@ -5,7 +5,7 @@ import Image from "next/image";
 import Layout from "../layout"; // Importar el componente Layout
 
 // Título y descripción globales para todas las imágenes
-const globalTitle = "DISEÑO INTERIOR CASA FAMILIAR-BAÑO";
+const globalTitle = "INTERIOR CASA FAMILIAR-BAÑO";
 const globalDescription = "''la soledad cuando no estan los padres en casa.''";
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'
