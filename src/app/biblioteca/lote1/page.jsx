@@ -40,6 +40,7 @@ const Pack = () => {
             alt={`Imagen ${index + 1}`}
             layout="fill"
             objectFit="cover"
+            unoptimized
           />
           <div className="absolute w-full h-28 text-neutral-100 p-3 z-20 flex font-BebasNeue text-7xl">
             <Image
