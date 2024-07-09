@@ -10,6 +10,7 @@ import Link from "next/link";
 //componente
 
 import Header from "./components/header";
+import Paquetes from "./components/paquetes";
 
 //fuentes
 
@@ -109,9 +110,15 @@ export default function Home() {
       {/* INFORMACION:   esta es la parte donde estan lo elementos grandes de la aplicacion!*/}
 
       <main>
-        {/*Ajuste Base Aplicacion 00  */}
-        <div className="bg-neutral-600 h-16 w-screen min-w-[400px]"></div>
-        {/*Base Ajuste Aplicacion 00  */}
+        {/*Ajuste Base Aplicacion     00  */}
+        <div className="bg-neutral-600 h-16 w-screen w-full min-w-[412px]"></div>
+        {/*Fin base Ajuste Aplicacion 00  */}
+
+
+        <section>
+          <Paquetes />
+        </section>
+
         {/*********************************************************************************
          **********************************************************************************
          **********************************************************************************
