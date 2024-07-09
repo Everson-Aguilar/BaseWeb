@@ -1,0 +1,16 @@
+.peticion_Estructura{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+@media screen and (max-width: 850px) {
+    .peticion_Estructura {
+      
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+  }

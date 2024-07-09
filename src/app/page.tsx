@@ -24,7 +24,6 @@ import "./css/galeria.css";
 
 //image galeria - CONTROL MINIATURA PEQUEÑAS
 
-
 const images = [
   "/DiseñoWeb/portfolio/g1.jpg",
   "/DiseñoWeb/portfolio/g2.jpg",
@@ -37,7 +36,6 @@ const images = [
   "/DiseñoWeb/portfolio/g9.jpg",
   "/DiseñoWeb/portfolio/g10.jpg",
   "/DiseñoWeb/portfolio/g11.jpg",
-  
 ];
 
 ///////////////////////////////// ALMACENAMIENTO
@@ -113,11 +111,6 @@ export default function Home() {
         {/*Ajuste Base Aplicacion     00  */}
         <div className="bg-neutral-600 h-16 w-full min-w-[412px]"></div>
         {/*Fin base Ajuste Aplicacion 00  */}
-
-
-        <section>
-          <Paquetes />
-        </section>
 
         {/*********************************************************************************
          **********************************************************************************
@@ -343,6 +336,20 @@ export default function Home() {
         </section>
 
         {/*FIN presentacion y servicio 01=================================================*/}
+
+        {/*********************************************************************************
+         **********************************************************************************
+         **********************************************************************************
+         **********************************************************************************
+         **********************************************************************************
+         **********************************************************************************/}
+
+        {/* componente Peticion==========================================================*/}
+        <section>
+          <Paquetes />
+        </section>
+        {/*Fin componente Peticion=======================================================*/}
+
         {/*********************************************************************************
          **********************************************************************************
          **********************************************************************************
@@ -351,7 +358,7 @@ export default function Home() {
          **********************************************************************************/}
         {/*portfolio y explicacion tecnica artistica     03-------------------------------*/}
         <section className="base">
-          <div className=" grid3 ">
+          <div className=" grid3  ">
             <div className="  w-full flex-row justify-center items-center text-end ">
               <div className=" h-1/2 text-sm  p-3">
                 <p>
@@ -461,11 +468,11 @@ export default function Home() {
           </div>
 
           <div>
-            <div className="imagen ">
+            <div className="imagen mt-2 ">
               <img
                 src="/DiseñoWeb/panel_03.jpg"
                 alt="paisaje"
-                className=" min-w-96 h-4/5 "
+                className=" min-w-96 h-4/5  "
               />
             </div>
           </div>

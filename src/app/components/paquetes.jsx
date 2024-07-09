@@ -2,6 +2,10 @@
 
 import React, { useState } from "react";
 
+//css
+
+import "../css/peticion.css";
+
 const Paquetes = () => {
   // Definiciones de opciones y estados de los selectores
   const escalasAmbiente = [
@@ -72,6 +76,12 @@ const Paquetes = () => {
     juego: 500, // Precio base para el juego
   };
 
+  // Definir la constante antes de usarla
+  const motoresGraficos = ["Unreal Engine", "Unity", "Render Normal"];
+
+  // Luego, puedes utilizarla en el estado
+  const [motorGrafico, setMotorGrafico] = useState(motoresGraficos[0]);
+
   // Estados para las selecciones
   const [escalaAmbiente, setEscalaAmbiente] = useState(escalasAmbiente[0]);
   const [variacionVegetacion, setVariacionVegetacion] = useState(
@@ -138,202 +148,249 @@ const Paquetes = () => {
   };
 
   return (
-    <div className="h-screen overflow-auto w-full min-w-[412px] bg-neutral-600 flex justify-center items-center text-start ">
-      <div className=" flex-row  shadow-lg min-w-96 mb-5 bg-neutral-700 p-5 w-3/6  h-full justify-between font-Quicksand   text-zinc-400">
-        <h2 className="font-BebasNeue text-2xl text-zinc-800">INFORMACION PROYECTO</h2>
-        <div>
-          <label>Nombre del Proyecto: <br /></label>
-          <input
-            className="w-4/5 bg-neutral-600"
-            type="text"
-            value={nombreProyecto}
-            onChange={(e) => setNombreProyecto(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Descripción del Proyecto: <br /></label>
-          <textarea
-          className="w-4/5 bg-neutral-600"
-            value={descripcionProyecto}
-            onChange={(e) => setDescripcionProyecto(e.target.value)}
-          />
-        </div>
+    <div>
+      <div className="  peticion_Estructura   h-auto w-full min-w-[412px] bg-neutral-600     ">
+        <div className="w-full h-screen bg-neutral-500   "></div>
 
-        <h2 className="font-BebasNeue text-2xl text-zinc-800" >DISEÑO GLOBAL MUNDO</h2>
-        <form onSubmit={handleSubmit}>
-          <div>
+        <div className="relative  w-1/2 ">
+          <div className=" p-14 w-full  flex-row pb-10  shadow-lg min-w-96  bg-neutral-700   justify-between font-Quicksand   text-zinc-400">
+            <h2 className="font-BebasNeue text-2xl text-zinc-800">
+              INFORMACION PROYECTO
+            </h2>
             <div>
-              <label>Escala del Ambiente: <br /></label>
-              <select
-              className="w-4/5 bg-neutral-600"
-                value={escalaAmbiente}
-                onChange={(e) => setEscalaAmbiente(Number(e.target.value))}
-              >
-                {escalasAmbiente.map((escala, index) => (
-                  <option key={index} value={escala}>
-                    {escala}m² - ${precios.escalaAmbiente * escala}
-                  </option>
-                ))}
-              </select>
+              <label>
+                Nombre del Proyecto: <br />
+              </label>
+              <input
+                className="w-4/5 bg-neutral-600"
+                type="text"
+                value={nombreProyecto}
+                onChange={(e) => setNombreProyecto(e.target.value)}
+              />
             </div>
             <div>
-              <label>Variación Vegetación Natural:</label>
-              <select
-              className="w-4/5 bg-neutral-600"
-                value={variacionVegetacion}
-                onChange={(e) => setVariacionVegetacion(Number(e.target.value))}
-              >
-                {variacionesVegetacion.map((variacion, index) => (
-                  <option key={index} value={variacion}>
-                    {variacion} - ${precios.variacionVegetacion * variacion}
-                  </option>
-                ))}
-              </select>
+              <label>
+                Descripción del Proyecto: <br />
+              </label>
+              <textarea
+                className=" w-4/5 bg-neutral-600"
+                value={descripcionProyecto}
+                onChange={(e) => setDescripcionProyecto(e.target.value)}
+              />
             </div>
-            <div>
-              <label>Variación Accesorios Naturales:</label>
-              <select
-              className="w-4/5 bg-neutral-600"
-                value={variacionAccesoriosNatural}
-                onChange={(e) =>
-                  setVariacionAccesoriosNatural(Number(e.target.value))
-                }
-              >
-                {variacionesAccesoriosNatural.map((variacion, index) => (
-                  <option key={index} value={variacion}>
-                    {variacion} - $
-                    {precios.variacionAccesoriosNatural * variacion}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label>Efecto Especiales Animaciones:</label>
-              <select
-              className="w-4/5 bg-neutral-600"
-                value={efectoEspecialAnimacionesMundo}
-                onChange={(e) =>
-                  setEfectoEspecialAnimacionesMundo(Number(e.target.value))
-                }
-              >
-                {efectosEspecialesAnimaciones.map((efecto, index) => (
-                  <option key={index} value={efecto}>
-                    {efecto} - $
-                    {precios.efectoEspecialAnimacionesMundo * efecto}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label>Complejidad y Estilo de Juego Esperado:</label>
-              <select
-              className="w-4/5 bg-neutral-600"
-                value={complejidadEstilo}
-                onChange={(e) => setComplejidadEstilo(e.target.value)}
-              >
-                {complejidadEstiloJuego.map((estilo, index) => (
-                  <option key={index} value={estilo}>
-                    {estilo} - $
-                    {precios.complejidadEstilo *
-                      complejidadEstiloJuego.indexOf(estilo)}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
 
-          <h2 className="font-BebasNeue text-2xl text-zinc-800" >DISEÑO LOCAL CONSTRUCCION</h2>
-          <div>
-            <div>
-              <label>Estilo Lugar Arquitectónico:</label>
-              <select
-              className="w-4/5 bg-neutral-600"
-                value={estiloArquitectonico}
-                onChange={(e) => setEstiloArquitectonico(e.target.value)}
-              >
-                {estilosArquitectonicos.map((estilo, index) => (
-                  <option key={index} value={estilo}>
-                    {estilo} - $
-                    {precios.estiloArquitectonico *
-                      estilosArquitectonicos.indexOf(estilo)}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label>Variación Accesorios: <br /></label>
-              <select
-              className="w-4/5 bg-neutral-600"
-                value={variacionAccesorios}
-                onChange={(e) => setVariacionAccesorios(Number(e.target.value))}
-              >
-                {variacionesAccesorios.map((variacion, index) => (
-                  <option key={index} value={variacion}>
-                    {variacion} - ${precios.variacionAccesorios * variacion}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label>Variación de Construcciones:</label>
-              <select
-              className="w-4/5 bg-neutral-600"
-                value={variacionConstrucciones}
-                onChange={(e) =>
-                  setVariacionConstrucciones(Number(e.target.value))
-                }
-              >
-                {variacionesConstrucciones.map((variacion, index) => (
-                  <option key={index} value={variacion}>
-                    {variacion} - ${precios.variacionConstrucciones * variacion}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label>Efecto Especiales Animaciones:</label>
-              <select
-              className="w-4/5 bg-neutral-600"
-                value={efectoEspecialAnimacionesLocal}
-                onChange={(e) =>
-                  setEfectoEspecialAnimacionesLocal(Number(e.target.value))
-                }
-              >
-                {efectosEspecialesAnimaciones.map((efecto, index) => (
-                  <option key={index} value={efecto}>
-                    {efecto} - $
-                    {precios.efectoEspecialAnimacionesLocal * efecto}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
+            <h2 className="font-BebasNeue text-2xl text-zinc-800">
+              DISEÑO GLOBAL MUNDO
+            </h2>
+            <form onSubmit={handleSubmit}>
+              <div>
+                <div>
+                  <label>
+                    Escala del Ambiente: <br />
+                  </label>
+                  <select
+                    className="w-4/5 bg-neutral-600"
+                    value={escalaAmbiente}
+                    onChange={(e) => setEscalaAmbiente(Number(e.target.value))}
+                  >
+                    {escalasAmbiente.map((escala, index) => (
+                      <option key={index} value={escala}>
+                        {escala}m² - ${precios.escalaAmbiente * escala}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label>Variación Vegetación Natural:</label>
+                  <select
+                    className="w-4/5 bg-neutral-600"
+                    value={variacionVegetacion}
+                    onChange={(e) =>
+                      setVariacionVegetacion(Number(e.target.value))
+                    }
+                  >
+                    {variacionesVegetacion.map((variacion, index) => (
+                      <option key={index} value={variacion}>
+                        {variacion} - ${precios.variacionVegetacion * variacion}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label>Variación Accesorios Naturales:</label>
+                  <select
+                    className="w-4/5 bg-neutral-600"
+                    value={variacionAccesoriosNatural}
+                    onChange={(e) =>
+                      setVariacionAccesoriosNatural(Number(e.target.value))
+                    }
+                  >
+                    {variacionesAccesoriosNatural.map((variacion, index) => (
+                      <option key={index} value={variacion}>
+                        {variacion} - $
+                        {precios.variacionAccesoriosNatural * variacion}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label>Efecto Especiales Animaciones:</label>
+                  <select
+                    className="w-4/5 bg-neutral-600"
+                    value={efectoEspecialAnimacionesMundo}
+                    onChange={(e) =>
+                      setEfectoEspecialAnimacionesMundo(Number(e.target.value))
+                    }
+                  >
+                    {efectosEspecialesAnimaciones.map((efecto, index) => (
+                      <option key={index} value={efecto}>
+                        {efecto} - $
+                        {precios.efectoEspecialAnimacionesMundo * efecto}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label>Complejidad y Estilo de Juego Esperado:</label>
+                  <select
+                    className="w-4/5 bg-neutral-600"
+                    value={complejidadEstilo}
+                    onChange={(e) => setComplejidadEstilo(e.target.value)}
+                  >
+                    {complejidadEstiloJuego.map((estilo, index) => (
+                      <option key={index} value={estilo}>
+                        {estilo} - $
+                        {precios.complejidadEstilo *
+                          complejidadEstiloJuego.indexOf(estilo)}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
 
-          <div>
-            <label>Disminuye los costo del proyecto,Duración del Proyecto:</label>
-            <select
-            className="w-4/5 text-red-400 bg-neutral-600 "
-              value={duracionProyecto}
-              onChange={(e) => setDuracionProyecto(Number(e.target.value))}
+              <h2 className="font-BebasNeue text-2xl text-zinc-800">
+                DISEÑO LOCAL CONSTRUCCION
+              </h2>
+              <div>
+                <div>
+                  <label>Estilo Lugar Arquitectónico:</label>
+                  <select
+                    className="w-4/5 bg-neutral-600"
+                    value={estiloArquitectonico}
+                    onChange={(e) => setEstiloArquitectonico(e.target.value)}
+                  >
+                    {estilosArquitectonicos.map((estilo, index) => (
+                      <option key={index} value={estilo}>
+                        {estilo} - $
+                        {precios.estiloArquitectonico *
+                          estilosArquitectonicos.indexOf(estilo)}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label>
+                    Variación Accesorios: <br />
+                  </label>
+                  <select
+                    className="w-4/5 bg-neutral-600"
+                    value={variacionAccesorios}
+                    onChange={(e) =>
+                      setVariacionAccesorios(Number(e.target.value))
+                    }
+                  >
+                    {variacionesAccesorios.map((variacion, index) => (
+                      <option key={index} value={variacion}>
+                        {variacion} - ${precios.variacionAccesorios * variacion}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label>Variación de Construcciones:</label>
+                  <select
+                    className="w-4/5 bg-neutral-600"
+                    value={variacionConstrucciones}
+                    onChange={(e) =>
+                      setVariacionConstrucciones(Number(e.target.value))
+                    }
+                  >
+                    {variacionesConstrucciones.map((variacion, index) => (
+                      <option key={index} value={variacion}>
+                        {variacion} - $
+                        {precios.variacionConstrucciones * variacion}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label>Efecto Especiales Animaciones:</label>
+                  <select
+                    className="w-4/5 bg-neutral-600"
+                    value={efectoEspecialAnimacionesLocal}
+                    onChange={(e) =>
+                      setEfectoEspecialAnimacionesLocal(Number(e.target.value))
+                    }
+                  >
+                    {efectosEspecialesAnimaciones.map((efecto, index) => (
+                      <option key={index} value={efecto}>
+                        {efecto} - $
+                        {precios.efectoEspecialAnimacionesLocal * efecto}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label>Motor Gráfico:</label>
+                <select
+                  className="w-4/5 bg-neutral-600"
+                  value={motorGrafico}
+                  onChange={(e) => setMotorGrafico(e.target.value)}
+                >
+                  {motoresGraficos.map((motor, index) => (
+                    <option key={index} value={motor}>
+                      {motor}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label>
+                  Disminuye los costo del proyecto,Duración del Proyecto:
+                </label>
+                <select
+                  className="w-4/5 text-red-400 bg-neutral-600 "
+                  value={duracionProyecto}
+                  onChange={(e) => setDuracionProyecto(Number(e.target.value))}
+                >
+                  {duracionProyectoOptions.map((opcion, index) => (
+                    <option key={index} value={opcion.value}>
+                      {opcion.label} - $
+                      {opcion.value < 0 ? Math.abs(opcion.value) : opcion.value}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </form>
+
+            {/* Mostrar resultado final dinámico */}
+            <div>
+              <h3 className="font-BebasNeue text-2xl text-zinc-800">
+                Costo Total del Proyecto:
+              </h3>
+              <p className=" text-4xl">${calcularCostoTotal()}</p>
+            </div>
+            <button
+              className="font-BebasNeue text-2xl text-zinc-800"
+              type="submit"
             >
-              {duracionProyectoOptions.map((opcion, index) => (
-                <option  key={index} value={opcion.value}>
-                  {opcion.label} - $
-                  {opcion.value < 0 ? Math.abs(opcion.value) : opcion.value}
-                </option>
-              ))}
-            </select>
+              Enviar
+            </button>
           </div>
-
-          
-        </form>
-
-        {/* Mostrar resultado final dinámico */}
-        <div>
-          <h3 className="font-BebasNeue text-2xl text-zinc-800">Costo Total del Proyecto:</h3>
-          <p className=" text-4xl">${calcularCostoTotal()}</p>
         </div>
-        <button className="font-BebasNeue text-2xl text-zinc-800" type="submit">Enviar</button>
       </div>
     </div>
   );
