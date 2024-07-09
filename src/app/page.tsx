@@ -21,7 +21,8 @@ import "./css/estructura.css";
 import "./css/animaciones.css";
 import "./css/galeria.css";
 
-//image galeria
+//image galeria - CONTROL MINIATURA PEQUEÑAS
+
 
 const images = [
   "/DiseñoWeb/portfolio/g1.jpg",
@@ -35,7 +36,7 @@ const images = [
   "/DiseñoWeb/portfolio/g9.jpg",
   "/DiseñoWeb/portfolio/g10.jpg",
   "/DiseñoWeb/portfolio/g11.jpg",
-  "/DiseñoWeb/portfolio/g12.jpg",
+  
 ];
 
 ///////////////////////////////// ALMACENAMIENTO
