@@ -5,8 +5,8 @@ import Image from "next/image";
 import Layout from "../layout"; // Importar el componente Layout
 
 // Título y descripción globales para todas las imágenes
-const globalTitle = "DISEÑO ENTORNO NATURAL";
-const globalDescription = "''Un entorno natural con inspiración asiática con estilo personalizado''";
+const globalTitle = "DISEÑO INTERIOR APOCALIPTICO";
+const globalDescription = "''Interior apocalíptico, sobreviviente con adicción al alcohol.''";
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'
 const imageNames = [
@@ -43,7 +43,7 @@ const Pack = () => {
             objectFit="cover"
             unoptimized
           />
-          <div className="absolute w-full h-28 text-neutral-100 p-3 z-20 flex font-BebasNeue text-7xl">
+          <div className="absolute w-full h-32 text-neutral-100 p-3 z-20 flex font-BebasNeue text-7xl">
             <Image
               src="/DiseñoWeb/logoblanco.svg"
               alt="Logo"
@@ -51,11 +51,11 @@ const Pack = () => {
               height={300}
             />
             <div>
-              <div className="text-7xl text-neutral-100">{globalTitle}</div>
-              <p className="text-xl font-Quicksand">{globalDescription}</p>
+            <div className="text-4xl text-neutral-100">{globalTitle}</div>
+              <p className="text-sm font-Quicksand">{globalDescription}</p>
             </div>
           </div>
-          <div className="bg-neutral-800 absolute opacity-60 text-neutral-100 w-full h-32 flex p-2"></div>
+          <div className="bg-neutral-800 absolute opacity-60 text-neutral-100 w-full h-36 flex p-2"></div>
         </div>
       ))}
     </Layout>

@@ -5,9 +5,8 @@ import Image from "next/image";
 import Layout from "../layout"; // Importar el componente Layout
 
 // Título y descripción globales para todas las imágenes
-const globalTitle = "DISEÑO ENTORNO NATURAL";
-const globalDescription = "''Un entorno natural con inspiración asiática con estilo personalizado''";
-
+const globalTitle = "DISEÑO INTERIOR CASA FAMILIAR-BAÑO";
+const globalDescription = "''la soledad cuando no estan los padres en casa.''";
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'
 const imageNames = [
@@ -16,13 +15,19 @@ const imageNames = [
   "g3.jpg",
   "g4.jpg",
   "g5.jpg",
+  "g6.jpg",
+  "g7.jpg",
+  "g8.jpg",
+  "g9.jpg",
+  "g10.jpg",
 
 ];
 
 
+
 const Pack = () => {
   // Directorio base de las imágenes
-  const basePath = "/DiseñoWeb/portfolio/g1/";
+  const basePath = "/DiseñoWeb/portfolio/g3/";
 
   return (
     <Layout>
@@ -50,7 +55,7 @@ const Pack = () => {
               height={300}
             />
             <div>
-              <div className="text-4xl text-neutral-100">{globalTitle}</div>
+            <div className="text-4xl text-neutral-100">{globalTitle}</div>
               <p className="text-sm font-Quicksand">{globalDescription}</p>
             </div>
           </div>
@@ -62,3 +67,7 @@ const Pack = () => {
 };
 
 export default Pack;
+
+
+
+
