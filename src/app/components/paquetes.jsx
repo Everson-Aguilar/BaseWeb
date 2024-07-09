@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-const MiComponente = () => {
+const Paquetes = () => {
   // Definiciones de opciones y estados de los selectores
   const escalasAmbiente = [
     10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800,
@@ -357,4 +357,4 @@ const MiComponente = () => {
   }
 };
 
-export default MiComponente;
+export default Paquetes;
