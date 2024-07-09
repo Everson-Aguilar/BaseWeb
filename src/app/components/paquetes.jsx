@@ -261,7 +261,7 @@ const Paquetes = () => {
               </select>
             </div>
             <div>
-              <label>Variación Accesorios:</label>
+              <label>Variación Accesorios: <br /></label>
               <select
               className="w-4/5 bg-neutral-600"
                 value={variacionAccesorios}
