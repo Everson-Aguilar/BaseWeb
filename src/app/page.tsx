@@ -110,7 +110,7 @@ export default function Home() {
 
       <main>
         {/*Ajuste Base Aplicacion 00  */}
-        <div className="bg-neutral-600 h-16"></div>
+        <div className="bg-neutral-600 h-16 w-screen min-w-[400px]"></div>
         {/*Base Ajuste Aplicacion 00  */}
         {/*********************************************************************************
          **********************************************************************************
