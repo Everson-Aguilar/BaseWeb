@@ -54,7 +54,7 @@ const Pack = () => {
               <p className="text-sm font-Quicksand">{globalDescription}</p>
             </div>
           </div>
-          <div className="bg-neutral-800 absolute opacity-60 text-neutral-100 w-full h-36 flex p-2"></div>
+          <div className="bg-neutral-800 absolute opacity-60 text-neutral-100 w-full h-40 flex p-2"></div>
         </div>
       ))}
     </Layout>
