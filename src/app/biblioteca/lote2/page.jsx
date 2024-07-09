@@ -5,7 +5,7 @@ import Image from "next/image";
 import Layout from "../layout"; // Importar el componente Layout
 
 // Título y descripción globales para todas las imágenes
-const globalTitle = "DISEÑO INTERIOR APOCALIPTICO";
+const globalTitle = "INTERIOR APOCALIPTICO";
 const globalDescription = "''Interior apocalíptico, sobreviviente con adicción al alcohol.''";
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'

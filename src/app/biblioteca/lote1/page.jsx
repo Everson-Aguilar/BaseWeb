@@ -5,7 +5,7 @@ import Image from "next/image";
 import Layout from "../layout"; // Importar el componente Layout
 
 // Título y descripción globales para todas las imágenes
-const globalTitle = "DISEÑO ENTORNO NATURAL";
+const globalTitle = "ENTORNO NATURAL";
 const globalDescription = "''Un entorno natural con inspiración asiática con estilo personalizado''";
 
 
