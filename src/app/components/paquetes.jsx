@@ -310,7 +310,7 @@ const Paquetes = () => {
           </div>
 
           <div>
-            <label>"Disminuye los costo del proyecto,"Duración del Proyecto:</label>
+            <label>Disminuye los costo del proyecto,Duración del Proyecto:</label>
             <select
             className="w-full text-red-400 bg-neutral-600 "
               value={duracionProyecto}
