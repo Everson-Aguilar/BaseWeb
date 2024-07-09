@@ -144,7 +144,7 @@ const Paquetes = () => {
         <div>
           <label>Nombre del Proyecto: <br /></label>
           <input
-            className="w-full bg-neutral-600"
+            className="w-4/5 bg-neutral-600"
             type="text"
             value={nombreProyecto}
             onChange={(e) => setNombreProyecto(e.target.value)}
@@ -153,7 +153,7 @@ const Paquetes = () => {
         <div>
           <label>Descripción del Proyecto: <br /></label>
           <textarea
-          className="w-full bg-neutral-600"
+          className="w-4/5 bg-neutral-600"
             value={descripcionProyecto}
             onChange={(e) => setDescripcionProyecto(e.target.value)}
           />
@@ -165,7 +165,7 @@ const Paquetes = () => {
             <div>
               <label>Escala del Ambiente: <br /></label>
               <select
-              className="w-full bg-neutral-600"
+              className="w-4/5 bg-neutral-600"
                 value={escalaAmbiente}
                 onChange={(e) => setEscalaAmbiente(Number(e.target.value))}
               >
@@ -179,7 +179,7 @@ const Paquetes = () => {
             <div>
               <label>Variación Vegetación Natural:</label>
               <select
-              className="w-full bg-neutral-600"
+              className="w-4/5 bg-neutral-600"
                 value={variacionVegetacion}
                 onChange={(e) => setVariacionVegetacion(Number(e.target.value))}
               >
@@ -193,7 +193,7 @@ const Paquetes = () => {
             <div>
               <label>Variación Accesorios Naturales:</label>
               <select
-              className="w-full bg-neutral-600"
+              className="w-4/5 bg-neutral-600"
                 value={variacionAccesoriosNatural}
                 onChange={(e) =>
                   setVariacionAccesoriosNatural(Number(e.target.value))
@@ -210,7 +210,7 @@ const Paquetes = () => {
             <div>
               <label>Efecto Especiales Animaciones:</label>
               <select
-              className="w-full bg-neutral-600"
+              className="w-4/5 bg-neutral-600"
                 value={efectoEspecialAnimacionesMundo}
                 onChange={(e) =>
                   setEfectoEspecialAnimacionesMundo(Number(e.target.value))
@@ -227,7 +227,7 @@ const Paquetes = () => {
             <div>
               <label>Complejidad y Estilo de Juego Esperado:</label>
               <select
-              className="w-full bg-neutral-600"
+              className="w-4/5 bg-neutral-600"
                 value={complejidadEstilo}
                 onChange={(e) => setComplejidadEstilo(e.target.value)}
               >
@@ -247,7 +247,7 @@ const Paquetes = () => {
             <div>
               <label>Estilo Lugar Arquitectónico:</label>
               <select
-              className="w-full bg-neutral-600"
+              className="w-4/5 bg-neutral-600"
                 value={estiloArquitectonico}
                 onChange={(e) => setEstiloArquitectonico(e.target.value)}
               >
@@ -263,7 +263,7 @@ const Paquetes = () => {
             <div>
               <label>Variación Accesorios:</label>
               <select
-              className="w-full bg-neutral-600"
+              className="w-4/5 bg-neutral-600"
                 value={variacionAccesorios}
                 onChange={(e) => setVariacionAccesorios(Number(e.target.value))}
               >
@@ -277,7 +277,7 @@ const Paquetes = () => {
             <div>
               <label>Variación de Construcciones:</label>
               <select
-              className="w-full bg-neutral-600"
+              className="w-4/5 bg-neutral-600"
                 value={variacionConstrucciones}
                 onChange={(e) =>
                   setVariacionConstrucciones(Number(e.target.value))
@@ -293,7 +293,7 @@ const Paquetes = () => {
             <div>
               <label>Efecto Especiales Animaciones:</label>
               <select
-              className="w-full bg-neutral-600"
+              className="w-4/5 bg-neutral-600"
                 value={efectoEspecialAnimacionesLocal}
                 onChange={(e) =>
                   setEfectoEspecialAnimacionesLocal(Number(e.target.value))
@@ -312,7 +312,7 @@ const Paquetes = () => {
           <div>
             <label>Disminuye los costo del proyecto,Duración del Proyecto:</label>
             <select
-            className="w-full text-red-400 bg-neutral-600 "
+            className="w-4/5 text-red-400 bg-neutral-600 "
               value={duracionProyecto}
               onChange={(e) => setDuracionProyecto(Number(e.target.value))}
             >
