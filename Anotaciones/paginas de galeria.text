@@ -64,3 +64,68 @@ const Pack = () => {
 };
 
 export default Pack;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ if (escalasAmbiente.includes(referencia_escala)) {
+    switch (referencia_escala) {
+      case 40:
+        mensaje = "Vivienda, Gimnasio, Taller, Parque, Garaje";
+        break;
+      case 80:
+        mensaje =
+          "Oficina, Cafetería, Tienda, Sala de exposiciones, Estudio de arte, Cancha de baloncesto, Castillo de juegos";
+        break;
+      case 120:
+        mensaje =
+          "Restaurante, Salón de eventos, Galería de arte, Clínica médica, Salón de belleza, Cancha de fútbol, Bosque de aventuras";
+        break;
+      case 160:
+        mensaje =
+          "Biblioteca, Centro educativo, Centro de coworking, Estudio de música, Sala de conferencias, Cancha de béisbol, Cuevas de exploración";
+        break;
+      case 200:
+        mensaje =
+          "Centro deportivo, Teatro pequeño, Espacio de coworking, Sala de conciertos, Museo pequeño, Calles de juegos";
+        break;
+      case 240:
+        mensaje =
+          "Centro comunitario, Espacio cultural, Centro de rehabilitación, Espacio para ferias, Espacio para talleres, Parque de atracciones";
+        break;
+      case 280:
+        mensaje =
+          "Sala de cine, Centro de innovación, Laboratorio de investigación, Espacio de yoga, Centro de formación, Laberinto de juegos";
+        break;
+      case 400:
+        mensaje =
+          "Centro comercial pequeño, Complejo deportivo, Centro de convenciones, Galería comercial, Espacio recreativo, Ciudad de juegos";
+        break;
+      case 1000:
+        mensaje =
+          "Gran centro comercial, Complejo deportivo grande, Hospital pequeño, Universidad pequeña, Parque temático, Aldea de juegos";
+        break;
+      case 2000:
+        mensaje =
+          "Aeropuerto regional, Hospital grande, Universidad grande, Centro de convenciones grande, Parque de diversiones, Mundo de juegos";
+        break;
+      default:
+        mensaje =
+          "El número seleccionado está en la lista pero no tiene una frase asociada.";
+    }

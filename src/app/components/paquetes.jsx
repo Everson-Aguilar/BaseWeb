@@ -1,70 +1,63 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
+
 
 //css
 
 import "../css/peticion.css";
 
+
 const Paquetes = () => {
   // Definiciones de opciones y estados de los selectores
 
   // sistemaEscala
+  
   const escalasAmbiente = [40, 80, 120, 160, 200, 240, 280, 400, 1000, 2000];
-  const referencia_escala = parseInt(document.getElementById("escala_ref").value); // Asegúrate de convertir el valor a entero si es necesario
-  let mensaje = "";
+  
+  const [escalaAmbiente, setEscalaAmbiente] = useState(escalasAmbiente[0]);
 
-  if (escalasAmbiente.includes(referencia_escala)) {
-    switch (referencia_escala) {
+  let mensaje;
+
+  // Definimos una función para asignar el mensaje basado en el valor de escalaAmbiente
+  const asignarMensaje = () => {
+    switch (escalaAmbiente) {
       case 40:
-        mensaje = "Vivienda, Gimnasio, Taller, Parque, Garaje";
-        break;
+        return "Vivienda, Gimnasio, Taller, Parque, Garaje";
       case 80:
-        mensaje =
-          "Oficina, Cafetería, Tienda, Sala de exposiciones, Estudio de arte, Cancha de baloncesto, Castillo de juegos";
-        break;
+        return "Oficina, Cafetería, Tienda, Sala de exposiciones, Estudio de arte, Cancha de baloncesto, Castillo de juegos";
       case 120:
-        mensaje =
-          "Restaurante, Salón de eventos, Galería de arte, Clínica médica, Salón de belleza, Cancha de fútbol, Bosque de aventuras";
-        break;
+        return "Restaurante, Salón de eventos, Galería de arte, Clínica médica, Salón de belleza, Cancha de fútbol, Bosque de aventuras";
       case 160:
-        mensaje =
-          "Biblioteca, Centro educativo, Centro de coworking, Estudio de música, Sala de conferencias, Cancha de béisbol, Cuevas de exploración";
-        break;
+        return "Biblioteca, Centro educativo, Centro de coworking, Estudio de música, Sala de conferencias, Cancha de béisbol, Cuevas de exploración";
       case 200:
-        mensaje =
-          "Centro deportivo, Teatro pequeño, Espacio de coworking, Sala de conciertos, Museo pequeño, Calles de juegos";
-        break;
+        return "Centro deportivo, Teatro pequeño, Espacio de coworking, Sala de conciertos, Museo pequeño, Calles de juegos";
       case 240:
-        mensaje =
-          "Centro comunitario, Espacio cultural, Centro de rehabilitación, Espacio para ferias, Espacio para talleres, Parque de atracciones";
-        break;
+        return "Centro comunitario, Espacio cultural, Centro de rehabilitación, Espacio para ferias, Espacio para talleres, Parque de atracciones";
       case 280:
-        mensaje =
-          "Sala de cine, Centro de innovación, Laboratorio de investigación, Espacio de yoga, Centro de formación, Laberinto de juegos";
-        break;
+        return "Sala de cine, Centro de innovación, Laboratorio de investigación, Espacio de yoga, Centro de formación, Laberinto de juegos";
       case 400:
-        mensaje =
-          "Centro comercial pequeño, Complejo deportivo, Centro de convenciones, Galería comercial, Espacio recreativo, Ciudad de juegos";
-        break;
+        return "Centro comercial pequeño, Complejo deportivo, Centro de convenciones, Galería comercial, Espacio recreativo, Ciudad de juegos";
       case 1000:
-        mensaje =
-          "Gran centro comercial, Complejo deportivo grande, Hospital pequeño, Universidad pequeña, Parque temático, Aldea de juegos";
-        break;
+        return "Gran centro comercial, Complejo deportivo grande, Hospital pequeño, Universidad pequeña, Parque temático, Aldea de juegos";
       case 2000:
-        mensaje =
-          "Aeropuerto regional, Hospital grande, Universidad grande, Centro de convenciones grande, Parque de diversiones, Mundo de juegos";
-        break;
+        return "Aeropuerto regional, Hospital grande, Universidad grande, Centro de convenciones grande, Parque de diversiones, Mundo de juegos";
       default:
-        mensaje =
-          "El número seleccionado está en la lista pero no tiene una frase asociada.";
+        return "El número seleccionado está en la lista pero no tiene una frase asociada.";
     }
-    console.log(mensaje); // o puedes mostrarlo en otro lugar según tu necesidad
-  } else {
-    console.log(
-      "El número seleccionado no está en la lista de escalas de ambiente."
-    );
-  }
+  };
+
+  // Llamamos a la función para obtener el mensaje
+  mensaje = asignarMensaje();
+
+  
+
+  
+
+
+
+
 
   // fin sistemaEscala
 
@@ -139,7 +132,8 @@ const Paquetes = () => {
   const [motorGrafico, setMotorGrafico] = useState(motoresGraficos[0]);
 
   // Estados para las selecciones
-  const [escalaAmbiente, setEscalaAmbiente] = useState(escalasAmbiente[0]);
+ 
+
   const [variacionVegetacion, setVariacionVegetacion] = useState(
     variacionesVegetacion[0]
   );
@@ -226,10 +220,15 @@ const Paquetes = () => {
               <div className=" relative flex justify-end items-end p-1 text-lime-500 h-[200px] w-[200px] border  border-lime-500">
                 <div className="absolute">{escalaAmbiente}m²</div>
 
-                <div className=" p-2 absolute  w-full h-full ">{mensaje}</div>
+              <div className=" p-2 absolute  w-full h-full "> <p className="text-lime-500 text-2xl">USOS</p> {mensaje}</div>
               </div>
               <div className="h-[200px] w-[200px] border  border-lime-500">
-                x
+              <Image
+                      src="/DiseñoWeb/formulario/vegetacion.jpg"
+                      alt="plano arquitectonico"
+                      layout="fill" // Ajusta la imagen para llenar todo el contenedor
+                      objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
+                    />
               </div>
               <div className="h-[200px] w-[200px] border  border-lime-500">
                 x
@@ -304,7 +303,7 @@ const Paquetes = () => {
                     Escala del Ambiente: <br />
                   </label>
                   <select
-                    id="escala_ref"
+                    
                     className="w-4/5 bg-neutral-600"
                     value={escalaAmbiente}
                     onChange={(e) => setEscalaAmbiente(Number(e.target.value))}

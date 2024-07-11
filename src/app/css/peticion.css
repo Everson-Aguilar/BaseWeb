@@ -46,10 +46,3 @@
     margin: 0 auto; /* Para centrar el texto */
   }
 
-.escala_cuadricula{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-  
