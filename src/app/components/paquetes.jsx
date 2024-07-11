@@ -3,6 +3,10 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
+//componentes
+
+import Plantas from "./plantas";
+
 
 //css
 
@@ -10,19 +14,21 @@ import "../css/peticion.css";
 
 
 const Paquetes = () => {
-  // Definiciones de opciones y estados de los selectores
+  
 
   // sistemaEscala
   
+  //array
   const escalasAmbiente = [40, 80, 120, 160, 200, 240, 280, 400, 1000, 2000];
+
+  //selectivo de array
   
-  const [escalaAmbiente, setEscalaAmbiente] = useState(escalasAmbiente[0]);
+  const [selectivoEscala, setselectivoEscala] = useState(escalasAmbiente[0]);
 
-  let mensaje;
-
-  // Definimos una función para asignar el mensaje basado en el valor de escalaAmbiente
+ 
+// condicional
   const asignarMensaje = () => {
-    switch (escalaAmbiente) {
+    switch (selectivoEscala) {
       case 40:
         return "Vivienda, Gimnasio, Taller, Parque, Garaje";
       case 80:
@@ -48,22 +54,41 @@ const Paquetes = () => {
     }
   };
 
+
+   // variable a obtener resultados
+   let mensaje;
+
   // Llamamos a la función para obtener el mensaje
   mensaje = asignarMensaje();
 
-  
-
-  
+  //...
 
 
+   // sistemaVegetacion
 
 
-
-  // fin sistemaEscala
 
   const variacionesVegetacion = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   ];
+
+
+  const [variacionVegetacion, setVariacionVegetacion] = useState(
+    variacionesVegetacion[0]
+  );
+
+
+
+
+
+
+
+  
+
+
+
+  //...
+
   const variacionesAccesoriosNatural = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   ];
@@ -113,16 +138,16 @@ const Paquetes = () => {
 
   // Precios base para cada tipo de selección
   const precios = {
-    escalaAmbiente: 2,
-    variacionVegetacion: 50,
-    variacionAccesoriosNatural: 30,
-    estiloArquitectonico: 200,
-    variacionAccesorios: 40,
-    variacionConstrucciones: 80,
-    efectoEspecialAnimacionesMundo: 150,
-    efectoEspecialAnimacionesLocal: 120,
-    complejidadEstilo: 300,
-    juego: 500, // Precio base para el juego
+    selectivoEscala: 2,
+    variacionVegetacion: 0,
+    variacionAccesoriosNatural: 0,
+    estiloArquitectonico: 0,
+    variacionAccesorios: 0,
+    variacionConstrucciones: 0,
+    efectoEspecialAnimacionesMundo: 0,
+    efectoEspecialAnimacionesLocal: 0,
+    complejidadEstilo: 0,
+    juego: 0, // Precio base para el juego
   };
 
   // Definir la constante antes de usarla
@@ -134,9 +159,6 @@ const Paquetes = () => {
   // Estados para las selecciones
  
 
-  const [variacionVegetacion, setVariacionVegetacion] = useState(
-    variacionesVegetacion[0]
-  );
   const [variacionAccesoriosNatural, setVariacionAccesoriosNatural] = useState(
     variacionesAccesoriosNatural[0]
   );
@@ -218,11 +240,19 @@ const Paquetes = () => {
 
             <div className="Grid_Exposicion gap-5">
               <div className=" relative flex justify-end items-end p-1 text-lime-500 h-[200px] w-[200px] border  border-lime-500">
-                <div className="absolute">{escalaAmbiente}m²</div>
+                <div className="absolute">{selectivoEscala}m²</div>
 
               <div className=" p-2 absolute  w-full h-full "> <p className="text-lime-500 text-2xl">USOS</p> {mensaje}</div>
               </div>
-              <div className="h-[200px] w-[200px] border  border-lime-500">
+              <div className=" relative h-[200px] w-[200px] flex   ">
+                <p className=" absolute  text-orange-600  z-20  text-3xl p-1 ">{variacionVegetacion}</p>
+
+
+                <Plantas cantidad={variacionVegetacion} />  {/* Mostrar 5 treboles */}
+
+
+
+            
               <Image
                       src="/DiseñoWeb/formulario/vegetacion.jpg"
                       alt="plano arquitectonico"
@@ -305,13 +335,13 @@ const Paquetes = () => {
                   <select
                     
                     className="w-4/5 bg-neutral-600"
-                    value={escalaAmbiente}
-                    onChange={(e) => setEscalaAmbiente(Number(e.target.value))}
+                    value={selectivoEscala}
+                    onChange={(e) => setselectivoEscala(Number(e.target.value))}
                   >
                     {escalasAmbiente.map((escala, index) => (
                       <option key={index} value={escala}>
                         {escala}ml <br /> x <br />
-                        {escala}ml = ${precios.escalaAmbiente * escala}
+                        {escala}ml = ${precios.selectivoEscala * escala}
                       </option>
                     ))}
                   </select>
@@ -518,7 +548,7 @@ const Paquetes = () => {
 
   function calcularCostoTotal() {
     return (
-      precios.escalaAmbiente * escalaAmbiente +
+      precios.selectivoEscala * selectivoEscala +
       precios.variacionVegetacion * variacionVegetacion +
       precios.variacionAccesoriosNatural * variacionAccesoriosNatural +
       precios.estiloArquitectonico *
