@@ -8,10 +8,66 @@ import "../css/peticion.css";
 
 const Paquetes = () => {
   // Definiciones de opciones y estados de los selectores
-  const escalasAmbiente = [
-    10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800,
-    900, 1000,
-  ];
+
+  // sistemaEscala
+  const escalasAmbiente = [40, 80, 120, 160, 200, 240, 280, 400, 1000, 2000];
+  const referencia_escala = parseInt(document.getElementById("escala_ref").value); // Asegúrate de convertir el valor a entero si es necesario
+  let mensaje = "";
+
+  if (escalasAmbiente.includes(referencia_escala)) {
+    switch (referencia_escala) {
+      case 40:
+        mensaje = "Vivienda, Gimnasio, Taller, Parque, Garaje";
+        break;
+      case 80:
+        mensaje =
+          "Oficina, Cafetería, Tienda, Sala de exposiciones, Estudio de arte, Cancha de baloncesto, Castillo de juegos";
+        break;
+      case 120:
+        mensaje =
+          "Restaurante, Salón de eventos, Galería de arte, Clínica médica, Salón de belleza, Cancha de fútbol, Bosque de aventuras";
+        break;
+      case 160:
+        mensaje =
+          "Biblioteca, Centro educativo, Centro de coworking, Estudio de música, Sala de conferencias, Cancha de béisbol, Cuevas de exploración";
+        break;
+      case 200:
+        mensaje =
+          "Centro deportivo, Teatro pequeño, Espacio de coworking, Sala de conciertos, Museo pequeño, Calles de juegos";
+        break;
+      case 240:
+        mensaje =
+          "Centro comunitario, Espacio cultural, Centro de rehabilitación, Espacio para ferias, Espacio para talleres, Parque de atracciones";
+        break;
+      case 280:
+        mensaje =
+          "Sala de cine, Centro de innovación, Laboratorio de investigación, Espacio de yoga, Centro de formación, Laberinto de juegos";
+        break;
+      case 400:
+        mensaje =
+          "Centro comercial pequeño, Complejo deportivo, Centro de convenciones, Galería comercial, Espacio recreativo, Ciudad de juegos";
+        break;
+      case 1000:
+        mensaje =
+          "Gran centro comercial, Complejo deportivo grande, Hospital pequeño, Universidad pequeña, Parque temático, Aldea de juegos";
+        break;
+      case 2000:
+        mensaje =
+          "Aeropuerto regional, Hospital grande, Universidad grande, Centro de convenciones grande, Parque de diversiones, Mundo de juegos";
+        break;
+      default:
+        mensaje =
+          "El número seleccionado está en la lista pero no tiene una frase asociada.";
+    }
+    console.log(mensaje); // o puedes mostrarlo en otro lugar según tu necesidad
+  } else {
+    console.log(
+      "El número seleccionado no está en la lista de escalas de ambiente."
+    );
+  }
+
+  // fin sistemaEscala
+
   const variacionesVegetacion = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   ];
@@ -64,7 +120,7 @@ const Paquetes = () => {
 
   // Precios base para cada tipo de selección
   const precios = {
-    escalaAmbiente: 100,
+    escalaAmbiente: 2,
     variacionVegetacion: 50,
     variacionAccesoriosNatural: 30,
     estiloArquitectonico: 200,
@@ -148,12 +204,71 @@ const Paquetes = () => {
   };
 
   return (
+    //ESTRUCTURA
+
     <div>
       <div className="  peticion_Estructura   h-auto w-full min-w-[412px] bg-neutral-600     ">
-        <div className="w-full h-screen bg-neutral-500   "></div>
+        {/*-----------------------------------------------------------------------------------------------------------------------visual-------*/}
 
-        <div className="relative  w-1/2 ">
-          <div className=" p-14 w-full  flex-row pb-10  shadow-lg min-w-96  bg-neutral-700   justify-between font-Quicksand   text-zinc-400">
+        <div className=" font-VT323 text-1xl break-words w-full p-2 text-neutral-600 h-full bg-neutral-900  min-h-[650px]  ">
+          {/*visual representacion */}
+
+          <div className="  w-[416px] flex-initial box-border  h-full">
+            <div className=" p-1  text-5xl text-neutral-200 ">
+              {nombreProyecto}
+            </div>
+
+            <div className="  p-1 text-1xl text-neutral-300 texto-limitado">
+              {descripcionProyecto}
+            </div>
+
+            <div className="Grid_Exposicion gap-5">
+              <div className=" relative flex justify-end items-end p-1 text-lime-500 h-[200px] w-[200px] border  border-lime-500">
+                <div className="absolute">{escalaAmbiente}m²</div>
+
+                <div className=" p-2 absolute  w-full h-full ">{mensaje}</div>
+              </div>
+              <div className="h-[200px] w-[200px] border  border-lime-500">
+                x
+              </div>
+              <div className="h-[200px] w-[200px] border  border-lime-500">
+                x
+              </div>
+              <div className="h-[200px] w-[200px] border  border-lime-500">
+                x
+              </div>
+              <div className="h-[200px] w-[200px] border  border-lime-500">
+                x
+              </div>
+              <div className="h-[200px] w-[200px] border  border-lime-500">
+                x
+              </div>
+              <div className="h-[200px] w-[200px] border  border-lime-500">
+                x
+              </div>
+              <div className="h-[200px] w-[200px] border  border-lime-500">
+                x
+              </div>
+              <div className="h-[200px] w-[200px] border  border-lime-500">
+                x
+              </div>
+              <div className="h-[200px] w-[200px] border  border-lime-500">
+                x
+              </div>
+              <div className="h-[200px] w-[200px] border  border-lime-500">
+                x
+              </div>
+              <div className="h-[200px] w-[200px] border  border-lime-500">
+                x
+              </div>
+            </div>
+          </div>
+        </div>
+        {/*...*/}
+
+        {/*-------------------------------------------------------------------------------------------------------------------formulario-------*/}
+        <div className="  flex w-1/2 ">
+          <div className=" z-10  p-14 w-full  flex-row pb-10  shadow-lg min-w-96  bg-neutral-700   justify-between font-Quicksand   text-zinc-400">
             <h2 className="font-BebasNeue text-2xl text-zinc-800">
               INFORMACION PROYECTO
             </h2>
@@ -173,7 +288,7 @@ const Paquetes = () => {
                 Descripción del Proyecto: <br />
               </label>
               <textarea
-                className=" w-4/5 bg-neutral-600"
+                className=" overflow-auto  max-h-20 w-4/5 bg-neutral-600"
                 value={descripcionProyecto}
                 onChange={(e) => setDescripcionProyecto(e.target.value)}
               />
@@ -189,13 +304,15 @@ const Paquetes = () => {
                     Escala del Ambiente: <br />
                   </label>
                   <select
+                    id="escala_ref"
                     className="w-4/5 bg-neutral-600"
                     value={escalaAmbiente}
                     onChange={(e) => setEscalaAmbiente(Number(e.target.value))}
                   >
                     {escalasAmbiente.map((escala, index) => (
                       <option key={index} value={escala}>
-                        {escala}m² - ${precios.escalaAmbiente * escala}
+                        {escala}ml <br /> x <br />
+                        {escala}ml = ${precios.escalaAmbiente * escala}
                       </option>
                     ))}
                   </select>
@@ -390,10 +507,15 @@ const Paquetes = () => {
               Enviar
             </button>
           </div>
+
+          <div className=" DiseñoMobil_peticion  ">publicidad</div>
         </div>
+        {/*...*/}
       </div>
     </div>
   );
+
+  // resultados
 
   function calcularCostoTotal() {
     return (
@@ -412,6 +534,7 @@ const Paquetes = () => {
       duracionProyecto // Sumando el precio de la duración del proyecto
     );
   }
+  /*...*/
 };
 
 export default Paquetes;

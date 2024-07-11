@@ -1,4 +1,13 @@
 /* Definición de la fuente Quicksand */
+
+@font-face {
+  font-family: "VT323";
+  src: url("./fuentes//MiConv.com__VT323-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 @font-face {
   font-family: "Quicksand";
   src: url("./fuentes/MiConv.com__Quicksand-VariableFont_wght.woff") format("woff");

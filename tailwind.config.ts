@@ -21,6 +21,8 @@ const config: Config = {
         'SixCaps': ['SixCaps-Regular', 'sans-serif'],
         'Staatliches': ['Staatliches-Regular', 'sans-serif'],
         'Quicksand': ['Quicksand', 'sans-serif'],
+        'VT323': ['VT323'],
+        
       },
     },
   },

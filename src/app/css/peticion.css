@@ -1,16 +1,55 @@
-.peticion_Estructura{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-
+.peticion_Estructura {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 850px) {
-    .peticion_Estructura {
-      
-        flex-direction: column;
+  .peticion_Estructura {
+    flex-direction: column;
 
-        align-items: flex-start;
-    }
+    align-items: flex-start;
   }
+}
+
+.DiseñoMobil_peticion {
+  display: flex;
+  position: absolute;
+  z-index: 0;
+  width: 49%;
+  height: 150%;
+  left: 50%;
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .DiseñoMobil_peticion {
+    display: flex;
+    background-color: rgb(37, 37, 37);
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.Grid_Exposicion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+
+.texto-limitado {
+    max-width: 500px; /* O la anchura que prefieras */
+    word-wrap: break-word;
+    margin: 0 auto; /* Para centrar el texto */
+  }
+
+.escala_cuadricula{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+  
