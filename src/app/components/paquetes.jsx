@@ -69,7 +69,7 @@ const Paquetes = () => {
 
 
   const variacionesVegetacion = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 50, 80, 200, 600,
   ];
 
 
@@ -139,7 +139,7 @@ const Paquetes = () => {
   // Precios base para cada tipo de selección
   const precios = {
     selectivoEscala: 2,
-    variacionVegetacion: 0,
+    variacionVegetacion: 2.5,
     variacionAccesoriosNatural: 0,
     estiloArquitectonico: 0,
     variacionAccesorios: 0,
@@ -347,7 +347,7 @@ const Paquetes = () => {
                   </select>
                 </div>
                 <div>
-                  <label>Variación Vegetación Natural:</label>
+                  <label>Cantidad Vegetación Natural:</label>
                   <select
                     className="w-4/5 bg-neutral-600"
                     value={variacionVegetacion}
