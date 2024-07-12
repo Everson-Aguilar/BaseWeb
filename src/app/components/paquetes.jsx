@@ -6,8 +6,11 @@ import Image from "next/image";
 //componentes
 
 import Plantas from "./plantas";
-
 import Construcciones from "./construcciones";
+
+import subir_01 from './subir_01';
+
+ 
 
 //css
 
@@ -137,7 +140,7 @@ const Paquetes = () => {
       "/DiseñoWeb/formulario/juegosMesa de trabajo 8.jpg",
     "The Sims": "/DiseñoWeb/formulario/juegosMesa de trabajo 9.jpg",
     "Half-Life": "/DiseñoWeb/formulario/juegosMesa de trabajo 10.jpg",
-    Doom: "/DiseñoWeb/formulario/juegosMesa de trabajo 11.jpg",
+    "Doom": "/DiseñoWeb/formulario/juegosMesa de trabajo 11.jpg",
     "Counter-Strike": "/DiseñoWeb/formulario/juegosMesa de trabajo 12.jpg",
     "World of Warcraft": "/DiseñoWeb/formulario/juegosMesa de trabajo 13.jpg",
   };
@@ -296,6 +299,7 @@ const Paquetes = () => {
     //ESTRUCTURA
 
     <div>
+      
       <div className="  peticion_Estructura   h-auto w-full min-w-[412px] bg-neutral-600     ">
         {/*-----------------------------------------------------------------------------------------------------------------------visual-------*/}
 
@@ -418,12 +422,11 @@ const Paquetes = () => {
                 <p className=" text-orange-600  z-20  text-3xl">{tiempo}</p>
               </div>
 
-              <div className=" flex justify-center items-center border-dashed text-3xl h-[180px] w-[180px] border  border-neutral-500">
-                <div className=" text-center text-sm">
-                  Agregar Imagen Referencia <br />{" "}
-                  <span className="font-BebasNeue text-3xl">+</span>{" "}
-                </div>
+
+              <div className=" flex z-50 justify-center items-center border-dashed text-3xl h-[180px] w-[180px] border  border-neutral-500">
+              <subir_01/>
               </div>
+
               <div className=" flex justify-center items-center border-dashed text-3xl h-[180px] w-[180px] border  border-neutral-500">
                 <div className=" text-center text-sm">
                   Agregar Imagen Referencia <br />{" "}
