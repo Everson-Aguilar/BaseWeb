@@ -424,12 +424,18 @@ const Paquetes = () => {
                   <span className="font-BebasNeue text-3xl">+</span>{" "}
                 </div>
               </div>
-
-              <div className="h-[180px] w-[180px] border  border-lime-500">
-                +
+              <div className=" flex justify-center items-center border-dashed text-3xl h-[180px] w-[180px] border  border-neutral-500">
+                <div className=" text-center text-sm">
+                  Agregar Imagen Referencia <br />{" "}
+                  <span className="font-BebasNeue text-3xl">+</span>{" "}
+                </div>
               </div>
-              <div className="h-[180px] w-[180px] border  border-lime-500">
-                +
+
+              <div className=" flex justify-center items-center border-dashed text-3xl h-[180px] w-[180px] border  border-neutral-500">
+                <div className=" text-center text-sm">
+                  Agregar Imagen Referencia <br />{" "}
+                  <span className="font-BebasNeue text-3xl">+</span>{" "}
+                </div>
               </div>
             </div>
           </div>
