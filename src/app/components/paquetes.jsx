@@ -25,9 +25,7 @@ const Paquetes = () => {
 
   // convercion m2
 
-  const metrosCuadrados =  selectivoEscala * selectivoEscala;
-
-
+  const metrosCuadrados = selectivoEscala * selectivoEscala;
 
   // condicional
   const asignarMensaje = () => {
@@ -111,7 +109,7 @@ const Paquetes = () => {
   const complejidadEstiloJuego = [
     "Free Fire Mobile",
     "GTA V",
-    "Call of Duty Black Ops 3 ",
+    "Call of Duty Black Ops 3",
     "Cyberpunk 2077",
     "Red Dead Redemption 2",
     "Assassin's Creed Valhalla",
@@ -124,16 +122,10 @@ const Paquetes = () => {
     "World of Warcraft",
   ];
 
-
-
-
-
-
-
   const imagenesJuegos = {
     "Free Fire Mobile": "/DiseñoWeb/formulario/juegosMesa de trabajo 1.jpg",
-    "GTA V ": "/DiseñoWeb/formulario/juegosMesa de trabajo 2.jpg",
-    "Call of Duty Black Ops 3 ":
+    "GTA V": "/DiseñoWeb/formulario/juegosMesa de trabajo 2.jpg",
+    "Call of Duty Black Ops 3":
       "/DiseñoWeb/formulario/juegosMesa de trabajo 3.jpg",
     "Cyberpunk 2077": "/DiseñoWeb/formulario/juegosMesa de trabajo 4.jpg",
     "Red Dead Redemption 2":
@@ -159,34 +151,26 @@ const Paquetes = () => {
   const rutaImagen = imagenesJuegos[juego_imagen];
   console.log(`La ruta de la imagen para ${juego_imagen} es: ${rutaImagen}`);
 
-
-
   const preciosJuegos = {
-    "Free Fire Mobile": 10,
-    "GTA V": 50,
-    "Call of Duty Black Ops 3": 50,
-    "Cyberpunk 2077": 70,
-    "Red Dead Redemption 2": 80,
-    "Assassin's Creed Valhalla": 55,
-    "Horizon Zero Dawn": 45,
-    "The Witcher 3: Wild Hunt": 40,
-    "The Sims": 30,
-    "Half-Life": 20,
-    "Doom": 35,
-    "Counter-Strike": 25,
-    "World of Warcraft": 15,
+    "Free Fire Mobile": 50,
+    "GTA V": 120,
+    "Call of Duty Black Ops 3": 200,
+    "Cyberpunk 2077": 200,
+    "Red Dead Redemption 2": 200,
+    "Assassin's Creed Valhalla": 200,
+    "Horizon Zero Dawn": 210,
+    "The Witcher 3: Wild Hunt": 200,
+    "The Sims": 50,
+    "Half-Life": 80,
+    Doom: 280,
+    "Counter-Strike": 180,
+    "World of Warcraft": 200,
   };
-  
+
   // Ejemplo de cómo acceder al precio de un juego
   const juegoSeleccionado = complejidadEstilo;
   const precioJuegoSeleccionado = preciosJuegos[juegoSeleccionado];
   console.log(precioJuegoSeleccionado);
-
-
-
-
-
-
 
   //...
 
@@ -254,7 +238,7 @@ const Paquetes = () => {
     { label: "3 meses", value: 30 },
   ];
 
-  const [duracionProyecto, setDuracionProyecto] = useState("");
+  const [duracionProyecto, setDuracionProyecto] = useState(duracionProyectoOptions[0].value);
 
   // Función para obtener el label a partir del value
   function getLabelByValue(value) {
@@ -281,9 +265,8 @@ const Paquetes = () => {
     variacionVegetacion: 2.5,
     variacionAccesoriosNatural: 18,
     efectoEspecialAnimacionesMundo: 50,
-    estiloArquitectonico: 0,
-    variacionAccesorios: 0,
-    variacionConstrucciones: 0,
+    variacionAccesorios:18,
+    variacionConstrucciones: 30,
     juego: 0, // Precio base para el juego
   };
 
@@ -294,8 +277,6 @@ const Paquetes = () => {
       precios.escalaAmbiente * escalaAmbiente +
       precios.variacionVegetacion * variacionVegetacion +
       precios.variacionAccesoriosNatural * variacionAccesoriosNatural +
-      precios.estiloArquitectonico *
-        estilosArquitectonicos.indexOf(estiloArquitectonico) +
       precios.variacionAccesorios * variacionAccesorios +
       precios.variacionConstrucciones * variacionConstrucciones +
       precios.efectoEspecialAnimacionesMundo * efectoEspecialAnimacionesMundo +
@@ -332,7 +313,7 @@ const Paquetes = () => {
 
             <div className="Grid_Exposicion gap-5">
               <div className=" relative flex justify-end items-end  p-1 text-lime-500 h-[180px] w-[180px] border  border-lime-500">
-                <div className="absolute">{metrosCuadrados} m2  </div>
+                <div className="absolute">{metrosCuadrados} m2 </div>
 
                 <div className=" p-2 absolute  w-full h-full ">
                   {" "}
@@ -437,14 +418,12 @@ const Paquetes = () => {
                 <p className=" text-orange-600  z-20  text-3xl">{tiempo}</p>
               </div>
 
-
               <div className=" flex justify-center items-center border-dashed text-3xl h-[180px] w-[180px] border  border-neutral-500">
                 <div className=" text-center text-sm">
                   Agregar Imagen Referencia <br />{" "}
                   <span className="font-BebasNeue text-3xl">+</span>{" "}
                 </div>
               </div>
-
 
               <div className="h-[180px] w-[180px] border  border-lime-500">
                 +
@@ -557,6 +536,7 @@ const Paquetes = () => {
                     ))}
                   </select>
                 </div>
+
                 <div>
                   <label>Complejidad y Estilo de Juego Esperado:</label>
                   <select
@@ -566,12 +546,11 @@ const Paquetes = () => {
                   >
                     {complejidadEstiloJuego.map((estilo, index) => (
                       <option key={index} value={estilo}>
-                        {estilo} - $
-                        {precios.complejidadEstilo *
-                          complejidadEstiloJuego.indexOf(estilo)}
+                        {estilo}
                       </option>
                     ))}
                   </select>
+                  <p className=" text-3xl">{precioJuegoSeleccionado}$</p>
                 </div>
               </div>
 
@@ -588,13 +567,12 @@ const Paquetes = () => {
                   >
                     {estilosArquitectonicos.map((estilo, index) => (
                       <option key={index} value={estilo}>
-                        {estilo} - $
-                        {precios.estiloArquitectonico *
-                          estilosArquitectonicos.indexOf(estilo)}
+                        {estilo}
                       </option>
                     ))}
                   </select>
                 </div>
+
                 <div>
                   <label>
                     Variación Accesorios: <br />
@@ -693,11 +671,10 @@ const Paquetes = () => {
       precios.selectivoEscala * selectivoEscala +
       precios.variacionVegetacion * variacionVegetacion +
       precios.variacionAccesoriosNatural * variacionAccesoriosNatural +
-      precios.estiloArquitectonico *
-        estilosArquitectonicos.indexOf(estiloArquitectonico) +
       precios.variacionAccesorios * variacionAccesorios +
       precios.variacionConstrucciones * variacionConstrucciones +
       precios.efectoEspecialAnimacionesMundo * efectoEspecialAnimacionesMundo +
+      precioJuegoSeleccionado +
       precios.juego +
       duracionProyecto // Sumando el precio de la duración del proyecto
     );
