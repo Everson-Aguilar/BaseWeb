@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import Plantas from "./plantas";
 
+import Construcciones from "./construcciones";
 
 //css
 
@@ -21,6 +22,12 @@ const Paquetes = () => {
   //selectivo de array
 
   const [selectivoEscala, setselectivoEscala] = useState(escalasAmbiente[0]);
+
+  // convercion m2
+
+  const metrosCuadrados =  selectivoEscala * selectivoEscala;
+
+
 
   // condicional
   const asignarMensaje = () => {
@@ -83,34 +90,27 @@ const Paquetes = () => {
 
   //...
 
+  // motores graficos
+  const motoresGraficos = ["Unreal Engine", "Unity", "Render Normal"];
 
+  const [motorGrafico, setMotorGrafico] = useState(motoresGraficos[0]);
 
-   // motores graficos
-   const motoresGraficos = ["Unreal Engine", "Unity", "Render Normal"];
+  //...
 
-   const [motorGrafico, setMotorGrafico] = useState(motoresGraficos[0]);
+  //efectoEspecialesAnimacion
 
-   //...
+  const efectosEspecialesAnimaciones = [0, 1, 2, 3, 4, 5, 6, 7]; // Números para los efectos especiales
 
+  const [efectoEspecialAnimacionesMundo, setEfectoEspecialAnimacionesMundo] =
+    useState(efectosEspecialesAnimaciones[0]);
 
+  //...
 
-   //efectoEspecialesAnimacion
+  //complejidad de videojuego
 
-   const efectosEspecialesAnimaciones = [0, 1, 2, 3, 4, 5, 6, 7]; // Números para los efectos especiales
-
-   const [efectoEspecialAnimacionesMundo, setEfectoEspecialAnimacionesMundo] =
-   useState(efectosEspecialesAnimaciones[0]);
-
-
-
-   //...
-
-
-   //complejidad de videojuego
-
-   const complejidadEstiloJuego = [
+  const complejidadEstiloJuego = [
     "Free Fire Mobile",
-    "GTA V ",
+    "GTA V",
     "Call of Duty Black Ops 3 ",
     "Cyberpunk 2077",
     "Red Dead Redemption 2",
@@ -124,18 +124,28 @@ const Paquetes = () => {
     "World of Warcraft",
   ];
 
+
+
+
+
+
+
   const imagenesJuegos = {
     "Free Fire Mobile": "/DiseñoWeb/formulario/juegosMesa de trabajo 1.jpg",
     "GTA V ": "/DiseñoWeb/formulario/juegosMesa de trabajo 2.jpg",
-    "Call of Duty Black Ops 3 ": "/DiseñoWeb/formulario/juegosMesa de trabajo 3.jpg",
-    "Cyberpunk 2077":"/DiseñoWeb/formulario/juegosMesa de trabajo 4.jpg",
-    "Red Dead Redemption 2": "/DiseñoWeb/formulario/juegosMesa de trabajo 5.jpg",
-    "Assassin's Creed Valhalla": "/DiseñoWeb/formulario/juegosMesa de trabajo 6.jpg",
+    "Call of Duty Black Ops 3 ":
+      "/DiseñoWeb/formulario/juegosMesa de trabajo 3.jpg",
+    "Cyberpunk 2077": "/DiseñoWeb/formulario/juegosMesa de trabajo 4.jpg",
+    "Red Dead Redemption 2":
+      "/DiseñoWeb/formulario/juegosMesa de trabajo 5.jpg",
+    "Assassin's Creed Valhalla":
+      "/DiseñoWeb/formulario/juegosMesa de trabajo 6.jpg",
     "Horizon Zero Dawn": "/DiseñoWeb/formulario/juegosMesa de trabajo 7.jpg",
-    "The Witcher 3: Wild Hunt": "/DiseñoWeb/formulario/juegosMesa de trabajo 8.jpg",
+    "The Witcher 3: Wild Hunt":
+      "/DiseñoWeb/formulario/juegosMesa de trabajo 8.jpg",
     "The Sims": "/DiseñoWeb/formulario/juegosMesa de trabajo 9.jpg",
     "Half-Life": "/DiseñoWeb/formulario/juegosMesa de trabajo 10.jpg",
-    "Doom": "/DiseñoWeb/formulario/juegosMesa de trabajo 11.jpg",
+    Doom: "/DiseñoWeb/formulario/juegosMesa de trabajo 11.jpg",
     "Counter-Strike": "/DiseñoWeb/formulario/juegosMesa de trabajo 12.jpg",
     "World of Warcraft": "/DiseñoWeb/formulario/juegosMesa de trabajo 13.jpg",
   };
@@ -144,22 +154,43 @@ const Paquetes = () => {
     complejidadEstiloJuego[0]
   );
 
-    
-
   // Ejemplo de cómo acceder a la ruta de imagen de un juego específico
   const juego_imagen = complejidadEstilo;
   const rutaImagen = imagenesJuegos[juego_imagen];
   console.log(`La ruta de la imagen para ${juego_imagen} es: ${rutaImagen}`);
 
- 
-
-   //...
 
 
- 
-   
+  const preciosJuegos = {
+    "Free Fire Mobile": 10,
+    "GTA V": 50,
+    "Call of Duty Black Ops 3": 50,
+    "Cyberpunk 2077": 70,
+    "Red Dead Redemption 2": 80,
+    "Assassin's Creed Valhalla": 55,
+    "Horizon Zero Dawn": 45,
+    "The Witcher 3: Wild Hunt": 40,
+    "The Sims": 30,
+    "Half-Life": 20,
+    "Doom": 35,
+    "Counter-Strike": 25,
+    "World of Warcraft": 15,
+  };
+  
+  // Ejemplo de cómo acceder al precio de un juego
+  const juegoSeleccionado = complejidadEstilo;
+  const precioJuegoSeleccionado = preciosJuegos[juegoSeleccionado];
+  console.log(precioJuegoSeleccionado);
 
 
+
+
+
+
+
+  //...
+
+  // estilo  arquiteconico
 
   const estilosArquitectonicos = [
     "Rural",
@@ -182,16 +213,67 @@ const Paquetes = () => {
     "Renacentista",
     "High-tech",
   ];
+
+  const [estiloArquitectonico, setEstiloArquitectonico] = useState(
+    estilosArquitectonicos[0]
+  );
+
+  //...
+
+  // variacion accesorios
+
   const variacionesAccesorios = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   ];
+
+  const [variacionAccesorios, setVariacionAccesorios] = useState(
+    variacionesAccesorios[0]
+  );
+
+  //...
+
+  // variacion construcciones
+
   const variacionesConstrucciones = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   ];
- 
 
+  const [variacionConstrucciones, setVariacionConstrucciones] = useState(
+    variacionesConstrucciones[0]
+  );
 
+  //...
 
+  // Opciones para duración del proyecto
+  const duracionProyectoOptions = [
+    { label: "21 días", value: 150 },
+    { label: "1 mes", value: 130 },
+    { label: "1 mes 1/2", value: 80 },
+    { label: "2 mes", value: 70 },
+    { label: "2 meses 1/2", value: 50 },
+    { label: "3 meses", value: 30 },
+  ];
+
+  const [duracionProyecto, setDuracionProyecto] = useState("");
+
+  // Función para obtener el label a partir del value
+  function getLabelByValue(value) {
+    const option = duracionProyectoOptions.find(
+      (option) => option.value === value
+    );
+    return option ? option.label : null;
+  }
+
+  // Ejemplo de uso
+  const value = duracionProyecto;
+  const tiempo = getLabelByValue(value);
+  console.log(tiempo); // Imprime "1 mes"
+
+  //..
+
+  // Nuevos estados para los campos de texto
+  const [nombreProyecto, setNombreProyecto] = useState("");
+  const [descripcionProyecto, setDescripcionProyecto] = useState("");
 
   // Precios base para cada tipo de selección
   const precios = {
@@ -202,42 +284,8 @@ const Paquetes = () => {
     estiloArquitectonico: 0,
     variacionAccesorios: 0,
     variacionConstrucciones: 0,
-    efectoEspecialAnimacionesLocal: 0,
-    complejidadEstilo: 0,
     juego: 0, // Precio base para el juego
   };
-
- 
-
-  const [estiloArquitectonico, setEstiloArquitectonico] = useState(
-    estilosArquitectonicos[0]
-  );
-
-  const [variacionAccesorios, setVariacionAccesorios] = useState(
-    variacionesAccesorios[0]
-  );
-  const [variacionConstrucciones, setVariacionConstrucciones] = useState(
-    variacionesConstrucciones[0]
-  );
-
-  const [efectoEspecialAnimacionesLocal, setEfectoEspecialAnimacionesLocal] =
-    useState(efectosEspecialesAnimaciones[0]);
-
-
-  // Nuevos estados para los campos de texto
-  const [nombreProyecto, setNombreProyecto] = useState("");
-  const [descripcionProyecto, setDescripcionProyecto] = useState("");
-  const [duracionProyecto, setDuracionProyecto] = useState("");
-
-  // Opciones para duración del proyecto
-  const duracionProyectoOptions = [
-    { label: "21 días", value: -1000 },
-    { label: "1 mes", value: -200 },
-    { label: "1 mes 1/2", value: -300 },
-    { label: "2 mes", value: -400 },
-    { label: "2 meses 1/2", value: -500 },
-    { label: "3 meses", value: -600 },
-  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -251,7 +299,6 @@ const Paquetes = () => {
       precios.variacionAccesorios * variacionAccesorios +
       precios.variacionConstrucciones * variacionConstrucciones +
       precios.efectoEspecialAnimacionesMundo * efectoEspecialAnimacionesMundo +
-      precios.efectoEspecialAnimacionesLocal * efectoEspecialAnimacionesLocal +
       precios.complejidadEstilo *
         complejidadEstiloJuego.indexOf(complejidadEstilo) +
       precios.juego +
@@ -284,8 +331,8 @@ const Paquetes = () => {
             </div>
 
             <div className="Grid_Exposicion gap-5">
-              <div className=" relative flex justify-end items-end p-1 text-lime-500 h-[180px] w-[180px] border  border-lime-500">
-                <div className="absolute">{selectivoEscala}m²</div>
+              <div className=" relative flex justify-end items-end  p-1 text-lime-500 h-[180px] w-[180px] border  border-lime-500">
+                <div className="absolute">{metrosCuadrados} m2  </div>
 
                 <div className=" p-2 absolute  w-full h-full ">
                   {" "}
@@ -306,53 +353,104 @@ const Paquetes = () => {
                 />
               </div>
               <div className=" p-2 relative flex h-[180px] w-[180px] border  border-lime-500">
-
-              <h2 className="text-lime-500 text-2xl"><h2>VARIEDAD COSAS</h2>  <span className="    z-20  text-3xl p-1 ">
-                  {variacionAccesoriosNatural}
-                </span> <span className=" text-base"> diferentes tipos de objetos en una escena 3D</span>   </h2> 
-
-          
-              
+                <h2 className="text-lime-500 text-2xl">
+                  <h2>VARIEDAD COSAS NATURAL</h2>{" "}
+                  <span className="    z-20  text-3xl p-1 ">
+                    {variacionAccesoriosNatural}
+                  </span>{" "}
+                  <span className=" text-base">
+                    {" "}
+                    diferentes tipos de objetos en una escena 3D
+                  </span>{" "}
+                </h2>
               </div>
 
               <div className=" p-2 h-[180px] w-[180px] border  border-lime-500">
-              <h2 className="text-lime-500 text-2xl"> <h2>ANIMACIONES OBJETOS</h2>  <span className="    z-20  text-3xl p-1 ">
-                  {efectoEspecialAnimacionesMundo}
-                </span> <span className=" text-base"> diseñar un ambiente mas vivo con animacion de objetos</span>   </h2> 
+                <h2 className="text-lime-500 text-2xl">
+                  {" "}
+                  <h2>ANIMACIONES OBJETOS</h2>{" "}
+                  <span className="    z-20  text-3xl p-1 ">
+                    {efectoEspecialAnimacionesMundo}
+                  </span>{" "}
+                  <span className=" text-base">
+                    {" "}
+                    diseñar un ambiente mas vivo con animacion de objetos
+                  </span>{" "}
+                </h2>
+              </div>
+              <div className=" relative h-[180px] w-[180px]  z-10 ">
+                <Image
+                  src={rutaImagen}
+                  alt="juegos consola"
+                  layout="fill" // Ajusta la imagen para llenar todo el contenedor
+                  objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
+                />
+              </div>
 
+              <div className=" p-2 h-[180px] w-[180px] border  border-lime-500">
+                <h2 className="text-lime-500 text-2xl">
+                  {" "}
+                  <h2>ESTILO ARQUITECTONICO</h2>{" "}
+                  <span className="    z-20  text-3xl p-1 ">
+                    {estiloArquitectonico}
+                  </span>{" "}
+                  <span className=" text-base">
+                    {" "}
+                    diseñar un ambiente con respecto al estilo e historia
+                  </span>{" "}
+                </h2>
               </div>
-              <div className=" relative h-[180px] w-[180px] border z-10 border-lime-500">
 
-              
+              <div className=" p-2 h-[180px] w-[180px] border  border-lime-500">
+                <h2 className="text-lime-500 text-2xl">
+                  {" "}
+                  <h2>VARIACION COSAS ARTIFICIAL</h2>{" "}
+                  <span className="    z-20  text-3xl p-1 "></span>{" "}
+                  <span className=" text-base"> creado por el humano</span>{" "}
+                </h2>
+                <h3 className=" absolute  text-lime-500  z-20  text-3xl p-1 ">
+                  {variacionAccesorios}
+                </h3>
+              </div>
+              <div className=" relative h-[180px] w-[180px] flex   ">
+                <h2 className=" absolute  text-orange-600  z-20  text-3xl p-1 ">
+                  {variacionConstrucciones}
+                </h2>
+                <Construcciones cantidad={variacionConstrucciones} />{" "}
+                {/* Mostrar 5 construcciones */}
+                <Image
+                  src="/DiseñoWeb/formulario/construcciones.jpg"
+                  alt="plano arquitectonico"
+                  layout="fill" // Ajusta la imagen para llenar todo el contenedor
+                  objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
+                />
+              </div>
 
-              <Image
-                      src={rutaImagen}
-                      alt="juegos consola"
-                      layout="fill" // Ajusta la imagen para llenar todo el contenedor
-                      objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
-                    />
+              <div className=" p-2 h-[180px] w-[180px]  ">
+                <h2 className="text-lime-500 text-2xl">
+                  {" "}
+                  <h2>MOTOR GRAFICO</h2>{" "}
+                  <span className="    z-20  text-3xl p-1 ">
+                    {motorGrafico}
+                  </span>{" "}
+                </h2>
+                <p className=" text-orange-600  z-20  text-3xl">{tiempo}</p>
+              </div>
 
+
+              <div className=" flex justify-center items-center border-dashed text-3xl h-[180px] w-[180px] border  border-neutral-500">
+                <div className=" text-center text-sm">
+                  Agregar Imagen Referencia <br />{" "}
+                  <span className="font-BebasNeue text-3xl">+</span>{" "}
+                </div>
+              </div>
+
+
+              <div className="h-[180px] w-[180px] border  border-lime-500">
+                +
               </div>
               <div className="h-[180px] w-[180px] border  border-lime-500">
-                x
-              </div>
-              <div className="h-[180px] w-[180px] border  border-lime-500">
-                x
-              </div>
-              <div className="h-[180px] w-[180px] border  border-lime-500">
-                x
-              </div>
-              <div className="h-[180px] w-[180px] border  border-lime-500">
-                x
-              </div>
-              <div className="h-[180px] w-[180px] border  border-lime-500">
-                x
-              </div>
-              <div className="h-[180px] w-[180px] border  border-lime-500">
-                x
-              </div>
-              <div className="h-[180px] w-[180px] border  border-lime-500">
-                x
+                +
               </div>
             </div>
           </div>
@@ -532,23 +630,6 @@ const Paquetes = () => {
                     ))}
                   </select>
                 </div>
-                <div>
-                  <label>Efecto Especiales Animaciones:</label>
-                  <select
-                    className="w-4/5 bg-neutral-600"
-                    value={efectoEspecialAnimacionesLocal}
-                    onChange={(e) =>
-                      setEfectoEspecialAnimacionesLocal(Number(e.target.value))
-                    }
-                  >
-                    {efectosEspecialesAnimaciones.map((efecto, index) => (
-                      <option key={index} value={efecto}>
-                        {efecto} - $
-                        {precios.efectoEspecialAnimacionesLocal * efecto}
-                      </option>
-                    ))}
-                  </select>
-                </div>
               </div>
 
               <div>
@@ -567,9 +648,7 @@ const Paquetes = () => {
               </div>
 
               <div>
-                <label>
-                  Disminuye los costo del proyecto,Duración del Proyecto:
-                </label>
+                <label>Tiempo Entrega:</label> <br />
                 <select
                   className="w-4/5 text-red-400 bg-neutral-600 "
                   value={duracionProyecto}
@@ -619,9 +698,6 @@ const Paquetes = () => {
       precios.variacionAccesorios * variacionAccesorios +
       precios.variacionConstrucciones * variacionConstrucciones +
       precios.efectoEspecialAnimacionesMundo * efectoEspecialAnimacionesMundo +
-      precios.efectoEspecialAnimacionesLocal * efectoEspecialAnimacionesLocal +
-      precios.complejidadEstilo *
-        complejidadEstiloJuego.indexOf(complejidadEstilo) +
       precios.juego +
       duracionProyecto // Sumando el precio de la duración del proyecto
     );
