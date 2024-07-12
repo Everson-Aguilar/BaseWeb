@@ -12,21 +12,17 @@ import Plantas from "./plantas";
 
 import "../css/peticion.css";
 
-
 const Paquetes = () => {
-  
-
   // sistemaEscala
-  
+
   //array
   const escalasAmbiente = [40, 80, 120, 160, 200, 240, 280, 400, 1000, 2000];
 
   //selectivo de array
-  
+
   const [selectivoEscala, setselectivoEscala] = useState(escalasAmbiente[0]);
 
- 
-// condicional
+  // condicional
   const asignarMensaje = () => {
     switch (selectivoEscala) {
       case 40:
@@ -54,44 +50,117 @@ const Paquetes = () => {
     }
   };
 
-
-   // variable a obtener resultados
-   let mensaje;
+  // variable a obtener resultados
+  let mensaje;
 
   // Llamamos a la función para obtener el mensaje
   mensaje = asignarMensaje();
 
   //...
 
-
-   // sistemaVegetacion
-
-
+  // sistemaVegetacion
 
   const variacionesVegetacion = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 50, 80, 200, 600,
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+    22, 23, 24, 25, 50, 80, 200, 600,
   ];
-
 
   const [variacionVegetacion, setVariacionVegetacion] = useState(
     variacionesVegetacion[0]
   );
 
-
-
-
-
-
-
-  
-
-
-
   //...
+
+  // variacionesAccesoriosNatural
 
   const variacionesAccesoriosNatural = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   ];
+
+  const [variacionAccesoriosNatural, setVariacionAccesoriosNatural] = useState(
+    variacionesAccesoriosNatural[0]
+  );
+
+  //...
+
+
+
+   // motores graficos
+   const motoresGraficos = ["Unreal Engine", "Unity", "Render Normal"];
+
+   const [motorGrafico, setMotorGrafico] = useState(motoresGraficos[0]);
+
+   //...
+
+
+
+   //efectoEspecialesAnimacion
+
+   const efectosEspecialesAnimaciones = [0, 1, 2, 3, 4, 5, 6, 7]; // Números para los efectos especiales
+
+   const [efectoEspecialAnimacionesMundo, setEfectoEspecialAnimacionesMundo] =
+   useState(efectosEspecialesAnimaciones[0]);
+
+
+
+   //...
+
+
+   //complejidad de videojuego
+
+   const complejidadEstiloJuego = [
+    "Free Fire Mobile",
+    "GTA V ",
+    "Call of Duty Black Ops 3 ",
+    "Cyberpunk 2077",
+    "Red Dead Redemption 2",
+    "Assassin's Creed Valhalla",
+    "Horizon Zero Dawn",
+    "The Witcher 3: Wild Hunt",
+    "The Sims",
+    "Half-Life",
+    "Doom",
+    "Counter-Strike",
+    "World of Warcraft",
+  ];
+
+  const imagenesJuegos = {
+    "Free Fire Mobile": "/DiseñoWeb/formulario/juegosMesa de trabajo 1.jpg",
+    "GTA V ": "/DiseñoWeb/formulario/juegosMesa de trabajo 2.jpg",
+    "Call of Duty Black Ops 3 ": "/DiseñoWeb/formulario/juegosMesa de trabajo 3.jpg",
+    "Cyberpunk 2077":"/DiseñoWeb/formulario/juegosMesa de trabajo 4.jpg",
+    "Red Dead Redemption 2": "/DiseñoWeb/formulario/juegosMesa de trabajo 5.jpg",
+    "Assassin's Creed Valhalla": "/DiseñoWeb/formulario/juegosMesa de trabajo 6.jpg",
+    "Horizon Zero Dawn": "/DiseñoWeb/formulario/juegosMesa de trabajo 7.jpg",
+    "The Witcher 3: Wild Hunt": "/DiseñoWeb/formulario/juegosMesa de trabajo 8.jpg",
+    "The Sims": "/DiseñoWeb/formulario/juegosMesa de trabajo 9.jpg",
+    "Half-Life": "/DiseñoWeb/formulario/juegosMesa de trabajo 10.jpg",
+    "Doom": "/DiseñoWeb/formulario/juegosMesa de trabajo 11.jpg",
+    "Counter-Strike": "/DiseñoWeb/formulario/juegosMesa de trabajo 12.jpg",
+    "World of Warcraft": "/DiseñoWeb/formulario/juegosMesa de trabajo 13.jpg",
+  };
+
+  const [complejidadEstilo, setComplejidadEstilo] = useState(
+    complejidadEstiloJuego[0]
+  );
+
+    
+
+  // Ejemplo de cómo acceder a la ruta de imagen de un juego específico
+  const juego_imagen = complejidadEstilo;
+  const rutaImagen = imagenesJuegos[juego_imagen];
+  console.log(`La ruta de la imagen para ${juego_imagen} es: ${rutaImagen}`);
+
+ 
+
+   //...
+
+
+ 
+   
+
+
+
   const estilosArquitectonicos = [
     "Rural",
     "Minimalista",
@@ -119,65 +188,41 @@ const Paquetes = () => {
   const variacionesConstrucciones = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   ];
-  const efectosEspecialesAnimaciones = [0, 1, 2, 3, 4, 5, 6, 7]; // Números para los efectos especiales
-  const complejidadEstiloJuego = [
-    "Free Fire Mobile",
-    "GTA V ",
-    "Call of Duty Black Ops 3 ",
-    "Cyberpunk 2077",
-    "Red Dead Redemption 2",
-    "Assassin's Creed Valhalla",
-    "Horizon Zero Dawn",
-    "The Witcher 3: Wild Hunt",
-    "The Sims",
-    "Half-Life",
-    "Doom",
-    "Counter-Strike",
-    "World of Warcraft",
-  ];
+ 
+
+
+
 
   // Precios base para cada tipo de selección
   const precios = {
     selectivoEscala: 2,
     variacionVegetacion: 2.5,
-    variacionAccesoriosNatural: 0,
+    variacionAccesoriosNatural: 18,
+    efectoEspecialAnimacionesMundo: 50,
     estiloArquitectonico: 0,
     variacionAccesorios: 0,
     variacionConstrucciones: 0,
-    efectoEspecialAnimacionesMundo: 0,
     efectoEspecialAnimacionesLocal: 0,
     complejidadEstilo: 0,
     juego: 0, // Precio base para el juego
   };
 
-  // Definir la constante antes de usarla
-  const motoresGraficos = ["Unreal Engine", "Unity", "Render Normal"];
-
-  // Luego, puedes utilizarla en el estado
-  const [motorGrafico, setMotorGrafico] = useState(motoresGraficos[0]);
-
-  // Estados para las selecciones
  
 
-  const [variacionAccesoriosNatural, setVariacionAccesoriosNatural] = useState(
-    variacionesAccesoriosNatural[0]
-  );
   const [estiloArquitectonico, setEstiloArquitectonico] = useState(
     estilosArquitectonicos[0]
   );
+
   const [variacionAccesorios, setVariacionAccesorios] = useState(
     variacionesAccesorios[0]
   );
   const [variacionConstrucciones, setVariacionConstrucciones] = useState(
     variacionesConstrucciones[0]
   );
-  const [efectoEspecialAnimacionesMundo, setEfectoEspecialAnimacionesMundo] =
-    useState(efectosEspecialesAnimaciones[0]);
+
   const [efectoEspecialAnimacionesLocal, setEfectoEspecialAnimacionesLocal] =
     useState(efectosEspecialesAnimaciones[0]);
-  const [complejidadEstilo, setComplejidadEstilo] = useState(
-    complejidadEstiloJuego[0]
-  );
+
 
   // Nuevos estados para los campos de texto
   const [nombreProyecto, setNombreProyecto] = useState("");
@@ -239,55 +284,74 @@ const Paquetes = () => {
             </div>
 
             <div className="Grid_Exposicion gap-5">
-              <div className=" relative flex justify-end items-end p-1 text-lime-500 h-[200px] w-[200px] border  border-lime-500">
+              <div className=" relative flex justify-end items-end p-1 text-lime-500 h-[180px] w-[180px] border  border-lime-500">
                 <div className="absolute">{selectivoEscala}m²</div>
 
-              <div className=" p-2 absolute  w-full h-full "> <p className="text-lime-500 text-2xl">USOS</p> {mensaje}</div>
+                <div className=" p-2 absolute  w-full h-full ">
+                  {" "}
+                  <h2 className="text-lime-500 text-2xl">USOS</h2> {mensaje}
+                </div>
               </div>
-              <div className=" relative h-[200px] w-[200px] flex   ">
-                <p className=" absolute  text-orange-600  z-20  text-3xl p-1 ">{variacionVegetacion}</p>
+              <div className=" relative h-[180px] w-[180px] flex   ">
+                <h2 className=" absolute  text-orange-600  z-20  text-3xl p-1 ">
+                  {variacionVegetacion}
+                </h2>
+                <Plantas cantidad={variacionVegetacion} />{" "}
+                {/* Mostrar 5 treboles */}
+                <Image
+                  src="/DiseñoWeb/formulario/vegetacion.jpg"
+                  alt="plano arquitectonico"
+                  layout="fill" // Ajusta la imagen para llenar todo el contenedor
+                  objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
+                />
+              </div>
+              <div className=" p-2 relative flex h-[180px] w-[180px] border  border-lime-500">
 
+              <h2 className="text-lime-500 text-2xl"><h2>VARIEDAD COSAS</h2>  <span className="    z-20  text-3xl p-1 ">
+                  {variacionAccesoriosNatural}
+                </span> <span className=" text-base"> diferentes tipos de objetos en una escena 3D</span>   </h2> 
 
-                <Plantas cantidad={variacionVegetacion} />  {/* Mostrar 5 treboles */}
+          
+              
+              </div>
 
+              <div className=" p-2 h-[180px] w-[180px] border  border-lime-500">
+              <h2 className="text-lime-500 text-2xl"> <h2>ANIMACIONES OBJETOS</h2>  <span className="    z-20  text-3xl p-1 ">
+                  {efectoEspecialAnimacionesMundo}
+                </span> <span className=" text-base"> diseñar un ambiente mas vivo con animacion de objetos</span>   </h2> 
 
+              </div>
+              <div className=" relative h-[180px] w-[180px] border z-10 border-lime-500">
 
-            
+              
+
               <Image
-                      src="/DiseñoWeb/formulario/vegetacion.jpg"
-                      alt="plano arquitectonico"
+                      src={rutaImagen}
+                      alt="juegos consola"
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
+
               </div>
-              <div className="h-[200px] w-[200px] border  border-lime-500">
+              <div className="h-[180px] w-[180px] border  border-lime-500">
                 x
               </div>
-              <div className="h-[200px] w-[200px] border  border-lime-500">
+              <div className="h-[180px] w-[180px] border  border-lime-500">
                 x
               </div>
-              <div className="h-[200px] w-[200px] border  border-lime-500">
+              <div className="h-[180px] w-[180px] border  border-lime-500">
                 x
               </div>
-              <div className="h-[200px] w-[200px] border  border-lime-500">
+              <div className="h-[180px] w-[180px] border  border-lime-500">
                 x
               </div>
-              <div className="h-[200px] w-[200px] border  border-lime-500">
+              <div className="h-[180px] w-[180px] border  border-lime-500">
                 x
               </div>
-              <div className="h-[200px] w-[200px] border  border-lime-500">
+              <div className="h-[180px] w-[180px] border  border-lime-500">
                 x
               </div>
-              <div className="h-[200px] w-[200px] border  border-lime-500">
-                x
-              </div>
-              <div className="h-[200px] w-[200px] border  border-lime-500">
-                x
-              </div>
-              <div className="h-[200px] w-[200px] border  border-lime-500">
-                x
-              </div>
-              <div className="h-[200px] w-[200px] border  border-lime-500">
+              <div className="h-[180px] w-[180px] border  border-lime-500">
                 x
               </div>
             </div>
@@ -333,7 +397,6 @@ const Paquetes = () => {
                     Escala del Ambiente: <br />
                   </label>
                   <select
-                    
                     className="w-4/5 bg-neutral-600"
                     value={selectivoEscala}
                     onChange={(e) => setselectivoEscala(Number(e.target.value))}
