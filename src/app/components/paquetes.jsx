@@ -7,8 +7,8 @@ import Image from "next/image";
 
 import Plantas from "./plantas";
 import Construcciones from "./construcciones";
+import Ref from "./ref"
 
-import subir_01 from './subir_01';
 
  
 
@@ -165,7 +165,7 @@ const Paquetes = () => {
     "The Witcher 3: Wild Hunt": 200,
     "The Sims": 50,
     "Half-Life": 80,
-    Doom: 280,
+    "Doom": 280,
     "Counter-Strike": 180,
     "World of Warcraft": 200,
   };
@@ -306,7 +306,7 @@ const Paquetes = () => {
         <div className=" font-VT323 text-1xl break-words w-full p-2 text-neutral-600 h-full bg-neutral-900  min-h-[650px]  ">
           {/*visual representacion */}
 
-          <div className="  w-[416px] flex-initial box-border  h-full">
+          <div className="  max-w-[416px] flex-initial box-border  h-full">
             <div className=" p-1  text-5xl text-neutral-200 ">
               {nombreProyecto}
             </div>
@@ -315,19 +315,19 @@ const Paquetes = () => {
               {descripcionProyecto}
             </div>
 
-            <div className="Grid_Exposicion gap-5">
+            <div className="Grid_Exposicion gap-1">
               <div className=" relative flex justify-end items-end  p-1 text-lime-500 h-[180px] w-[180px] border  border-lime-500">
                 <div className="absolute">{metrosCuadrados} m2 </div>
 
                 <div className=" p-2 absolute  w-full h-full ">
                   {" "}
-                  <h2 className="text-lime-500 text-2xl">USOS</h2> {mensaje}
+                  <div className="text-lime-500 text-2xl">USOS</div> {mensaje}
                 </div>
               </div>
               <div className=" relative h-[180px] w-[180px] flex   ">
-                <h2 className=" absolute  text-orange-600  z-20  text-3xl p-1 ">
+                <div className=" absolute  text-orange-600  z-20  text-3xl p-1 ">
                   {variacionVegetacion}
-                </h2>
+                </div>
                 <Plantas cantidad={variacionVegetacion} />{" "}
                 {/* Mostrar 5 treboles */}
                 <Image
@@ -338,8 +338,8 @@ const Paquetes = () => {
                 />
               </div>
               <div className=" p-2 relative flex h-[180px] w-[180px] border  border-lime-500">
-                <h2 className="text-lime-500 text-2xl">
-                  <h2>VARIEDAD COSAS NATURAL</h2>{" "}
+                <div className="text-lime-500 text-2xl">
+                  <div>VARIEDAD COSAS NATURAL</div>{" "}
                   <span className="    z-20  text-3xl p-1 ">
                     {variacionAccesoriosNatural}
                   </span>{" "}
@@ -347,13 +347,13 @@ const Paquetes = () => {
                     {" "}
                     diferentes tipos de objetos en una escena 3D
                   </span>{" "}
-                </h2>
+                </div>
               </div>
 
               <div className=" p-2 h-[180px] w-[180px] border  border-lime-500">
-                <h2 className="text-lime-500 text-2xl">
+                <div className="text-lime-500 text-2xl">
                   {" "}
-                  <h2>ANIMACIONES OBJETOS</h2>{" "}
+                  <div>ANIMACIONES OBJETOS</div>{" "}
                   <span className="    z-20  text-3xl p-1 ">
                     {efectoEspecialAnimacionesMundo}
                   </span>{" "}
@@ -361,7 +361,7 @@ const Paquetes = () => {
                     {" "}
                     diseñar un ambiente mas vivo con animacion de objetos
                   </span>{" "}
-                </h2>
+                </div>
               </div>
               <div className=" relative h-[180px] w-[180px]  z-10 ">
                 <Image
@@ -373,9 +373,9 @@ const Paquetes = () => {
               </div>
 
               <div className=" p-2 h-[180px] w-[180px] border  border-lime-500">
-                <h2 className="text-lime-500 text-2xl">
+                <div className="text-lime-500 text-2xl">
                   {" "}
-                  <h2>ESTILO ARQUITECTONICO</h2>{" "}
+                  <div>ESTILO ARQUITECTONICO</div>{" "}
                   <span className="    z-20  text-3xl p-1 ">
                     {estiloArquitectonico}
                   </span>{" "}
@@ -383,24 +383,24 @@ const Paquetes = () => {
                     {" "}
                     diseñar un ambiente con respecto al estilo e historia
                   </span>{" "}
-                </h2>
+                </div>
               </div>
 
               <div className=" p-2 h-[180px] w-[180px] border  border-lime-500">
-                <h2 className="text-lime-500 text-2xl">
+                <div className="text-lime-500 text-2xl">
                   {" "}
-                  <h2>VARIACION COSAS ARTIFICIAL</h2>{" "}
+                  <div>VARIACION COSAS ARTIFICIAL</div>{" "}
                   <span className="    z-20  text-3xl p-1 "></span>{" "}
                   <span className=" text-base"> creado por el humano</span>{" "}
-                </h2>
-                <h3 className=" absolute  text-lime-500  z-20  text-3xl p-1 ">
+                </div>
+                <div className=" absolute  text-lime-500  z-20  text-3xl p-1 ">
                   {variacionAccesorios}
-                </h3>
+                </div>
               </div>
               <div className=" relative h-[180px] w-[180px] flex   ">
-                <h2 className=" absolute  text-orange-600  z-20  text-3xl p-1 ">
+                <div className=" absolute  text-orange-600  z-20  text-3xl p-1 ">
                   {variacionConstrucciones}
-                </h2>
+                </div>
                 <Construcciones cantidad={variacionConstrucciones} />{" "}
                 {/* Mostrar 5 construcciones */}
                 <Image
@@ -412,34 +412,47 @@ const Paquetes = () => {
               </div>
 
               <div className=" p-2 h-[180px] w-[180px]  ">
-                <h2 className="text-lime-500 text-2xl">
+                <div className="text-lime-500 text-2xl">
                   {" "}
-                  <h2>MOTOR GRAFICO</h2>{" "}
+                  <div>MOTOR GRAFICO</div>{" "}
                   <span className="    z-20  text-3xl p-1 ">
                     {motorGrafico}
                   </span>{" "}
-                </h2>
-                <p className=" text-orange-600  z-20  text-3xl">{tiempo}</p>
-              </div>
-
-
-              <div className=" flex z-50 justify-center items-center border-dashed text-3xl h-[180px] w-[180px] border  border-neutral-500">
-              <subir_01/>
-              </div>
-
-              <div className=" flex justify-center items-center border-dashed text-3xl h-[180px] w-[180px] border  border-neutral-500">
-                <div className=" text-center text-sm">
-                  Agregar Imagen Referencia <br />{" "}
-                  <span className="font-BebasNeue text-3xl">+</span>{" "}
                 </div>
+                <div className=" text-orange-600  z-20  text-3xl">{tiempo}</div>
               </div>
 
-              <div className=" flex justify-center items-center border-dashed text-3xl h-[180px] w-[180px] border  border-neutral-500">
-                <div className=" text-center text-sm">
-                  Agregar Imagen Referencia <br />{" "}
-                  <span className="font-BebasNeue text-3xl">+</span>{" "}
-                </div>
+
+              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <Ref/> 
               </div>
+
+              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <Ref/> 
+              </div>
+              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <Ref/> 
+              </div>
+              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <Ref/> 
+              </div>
+              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <Ref/> 
+              </div>
+              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <Ref/> 
+              </div>
+              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <Ref/> 
+              </div>
+              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <Ref/> 
+              </div>
+              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <Ref/> 
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -448,12 +461,12 @@ const Paquetes = () => {
         {/*-------------------------------------------------------------------------------------------------------------------formulario-------*/}
         <div className="  flex w-1/2 ">
           <div className=" z-10  p-14 w-full  flex-row pb-10  shadow-lg min-w-96  bg-neutral-700   justify-between font-Quicksand   text-zinc-400">
-            <h2 className="font-BebasNeue text-2xl text-zinc-800">
+            <div className="font-BebasNeue text-2xl text-zinc-800">
               INFORMACION PROYECTO
-            </h2>
+            </div>
             <div>
               <label>
-                Nombre del Proyecto: <br />
+               <div> Nombre del Proyecto: </div>
               </label>
               <input
                 className="w-4/5 bg-neutral-600"
@@ -464,7 +477,7 @@ const Paquetes = () => {
             </div>
             <div>
               <label>
-                Descripción del Proyecto: <br />
+                <div>Descripción del Proyecto: </div>
               </label>
               <textarea
                 className=" overflow-auto  max-h-20 w-4/5 bg-neutral-600"
@@ -473,14 +486,14 @@ const Paquetes = () => {
               />
             </div>
 
-            <h2 className="font-BebasNeue text-2xl text-zinc-800">
-              DISEÑO GLOBAL MUNDO
-            </h2>
+            <div className="font-BebasNeue text-2xl text-zinc-800">
+              <div>DISEÑO GLOBAL MUNDO</div>
+            </div>
             <form onSubmit={handleSubmit}>
               <div>
                 <div>
                   <label>
-                    Escala del Ambiente: <br />
+                    Escala del Ambiente: 
                   </label>
                   <select
                     className="w-4/5 bg-neutral-600"
@@ -489,7 +502,7 @@ const Paquetes = () => {
                   >
                     {escalasAmbiente.map((escala, index) => (
                       <option key={index} value={escala}>
-                        {escala}ml <br /> x <br />
+                        {escala}ml× 
                         {escala}ml = ${precios.selectivoEscala * escala}
                       </option>
                     ))}
@@ -559,13 +572,13 @@ const Paquetes = () => {
                       </option>
                     ))}
                   </select>
-                  <p className=" text-3xl">{precioJuegoSeleccionado}$</p>
+                  <div className=" text-3xl">{precioJuegoSeleccionado}$</div>
                 </div>
               </div>
 
-              <h2 className="font-BebasNeue text-2xl text-zinc-800">
+              <div className="font-BebasNeue text-2xl text-zinc-800">
                 DISEÑO LOCAL CONSTRUCCION
-              </h2>
+              </div>
               <div>
                 <div>
                   <label>Estilo Lugar Arquitectónico:</label>
@@ -584,7 +597,7 @@ const Paquetes = () => {
 
                 <div>
                   <label>
-                    Variación Accesorios: <br />
+                    <div>Variación Accesorios: </div>
                   </label>
                   <select
                     className="w-4/5 bg-neutral-600"
@@ -601,7 +614,7 @@ const Paquetes = () => {
                   </select>
                 </div>
                 <div>
-                  <label>Variación de Construcciones:</label>
+                  <label><div>Variación de Construcciones:</div></label>
                   <select
                     className="w-4/5 bg-neutral-600"
                     value={variacionConstrucciones}
@@ -620,7 +633,7 @@ const Paquetes = () => {
               </div>
 
               <div>
-                <label>Motor Gráfico:</label>
+                <label><div>Motor Gráfico:</div></label>
                 <select
                   className="w-4/5 bg-neutral-600"
                   value={motorGrafico}
@@ -635,7 +648,7 @@ const Paquetes = () => {
               </div>
 
               <div>
-                <label>Tiempo Entrega:</label> <br />
+                <label><div>Tiempo Entrega:</div></label> 
                 <select
                   className="w-4/5 text-red-400 bg-neutral-600 "
                   value={duracionProyecto}
@@ -653,10 +666,10 @@ const Paquetes = () => {
 
             {/* Mostrar resultado final dinámico */}
             <div>
-              <h3 className="font-BebasNeue text-2xl text-zinc-800">
+              <div className="font-BebasNeue text-2xl text-zinc-800">
                 Costo Total del Proyecto:
-              </h3>
-              <p className=" text-4xl">${calcularCostoTotal()}</p>
+              </div>
+              <div className=" text-4xl">${calcularCostoTotal()}</div>
             </div>
             <button
               className="font-BebasNeue text-2xl text-zinc-800"
