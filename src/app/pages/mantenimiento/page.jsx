@@ -12,9 +12,12 @@ const MiComponente = () => {
             ofrecerte una mejor experiencia. Lamentamos cualquier inconveniente
             causado. Estaremos de vuelta pronto.
           </p>
-          <button className="mt-10 rounded-xl font-Staatliches bg-neutral-400 h-10 w-40 hover:bg-neutral-500 transform transition duration-300 hover:scale-105">
-      <Link href="/">Inicio</Link>
-    </button>
+          
+          <Link href="/">
+        <button className="mt-10 rounded-xl font-Staatliches bg-neutral-400 h-10 w-40 hover:bg-neutral-500 transform transition duration-300 hover:scale-105">
+          Inicio
+        </button>
+    </Link>
         </div>
       </div>
     </div>
