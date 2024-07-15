@@ -77,7 +77,7 @@ export default function Home() {
   }
 
   return (
-    <div className="App">
+    <div className="App ">
       {/* PANEL DE RESULTAD DE BUSCADORES     */}
 
       <Head>
@@ -111,7 +111,7 @@ export default function Home() {
 
       <main>
         {/*Ajuste Base Aplicacion     00  */}
-        <div className="bg-neutral-600 h-16 w-full min-w-[412px]"></div>
+        <div className="bg-neutral-600 h-16 w-full "></div>
         {/*Fin base Ajuste Aplicacion 00  */}
 
         {/*********************************************************************************

@@ -6,7 +6,7 @@
   grid-template-rows: 1fr;
   gap: 5px 5px;
   grid-auto-flow: row;
-  min-width: 412px;
+  min-width: 415px;
   background-color: rgb(82 82 82 ) ;
   overflow: hidden;
  
