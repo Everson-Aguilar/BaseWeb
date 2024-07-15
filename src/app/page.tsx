@@ -83,6 +83,8 @@ export default function Home() {
       <Head>
         <title>SERVICIO DE DISEÑO DE ENTORNO 3D</title>
 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
         <meta
           name="description"
           content="Descubre nuestros servicios en diseño 3D para entornos, planos de construcción y accesorios. En 3Dscape, convertimos ideas en realidad con modelos virtuales detallados y visualizaciones realistas."

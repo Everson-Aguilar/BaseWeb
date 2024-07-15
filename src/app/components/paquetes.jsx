@@ -300,10 +300,10 @@ const Paquetes = () => {
 
     <div>
       
-      <div className="  peticion_Estructura   h-auto w-full min-w-[412px] bg-neutral-600     ">
+      <div className="  peticion_Estructura   h-auto w-full min-w-[412px] bg-neutral-600    ">
         {/*-----------------------------------------------------------------------------------------------------------------------visual-------*/}
 
-        <div className=" font-VT323 text-1xl break-words w-full p-2 text-neutral-600 h-full bg-neutral-900  min-h-[650px]  ">
+        <div className=" font-VT323 text-1xl break-words w-full p-2 text-neutral-600 h-full bg-neutral-900  min-h-[650px]   ">
           {/*visual representacion */}
 
           <div className="  max-w-[416px] flex-initial box-border  h-full">
