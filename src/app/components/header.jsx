@@ -14,8 +14,11 @@ const Header = () => {
       <nav>
         <ul className='header_contenido font-Quicksand'>
           <li><Link href="/">Inicio</Link></li>
-          <li><a href="#">Soy Artista $$$</a></li>
-          <li><a href="#">Productos Visuales</a></li>
+          <li><Link href="/pages/mantenimiento">Soy Artista $$$</Link></li>
+          <li><Link href="/pages/mantenimiento">Productos Visuales</Link></li>
+        
+
+
           
         </ul>
       </nav>

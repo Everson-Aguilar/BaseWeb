@@ -470,7 +470,7 @@ export default function Home() {
           </div>
 
           <div>
-            <div className="imagen mt-2 ">
+            <div className="imagen_relleno mt-2 ">
               <img
                 src="/DiseñoWeb/panel_03.jpg"
                 alt="paisaje"

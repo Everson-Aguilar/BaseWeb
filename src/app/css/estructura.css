@@ -137,14 +137,24 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 5px 0px;
+  gap: 5px 5px;
   grid-auto-flow: row;
   height: auto;
-  min-width: 25vw;
+  min-width: 35vw;
  
 }
 
-/* Media query para pantallas aún más pequeñas */
+
+
+@media screen and (max-width: 1200px) {
+  .grid3 {
+
+    min-width: 30vw;
+
+    
+    
+  }
+}
 
 
 
@@ -152,4 +162,27 @@
 .imagen {
   height: 100%;
   width: 100%;
+}
+
+
+.imagen_relleno {
+  height: 100%;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .imagen_relleno {
+
+    display: none;
+    
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .imagen_relleno {
+
+    display: block;
+    
+  }
 }
