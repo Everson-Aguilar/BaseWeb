@@ -83,7 +83,10 @@ export default function Home() {
       <Head>
         <title>SERVICIO DE DISEÑO DE ENTORNO 3D</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
 
         <meta
           name="description"
@@ -138,9 +141,9 @@ export default function Home() {
 
               <div>
                 <ul className="text-5xl font-SixCaps text-stone-600   ">
-                  <li>+ Terreno</li>
+                  <li>+Terreno</li>
                   <li>+Construcción</li>
-                  <li>+ Accesorios</li>
+                  <li>+Accesorios</li>
                 </ul>
               </div>
             </div>
@@ -316,11 +319,11 @@ export default function Home() {
 
               <div className=" max-w-40 text-xs  text-neutral-300 box-border items-center justify-center flex-col h-full   p-5 overflow-hidden">
                 <span className="break-words">
-                  <p>
+                  <div>
                     Ofrecemos precios justos y equitativos adaptados al
                     proyecto. Nos enfocamos en ayudar a pequeños emprendedores
                     con productos económicos que cumplen sus necesidades.
-                  </p>
+                  </div>
                   <p className="font-BebasNeue text-2xl">Incluye:</p>
                   <ul className="text-stone-400 ">
                     <li>- Modelado 3D de [objetos/arquitectura/productos].</li>
@@ -359,16 +362,16 @@ export default function Home() {
          **********************************************************************************
          **********************************************************************************/}
         {/*portfolio y explicacion tecnica artistica     03-------------------------------*/}
-        <section className="base">
+        <section className="base mt-10">
           <div className=" grid3  ">
             <div className="  w-full flex-row justify-center items-center text-end ">
               <div className=" h-1/2 text-sm  p-3">
-                <p>
-                  <strong className=" tracking-wide  font-Acme  text-neutral-300 text-xl">
+                <div>
+                  <div className=" tracking-wide  font-Acme  text-neutral-300 text-xl">
                     PASOS PARA CREAR ACCESORIOS COMO ARTISTA DIGITAL:
-                  </strong>
-                </p>
-                <ul className="font-BebasNeue text-1xl text-neutral-400  ">
+                  </div>
+                </div>
+                <ul className="font-Staatliches text-1xl text-neutral-400  ">
                   <li>*Conceptualizaci&oacute;n y Referencias Visuales</li>
                   <li>*Modelado 3D de Alto Pol&iacute;gono</li>
                   <li>*Retopolog&iacute;a del Modelo</li>
@@ -382,7 +385,7 @@ export default function Home() {
                 </ul>
               </div>
             </div>
-            <div className=" w-full flex-row justify-center  items-center  bg-neutral-500 ">
+            <div className="   w-full flex-row justify-center  items-center   ">
               <div className=" h-full w-full flex items-center text-stone-600  p-5 ">
                 <Image
                   src="/DiseñoWeb/logogris.svg"
@@ -398,7 +401,7 @@ export default function Home() {
               </span>
               <div className=" h-full p-3 box-border ">
                 <div className=" h-1/2 p-2">
-                  <ul className="text-xs text-neutral-400 font-BebasNeue">
+                  <ul className="text-xs text-neutral-400 font-Staatliches">
                     <li>Autodesk Maya</li>
                     <li>Blender</li>
                     <li>Autodesk 3ds Max</li>
@@ -414,7 +417,7 @@ export default function Home() {
               <span className="font-Acme  text-neutral-300 text-xl ">
                 GRATIS PARA TI !
               </span>
-              <div className=" p-5 max-full text-xs text-neutral-400 font-BebasNeue">
+              <div className=" p-5 max-full text-xs text-neutral-400 font-Staatliches">
                 <span className=" text-2xl text-neutral-200">!</span> En nuestra
                 sección gratuita, ofrecemos consejos prácticos y accesibles para
                 mejorar tus espacios con soluciones de diseño funcional y
@@ -470,7 +473,7 @@ export default function Home() {
           </div>
 
           <div>
-            <div className="imagen_relleno mt-2 ">
+            <div className="imagen_relleno  mt-2 ">
               <img
                 src="/DiseñoWeb/panel_03.jpg"
                 alt="paisaje"
@@ -492,25 +495,16 @@ export default function Home() {
 
       {/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$--POLITICA--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */}
 
-      <footer className=" footer w-full  text-neutral-400 ">
-        <div className="ml-5">
+      <footer className=" footer w-full mt-10  text-neutral-400  ">
+        <div className="p-5 text-xs">
           <section>
-            <h2>Contacto</h2>
+            <div className="font-Jacquard12 text-2xl ">Contacto</div>
             <address>
-              <p>Dirección: COLOMBIA</p>
-              <p>
-                Email:{" "}
-                <a href="mailto:aguilar3dstudio@gmail.com">
-                  aguilar3dstudio@gmail.com
-                </a>
-              </p>
-              <p>
-                Teléfono: <a href="tel:+573052158161">+57 305 215 81 61</a>
-              </p>
+              <div>aguilar3dstudio@gmail.com</div>
             </address>
           </section>
           <section>
-            <h2>Redes Sociales</h2>
+            <div className="font-Jacquard12 text-2xl">Redes Sociales</div>
             <ul className="flex space-x-4">
               <li>
                 <a href="#">Facebook</a>
@@ -523,9 +517,6 @@ export default function Home() {
               </li>
               <li>
                 <a href="#">LinkedIn</a>
-              </li>
-              <li>
-                <a href="#">YouTube</a>
               </li>
             </ul>
           </section>

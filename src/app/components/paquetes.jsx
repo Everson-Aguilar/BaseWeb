@@ -679,7 +679,7 @@ const Paquetes = () => {
             </button>
           </div>
 
-          <div className=" DiseñoMobil_peticion  ">publicidad</div>
+          <div className=" DiseñoMobil_peticion  "></div>{/* publicidad */}
         </div>
         {/*...*/}
       </div>
