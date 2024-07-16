@@ -33,21 +33,22 @@
 
 .Grid_Exposicion {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  grid-template-columns: repeat(3, 180px);
+  grid-template-rows: repeat(6, 180px);
+
 }
 
 
 
 @media screen and (max-width: 850px) {
   .Grid_Exposicion {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+  
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: repeat(6, 180px);
+    
+    
+   
+  
   }
 }
 

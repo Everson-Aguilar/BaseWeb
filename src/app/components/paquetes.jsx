@@ -230,7 +230,7 @@ const Paquetes = () => {
 
   // Opciones para duración del proyecto
   const duracionProyectoOptions = [
-    { label: "21 días", value: 150 },
+    { label: "21 días", value: 250 },
     { label: "1 mes", value: 130 },
     { label: "1 mes 1/2", value: 80 },
     { label: "2 mes", value: 70 },
@@ -299,27 +299,35 @@ const Paquetes = () => {
     //ESTRUCTURA
 
     <div>
-      <div className="  peticion_Estructura   h-auto w-full min-w-[412px] bg-neutral-600    ">
+      <div className="  peticion_Estructura  w-full min-w-[412px] bg-neutral-600    ">
         {/*-----------------------------------------------------------------------------------------------------------------------visual-------*/}
 
-        <div className=" font-VT323 text-1xl break-words w-full p-2 text-neutral-600 h-full bg-neutral-900  min-h-[650px]   ">
+        <div className=" flex items-start justify-start text-center font-VT323 text-1xl break-words w-full p-2 text-neutral-600 h-full bg-neutral-900  min-h-[650px]   ">
           {/*visual representacion */}
 
-          <div className=" text-lime-500 text-5xl "> INFORMACION BASICA</div>
-          <div className=" text-orange-600">
-            ! Piensa en los elementos básicos y principales que necesitarás,
-            Nuestro enfoque es guiar y dejar todo lo relacionado con el diseño
-            en manos de nuestros artistas, quienes se encargarán de darle
-            sentido y fuerza a tu proyecto tanto artísticamente como en su
-            historia
-          </div>
+          <div className="  max-w-[416px] box-border  h-full">
+            <div className=" max-w-[416px] text-lime-500 text-5xl ">
+              {" "}
+              INFORMACION BASICA
+            </div>
 
-          <div className="  max-w-[416px] flex-initial box-border  h-full">
+            <div>1</div>
+
+            <div className=" text-orange-600 border-dashed border border-orange-600  mt-2 mb-2 ">
+              ! Piensa en los elementos básicos y principales que necesitarás,
+              Nuestro enfoque es guiar y dejar todo lo relacionado con el diseño
+              en manos de nuestros artistas, quienes se encargarán de darle
+              sentido y fuerza a tu proyecto tanto artísticamente como en su
+              historia
+            </div>
+
             <div className=" p-1  text-5xl text-neutral-200 ">
               {nombreProyecto}
             </div>
 
-            <div className=" text-orange-600">
+            <div>2</div>
+
+            <div className=" text-orange-600 border-dashed border  mt-2 mb-2 border-orange-600 ">
               ! Cuéntanos cómo te gustaría que fuera la historia, Vamos a
               procesarla y editarla para hacerla más interesante a nivel
               literario y escénico, buscando incluir emociones que impacten a
@@ -330,25 +338,29 @@ const Paquetes = () => {
               {descripcionProyecto}
             </div>
 
-            <div className=" text-orange-600">
+            <div>3</div>
+
+            <div className=" text-orange-600 border-dashed  mt-2 mb-2 border border-orange-600 ">
               ! Aspectos esenciales pero completos para obtener un excelente
               proyecto. El presupuesto dependerá de la complejidad, pero siempre
               nos esforzaremos por ofrecer lo mejor, sin importar las
               variaciones.
             </div>
 
-            <div className="Grid_Exposicion gap-1">
-              <div className=" relative flex justify-end items-end  p-1 text-lime-500 h-[180px] w-[180px] border  border-lime-500">
+
+    
+            <div className="Grid_Exposicion gap-9  ">
+              <div className=" relative  p-1 text-lime-500  border  border-lime-500">
                 <div className="absolute text-orange-600">
                   {metrosCuadrados} m2{" "}
                 </div>
 
-                <div className=" p-2 absolute  w-full h-full ">
+                <div className=" p-2 absolute   ">
                   {" "}
-                  <div className="text-lime-500 text-2xl">USOS</div> {mensaje}
+                  <div className= "  text-lime-500 text-2xl">USOS</div> {mensaje}
                 </div>
               </div>
-              <div className=" relative h-[180px] w-[180px] flex   ">
+              <div className=" relative  flex   ">
                 <div className=" absolute  text-orange-600  z-20  text-3xl p-1 ">
                   {variacionVegetacion}
                 </div>
@@ -361,7 +373,7 @@ const Paquetes = () => {
                   objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                 />
               </div>
-              <div className=" p-2 relative flex h-[180px] w-[180px] border  border-lime-500">
+              <div className=" p-2 relative flex  border  border-lime-500">
                 <div className="text-lime-500 text-2xl">
                   <div>VARIEDAD COSAS NATURAL</div>{" "}
                   <span className=" text-orange-600   z-20  text-3xl p-1 ">
@@ -374,7 +386,7 @@ const Paquetes = () => {
                 </div>
               </div>
 
-              <div className=" p-2 h-[180px] w-[180px] border  border-lime-500">
+              <div className=" p-2  border  border-lime-500">
                 <div className="text-lime-500 text-2xl">
                   {" "}
                   <div>ANIMACIONES OBJETOS</div>{" "}
@@ -387,7 +399,7 @@ const Paquetes = () => {
                   </span>{" "}
                 </div>
               </div>
-              <div className=" relative h-[180px] w-[180px]  z-10 ">
+              <div className=" relative   z-10 ">
                 <Image
                   src={rutaImagen}
                   alt="juegos consola"
@@ -396,7 +408,7 @@ const Paquetes = () => {
                 />
               </div>
 
-              <div className=" p-2 h-[180px] w-[180px] border  border-lime-500">
+              <div className=" p-2  border  border-lime-500">
                 <div className="text-lime-500 text-2xl">
                   {" "}
                   <div>ESTILO ARQUITECTONICO</div>{" "}
@@ -410,7 +422,7 @@ const Paquetes = () => {
                 </div>
               </div>
 
-              <div className=" p-2 h-[180px] w-[180px] border  border-lime-500">
+              <div className=" p-2  border  border-lime-500">
                 <div className="text-lime-500 text-2xl">
                   {" "}
                   <div>VARIACION COSAS ARTIFICIAL</div>{" "}
@@ -421,7 +433,7 @@ const Paquetes = () => {
                   {variacionAccesorios}
                 </div>
               </div>
-              <div className=" relative h-[180px] w-[180px] flex   ">
+              <div className=" relative  flex   ">
                 <div className=" absolute  text-orange-600  z-20  text-3xl p-1 ">
                   {variacionConstrucciones}
                 </div>
@@ -435,7 +447,7 @@ const Paquetes = () => {
                 />
               </div>
 
-              <div className=" p-2 h-[180px] w-[180px] border  border-lime-500  ">
+              <div className=" p-2  border  border-lime-500  ">
                 <div className="text-lime-500 text-2xl ">
                   {" "}
                   <div>MOTOR GRAFICO</div>{" "}
@@ -446,36 +458,37 @@ const Paquetes = () => {
                 <div className=" text-orange-600  z-20  text-3xl">{tiempo}</div>
               </div>
 
-              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <div className=" relative flex text-center items-center justify-center border-dashed h-[180px]   border box-border overflow-hidden border-neutral-500">
                 <Ref />
               </div>
 
-              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <div className=" relative flex text-center items-center justify-center border-dashed h-[180px]   border box-border overflow-hidden border-neutral-500">
                 <Ref />
               </div>
-              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <div className=" relative flex text-center items-center justify-center border-dashed h-[180px]   border box-border overflow-hidden border-neutral-500">
                 <Ref />
               </div>
-              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <div className=" relative flex text-center items-center justify-center border-dashed h-[180px]   border box-border overflow-hidden border-neutral-500">
                 <Ref />
               </div>
-              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <div className=" relative flex text-center items-center justify-center border-dashed h-[180px]   border box-border overflow-hidden border-neutral-500">
                 <Ref />
               </div>
-              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <div className=" relative flex text-center items-center justify-center border-dashed h-[180px]   border box-border overflow-hidden border-neutral-500">
                 <Ref />
               </div>
-              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <div className=" relative flex text-center items-center justify-center border-dashed h-[180px]   border box-border overflow-hidden border-neutral-500">
                 <Ref />
               </div>
-              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <div className=" relative flex text-center items-center justify-center border-dashed h-[180px]   border box-border overflow-hidden border-neutral-500">
                 <Ref />
               </div>
-              <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
+              <div className=" relative flex text-center items-center justify-center border-dashed h-[180px]  border box-border overflow-hidden border-neutral-500">
                 <Ref />
               </div>
             </div>
-            <div className=" text-orange-600">
+           
+            <div className=" text-orange-600 border-dashed border  mt-2 mb-2 border-orange-600 ">
               ! IMPORTANTE:Cuanto más significativas y detalladas sean las
               referencias que nos proporciones, más precisa será nuestra
               capacidad para crear exactamente lo que deseas.
