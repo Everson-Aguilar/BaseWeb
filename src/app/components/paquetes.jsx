@@ -7,10 +7,7 @@ import Image from "next/image";
 
 import Plantas from "./plantas";
 import Construcciones from "./construcciones";
-import Ref from "./ref"
-
-
- 
+import Ref from "./ref";
 
 //css
 
@@ -140,7 +137,7 @@ const Paquetes = () => {
       "/DiseñoWeb/formulario/juegosMesa de trabajo 8.jpg",
     "The Sims": "/DiseñoWeb/formulario/juegosMesa de trabajo 9.jpg",
     "Half-Life": "/DiseñoWeb/formulario/juegosMesa de trabajo 10.jpg",
-    "Doom": "/DiseñoWeb/formulario/juegosMesa de trabajo 11.jpg",
+    Doom: "/DiseñoWeb/formulario/juegosMesa de trabajo 11.jpg",
     "Counter-Strike": "/DiseñoWeb/formulario/juegosMesa de trabajo 12.jpg",
     "World of Warcraft": "/DiseñoWeb/formulario/juegosMesa de trabajo 13.jpg",
   };
@@ -165,7 +162,7 @@ const Paquetes = () => {
     "The Witcher 3: Wild Hunt": 200,
     "The Sims": 50,
     "Half-Life": 80,
-    "Doom": 280,
+    Doom: 280,
     "Counter-Strike": 180,
     "World of Warcraft": 200,
   };
@@ -241,7 +238,9 @@ const Paquetes = () => {
     { label: "3 meses", value: 30 },
   ];
 
-  const [duracionProyecto, setDuracionProyecto] = useState(duracionProyectoOptions[0].value);
+  const [duracionProyecto, setDuracionProyecto] = useState(
+    duracionProyectoOptions[0].value
+  );
 
   // Función para obtener el label a partir del value
   function getLabelByValue(value) {
@@ -259,6 +258,7 @@ const Paquetes = () => {
   //..
 
   // Nuevos estados para los campos de texto
+  const [correoEletronico, setcorreoEletronico] = useState("");
   const [nombreProyecto, setNombreProyecto] = useState("");
   const [descripcionProyecto, setDescripcionProyecto] = useState("");
 
@@ -268,7 +268,7 @@ const Paquetes = () => {
     variacionVegetacion: 2.5,
     variacionAccesoriosNatural: 18,
     efectoEspecialAnimacionesMundo: 50,
-    variacionAccesorios:18,
+    variacionAccesorios: 18,
     variacionConstrucciones: 30,
     juego: 0, // Precio base para el juego
   };
@@ -299,25 +299,49 @@ const Paquetes = () => {
     //ESTRUCTURA
 
     <div>
-      
       <div className="  peticion_Estructura   h-auto w-full min-w-[412px] bg-neutral-600    ">
         {/*-----------------------------------------------------------------------------------------------------------------------visual-------*/}
 
         <div className=" font-VT323 text-1xl break-words w-full p-2 text-neutral-600 h-full bg-neutral-900  min-h-[650px]   ">
           {/*visual representacion */}
 
+          <div className=" text-lime-500 text-5xl "> INFORMACION BASICA</div>
+          <div className=" text-orange-600">
+            ! Piensa en los elementos básicos y principales que necesitarás,
+            Nuestro enfoque es guiar y dejar todo lo relacionado con el diseño
+            en manos de nuestros artistas, quienes se encargarán de darle
+            sentido y fuerza a tu proyecto tanto artísticamente como en su
+            historia
+          </div>
+
           <div className="  max-w-[416px] flex-initial box-border  h-full">
             <div className=" p-1  text-5xl text-neutral-200 ">
               {nombreProyecto}
+            </div>
+
+            <div className=" text-orange-600">
+              ! Cuéntanos cómo te gustaría que fuera la historia, Vamos a
+              procesarla y editarla para hacerla más interesante a nivel
+              literario y escénico, buscando incluir emociones que impacten a
+              tus clientes.
             </div>
 
             <div className="  p-1 text-1xl text-neutral-300 texto-limitado">
               {descripcionProyecto}
             </div>
 
+            <div className=" text-orange-600">
+              ! Aspectos esenciales pero completos para obtener un excelente
+              proyecto. El presupuesto dependerá de la complejidad, pero siempre
+              nos esforzaremos por ofrecer lo mejor, sin importar las
+              variaciones.
+            </div>
+
             <div className="Grid_Exposicion gap-1">
               <div className=" relative flex justify-end items-end  p-1 text-lime-500 h-[180px] w-[180px] border  border-lime-500">
-                <div className="absolute">{metrosCuadrados} m2 </div>
+                <div className="absolute text-orange-600">
+                  {metrosCuadrados} m2{" "}
+                </div>
 
                 <div className=" p-2 absolute  w-full h-full ">
                   {" "}
@@ -340,7 +364,7 @@ const Paquetes = () => {
               <div className=" p-2 relative flex h-[180px] w-[180px] border  border-lime-500">
                 <div className="text-lime-500 text-2xl">
                   <div>VARIEDAD COSAS NATURAL</div>{" "}
-                  <span className="    z-20  text-3xl p-1 ">
+                  <span className=" text-orange-600   z-20  text-3xl p-1 ">
                     {variacionAccesoriosNatural}
                   </span>{" "}
                   <span className=" text-base">
@@ -354,7 +378,7 @@ const Paquetes = () => {
                 <div className="text-lime-500 text-2xl">
                   {" "}
                   <div>ANIMACIONES OBJETOS</div>{" "}
-                  <span className="    z-20  text-3xl p-1 ">
+                  <span className=" text-orange-600   z-20  text-3xl p-1 ">
                     {efectoEspecialAnimacionesMundo}
                   </span>{" "}
                   <span className=" text-base">
@@ -376,7 +400,7 @@ const Paquetes = () => {
                 <div className="text-lime-500 text-2xl">
                   {" "}
                   <div>ESTILO ARQUITECTONICO</div>{" "}
-                  <span className="    z-20  text-3xl p-1 ">
+                  <span className="  text-orange-600  z-20  text-3xl p-1 ">
                     {estiloArquitectonico}
                   </span>{" "}
                   <span className=" text-base">
@@ -393,7 +417,7 @@ const Paquetes = () => {
                   <span className="    z-20  text-3xl p-1 "></span>{" "}
                   <span className=" text-base"> creado por el humano</span>{" "}
                 </div>
-                <div className=" absolute  text-lime-500  z-20  text-3xl p-1 ">
+                <div className=" absolute  text-orange-600  z-20  text-3xl p-1 ">
                   {variacionAccesorios}
                 </div>
               </div>
@@ -411,48 +435,50 @@ const Paquetes = () => {
                 />
               </div>
 
-              <div className=" p-2 h-[180px] w-[180px]  ">
-                <div className="text-lime-500 text-2xl">
+              <div className=" p-2 h-[180px] w-[180px] border  border-lime-500  ">
+                <div className="text-lime-500 text-2xl ">
                   {" "}
                   <div>MOTOR GRAFICO</div>{" "}
-                  <span className="    z-20  text-3xl p-1 ">
+                  <span className=" text-orange-600   z-20  text-3xl p-1 ">
                     {motorGrafico}
                   </span>{" "}
                 </div>
                 <div className=" text-orange-600  z-20  text-3xl">{tiempo}</div>
               </div>
 
-
               <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
-              <Ref/> 
+                <Ref />
               </div>
 
               <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
-              <Ref/> 
+                <Ref />
               </div>
               <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
-              <Ref/> 
+                <Ref />
               </div>
               <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
-              <Ref/> 
+                <Ref />
               </div>
               <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
-              <Ref/> 
+                <Ref />
               </div>
               <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
-              <Ref/> 
+                <Ref />
               </div>
               <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
-              <Ref/> 
+                <Ref />
               </div>
               <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
-              <Ref/> 
+                <Ref />
               </div>
               <div className=" relative flex text-center items-center justify-center border-dashed  h-[180px] w-[180px] border box-border overflow-hidden border-neutral-500">
-              <Ref/> 
+                <Ref />
               </div>
-
-
+            </div>
+            <div className=" text-orange-600">
+              ! IMPORTANTE:Cuanto más significativas y detalladas sean las
+              referencias que nos proporciones, más precisa será nuestra
+              capacidad para crear exactamente lo que deseas.
             </div>
           </div>
         </div>
@@ -461,18 +487,36 @@ const Paquetes = () => {
         {/*-------------------------------------------------------------------------------------------------------------------formulario-------*/}
         <div className="  flex w-1/2 ">
           <div className=" z-10  p-14 w-full  flex-row pb-10  shadow-lg min-w-96  bg-neutral-700   justify-between font-Quicksand   text-zinc-400">
+            <div className="font-BebasNeue text-3xl text-zinc-800">
+              RECOLECTA DE DATOS
+            </div>
+
+            <div>
+              <label>
+                <div> Correo Eletronico: </div>
+              </label>
+              <input
+                className="w-4/5 bg-neutral-600"
+                type="text"
+                value={correoEletronico}
+                onChange={(e) => setcorreoEletronico(e.target.value)}
+                maxLength={50} // ajusta el valor según tus necesidades
+              />
+            </div>
+
             <div className="font-BebasNeue text-2xl text-zinc-800">
               INFORMACION PROYECTO
             </div>
             <div>
               <label>
-               <div> Nombre del Proyecto: </div>
+                <div> Nombre del Proyecto: </div>
               </label>
               <input
                 className="w-4/5 bg-neutral-600"
                 type="text"
                 value={nombreProyecto}
                 onChange={(e) => setNombreProyecto(e.target.value)}
+                maxLength={35} // ajusta el valor según tus necesidades
               />
             </div>
             <div>
@@ -483,6 +527,7 @@ const Paquetes = () => {
                 className=" overflow-auto  max-h-20 w-4/5 bg-neutral-600"
                 value={descripcionProyecto}
                 onChange={(e) => setDescripcionProyecto(e.target.value)}
+                maxLength={500} // ajusta el valor según tus necesidades
               />
             </div>
 
@@ -492,9 +537,7 @@ const Paquetes = () => {
             <form onSubmit={handleSubmit}>
               <div>
                 <div>
-                  <label>
-                    Escala del Ambiente: 
-                  </label>
+                  <label>Escala del Ambiente:</label>
                   <select
                     className="w-4/5 bg-neutral-600"
                     value={selectivoEscala}
@@ -502,7 +545,7 @@ const Paquetes = () => {
                   >
                     {escalasAmbiente.map((escala, index) => (
                       <option key={index} value={escala}>
-                        {escala}ml× 
+                        {escala}ml×
                         {escala}ml = ${precios.selectivoEscala * escala}
                       </option>
                     ))}
@@ -614,7 +657,9 @@ const Paquetes = () => {
                   </select>
                 </div>
                 <div>
-                  <label><div>Variación de Construcciones:</div></label>
+                  <label>
+                    <div>Variación de Construcciones:</div>
+                  </label>
                   <select
                     className="w-4/5 bg-neutral-600"
                     value={variacionConstrucciones}
@@ -633,7 +678,9 @@ const Paquetes = () => {
               </div>
 
               <div>
-                <label><div>Motor Gráfico:</div></label>
+                <label>
+                  <div>Motor Gráfico:</div>
+                </label>
                 <select
                   className="w-4/5 bg-neutral-600"
                   value={motorGrafico}
@@ -648,7 +695,9 @@ const Paquetes = () => {
               </div>
 
               <div>
-                <label><div>Tiempo Entrega:</div></label> 
+                <label>
+                  <div>Tiempo Entrega:</div>
+                </label>
                 <select
                   className="w-4/5 text-red-400 bg-neutral-600 "
                   value={duracionProyecto}
@@ -679,7 +728,8 @@ const Paquetes = () => {
             </button>
           </div>
 
-          <div className=" DiseñoMobil_peticion  "></div>{/* publicidad */}
+          <div className=" DiseñoMobil_peticion  "></div>
+          {/* publicidad */}
         </div>
         {/*...*/}
       </div>
