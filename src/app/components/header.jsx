@@ -16,7 +16,7 @@ const Header = () => {
             <Link href="/">Inicio</Link>
           </li>
           <li>
-            <Link href="/pages/mantenimiento">Soy Artista $$$</Link>
+            <Link href="pages/mantenimiento/">Soy Artista $$$</Link>
           </li>
           <li>
             <Link href="/pages/mantenimiento">Productos Visuales</Link>

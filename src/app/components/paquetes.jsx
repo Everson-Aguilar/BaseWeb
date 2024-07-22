@@ -9,11 +9,35 @@ import Plantas from "./plantas";
 import Construcciones from "./construcciones";
 import Ref from "./ref";
 
+
 //css
 
 import "../css/peticion.css";
 
+
+
+
+
+
+
+
+
 const Paquetes = () => {
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
   // sistemaEscala
 
   //array
@@ -257,11 +281,28 @@ const Paquetes = () => {
 
   //..
 
-  // Nuevos estados para los campos de texto
+
+
+  // informacion personal
+  
+  const [nombre, setnombre] = useState("");
+  const [ciudad, setciudad] = useState("");
+  const [Whatsapp, setWhatsapp] = useState("");
   const [correoEletronico, setcorreoEletronico] = useState("");
+
+  //proyecto
+
   const [nombreProyecto, setNombreProyecto] = useState("");
   const [descripcionProyecto, setDescripcionProyecto] = useState("");
 
+
+
+
+ 
+
+
+
+ 
   // Precios base para cada tipo de selección
   const precios = {
     selectivoEscala: 2,
@@ -299,6 +340,12 @@ const Paquetes = () => {
     //ESTRUCTURA
 
     <div>
+
+
+
+
+
+
       <div className="  peticion_Estructura  w-full min-w-[412px] bg-neutral-600    ">
         {/*-----------------------------------------------------------------------------------------------------------------------visual-------*/}
 
@@ -503,6 +550,53 @@ const Paquetes = () => {
             <div className="font-BebasNeue text-3xl text-zinc-800">
               RECOLECTA DE DATOS
             </div>
+
+
+            
+            <div>
+              <label>
+                <div> Nombre: </div>
+              </label>
+              <input
+                className="w-4/5 bg-neutral-600"
+                type="text"
+                value={nombre}
+                onChange={(e) => setnombre(e.target.value)}
+                maxLength={50} // ajusta el valor según tus necesidades
+              />
+            </div>
+
+            
+
+
+            <div>
+              <label>
+                <div> Ciudad: </div>
+              </label>
+              <input
+                className="w-4/5 bg-neutral-600"
+                type="text"
+                value={ciudad}
+                onChange={(e) => setciudad(e.target.value)}
+                maxLength={50} // ajusta el valor según tus necesidades
+              />
+            </div>
+
+
+            <div>
+              <label>
+                <div> Whatsapp: </div>
+              </label>
+              <input
+                className="w-4/5 bg-neutral-600"
+                type="text"
+                value={Whatsapp}
+                onChange={(e) => setWhatsapp(e.target.value)}
+                maxLength={50} // ajusta el valor según tus necesidades
+              />
+            </div>
+
+
 
             <div>
               <label>
@@ -739,6 +833,11 @@ const Paquetes = () => {
             >
               Enviar
             </button>
+
+
+   
+
+
           </div>
 
           <div className=" DiseñoMobil_peticion  "></div>
@@ -746,25 +845,46 @@ const Paquetes = () => {
         </div>
         {/*...*/}
       </div>
+
+
+     
+
+      
+
+
     </div>
   );
 
   // resultados
 
-  function calcularCostoTotal() {
-    return (
-      precios.selectivoEscala * selectivoEscala +
-      precios.variacionVegetacion * variacionVegetacion +
-      precios.variacionAccesoriosNatural * variacionAccesoriosNatural +
-      precios.variacionAccesorios * variacionAccesorios +
-      precios.variacionConstrucciones * variacionConstrucciones +
-      precios.efectoEspecialAnimacionesMundo * efectoEspecialAnimacionesMundo +
-      precioJuegoSeleccionado +
-      precios.juego +
-      duracionProyecto // Sumando el precio de la duración del proyecto
-    );
-  }
-  /*...*/
+
+  
+
+function calcularCostoTotal() {
+  const totalPrecio = 
+    precios.selectivoEscala * selectivoEscala +
+    precios.variacionVegetacion * variacionVegetacion +
+    precios.variacionAccesoriosNatural * variacionAccesoriosNatural +
+    precios.variacionAccesorios * variacionAccesorios +
+    precios.variacionConstrucciones * variacionConstrucciones +
+    precios.efectoEspecialAnimacionesMundo * efectoEspecialAnimacionesMundo +
+    precioJuegoSeleccionado +
+    precios.juego +
+    duracionProyecto; // Sumando el precio de la duración del proyecto
+
+  console.log(totalPrecio);
+  return totalPrecio;
+}
+
+
+
+
+
+
+
+
+
+
 };
 
 export default Paquetes;

@@ -9,6 +9,7 @@ import Link from "next/link";
 
 //componente
 
+import Administracion from "./components/administracion"
 import Header from "./components/header";
 import Paquetes from "./components/paquetes";
 
@@ -124,6 +125,8 @@ export default function Home() {
          **********************************************************************************
          **********************************************************************************/}
         {/*presentacion y servicios    01-----------------------------------------------------*/}
+
+        <section> <Administracion/></section>
 
         <section className="base">
           <div className="contenedor1">
