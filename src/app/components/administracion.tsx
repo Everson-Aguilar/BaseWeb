@@ -1,21 +1,40 @@
-import React, { useState } from "react";
-import credentials from "admin.json"; // Ajusta la ruta según tu estructura de carpetas
+import { useRouter } from 'next/navigation';
+import React, { useState } from 'react';
+import credentials from 'admin.json'; // Ajusta la ruta según tu estructura de carpetas
 
 const Login: React.FC = () => {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const router = useRouter();
 
-  const [password, setPassword] = useState("");
-
-  const [error, setError] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Lógica de autenticación simple
     if (username === credentials.username && password === credentials.hash) {
-      alert("Inicio de sesión exitoso");
+      try {
+        const response = await fetch('/api/verificacion', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ verificacion: true }),
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          console.log('Respuesta de la API:', data);
+          // Redirige a la página deseada en caso de éxito
+          router.push('/pages/Admin/');
+        } else {
+          setError('Error en la verificación');
+        }
+      } catch (error) {
+        console.error('Error al enviar los datos a la API:', error);
+        setError('Error al conectar con el servidor');
+      }
     } else {
-      setError("Usuario o contraseña incorrectos");
+      setError('Usuario o contraseña incorrectos');
     }
   };
 
