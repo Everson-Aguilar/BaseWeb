@@ -1,7 +1,8 @@
 // Indica que el componente debe ser renderizado en el cliente, no en el servidor
-'use client';
+"use client";
 // Importa las librerías necesarias
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+
 
 // Define el componente funcional 'YourComponent'
 const Admin: React.FC = () => {
@@ -14,8 +15,8 @@ const Admin: React.FC = () => {
     async function fetchData() {
       try {
         // Realiza una solicitud HTTP GET al endpoint '/api/verificacion'
-        const response = await fetch('/api/verificacion'); // Ajusta la ruta del endpoint según sea necesario
-        
+        const response = await fetch("/api/verificacion"); // Ajusta la ruta del endpoint según sea necesario
+
         // Verifica si la respuesta fue exitosa
         if (response.ok) {
           // Convierte la respuesta en JSON
@@ -24,11 +25,11 @@ const Admin: React.FC = () => {
           setData(result.data);
         } else {
           // Imprime un error en la consola si la respuesta no es exitosa
-          console.error('Error al obtener datos');
+          console.error("Error al obtener datos");
         }
       } catch (error) {
         // Maneja cualquier error que ocurra durante la solicitud
-        console.error('Error:', error);
+        console.error("Error:", error);
       }
     }
 
@@ -41,13 +42,25 @@ const Admin: React.FC = () => {
 
   // Renderiza el contenido del componente
 
-  
+  const Door: boolean = false;
 
+  const Key = {
+    jsonData: JSON.stringify(data, null, 2),
+  };
 
+  // Función para verificar el estado de Key y ajustar Door
+  const updateDoor = (key: string): boolean => {
+    return Boolean(key); // Retorna true si key tiene contenido no vacío
+  };
+
+  // Uso de la función
+  const newDoorState = updateDoor(Key.jsonData);
+
+  console.log("Door state:", newDoorState ? "Open" : "Closed");
 
   return (
     <div>
-      <h1>Datos de Verificación</h1>
+      <p>Acceso Permitido</p>
       {/* Muestra los datos obtenidos en formato JSON */}
       <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
