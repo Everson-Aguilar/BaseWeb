@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react"; // Importa React y los hooks useState y useEffect
 
 // Importa el componente InformacionNueva desde la ruta especificada
-import InformacionNueva from '../components/informacionNueva'; // Asegúrate de que la ruta sea correcta
+import InformacionNueva from '../../../../components/informacionNueva'; // Asegúrate de que la ruta sea correcta
 
 // Define el componente funcional Admin
 const Admin: React.FC = () => {

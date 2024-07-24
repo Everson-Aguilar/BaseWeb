@@ -300,7 +300,38 @@ const Paquetes = () => {
     console.log("Descripción del Proyecto:", descripcionProyecto);
     console.log("Duración del Proyecto:", duracionProyecto);
     console.log("Costo Total del Proyecto:", costoTotal);
+
   };
+
+
+
+  
+  // resultados
+
+// Declarar la variable global o en un ámbito más amplio
+let totalPrecio;
+
+// Función para calcular el costo total
+function calcularCostoTotal() {
+  totalPrecio =
+    precios.selectivoEscala * selectivoEscala +
+    precios.variacionVegetacion * variacionVegetacion +
+    precios.variacionAccesoriosNatural * variacionAccesoriosNatural +
+    precios.variacionAccesorios * variacionAccesorios +
+    precios.variacionConstrucciones * variacionConstrucciones +
+    precios.efectoEspecialAnimacionesMundo * efectoEspecialAnimacionesMundo +
+    precioJuegoSeleccionado +
+    precios.juego +
+    duracionProyecto; // Sumando el precio de la duración del proyecto
+
+  console.log(totalPrecio);
+  return totalPrecio;
+}
+
+
+
+
+
 
   ////////////////////////////////////////////////////////+++++++++++++++++++ INFORMACION NUEVA+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++!
 
@@ -328,6 +359,10 @@ const Paquetes = () => {
     variacionAccesorios: variacionAccesorios,
     variacionConstrucciones: variacionConstrucciones,
     duracionProyecto: getLabelByValue(duracionProyecto), // Usar la función para obtener el label
+    total: totalPrecio
+    
+   
+    
   };
   
   fetch(url, {
@@ -845,23 +880,10 @@ const Paquetes = () => {
     </div>
   );
 
-  // resultados
 
-  function calcularCostoTotal() {
-    const totalPrecio =
-      precios.selectivoEscala * selectivoEscala +
-      precios.variacionVegetacion * variacionVegetacion +
-      precios.variacionAccesoriosNatural * variacionAccesoriosNatural +
-      precios.variacionAccesorios * variacionAccesorios +
-      precios.variacionConstrucciones * variacionConstrucciones +
-      precios.efectoEspecialAnimacionesMundo * efectoEspecialAnimacionesMundo +
-      precioJuegoSeleccionado +
-      precios.juego +
-      duracionProyecto; // Sumando el precio de la duración del proyecto
+  
 
-    console.log(totalPrecio);
-    return totalPrecio;
-  }
+
 };
 
 export default Paquetes;
