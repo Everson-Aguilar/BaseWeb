@@ -2,7 +2,7 @@
 
 // pages/Pack.js
 import Image from "next/image";
-import Layout from "../layout"; // Importar el componente Layout
+
 
 // Título y descripción globales para todas las imágenes
 const globalTitle = "INTERIOR APOCALIPTICO";
@@ -26,8 +26,8 @@ const Pack = () => {
   const basePath = "/DiseñoWeb/portfolio/g2/";
 
   return (
-    <Layout>
-      
+    
+      <div>
 
       {/* Mapeo de las imágenes */}
       {imageNames.map((imageName, index) => (
@@ -57,8 +57,11 @@ const Pack = () => {
           </div>
           <div className="bg-neutral-800 absolute opacity-60 text-neutral-100 w-full h-40 flex p-2"></div>
         </div>
+        
       ))}
-    </Layout>
+
+   </div>
+    
   );
 };
 

@@ -1,0 +1,34 @@
+/* Mostrar el contenedor en modo vertical */
+@media (orientation: portrait) {
+    .mobil {
+
+        display: flex;
+        background-color: rgba(70, 70, 70, 0.363);
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+
+    }
+  }
+  
+  /* Ocultar el contenedor en modo horizontal */
+  @media (orientation: landscape) {
+    .mobil {
+      display: none;
+    }
+  }
+
+  .rotar_animacion {
+    animation: rotar 8s linear infinite;
+  }
+  
+  @keyframes rotar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
