@@ -9,35 +9,11 @@ import Plantas from "./plantas";
 import Construcciones from "./construcciones";
 import Ref from "./ref";
 
-
 //css
 
 import "../css/peticion.css";
 
-
-
-
-
-
-
-
-
 const Paquetes = () => {
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
   // sistemaEscala
 
   //array
@@ -281,10 +257,8 @@ const Paquetes = () => {
 
   //..
 
-
-
   // informacion personal
-  
+
   const [nombre, setnombre] = useState("");
   const [ciudad, setciudad] = useState("");
   const [Whatsapp, setWhatsapp] = useState("");
@@ -295,14 +269,6 @@ const Paquetes = () => {
   const [nombreProyecto, setNombreProyecto] = useState("");
   const [descripcionProyecto, setDescripcionProyecto] = useState("");
 
-
-
-
- 
-
-
-
- 
   // Precios base para cada tipo de selección
   const precios = {
     selectivoEscala: 2,
@@ -336,16 +302,62 @@ const Paquetes = () => {
     console.log("Costo Total del Proyecto:", costoTotal);
   };
 
+  ////////////////////////////////////////////////////////+++++++++++++++++++ INFORMACION NUEVA+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++!
+
+  const enviarFormulario = () => {
+
+  const url = "/api/envio_formulario"; // Asegúrate de usar la ruta relativa de la API en Next.js
+
+  const informacionProyecto = {
+    nombre: nombre, // Usar el estado actualizado
+    ciudad: ciudad,
+    Whatsapp: Whatsapp,
+    correoEletronico: correoEletronico,
+    nombreProyecto: nombreProyecto,
+    descripcionProyecto: descripcionProyecto,
+    selectivoEscala: selectivoEscala,
+    metrosCuadrados: metrosCuadrados,
+    variacionVegetacion: variacionVegetacion,
+    variacionAccesoriosNatural: variacionAccesoriosNatural,
+    motorGrafico: motorGrafico,
+    efectoEspecialAnimacionesMundo: efectoEspecialAnimacionesMundo,
+    complejidadEstilo: complejidadEstilo,
+    rutaImagen: rutaImagen,
+    precioJuegoSeleccionado: precioJuegoSeleccionado,
+    estiloArquitectonico: estiloArquitectonico,
+    variacionAccesorios: variacionAccesorios,
+    variacionConstrucciones: variacionConstrucciones,
+    duracionProyecto: getLabelByValue(duracionProyecto), // Usar la función para obtener el label
+  };
+  
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(informacionProyecto),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log("Success:", data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+
+  };
+
+    // FIN ...
+  
   return (
     //ESTRUCTURA
 
     <div>
-
-
-
-
-
-
       <div className="  peticion_Estructura  w-full min-w-[412px] bg-neutral-600    ">
         {/*-----------------------------------------------------------------------------------------------------------------------visual-------*/}
 
@@ -394,8 +406,6 @@ const Paquetes = () => {
               variaciones.
             </div>
 
-
-    
             <div className="Grid_Exposicion gap-9  ">
               <div className=" relative  p-1 text-lime-500  border  border-lime-500">
                 <div className="absolute text-orange-600">
@@ -404,7 +414,7 @@ const Paquetes = () => {
 
                 <div className=" p-2 absolute   ">
                   {" "}
-                  <div className= "  text-lime-500 text-2xl">USOS</div> {mensaje}
+                  <div className="  text-lime-500 text-2xl">USOS</div> {mensaje}
                 </div>
               </div>
               <div className=" relative  flex   ">
@@ -534,7 +544,7 @@ const Paquetes = () => {
                 <Ref />
               </div>
             </div>
-           
+
             <div className=" text-orange-600 border-dashed border  mt-2 mb-2 border-orange-600 ">
               ! IMPORTANTE:Cuanto más significativas y detalladas sean las
               referencias que nos proporciones, más precisa será nuestra
@@ -551,8 +561,6 @@ const Paquetes = () => {
               RECOLECTA DE DATOS
             </div>
 
-
-            
             <div>
               <label>
                 <div> Nombre: </div>
@@ -565,9 +573,6 @@ const Paquetes = () => {
                 maxLength={50} // ajusta el valor según tus necesidades
               />
             </div>
-
-            
-
 
             <div>
               <label>
@@ -582,21 +587,18 @@ const Paquetes = () => {
               />
             </div>
 
-
             <div>
               <label>
                 <div> Whatsapp: </div>
               </label>
               <input
                 className="w-4/5 bg-neutral-600"
-                type="text"
+                type="number"
                 value={Whatsapp}
                 onChange={(e) => setWhatsapp(e.target.value)}
                 maxLength={50} // ajusta el valor según tus necesidades
               />
             </div>
-
-
 
             <div>
               <label>
@@ -604,7 +606,7 @@ const Paquetes = () => {
               </label>
               <input
                 className="w-4/5 bg-neutral-600"
-                type="text"
+                type="email"
                 value={correoEletronico}
                 onChange={(e) => setcorreoEletronico(e.target.value)}
                 maxLength={50} // ajusta el valor según tus necesidades
@@ -827,17 +829,12 @@ const Paquetes = () => {
               </div>
               <div className=" text-4xl">${calcularCostoTotal()}</div>
             </div>
-            <button
+            <button onClick={enviarFormulario}
               className="font-BebasNeue text-2xl text-zinc-800"
               type="submit"
             >
               Enviar
             </button>
-
-
-   
-
-
           </div>
 
           <div className=" DiseñoMobil_peticion  "></div>
@@ -845,46 +842,26 @@ const Paquetes = () => {
         </div>
         {/*...*/}
       </div>
-
-
-     
-
-      
-
-
     </div>
   );
 
   // resultados
 
+  function calcularCostoTotal() {
+    const totalPrecio =
+      precios.selectivoEscala * selectivoEscala +
+      precios.variacionVegetacion * variacionVegetacion +
+      precios.variacionAccesoriosNatural * variacionAccesoriosNatural +
+      precios.variacionAccesorios * variacionAccesorios +
+      precios.variacionConstrucciones * variacionConstrucciones +
+      precios.efectoEspecialAnimacionesMundo * efectoEspecialAnimacionesMundo +
+      precioJuegoSeleccionado +
+      precios.juego +
+      duracionProyecto; // Sumando el precio de la duración del proyecto
 
-  
-
-function calcularCostoTotal() {
-  const totalPrecio = 
-    precios.selectivoEscala * selectivoEscala +
-    precios.variacionVegetacion * variacionVegetacion +
-    precios.variacionAccesoriosNatural * variacionAccesoriosNatural +
-    precios.variacionAccesorios * variacionAccesorios +
-    precios.variacionConstrucciones * variacionConstrucciones +
-    precios.efectoEspecialAnimacionesMundo * efectoEspecialAnimacionesMundo +
-    precioJuegoSeleccionado +
-    precios.juego +
-    duracionProyecto; // Sumando el precio de la duración del proyecto
-
-  console.log(totalPrecio);
-  return totalPrecio;
-}
-
-
-
-
-
-
-
-
-
-
+    console.log(totalPrecio);
+    return totalPrecio;
+  }
 };
 
 export default Paquetes;

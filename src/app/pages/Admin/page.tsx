@@ -1,71 +1,74 @@
-// Indica que el componente debe ser renderizado en el cliente, no en el servidor
-"use client";
-// Importa las librerías necesarias
-import React, { useState, useEffect } from "react";
+"use client"; // Indica que este código se ejecuta en el cliente, no en el servidor
 
+import React, { useState, useEffect } from "react"; // Importa React y los hooks useState y useEffect
 
-// Define el componente funcional 'YourComponent'
+// Importa el componente InformacionNueva desde la ruta especificada
+import InformacionNueva from '../components/informacionNueva'; // Asegúrate de que la ruta sea correcta
+
+// Define el componente funcional Admin
 const Admin: React.FC = () => {
-  // Declara un estado para almacenar los datos obtenidos del endpoint
+  // Declara un estado para almacenar los datos, inicializado en null
   const [data, setData] = useState<any>(null);
 
-  // useEffect se usa para realizar efectos secundarios en el componente
+  // Usa el hook useEffect para ejecutar código cuando el componente se monta
   useEffect(() => {
-    // Función asíncrona para obtener los datos del endpoint
+    // Define una función asíncrona para obtener datos
     async function fetchData() {
       try {
-        // Realiza una solicitud HTTP GET al endpoint '/api/verificacion'
-        const response = await fetch("/api/verificacion"); // Ajusta la ruta del endpoint según sea necesario
+        // Realiza una solicitud GET al endpoint /api/verificacion
+        const response = await fetch("/api/verificacion");
 
-        // Verifica si la respuesta fue exitosa
+        // Verifica si la respuesta fue exitosa (código de estado 200-299)
         if (response.ok) {
-          // Convierte la respuesta en JSON
+          // Convierte la respuesta a formato JSON
           const result = await response.json();
           // Actualiza el estado con los datos obtenidos
           setData(result.data);
         } else {
-          // Imprime un error en la consola si la respuesta no es exitosa
+          // Muestra un error en la consola si la respuesta no fue exitosa
           console.error("Error al obtener datos");
         }
       } catch (error) {
-        // Maneja cualquier error que ocurra durante la solicitud
+        // Captura y muestra cualquier error ocurrido durante la solicitud
         console.error("Error:", error);
       }
     }
 
-    // Llama a la función fetchData para iniciar la solicitud de datos
+    // Llama a la función fetchData para obtener datos
     fetchData();
-  }, []); // El arreglo vacío asegura que useEffect se ejecute solo una vez al montar el componente
+  }, []); // El arreglo vacío indica que el efecto se ejecuta solo una vez al montar el componente
 
-  // Si los datos aún no están disponibles, muestra un mensaje de carga
+  // Si no hay datos, renderiza un mensaje "Restringido"
   if (!data) return <div>Restringido</div>;
 
-  // Renderiza el contenido del componente
-
+  // Declara una constante Door con valor booleano false (no utilizada en el código actual)
   const Door: boolean = false;
 
+  // Crea un objeto Key con una propiedad jsonData que contiene los datos en formato JSON
   const Key = {
     jsonData: JSON.stringify(data, null, 2),
   };
 
-  // Función para verificar el estado de Key y ajustar Door
-  const updateDoor = (key: string): boolean => {
-    return Boolean(key); // Retorna true si key tiene contenido no vacío
-  };
+  // Define una función que convierte una cadena en un valor booleano
+  const updateDoor = (key: string): boolean => Boolean(key);
 
-  // Uso de la función
+  // Usa la función updateDoor para determinar el nuevo estado de la "puerta"
   const newDoorState = updateDoor(Key.jsonData);
 
+  // Muestra en la consola el estado de la "puerta" basado en el valor booleano
   console.log("Door state:", newDoorState ? "Open" : "Closed");
 
+  // Renderiza el componente
   return (
     <div>
-      <p>Acceso Permitido</p>
-      {/* Muestra los datos obtenidos en formato JSON */}
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      <p>Acceso Permitido</p> {/* Mensaje que indica que el acceso está permitido */}
+      <pre>{JSON.stringify(data, null, 2)}</pre> {/* Muestra los datos en formato JSON con sangría para facilitar la lectura */}
+
+      {/* Renderiza el componente InformacionNueva */}
+      <InformacionNueva/>
     </div>
   );
 };
 
-// Exporta el componente para que pueda ser usado en otros lugares
+// Exporta el componente Admin como exportación por defecto del módulo
 export default Admin;
