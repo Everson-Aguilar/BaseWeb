@@ -1,18 +1,18 @@
-// src/components/HolaMundo.tsx
 
-import React, { useEffect, useState } from 'react';
 
-const HolaMundo: React.FC = () => {
+import React, { useEffect, useState } from "react";
+
+const Peticiones: React.FC = () => {
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        const response = await fetch('/api/pedidos');
+        const response = await fetch("/api/pedidos");
         const jsonData = await response.json();
         setData(jsonData);
       } catch (error) {
-        console.error('Error al leer el archivo JSON:', error);
+        console.error("Error al leer el archivo JSON:", error);
       }
     };
 
@@ -26,7 +26,7 @@ const HolaMundo: React.FC = () => {
         <div>
           {data.map((item, index) => (
             <div key={index}>
-              <h3>Pedido {index + 1}</h3>
+              <div className="p-5 bg-neutral-700 rounded-xl font-VT323 text-3xl text-neutral-400 text-">Pedido-$$$ : {index + 1}</div>
               <ul>
                 {Object.entries(item).map(([key, value]) => (
                   <li key={key}>
@@ -45,15 +45,12 @@ const HolaMundo: React.FC = () => {
 
   return (
     <div>
-      <h1>¡Hola Mundo!</h1>
-      <h2>peticiones</h2>
-      {data ? (
-        renderData(data)
-      ) : (
-        <p>Cargando datos...</p>
-      )}
+      <div>
+        <div className=" text-2xl text-neutral-700 font-Staatliches">PETICIONES RECIBIDAS</div>
+        <div className=" p-5 border-neutral-500 text-neutral-700 border ">{data ? renderData(data) : <div>Cargando datos...</div>}</div>
+      </div>
     </div>
   );
 };
 
-export default HolaMundo;
+export default Peticiones;

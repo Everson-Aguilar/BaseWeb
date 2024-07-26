@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'; // Importa el módulo NextResponse para manejar respuestas HTTP en Next.js
 
 // Variable global para almacenar temporalmente la información de verificación
-let verificationData: any = false;
+let verificationData: any = true;  // activar o desactivar verificacion 
 
 export async function POST(request: Request) {
   // Función para manejar solicitudes HTTP POST

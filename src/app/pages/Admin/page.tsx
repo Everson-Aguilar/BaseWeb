@@ -1,9 +1,9 @@
 "use client"; // Indica que este código se ejecuta en el cliente, no en el servidor
-
+import Image from "next/image";
 import React, { useState, useEffect } from "react"; // Importa React y los hooks useState y useEffect
 
 // Importa el componente InformacionNueva desde la ruta especificada
-import InformacionNueva from '../../../../components/informacionNueva'; // Asegúrate de que la ruta sea correcta
+import InformacionNueva from '../../components/informacionNueva'; // Asegúrate de que la ruta sea correcta
 
 // Define el componente funcional Admin
 const Admin: React.FC = () => {
@@ -58,17 +58,57 @@ const Admin: React.FC = () => {
   // Muestra en la consola el estado de la "puerta" basado en el valor booleano
   console.log("Door state:", newDoorState ? "Open" : "Closed");
 
-  // Renderiza el componente
-  return (
-    <div>
-      <p>Acceso Permitido</p> {/* Mensaje que indica que el acceso está permitido */}
-      <pre>{JSON.stringify(data, null, 2)}</pre> {/* Muestra los datos en formato JSON con sangría para facilitar la lectura */}
+  
 
-      {/* Renderiza el componente InformacionNueva */}
-      <InformacionNueva/>
+
+
+
+
+
+
+  return (
+<div>
+
+  <div className="h-20 bg-neutral-100 text-3xl flex justify-center items-center font-Acme">
+    
+    <div className=" p-5">
+
+  <Image
+                src="/DiseñoWeb/logogrisoscuro.svg"
+                alt="Logo"
+                width={80} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
+                height={80} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
+              />
+
+
+</div>
+    
+    ADMINISTRACION
+    
     </div>
+
+   <div className=" bg-neutral-200  h-screen w-screen p-5 flex"> 
+
+   
+
+
+
+   
+   <div className="  shadow-inner-md  bg-neutral-400 border-x-neutral-700 overflow-scroll w-1/2 h-5/6 " >
+    
+   <div className=" bg-neutral-800 h-16 text-4xl flex justify-center items-center text-neutral-200 font-BebasNeue">PETICIONES</div>
+   <div className="p-5  justify-center items-center  ">
+      <InformacionNueva/>
+      </div>
+    </div>
+
+    <div className=" bg-neutral-300 shadow-2xl  h-5/6   w-1/2"></div>
+
+    </div>
+
+    </div>
+
+
   );
 };
-
-// Exporta el componente Admin como exportación por defecto del módulo
 export default Admin;

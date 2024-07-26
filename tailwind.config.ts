@@ -10,7 +10,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+
+      boxShadow: {
+        'inner-md': 'inset 0 4px 6px rgba(0, 0, 0, 0.1)',
+        'inner-lg': 'inset 0 10px 15px rgba(0, 0, 0, 0.1)',
+        'inner-xl': 'inset 0 20px 25px rgba(0, 0, 0, 0.1)',
+      },
+
+
       fontFamily: {
+
         'Acme': ['Acme-Regular', 'sans-serif'],
         'BebasNeue': ['BebasNeue-Regular', 'sans-serif'],
         'Jacquard12': ['Jacquard12-Regular', 'sans-serif'],

@@ -1,0 +1,22 @@
+{
+  "nombre": "",
+  "ciudad": "",
+  "Whatsapp": "",
+  "correoEletronico": "",
+  "nombreProyecto": "",
+  "descripcionProyecto": "",
+  "selectivoEscala": 40,
+  "metrosCuadrados": 1600,
+  "variacionVegetacion": 1,
+  "variacionAccesoriosNatural": 1,
+  "motorGrafico": "Unreal Engine",
+  "efectoEspecialAnimacionesMundo": 0,
+  "complejidadEstilo": "Free Fire Mobile",
+  "rutaImagen": "/DiseñoWeb/formulario/juegosMesa de trabajo 1.jpg",
+  "precioJuegoSeleccionado": 50,
+  "estiloArquitectonico": "Rural",
+  "variacionAccesorios": 1,
+  "variacionConstrucciones": 1,
+  "duracionProyecto": "21 días",
+  "total": 448.5
+}

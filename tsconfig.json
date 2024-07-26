@@ -37,7 +37,7 @@
     "src/**/*",
     "next-env.d.ts",
     ".next/types/**/*.ts"
-, "src/app/pages", "components" ],
+, "src/app/pages", "components-server" ],
   "exclude": [
     "node_modules"
   ]
