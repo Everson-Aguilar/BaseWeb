@@ -85,15 +85,16 @@ export default function Home() {
       
 
 
-      <Head>
+     <Head>
         <title>SERVICIO DE DISEÑO DE ENTORNO 3D</title>
-
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta
           name="viewport"
-
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no viewport-fit=cover "
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
         />
-
         <meta
           name="description"
           content="Descubre nuestros servicios en diseño 3D para entornos, planos de construcción y accesorios. En 3Dscape, convertimos ideas en realidad con modelos virtuales detallados y visualizaciones realistas."
@@ -102,8 +103,11 @@ export default function Home() {
           name="keywords"
           content="diseño 3D, modelado 3D, renderizado, visualización arquitectónica, diseño de interiores, animación 3D, simulaciones 3D"
         />
-        {/* Otras meta etiquetas según sea necesario */}
       </Head>
+
+
+
+
 
       {/* FIN   DE RESULTAD DE BUSCADORES     */}
 
