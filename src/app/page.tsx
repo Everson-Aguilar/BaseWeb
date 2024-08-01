@@ -11,7 +11,8 @@ import Link from "next/link";
 
 import Administracion from "./components/administracion"
 import Header from "./components/header";
-import Paquetes from "./components/paquetes";
+import El_guias from "./components/el_guias";
+
 
 //fuentes
 
@@ -80,6 +81,9 @@ export default function Home() {
   return (
     <div className="App ">
       {/* PANEL DE RESULTAD DE BUSCADORES     */}
+
+      <section><El_guias/></section>
+
 
       <Head>
         <title>SERVICIO DE DISEÑO DE ENTORNO 3D</title>
@@ -174,7 +178,7 @@ export default function Home() {
             <div className="bg-slate-500 h-full ">
               <img
                 src="/DiseñoWeb/panel_04.jpg"
-                alt="Logo"
+                alt="imagen"
                 className="w-full  h-full  min-w-96"
               />
             </div>
@@ -352,11 +356,11 @@ export default function Home() {
          **********************************************************************************
          **********************************************************************************/}
 
-        {/* componente Peticion==========================================================*/}
+        {/* componente ==========================================================*/}
         <section>
-          <Paquetes />
+          
         </section>
-        {/*Fin componente Peticion=======================================================*/}
+        {/*Fin componente =======================================================*/}
 
         {/*********************************************************************************
          **********************************************************************************
@@ -498,7 +502,7 @@ export default function Home() {
 
       {/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$--POLITICA--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */}
 
-      <footer className=" footer w-full mt-10  text-neutral-400  ">
+      <footer className=" footer  w-full mt-10  text-neutral-400  ">
         <div className="p-5 text-xs">
           <section>
             <div className="font-Jacquard12 text-2xl ">Contacto</div>

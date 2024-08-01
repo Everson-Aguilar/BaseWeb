@@ -1,0 +1,12 @@
+/* Estilo inicial del elemento */
+.guias {
+    transition: all 0.3s ease; /* Transición suave */
+    transform: scale(1);      /* Escala inicial */
+  }
+  
+  /* Estilo cuando el ratón pasa sobre el elemento */
+  .guias:hover {
+    background-color: #2ecc71; /* Color de fondo al pasar el ratón */
+    transform: scale(1.1);     /* Escala al pasar el ratón */
+  }
+  

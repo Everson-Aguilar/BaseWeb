@@ -43,7 +43,7 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="relative p-1  flex  overflow-scroll justify-end text-sm font-Quicksand text-neutral-300 items-start h-full  bg-neutral-600 border-b border-neutral-400">
+    <div className="relative p-1 mb-3  flex  overflow-scroll justify-end text-sm font-Quicksand text-neutral-300 items-start h-full  bg-neutral-500 ">
       <form
         className="  sesion_mobil  flex-row  items-center justify-center mr-28"
         onSubmit={handleSubmit}
