@@ -19,13 +19,13 @@ const El_guias = () => {
         <Image
           src="/DiseñoWeb/whatsapp.svg"
           alt="Logo"
-          width={60} // Ancho deseado en píxeles
-          height={60} // Alto deseado en píxeles
+          width={65} // Ancho deseado en píxeles
+          height={65} // Alto deseado en píxeles
         />
       </a>
 
 
-      <div className="font-mono bg-neutral-400 p-5 h-12 flex items-center shadow-inner-md text-sm rounded-r-full -translate-x-5 z-0">
+      <div className="font-mono bg-neutral-400 p-5 h-14 flex items-center shadow-inner-md text-sm rounded-r-full -translate-x-5 z-0">
         ¿Tienes preguntas? Contáctanos por WhatsApp y te responderemos de inmediato.
       </div>
 
