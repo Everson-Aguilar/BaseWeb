@@ -4,9 +4,10 @@ import Image from "next/image";
 // Importar las animaciones CSS si es necesario
 import "../css/animaciones.css";
 
+
 const El_guias = () => {
   return (
-    <div className="flex items-center justify-center pl-5 fixed h-20 w-full z-50 bottom-5">
+    <div className=" z-30 flex items-center justify-center pl-5 fixed h-20 w-full  bottom-8">
 
 
       <a

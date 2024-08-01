@@ -1,0 +1,17 @@
+.guias_movil{
+
+    bottom: 3%;
+
+
+
+}
+
+
+@media screen and (max-width: 1300px) {
+    .guias_movil {
+
+        bottom: 10%;
+
+      
+    }
+  }

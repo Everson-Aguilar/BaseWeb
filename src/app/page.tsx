@@ -80,9 +80,9 @@ export default function Home() {
 
   return (
     <div className="App ">
-      {/* PANEL DE RESULTAD DE BUSCADORES     */}
+     
 
-      <section><El_guias/></section>
+      
 
 
       <Head>
@@ -502,7 +502,10 @@ export default function Home() {
 
       {/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$--POLITICA--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */}
 
-      <footer className=" footer  w-full mt-10  text-neutral-400  ">
+      <div><El_guias/></div>
+
+
+      <footer className=" footer z-40  w-full mt-10  text-neutral-400  ">
         <div className="p-5 text-xs">
           <section>
             <div className="font-Jacquard12 text-2xl ">Contacto</div>
@@ -535,6 +538,8 @@ export default function Home() {
           </section>
         </div>
       </footer>
+
+     
 
       {/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$--FIN   POLITICA--$$$$$$$$$$$$$$$$$$$$$$$$$ */}
     </div>

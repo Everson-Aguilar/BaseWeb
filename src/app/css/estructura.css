@@ -53,13 +53,10 @@
 
 
 .footer{
-
-
-
+  position: relative;
   min-width: 412px;
   background-color: #2e2e2e;
   
-
   
 }
 
