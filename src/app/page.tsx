@@ -9,10 +9,9 @@ import Link from "next/link";
 
 //componente
 
-import Administracion from "./components/administracion"
+import Administracion from "./components/administracion";
 import Header from "./components/header";
 import El_guias from "./components/el_guias";
-
 
 //fuentes
 
@@ -80,16 +79,6 @@ export default function Home() {
 
   return (
     <div className="App ">
-     
-
-      
-
-
-
-
-
-
-
       {/* FIN   DE RESULTAD DE BUSCADORES     */}
 
       {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!       NAVEGACION APLICACION*/}
@@ -116,7 +105,10 @@ export default function Home() {
          **********************************************************************************/}
         {/*presentacion y servicios    01-----------------------------------------------------*/}
 
-        <section> <Administracion/></section>
+        <section>
+          {" "}
+          <Administracion />
+        </section>
 
         <section className="base">
           <div className="contenedor1">
@@ -124,30 +116,41 @@ export default function Home() {
               <Image
                 src="/DiseñoWeb/logogrisoscuro.svg"
                 alt="Logo"
-                width={300} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
-                height={300} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
+                width={800} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
+                height={800} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
               />
 
               <h1 className="font-Staatliches text-7xl text-stone-600  mt-4">
-                3D DISEÑO ENTORNO PLAN:
+                CREA TU IDENTIDAD DIGITAL
               </h1>
 
               <div>
-                <ul className="text-5xl font-SixCaps text-stone-600   ">
-                  <li>+Terreno</li>
-                  <li>+Construcción</li>
-                  <li>+Accesorios</li>
+                <ul className="text-5xl font-BebasNeue text-stone-600   ">
+                  <li>+ Herramientas</li>
+                  <li>+ Recursos</li>
+                  <li>+ Servicios</li>
                 </ul>
               </div>
             </div>
 
             <div className="absolute  font-Acme bg-slate-300 bg-opacity-10 backdrop-blur-md box-border p-3 z-20 text-stone-600  w-1/3 h-full right-0 text-1xl">
-              <span className=" relative text-5xl ">E</span>n 3Dscape,
-              transformamos ideas en realidad mediante modelos virtuales
-              detallados y visualizaciones realistas. Nuestra experiencia abarca
-              diversas industrias, incluyendo arquitectura, cine, videojuegos y
-              más. Ofrecemos soluciones personalizadas que combinan creatividad,
-              precisión y sostenibilidad.
+              <p>
+                <strong>
+                  Impulsa tu Presencia Digital con un ID &Uacute;nico
+                </strong>
+              </p>
+              <p>
+                Con nuestro <strong>ID exclusivo</strong>, facilitar&aacute;s
+                que otros accedan a tu negocio y recursos digitales. Tu ID
+                conectar&aacute; a clientes y colaboradores con tu marca,
+                mejorando tu visibilidad y presencia online.
+              </p>
+              <p>
+                <strong>
+                  Consigue tu ID y abre las puertas a nuevas oportunidades
+                  digitales para tu negocio!
+                </strong>
+              </p>
             </div>
 
             <div className="imagen relative">
@@ -192,7 +195,7 @@ export default function Home() {
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
                     <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
-                      Diseño Ambiental
+                      Desarrollo Web
                     </div>
                   </div>
 
@@ -205,7 +208,7 @@ export default function Home() {
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
                     <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
-                      Modelado 3D
+                      Diseño Gráfico
                     </div>
                   </div>
 
@@ -218,7 +221,7 @@ export default function Home() {
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
                     <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
-                      Superficies Duras
+                      Diseño Productos
                     </div>
                   </div>
                   {/*items servicios*/}
@@ -230,7 +233,7 @@ export default function Home() {
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
                     <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
-                      Unity/Unreal Engine
+                      Diseño Interiorismo
                     </div>
                   </div>
                   {/*items servicios*/}
@@ -242,7 +245,7 @@ export default function Home() {
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
                     <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
-                      Escultura 3D
+                      Marketing Digital
                     </div>
                   </div>
                   {/*items servicios*/}
@@ -254,7 +257,7 @@ export default function Home() {
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
                     <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
-                      Plano Arquitectonico
+                      Publicidad
                     </div>
                   </div>
                   {/*items servicios*/}
@@ -266,7 +269,7 @@ export default function Home() {
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
                     <div className=" mt-14  font-Acme text-1xl text-neutral-300 flex items-center justify-center">
-                      Mobilarios
+                      Contenido Redes Sociales
                     </div>
                   </div>
                   {/*items servicios*/}
@@ -278,7 +281,7 @@ export default function Home() {
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
                     <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
-                      Diseño Niveles
+                      Diseño Entorno 3D
                     </div>
                   </div>
                   {/*items servicios*/}
@@ -290,7 +293,7 @@ export default function Home() {
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
                     <div className="  mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
-                      Objetos
+                      Diseño Assets
                     </div>
                   </div>
                 </div>
@@ -301,32 +304,23 @@ export default function Home() {
 
             <div className="   justify-center   flex h-1/2  w-full  ">
               <div>
-                <div className="  box-border  p-5 flex items-center justify-center flex-col  h-4/5 w-full text-4xl font-BebasNeue text-neutral-300  border-2  border-neutral-300 mt-20  ">
-                  <div className="text-5xl ">
-                    DISEÑOS <br /> PRECIOS <br />
-                    ECONOMICOS
-                  </div>
-                  <div className="text-9xl">50%</div>
+                <div className="  box-border  p-5 flex items-center justify-center   h-4/5 w-full text-4xl font-BebasNeue text-neutral-300  border-2  border-neutral-300 mt-20  ml-3 ">
+                  
+                  La digitalización es el futuro. Lleva tu negocio al siguiente nivel ahora.
+                 
+                  
                 </div>
               </div>
 
               <div className=" max-w-40 text-xs  text-neutral-300 box-border items-center justify-center flex-col h-full   p-5 overflow-hidden">
                 <span className="break-words">
                   <div>
-                    Ofrecemos precios justos y equitativos adaptados al
-                    proyecto. Nos enfocamos en ayudar a pequeños emprendedores
-                    con productos económicos que cumplen sus necesidades.
+                    <span className="text-6xl"> !</span>Entendemos que pasar al mundo digital es un desafío para
+                    los negocios tradicionales. Este proceso puede ser lento y
+                    experimental, pero tomar el riesgo vale la pena; te hará ver
+                    la vida de manera diferente. Estamos aquí para apoyarte y
+                    ayudarte a crecer en la era digital. ¡Juntos lo lograremos!
                   </div>
-                  <p className="font-BebasNeue text-2xl">Incluye:</p>
-                  <ul className="text-stone-400 ">
-                    <li>- Modelado 3D de [objetos/arquitectura/productos].</li>
-                    <li>- Texturización y materiales realistas.</li>
-                    <li>- Renderizado de alta calidad.</li>
-                    <li>- Revisión y ajustes según tu retroalimentación.</li>
-                    <li>
-                      - Entrega en formatos estándar para fácil integración.
-                    </li>
-                  </ul>
                 </span>
               </div>
             </div>
@@ -343,9 +337,7 @@ export default function Home() {
          **********************************************************************************/}
 
         {/* componente ==========================================================*/}
-        <section>
-          
-        </section>
+        <section></section>
         {/*Fin componente =======================================================*/}
 
         {/*********************************************************************************
@@ -395,13 +387,15 @@ export default function Home() {
               <div className=" h-full p-3 box-border ">
                 <div className=" h-1/2 p-2">
                   <ul className="text-xs text-neutral-400 font-Staatliches">
-                    <li>Autodesk Maya</li>
+                    <li>Autodesk Revit</li>
                     <li>Blender</li>
-                    <li>Autodesk 3ds Max</li>
                     <li>ZBrush</li>
                     <li>Substance Painter</li>
                     <li>Unity 3D / Unreal</li>
                     <li>Adobe After Effects</li>
+                    <li>Adobe Photoshop</li>
+                    <li>Adobe Premier</li>
+                    <li>Adobe Illustrator</li>
                   </ul>
                 </div>
               </div>
@@ -488,8 +482,9 @@ export default function Home() {
 
       {/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$--POLITICA--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */}
 
-      <div><El_guias/></div>
-
+      <div>
+        <El_guias />
+      </div>
 
       <footer className=" footer z-40  w-full mt-10  text-neutral-400  ">
         <div className="p-5 text-xs">
@@ -524,8 +519,6 @@ export default function Home() {
           </section>
         </div>
       </footer>
-
-     
 
       {/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$--FIN   POLITICA--$$$$$$$$$$$$$$$$$$$$$$$$$ */}
     </div>

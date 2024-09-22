@@ -26,7 +26,7 @@ const El_guias = () => {
 
 
       <div className="font-mono bg-neutral-400 p-5 pl-10 h-14 flex items-center shadow-inner-md text-sm rounded-r-full -translate-x-5 z-0">
-        ¿Tienes preguntas? Contáctanos por WhatsApp y te responderemos de inmediato.
+         Contáctanos por WhatsApp.
       </div>
 
 
