@@ -305,21 +305,20 @@ export default function Home() {
             <div className="   justify-center   flex h-1/2  w-full  ">
               <div>
                 <div className="  box-border  p-5 flex items-center justify-center   h-4/5 w-full text-4xl font-BebasNeue text-neutral-300  border-2  border-neutral-300 mt-20  ml-3 ">
-                  
-                  La digitalización es el futuro. Lleva tu negocio al siguiente nivel ahora.
-                 
-                  
+                  La digitalización es el futuro. Lleva tu negocio al siguiente
+                  nivel ahora.
                 </div>
               </div>
 
               <div className=" max-w-40 text-xs  text-neutral-300 box-border items-center justify-center flex-col h-full   p-5 overflow-hidden">
                 <span className="break-words">
                   <div>
-                    <span className="text-6xl"> !</span>Entendemos que pasar al mundo digital es un desafío para
-                    los negocios tradicionales. Este proceso puede ser lento y
-                    experimental, pero tomar el riesgo vale la pena; te hará ver
-                    la vida de manera diferente. Estamos aquí para apoyarte y
-                    ayudarte a crecer en la era digital. ¡Juntos lo lograremos!
+                    <span className="text-6xl"> !</span>Entendemos que pasar al
+                    mundo digital es un desafío para los negocios tradicionales.
+                    Este proceso puede ser lento y experimental, pero tomar el
+                    riesgo vale la pena; te hará ver la vida de manera
+                    diferente. Estamos aquí para apoyarte y ayudarte a crecer en
+                    la era digital. ¡Juntos lo lograremos!
                   </div>
                 </span>
               </div>
@@ -402,15 +401,15 @@ export default function Home() {
             </div>
             <div className="  box-border flex-row overflow-hidden  items-center justify-center text-center ">
               <span className="font-Acme  text-neutral-300 text-xl ">
-                GRATIS PARA TI !
+              CONCEPTO TECNICO Y ARTISTICO!
               </span>
               <div className=" p-5 max-full text-xs text-neutral-400 font-Staatliches">
-                <span className=" text-2xl text-neutral-200">!</span> En nuestra
-                sección gratuita, ofrecemos consejos prácticos y accesibles para
-                mejorar tus espacios con soluciones de diseño funcional y
-                estético. Desde ideas básicas hasta avanzadas, buscamos
-                inspirarte y proporcionarte herramientas prácticas para
-                transformar tus entornos fácilmente
+                <span className=" text-2xl text-neutral-200">!</span> Nuestro
+                enfoque combina sólidos conocimientos técnicos y una visión
+                artística detallada, asegurando que cada proyecto digital sea
+                ejecutado con el más alto nivel de profesionalismo. Tu negocio
+                merece lo mejor, y estamos aquí para ofrecerte soluciones que
+                realmente marquen la diferencia.
                 <span className=" text-2xl text-neutral-200">.</span>
               </div>
             </div>
