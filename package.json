@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     
-    "dev": "nodemon ./bin/www",  
+    "dev": "node app.js",  
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
