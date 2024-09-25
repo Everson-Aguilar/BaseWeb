@@ -12,6 +12,7 @@ import Link from "next/link";
 import Administracion from "./components/administracion";
 import Header from "./components/header";
 import El_guias from "./components/el_guias";
+import ConexionesLocales from "./components/conexionesLocales";
 
 //fuentes
 
@@ -335,9 +336,20 @@ export default function Home() {
          **********************************************************************************
          **********************************************************************************/}
 
-        {/* componente ==========================================================*/}
-        <section></section>
-        {/*Fin componente =======================================================*/}
+        {/* componente vacio seccion ==========================================================*/}
+        <section>
+
+          <ConexionesLocales/>
+
+          </section>
+        {/*Fin componente vacio seccion =======================================================*/}
+
+
+              {/* componente vacio seccion ==========================================================*/}
+              <section></section>
+        {/*Fin componente vacio seccion =======================================================*/}
+
+
 
         {/*********************************************************************************
          **********************************************************************************
@@ -527,8 +539,18 @@ export default function Home() {
 {
   /*  GUARDAR Y SUBIR APLICACION   */
 }
-/* git-hub pasos para guardar CONSOLA
+/* git-hub pasos para guardar CONSOLA (prueba)
 git add .
 git commit -m "subir"
 git pull origin main
 git push origin main */
+
+
+/* git-hub pasos para guardar CONSOLA (produccion)
+git add .
+git commit -m "subir"
+git pull origin develop
+git push origin develop */
+
+
+
