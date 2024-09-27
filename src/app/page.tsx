@@ -127,9 +127,9 @@ export default function Home() {
 
               <div>
                 <ul className="text-5xl font-BebasNeue text-stone-600   ">
-                  <li>+ Herramientas</li>
-                  <li>+ Recursos</li>
-                  <li>+ Servicios</li>
+                  <li> Herramientas</li>
+                  <li> Recursos</li>
+                  <li> Servicios</li>
                 </ul>
               </div>
             </div>
@@ -548,7 +548,7 @@ git push origin main */
 
 /* git-hub pasos para guardar CONSOLA (produccion)
 git add .
-git commit -m "subir"
+git commit -m "produccion"
 git pull origin develop
 git push origin develop */
 

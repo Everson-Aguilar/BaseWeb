@@ -5,8 +5,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SERVICIOS DE DISEÑO DE ENTORNO 3D, PLANIFICACION DE CONSTRUCCION Y ACCESORIOS OPTIMIZADO-3Dscape",
-  description: "Descubre nuestros servicios en diseño 3D para entornos, planos de construcción y accesorios. En 3Dscape, convertimos ideas en realidad con modelos virtuales detallados y visualizaciones realistas.",
+  title:
+    "IMPULSA TUS VENTAS: Creamos Negocios Digitales con Redes Sociales, Marketing, Web, Orientación Artística y Obtención de Clientes",
+  description:
+    "En tudigitalnegocio.com, transformamos tu negocio local en un poderoso negocio digital que impulsa tus ventas. Utilizamos redes sociales, marketing digital, desarrollo web, diseño gráfico, diseño de productos y diseño de espacios. Con tecnologías avanzadas y un flujo de trabajo optimizado, ofrecemos soluciones económicas y adaptadas a tus necesidades. ¡Conéctate con nosotros y da el primer paso hacia el éxito digital!",
 };
 
 export default function RootLayout({
@@ -18,12 +20,32 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/DiseñoWeb/logogrisoscuro.svg" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/DiseñoWeb/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/DiseñoWeb/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/DiseñoWeb/favicon-16x16.png" />
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-        <meta name="keywords" content="diseño 3D, modelado 3D, renderizado, visualización arquitectónica, diseño de interiores, animación 3D, simulaciones 3D" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/DiseñoWeb/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/DiseñoWeb/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/DiseñoWeb/favicon-16x16.png"
+        />
+
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+        />
+        <meta
+          name="keywords"
+          content="negocio digital, impulso de ventas, redes sociales, marketing digital, desarrollo web, diseño gráfico, diseño de productos, diseño de espacios, tecnologías avanzadas, soluciones económicas"
+        />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
