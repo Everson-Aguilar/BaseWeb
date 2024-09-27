@@ -339,7 +339,7 @@ export default function Home() {
         {/* componente vacio seccion ==========================================================*/}
         <section>
 
-          <ConexionesLocales/>
+          
 
           </section>
         {/*Fin componente vacio seccion =======================================================*/}
@@ -524,8 +524,7 @@ export default function Home() {
           </section>
           <section>
             <p className="text-center">
-              © 2024 3Dscape. Todos los derechos reservados. Diseñado por
-              3Dscape.
+              © 2024 tudigitalnegocio.com. Todos los derechos reservados. 
             </p>
           </section>
         </div>
