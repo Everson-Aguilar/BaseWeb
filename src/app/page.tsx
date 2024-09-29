@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 ///////////////////////////////// ALMACENAMIENTO
@@ -12,7 +13,8 @@ import Link from "next/link";
 import Administracion from "./components/administracion";
 import Header from "./components/header";
 import El_guias from "./components/el_guias";
-import ConexionesLocales from "./components/conexionesLocales";
+import Retiro from "./components/retiro";
+import Reglas from "./components/reglas";
 
 //fuentes
 
@@ -168,8 +170,8 @@ export default function Home() {
             <div className="bg-slate-500 h-full ">
               <img
                 src="/DiseñoWeb/panel_04.jpg"
-                alt="imagen"
-                className="w-full  h-full  min-w-96"
+                alt="Descripción de la imagen"
+                className="w-full h-full min-w-96"
               />
             </div>
           </div>
@@ -336,17 +338,16 @@ export default function Home() {
          **********************************************************************************
          **********************************************************************************/}
 
+
+
         {/* componente vacio seccion ==========================================================*/}
-        <section>
-
-          
-
-          </section>
+        <section><Reglas/></section>
         {/*Fin componente vacio seccion =======================================================*/}
 
 
-              {/* componente vacio seccion ==========================================================*/}
-              <section></section>
+
+                {/* componente vacio seccion ==========================================================*/}
+                <section></section>
         {/*Fin componente vacio seccion =======================================================*/}
 
 
@@ -413,7 +414,7 @@ export default function Home() {
             </div>
             <div className="  box-border flex-row overflow-hidden  items-center justify-center text-center ">
               <span className="font-Acme  text-neutral-300 text-xl ">
-              CONCEPTO TECNICO Y ARTISTICO!
+                CONCEPTO TECNICO Y ARTISTICO!
               </span>
               <div className=" p-5 max-full text-xs text-neutral-400 font-Staatliches">
                 <span className=" text-2xl text-neutral-200">!</span> Nuestro
@@ -487,6 +488,12 @@ export default function Home() {
          **********************************************************************************
          **********************************************************************************
          **********************************************************************************/}
+
+        {/* componente  ==========================================================*/}
+        <section>
+          <Retiro />
+        </section>
+        {/*Fin componente =======================================================*/}
       </main>
 
       {/*       v              EXIT MAIN            v          */}
@@ -524,7 +531,7 @@ export default function Home() {
           </section>
           <section>
             <p className="text-center">
-              © 2024 tudigitalnegocio.com. Todos los derechos reservados. 
+              © 2024 tudigitalnegocio.com. Todos los derechos reservados.
             </p>
           </section>
         </div>
@@ -544,12 +551,8 @@ git commit -m "subir"
 git pull origin main
 git push origin main */
 
-
 /* git-hub pasos para guardar CONSOLA (produccion)
 git add .
-git commit -m "produccion"
+git commit -m "29/09/2024"
 git pull origin develop
 git push origin develop */
-
-
-

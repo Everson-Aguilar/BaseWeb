@@ -7,7 +7,7 @@ import "../css/animaciones.css";
 
 const El_guias = () => {
   return (
-    <div className=" z-30 flex items-center justify-center pl-5 fixed h-20 w-full  bottom-8">
+    <div className=" z-30 flex items-center justify-end pl-5 fixed h-10 w-full  bottom-8">
 
 
       <a
