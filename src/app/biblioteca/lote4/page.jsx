@@ -36,22 +36,22 @@ const Pack = () => {
             src={`${basePath}${imageName}`}
             alt={`Imagen ${index + 1}`}
             layout="fill"
-            objectFit="cover"
+            objectFit="scale-down"
             unoptimized
           />
           <div className="absolute w-full h-32 text-neutral-100 p-3 z-20 flex font-BebasNeue text-7xl">
             <Image
-              src="/DiseñoWeb/logoblanco.svg"
+              src="/DiseñoWeb/logogaleria.svg"
               alt="Logo"
               width={300}
               height={300}
             />
-            <div>
-            <div className="text-4xl text-neutral-100">{globalTitle}</div>
-              <p className="text-sm font-Quicksand">{globalDescription}</p>
+         <div>
+              <div className="text-4xl text-pink-700">{globalTitle}</div>
+              <p className="text-2xl text-pink-700 font-BebasNeue">{globalDescription}</p>
             </div>
           </div>
-          <div className="bg-neutral-800 absolute opacity-60 text-neutral-100 w-full h-40 flex p-2"></div>
+          
         </div>
       ))}
     </div>
