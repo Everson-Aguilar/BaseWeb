@@ -15,6 +15,7 @@ import Header from "./components/header";
 import El_guias from "./components/el_guias";
 import Retiro from "./components/retiro";
 import Reglas from "./components/reglas";
+import Introduccion from "./components/introduccion";
 
 //fuentes
 
@@ -97,7 +98,7 @@ export default function Home() {
 
       <main>
         {/*Ajuste Base Aplicacion     00  */}
-        <div className="bg-neutral-600 h-16 w-full "></div>
+        <div className="bg-message h-16 w-full "></div>
         {/*Fin base Ajuste Aplicacion 00  */}
 
         {/*********************************************************************************
@@ -112,6 +113,10 @@ export default function Home() {
           {" "}
           <Administracion />
         </section>
+
+        {/* componente vacio seccion ==========================================================*/}
+        <section> <Introduccion/> </section>
+        {/*Fin componente vacio seccion =======================================================*/}
 
         <section className="base">
           <div className="contenedor1">
@@ -223,7 +228,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-message flex items-center justify-center">
                       Diseño Productos
                     </div>
                   </div>
@@ -235,7 +240,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-message flex items-center justify-center">
                       Diseño Interiorismo
                     </div>
                   </div>
@@ -247,7 +252,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-message flex items-center justify-center">
                       Marketing Digital
                     </div>
                   </div>
@@ -259,7 +264,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-message flex items-center justify-center">
                       Publicidad
                     </div>
                   </div>
@@ -271,7 +276,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className=" mt-14  font-Acme text-1xl text-neutral-300 flex items-center justify-center">
+                    <div className=" mt-14  font-Acme text-1xl text-message flex items-center justify-center">
                       Contenido Redes Sociales
                     </div>
                   </div>
@@ -283,7 +288,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className=" mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
+                    <div className=" mt-14 font-Acme text-1xl text-message flex items-center justify-center">
                       Diseño Entorno 3D
                     </div>
                   </div>
@@ -295,7 +300,7 @@ export default function Home() {
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
-                    <div className="  mt-14 font-Acme text-1xl text-neutral-300 flex items-center justify-center">
+                    <div className="  mt-14 font-Acme text-1xl text-message flex items-center justify-center">
                       Diseño Assets
                     </div>
                   </div>
@@ -307,13 +312,13 @@ export default function Home() {
 
             <div className="   justify-center   flex h-1/2  w-full  ">
               <div>
-                <div className="  box-border  p-5 flex items-center justify-center   h-4/5 w-full text-4xl font-BebasNeue text-neutral-300  border-2  border-neutral-300 mt-20  ml-3 ">
+                <div className="  box-border  p-5 flex items-center justify-center   h-4/5 w-full text-4xl font-BebasNeue text-trend border-2  border-trend mt-20  ml-3 ">
                   La digitalización es el futuro. Lleva tu negocio al siguiente
                   nivel ahora.
                 </div>
               </div>
 
-              <div className=" max-w-40 text-xs  text-neutral-300 box-border items-center justify-center flex-col h-full   p-5 overflow-hidden">
+              <div className=" max-w-40 text-xs  text-message box-border items-center justify-center flex-col h-full   p-5 overflow-hidden">
                 <span className="break-words">
                   <div>
                     <span className="text-6xl"> !</span>Entendemos que pasar al
@@ -338,19 +343,15 @@ export default function Home() {
          **********************************************************************************
          **********************************************************************************/}
 
-
+        {/* componente vacio seccion ==========================================================*/}
+        <section>
+          <Reglas />
+        </section>
+        {/*Fin componente vacio seccion =======================================================*/}
 
         {/* componente vacio seccion ==========================================================*/}
-        <section><Reglas/></section>
+        <section></section>
         {/*Fin componente vacio seccion =======================================================*/}
-
-
-
-                {/* componente vacio seccion ==========================================================*/}
-                <section></section>
-        {/*Fin componente vacio seccion =======================================================*/}
-
-
 
         {/*********************************************************************************
          **********************************************************************************

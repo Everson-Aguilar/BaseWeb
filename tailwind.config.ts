@@ -17,6 +17,15 @@ const config: Config = {
         'inner-xl': 'inset 0 20px 25px rgba(0, 0, 0, 0.1)',
       },
 
+      colors: {
+        base: '#FFFCF2',
+        message: '#CCC5B9',
+        subtitle: '#403D39',
+        title: '#252422',
+        trend: '#EB5E28',
+      },
+
+
 
       fontFamily: {
 

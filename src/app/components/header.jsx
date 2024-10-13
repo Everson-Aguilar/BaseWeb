@@ -9,9 +9,9 @@ import "../css/header.css";
 
 const Header = () => {
   return (
-    <header className="  bg-neutral-300 h-16  bg-opacity-20 backdrop-blur-md   header">
+    <header className="  bg-neutral-800 h-16    header">
       <nav>
-        <ul className="header_contenido font-Quicksand">
+        <ul className="header_contenido font-sans ">
           <li>
             <Link href="/">Inicio</Link>
           </li>
