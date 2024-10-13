@@ -120,20 +120,20 @@ export default function Home() {
 
         <section className="base">
           <div className="contenedor1">
-            <div className="absolute  text-5xl z-10   text-stone-600  p-4 h-2/5 w-2/3 ">
+            <div className="absolute  z-10    p-4 h-2/5 w-2/3 ">
               <Image
-                src="/DiseñoWeb/logogrisoscuro.svg"
+                src="/DiseñoWeb/logoNaranja.svg"
                 alt="Logo"
                 width={800} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
                 height={800} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
               />
 
-              <h1 className="font-Staatliches text-7xl text-stone-600  mt-4">
+              <h1 className="font-Staatliches text-7xl text-trend  mt-4">
                 CREA TU IDENTIDAD DIGITAL
               </h1>
 
               <div>
-                <ul className="text-5xl font-BebasNeue text-stone-600   ">
+                <ul className="text-5xl  text-trend  ">
                   <li> Herramientas</li>
                   <li> Recursos</li>
                   <li> Servicios</li>
@@ -141,7 +141,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="absolute  font-Acme bg-slate-300 bg-opacity-10 backdrop-blur-md box-border p-3 z-20 text-stone-600  w-1/3 h-full right-0 text-1xl">
+            <div className="absolute text-title bg-slate-300 bg-opacity-10 backdrop-blur-md box-border p-3 z-20   w-1/3 h-full right-0 text-1xl">
               <p>
                 <strong>
                   Impulsa tu Presencia Digital con un ID &Uacute;nico
@@ -163,7 +163,7 @@ export default function Home() {
 
             <div className="imagen relative">
               <Image
-                src="/DiseñoWeb/panel_01gris.jpg"
+                src="/DiseñoWeb/panel_01.jpg"
                 alt="Diseño Ambiental"
                 layout="fill" // Ajusta la imagen para llenar todo el contenedor
                 objectFit="cover" // Ajusta la imagen para cubrir el contenedor sin distorsión
@@ -365,11 +365,11 @@ export default function Home() {
             <div className="  w-full flex-row justify-center items-center text-end ">
               <div className=" h-1/2 text-sm  p-3">
                 <div>
-                  <div className=" tracking-wide  font-Acme  text-neutral-300 text-xl">
+                  <div className=" tracking-wide  text-trend font-BebasNeue text-xl">
                     PASOS PARA CREAR ACCESORIOS COMO ARTISTA DIGITAL:
                   </div>
                 </div>
-                <ul className="font-Staatliches text-1xl text-neutral-400  ">
+                <ul className=" text-title  text-1xl   ">
                   <li>*Conceptualizaci&oacute;n y Referencias Visuales</li>
                   <li>*Modelado 3D de Alto Pol&iacute;gono</li>
                   <li>*Retopolog&iacute;a del Modelo</li>
@@ -384,7 +384,7 @@ export default function Home() {
               </div>
             </div>
             <div className="   w-full flex-row justify-center  items-center   ">
-              <div className=" h-full w-full flex items-center text-stone-600  p-5 ">
+              <div className=" h-full w-full flex items-center p-5 ">
                 <Image
                   src="/DiseñoWeb/logogris.svg"
                   alt="Logo"
@@ -394,12 +394,12 @@ export default function Home() {
               </div>
             </div>
             <div className=" w-full  text-end  overflow-hidden border-r-neutral-400     border-r-2">
-              <span className=" font-Acme  text-neutral-300 text-xl ">
+              <span className=" text-trend font-BebasNeue text-xl ">
                 TECNOLOGIAS
               </span>
               <div className=" h-full p-3 box-border ">
                 <div className=" h-1/2 p-2">
-                  <ul className="text-xs text-neutral-400 font-Staatliches">
+                  <ul className="text-xs text-title ">
                     <li>Autodesk Revit</li>
                     <li>Blender</li>
                     <li>ZBrush</li>
@@ -414,23 +414,23 @@ export default function Home() {
               </div>
             </div>
             <div className="  box-border flex-row overflow-hidden  items-center justify-center text-center ">
-              <span className="font-Acme  text-neutral-300 text-xl ">
+              <span className="text-trend font-BebasNeue text-xl ">
                 CONCEPTO TECNICO Y ARTISTICO!
               </span>
-              <div className=" p-5 max-full text-xs text-neutral-400 font-Staatliches">
-                <span className=" text-2xl text-neutral-200">!</span> Nuestro
+              <div className=" p-5 max-full text-xs text-title ">
+                <span className=" text-2xl text-title">!</span> Nuestro
                 enfoque combina sólidos conocimientos técnicos y una visión
                 artística detallada, asegurando que cada proyecto digital sea
                 ejecutado con el más alto nivel de profesionalismo. Tu negocio
                 merece lo mejor, y estamos aquí para ofrecerte soluciones que
-                realmente marquen la diferencia.
-                <span className=" text-2xl text-neutral-200">.</span>
+                realmente marquen la diferencia
+                <span className=" text-2xl text-title">.</span>
               </div>
             </div>
           </div>
 
           <div>
-            <div className=" text-neutral-300 text-8xl font-BebasNeue">
+            <div className=" text-trend font-BebasNeue text-8xl">
               PORTFOLIO
             </div>
 
@@ -505,7 +505,7 @@ export default function Home() {
         <El_guias />
       </div>
 
-      <footer className=" footer z-40  w-full mt-10  text-neutral-400  ">
+      <footer className=" footer z-40  w-full mt-10  text-message ">
         <div className="p-5 text-xs">
           <section>
             <div className="font-Jacquard12 text-2xl ">Contacto</div>
@@ -554,6 +554,6 @@ git push origin main */
 
 /* git-hub pasos para guardar CONSOLA (produccion)
 git add .
-git commit -m "29/09/2024"
+git commit -m "13/10/2024"
 git pull origin develop
 git push origin develop */

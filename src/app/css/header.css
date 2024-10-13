@@ -23,14 +23,16 @@
 }
 
 .header_contenido :hover {
-  color: rgb(233, 13, 68);
+  color: #252422;
 }
 
 .sesion {
+
 }
 
 .sesion:hover {
-  color: rgb(233, 13, 68);
+  background-color: #ffffff;
+  
 }
 
 .sesion_mobil {
