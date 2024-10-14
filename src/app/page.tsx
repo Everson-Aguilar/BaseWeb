@@ -133,7 +133,7 @@ export default function Home() {
               </h1>
 
               <div>
-                <ul className="text-5xl  text-trend  ">
+                <ul className="text-5xl font-BebasNeue text-trend  ">
                   <li> Herramientas</li>
                   <li> Recursos</li>
                   <li> Servicios</li>

@@ -52,8 +52,8 @@ const Pack = () => {
               height={300}
             />
          <div>
-              <div className="text-4xl text-pink-700">{globalTitle}</div>
-              <p className="text-2xl text-pink-700 font-BebasNeue">{globalDescription}</p>
+              <div className="text-4xl text-trend ">{globalTitle}</div>
+              <p className="text-2xl text-trend font-BebasNeue">{globalDescription}</p>
             </div>
           </div>
           

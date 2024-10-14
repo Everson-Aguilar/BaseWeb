@@ -63,7 +63,7 @@ const ComicStory: React.FC = () => {
       {/* Diagramas */}
       <div className='w-full md:w-1/2 p-5 bg-base'>
         {/* Aquí puedes agregar tus diagramas */}
-        <h2 className="text-2xl font-bold text-center mb-4 text-title">Diagramas</h2>
+        <h2 className="text-2xl font-BebasNeue text-center mb-4 text-title">Diagramas</h2>
         <div className="bg-white p-4 rounded-md shadow-lg">
           [Aquí van los diagramas]
         </div>
