@@ -4,7 +4,6 @@
 ///////////////////////////////// ALMACENAMIENTO
 
 import { useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,6 +15,7 @@ import El_guias from "./components/el_guias";
 import Retiro from "./components/retiro";
 import Reglas from "./components/reglas";
 import Introduccion from "./components/introduccion";
+import Exposicion from "./components/exposicionClientes";
 
 //fuentes
 
@@ -115,8 +115,21 @@ export default function Home() {
         </section>
 
         {/* componente vacio seccion ==========================================================*/}
-        <section> <Introduccion/> </section>
+        <section>
+          {" "}
+          <Introduccion />{" "}
+        </section>
         {/*Fin componente vacio seccion =======================================================*/}
+
+        {/* componente exposicion seccion ==========================================================*/}
+        <section>
+          <Exposicion />
+        </section>
+        {/*Fin componente exposicion seccion =======================================================*/}
+
+
+
+
 
         <section className="base">
           <div className="contenedor1">
@@ -343,11 +356,11 @@ export default function Home() {
          **********************************************************************************
          **********************************************************************************/}
 
-        {/* componente vacio seccion ==========================================================*/}
+        {/* componente reglas seccion ==========================================================*/}
         <section>
           <Reglas />
         </section>
-        {/*Fin componente vacio seccion =======================================================*/}
+        {/*Fin componente reglas seccion =======================================================*/}
 
         {/* componente vacio seccion ==========================================================*/}
         <section></section>
@@ -393,7 +406,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className=" w-full  text-end  overflow-hidden border-r-neutral-400     border-r-2">
+            <div className=" w-full  text-end  overflow-hidden border-r-neutral-400  pr-2   border-r-2">
               <span className=" text-trend font-BebasNeue text-xl ">
                 TECNOLOGIAS
               </span>
@@ -418,21 +431,19 @@ export default function Home() {
                 CONCEPTO TECNICO Y ARTISTICO!
               </span>
               <div className=" p-5 max-full text-xs text-title ">
-                <span className=" text-2xl text-title">!</span> Nuestro
-                enfoque combina sólidos conocimientos técnicos y una visión
-                artística detallada, asegurando que cada proyecto digital sea
-                ejecutado con el más alto nivel de profesionalismo. Tu negocio
-                merece lo mejor, y estamos aquí para ofrecerte soluciones que
-                realmente marquen la diferencia
+                <span className=" text-2xl text-title">!</span> Nuestro enfoque
+                combina sólidos conocimientos técnicos y una visión artística
+                detallada, asegurando que cada proyecto digital sea ejecutado
+                con el más alto nivel de profesionalismo. Tu negocio merece lo
+                mejor, y estamos aquí para ofrecerte soluciones que realmente
+                marquen la diferencia
                 <span className=" text-2xl text-title">.</span>
               </div>
             </div>
           </div>
 
           <div>
-            <div className=" text-trend font-BebasNeue text-8xl">
-              PORTFOLIO
-            </div>
+            <div className=" text-trend font-BebasNeue text-8xl">PORTFOLIO</div>
 
             {/* galeria */}
 
@@ -554,6 +565,6 @@ git push origin main */
 
 /* git-hub pasos para guardar CONSOLA (produccion)
 git add .
-git commit -m "13/10/2024"
+git commit -m "14/10/2024"
 git pull origin develop
 git push origin develop */

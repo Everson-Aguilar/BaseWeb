@@ -78,7 +78,7 @@ const Login: React.FC = () => {
         </div>
         <div>
           {" "}
-          <button className="sesion bg-trend p-2 rounded-lg "  type="submit">
+          <button className="sesion bg-trend p-1 rounded-lg "  type="submit">
             Iniciar sesión
           </button>{" "}
         </div>

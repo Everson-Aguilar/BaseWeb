@@ -1,5 +1,5 @@
 import Header from "../components/header";
-import Image from "next/image";
+
 
 
 const Layout = ({ children }) => {
