@@ -132,7 +132,7 @@ export default function Home() {
 
 
         <section className="base">
-          <div className="contenedor1">
+          <div className="contenedor1  ">
             <div className="absolute  z-10    p-4 h-2/5 w-2/3 ">
               <Image
                 src="/DiseñoWeb/logoNaranja.svg"
