@@ -14,7 +14,7 @@ const El_guias = () => {
         href="https://wa.me/573052158161" // Reemplaza con el número de WhatsApp deseado
         target="_blank" // Abre el enlace en una nueva pestaña
         rel="noopener noreferrer" // Mejora la seguridad
-        className="guias min-h-14 z-10 bg-trend p-3 rounded-full  shadow-2xl flex items-center justify-center"
+        className="guias min-h-14 z-10 bg-message p-3 rounded-full  shadow-2xl flex items-center justify-center"
       >
         <Image
           src="/DiseñoWeb/whatsapp.svg"
@@ -25,7 +25,7 @@ const El_guias = () => {
       </a>
 
 
-      <div className="font-mono bg-trend p-5 pl-10 h-14 flex items-center shadow-inner-md text-sm rounded-r-full -translate-x-5 z-0">
+      <div className="font-mono bg-message p-5 pl-10 h-14 flex items-center shadow-inner-md text-sm rounded-r-full -translate-x-5 z-0">
          Contáctanos por WhatsApp.
       </div>
 

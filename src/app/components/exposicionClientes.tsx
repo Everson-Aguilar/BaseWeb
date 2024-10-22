@@ -27,15 +27,19 @@ const exposicionClientes: React.FC = () => {
 
       </div>
 
-      <div className="mt-5">
+      <div className="mt-5 ">
 
-      <div className=" text-title  font-bold  text-3xl"> producto hogar </div>
-      <div className="  text-title    text-2xl">  mobilarios </div>
+      <div className="text-title  p-3 font-bold text-3xl border-2 border-trend">
+  producto hogar
+</div>
+
+
+      <div className="  text-title p-1  font-bold text-2xl shadow-xl h-10 ">  mobilarios </div>
 
 
       {/* COMIENZO imagenes exposicion-------------------------------*/}
 
-      <div className=" flex gap-5"> 
+      <div className=" flex gap-5 mt-10"> 
 
 
       <div className="  bg-slate-500  ">

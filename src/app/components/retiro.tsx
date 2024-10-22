@@ -3,7 +3,7 @@
 
 const RefundPolicy = () => {
   return (
-    <div className="mt-5 max-w-3xl mx-auto p-6 bg-trend shadow-lg rounded-lg">
+    <div className="mt-5 max-w-3xl mx-auto p-6 bg-message shadow-lg rounded-lg">
       <h2 className="text-3xl font-BebasNeue text-center text-title mb-4">
         Cambié de Opinión: ¡Vende Tu Diseño!
       </h2>

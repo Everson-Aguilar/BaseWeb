@@ -1,0 +1,23 @@
+.card {
+
+  border-radius: 5px;
+  background: rgba(211, 211, 211, 0.329);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+}
+
+.panel {
+    border-radius: 15px; /* Bordes más redondeados */
+    background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Gradiente para mayor profundidad */
+    box-shadow: 
+      8px 8px 15px rgba(0, 0, 0, 0.2), /* Sombra hacia la derecha y abajo */
+      -8px -8px 15px rgba(255, 255, 255, 0.8); /* Sombra hacia la izquierda y arriba */
+    transition: all 0.3s ease; /* Suaviza la transición del hover */
+  }
+  
+  .panel:hover {
+    box-shadow: 
+      4px 4px 25px rgba(0, 0, 0, 0.3), /* Sombra más profunda en hover */
+      -4px -4px 25px rgba(255, 255, 255, 1); /* Brillo más intenso en hover */
+  }
+  

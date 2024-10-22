@@ -71,8 +71,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-color: #9e9e9e; /* Color del texto predeterminado */
-  --background-start-color: #dcd6da; /* Color de inicio del fondo */
+  --foreground-color: #f8fcff; /* Color del texto predeterminado */
+  --background-start-color: #f8fcff; /* Color de inicio del fondo */
   --background-end-color: #ffffff; /* Color de fin del fondo */
 }
 
@@ -91,9 +91,10 @@
 
 body {
 
-  background-color: #FFFCF2;
+  background-color: #f5faff;
   height: max-content;
   
+
   
  
 

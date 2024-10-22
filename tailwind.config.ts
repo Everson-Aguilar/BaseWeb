@@ -18,12 +18,20 @@ const config: Config = {
       },
 
       colors: {
-        base: '#FFFCF2',
-        message: '#CCC5B9',
+        base: '#f8fcff',
+        message: '#F1F2F1',
         subtitle: '#403D39',
         title: '#252422',
-        trend: '#EB5E28',
+        trend: '#1f1f1f',
       },
+
+      maxHeight: {
+        'px': '1000px', // Cambia 100px al valor deseado
+      },
+
+
+
+     
 
 
 

@@ -325,7 +325,7 @@ export default function Home() {
 
             <div className="   justify-center   flex h-1/2  w-full  ">
               <div>
-                <div className="  box-border  p-5 flex items-center justify-center   h-4/5 w-full text-4xl font-BebasNeue text-trend border-2  border-trend mt-20  ml-3 ">
+                <div className="  box-border  p-5 flex items-center justify-center   h-4/5 w-full text-4xl font-BebasNeue text-message border-2  border-message mt-20  ml-3 ">
                   La digitalización es el futuro. Lleva tu negocio al siguiente
                   nivel ahora.
                 </div>
@@ -373,7 +373,7 @@ export default function Home() {
          **********************************************************************************
          **********************************************************************************/}
         {/*portfolio y explicacion tecnica artistica     03-------------------------------*/}
-        <section className="base mt-10">
+        <section className="base bg-base mt-10">
           <div className=" grid3  ">
             <div className="  w-full flex-row justify-center items-center text-end ">
               <div className=" h-1/2 text-sm  p-3">
@@ -565,6 +565,6 @@ git push origin main */
 
 /* git-hub pasos para guardar CONSOLA (produccion)
 git add .
-git commit -m "14/10/2024"
+git commit -m "21/10/2024"
 git pull origin develop
 git push origin develop */
