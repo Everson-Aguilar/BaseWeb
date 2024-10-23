@@ -95,7 +95,7 @@ const ComicStory: React.FC = () => {
 
       
 
-        <h2 className="text-2xl font-BebasNeue text-center mb-4 text-title">Diagramas</h2>
+        <h2 className="text-2xl font-BebasNeue text-center mb-4 text-title">Un estilo de vida diferente...</h2>
 
         
 
@@ -103,7 +103,7 @@ const ComicStory: React.FC = () => {
 
         <div className="  relative flex justify-center items-center  bg-slate-300 bg-opacity-30 backdrop-blur-md p-4 rounded-md h-full shadow-lg z-10">
 
-        <div className='absolute h-auto w-auto   top-40 flex justify-center items-center xl:p-5 md:p-2 md:gap-2 p-2 gap-2 '>
+        <div className='absolute h-auto w-auto   top-44 flex justify-center items-center xl:p-5 md:p-2 md:gap-2 p-2 gap-2 '>
 
           <div className=' xl:h-28 xl:w-28 lg:h-20 lg:w-20 md:h-14 md:w-14 h-16 w-16 panel'></div>
           <div className=' xl:h-28 xl:w-28 lg:h-20 lg:w-20 md:h-14 md:w-14 h-16 w-16 panel'></div>
@@ -113,7 +113,7 @@ const ComicStory: React.FC = () => {
 
         </div>
 
-        <div className='absolute h-auto w-auto   bottom-40 flex justify-center items-center xl:p-5 md:p-2 md:gap-2 p-2 gap-2 '>
+        <div className='absolute h-auto w-auto   bottom-44 flex justify-center items-center xl:p-5 md:p-2 md:gap-2 p-2 gap-2 '>
 
 <div className=' xl:h-28 xl:w-28 lg:h-20 lg:w-20 md:h-14 md:w-14 h-16 w-16 panel'></div>
 <div className=' xl:h-28 xl:w-28 lg:h-20 lg:w-20 md:h-14 md:w-14 h-16 w-16 panel'></div>

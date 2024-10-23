@@ -16,6 +16,7 @@ import Retiro from "./components/retiro";
 import Reglas from "./components/reglas";
 import Introduccion from "./components/introduccion";
 import Exposicion from "./components/exposicionClientes";
+import PrecioServicio from "./components/paquetes";
 
 //fuentes
 
@@ -110,14 +111,14 @@ export default function Home() {
         {/*presentacion y servicios    01-----------------------------------------------------*/}
 
         <section>
-          {" "}
+          
           <Administracion />
         </section>
 
         {/* componente vacio seccion ==========================================================*/}
-        <section>
-          {" "}
-          <Introduccion />{" "}
+        <section className=" mt-5">
+      
+          <Introduccion />
         </section>
         {/*Fin componente vacio seccion =======================================================*/}
 
@@ -128,14 +129,11 @@ export default function Home() {
         {/*Fin componente exposicion seccion =======================================================*/}
 
 
-
-
-
-        <section className="base">
+        <section className="base mt-40">
           <div className="contenedor1  ">
             <div className="absolute  z-10    p-4 h-2/5 w-2/3 ">
               <Image
-                src="/DiseñoWeb/logoNaranja.svg"
+                src="/DiseñoWeb/logoGris.svg"
                 alt="Logo"
                 width={800} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
                 height={800} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
@@ -357,14 +355,27 @@ export default function Home() {
          **********************************************************************************/}
 
         {/* componente reglas seccion ==========================================================*/}
-        <section>
+        <section className="mt-20">
           <Reglas />
         </section>
         {/*Fin componente reglas seccion =======================================================*/}
 
+
+             {/* componente precio servicio ==========================================================*/}
+             <section className=" mt-20"> <PrecioServicio/></section>
+        {/*Fin componente precio servicio =======================================================*/}
+
+
+
+
+
+
+
         {/* componente vacio seccion ==========================================================*/}
         <section></section>
         {/*Fin componente vacio seccion =======================================================*/}
+
+
 
         {/*********************************************************************************
          **********************************************************************************
