@@ -20,7 +20,10 @@ const ComicStory: React.FC = () => {
 
          {/* ladoA */}
         <section className=" space-y-1   ">
-        <div>
+        <div className=" relative">
+
+          <div className="absolute font-BebasNeue w- 1/2 p-5 text-base xl:text-2xl  ">- Necesitamos algo que de verdad destaque, algo que rompa con todo lo que hace la competencia</div>
+
           <Image
             src="/DiseñoWeb/comic/comic1.jpg"
             alt="comic 1"
@@ -29,7 +32,11 @@ const ComicStory: React.FC = () => {
           />
         </div>
 
-        <div>
+        <div className=" relative">
+
+        <div className="absolute font-BebasNeue w- 1/2 p-5 text-base xl:text-2xl  ">-¡Los gatos son la clave del éxito!</div>
+
+
           <Image
             src="/DiseñoWeb/comic/comic3.jpg"
             alt="comic 3"
@@ -38,7 +45,13 @@ const ComicStory: React.FC = () => {
           />
         </div>
 
-        <div>
+        <div className=" relative">
+
+        <div className="absolute font-BebasNeue w- 1/2 p-5 text-base xl:text-2xl  ">-Con herramientas 3D, la única limitación es nuestra imaginación. ¡Conquistemos el mercado!</div>
+
+
+
+
           <Image
             src="/DiseñoWeb/comic/comic5.jpg"
             alt="comic 6"
@@ -51,7 +64,9 @@ const ComicStory: React.FC = () => {
 
 
         {/* ladoB */}
-        <section className=" space-y-1 ">
+        <section className="relative space-y-1 ">
+
+        <div className="absolute font-BebasNeue w- 1/2 p-5 text-base xl:text-2xl  ">-Esto no está funcionando, tenemos que replantear todo</div>
 
         <div>
           <Image
@@ -62,7 +77,11 @@ const ComicStory: React.FC = () => {
           />
         </div>
 
-        <div>
+        <div className="relative">
+
+        <div className="absolute font-BebasNeue w- 1/2 p-5 text-base xl:text-2xl  ">-¿Y si en vez de lo de siempre, usamos diseño de entornos 3D? ¡Imaginen las posibilidades!</div>
+
+
           <Image
             src="/DiseñoWeb/comic/comic4.jpg"
             alt="comic 4"
@@ -71,7 +90,12 @@ const ComicStory: React.FC = () => {
           />
         </div>
 
-        <div>
+
+        <div className="relative">
+
+        <div className="absolute font-BebasNeue w- 1/2 p-5 text-base xl:text-2xl  ">-Mama,La agencia aprobó mi servicio! ya Voy al centro por tus aguacates</div>
+
+
           <Image
             src="/DiseñoWeb/comic/comic6.jpg"
             alt="comic 1"
