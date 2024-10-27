@@ -194,7 +194,7 @@ export default function Home() {
 
           <div className="contenedor2">
             <div className="flex  justify-center">
-              <div className="  text-neutral-300 h-auto w-2/3 text-center justify-center text-3xl  font-Staatliches ">
+              <div className="  text-neutral-300 translate-y-5   justify-center text-3xl  font-Staatliches ">
                 servicios disponibles
               </div>
             </div>
@@ -208,7 +208,7 @@ export default function Home() {
 
                   <div className="imagen animacion_1">
                     <Image
-                      src="/DiseñoWeb/servicios.png"
+                      src="/DiseñoWeb/iconos/servicios/ICONOS WEB-  DESAROLLO WEB.svg"
                       alt="environment3D"
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
@@ -221,8 +221,8 @@ export default function Home() {
                   {/*items servicios*/}
                   <div className="imagen animacion_2">
                     <Image
-                      src="/DiseñoWeb/servicios.png"
-                      alt="modelado3d"
+                      src="/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO GRAFICO.svg"
+                      alt="DISEÑO GRAFICO"
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
@@ -234,8 +234,8 @@ export default function Home() {
                   {/*items servicios*/}
                   <div className="imagen imagen animacion_3">
                     <Image
-                      src="/DiseñoWeb/servicios.png"
-                      alt="superficies duras 3d"
+                      src="/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO DE PRODUCTOS.svg"
+                      alt="diseño productos"
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
@@ -246,8 +246,8 @@ export default function Home() {
                   {/*items servicios*/}
                   <div className="imagen">
                     <Image
-                      src="/DiseñoWeb/servicios.png"
-                      alt="unity unreal engine"
+                      src="/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO DE INTERIORISMO.svg"
+                      alt="diseño interiorismo"
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
@@ -258,8 +258,8 @@ export default function Home() {
                   {/*items servicios*/}
                   <div className="imagen">
                     <Image
-                      src="/DiseñoWeb/servicios.png"
-                      alt="escultura 3d"
+                      src="/DiseñoWeb/iconos/servicios/ICONOS WEB- MARKETING DIGITAL.svg"
+                      alt="marketing digital"
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
                     />
@@ -270,7 +270,7 @@ export default function Home() {
                   {/*items servicios*/}
                   <div className="imagen">
                     <Image
-                      src="/DiseñoWeb/servicios.png"
+                      src="/DiseñoWeb/iconos/servicios/ICONOS WEB- PUBLICIDAD.svg"
                       alt="plano arquitectonico"
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
@@ -282,7 +282,7 @@ export default function Home() {
                   {/*items servicios*/}
                   <div className="imagen">
                     <Image
-                      src="/DiseñoWeb/servicios.png"
+                      src="/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO REDES SOCIALES.svg"
                       alt="mobilarios"
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
@@ -294,7 +294,7 @@ export default function Home() {
                   {/*items servicios*/}
                   <div className="imagen">
                     <Image
-                      src="/DiseñoWeb/servicios.png"
+                      src="/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO ENTORNO 3D.svg"
                       alt="diseño niveles"
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
@@ -306,7 +306,7 @@ export default function Home() {
                   {/*items servicios*/}
                   <div className="imagen">
                     <Image
-                      src="/DiseñoWeb/servicios.png"
+                      src="/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO ASSETS.svg"
                       alt="diseño objetos 3d"
                       layout="fill" // Ajusta la imagen para llenar todo el contenedor
                       objectFit="fill" // Ajusta la imagen para llenar completamente el contenedor, sin recortar
@@ -323,7 +323,7 @@ export default function Home() {
 
             <div className="   justify-center   flex h-1/2  w-full  ">
               <div>
-                <div className="  box-border  p-5 flex items-center justify-center   h-4/5 w-full text-4xl font-BebasNeue text-message border-2  border-message mt-20  ml-3 ">
+                <div className="  box-border  p-5 flex items-center justify-center   h-3/5 w-full text-4xl font-BebasNeue text-message border-2  border-message mt-20  ml-3 ">
                   La digitalización es el futuro. Lleva tu negocio al siguiente
                   nivel ahora.
                 </div>
