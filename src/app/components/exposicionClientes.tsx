@@ -29,7 +29,6 @@ const exposicionClientes: React.FC = () => {
         </div>
 
         <div className="  text-title p-1  font-bold text-2xl shadow-xl h-10 ">
-          
           mobilarios
         </div>
 
@@ -115,7 +114,7 @@ const exposicionClientes: React.FC = () => {
 
           {/* COMIENZO video y imagenes-------------------------------*/}
 
-          <div className="flex  mt-5 ">
+          <div className="flex-row  md:flex  xl:flex   mt-5 ">
             <div>
               <video
                 src="/DiseñoWeb/videos/muebleContemporaneo.mp4"
@@ -127,166 +126,116 @@ const exposicionClientes: React.FC = () => {
                 Tu navegador no soporta videos HTML5.
               </video>
             </div>
-           
+
             <div className=" w-full ">
+              <h2 className=" font-BebasNeue text-5xl text-title">
+                {" "}
+                Contenido disponible para 1 mes...
+              </h2>
 
+              <section className=" h-[800px] overflow-y-auto">
+                {/* Crear un arreglo de 23 elementos y mapear cada uno para generar las imágenes */}
+                {Array.from({ length: 22 }, (_, index) => (
+                  <Image
+                    // `key` único para cada imagen, necesario para el renderizado eficiente en React
+                    key={index}
+                    // Ruta dinámica para cada imagen: e1.png, e2.png, ..., e23.png
+                    src={`/DiseñoWeb/exposicionCliente/e${index + 1}.jpg`}
+                    // Texto alternativo para accesibilidad, mostrando el número de la imagen
+                    alt={`Imagen ${index + 1}`}
+                    // Ancho y alto deseados en píxeles
+                    width={201}
+                    height={372}
+                    // Ajustar la imagen para que llene el contenedor sin distorsionarse
+                    objectFit="fill"
+                  />
+                ))}
+              </section>
 
-            <h2 className=" font-BebasNeue text-5xl text-title">
-          {" "}
-          Contenido disponible para 1 mes...
-        </h2>
-
-
-
-            <section className=" h-[800px] overflow-y-auto">
-  {/* Crear un arreglo de 23 elementos y mapear cada uno para generar las imágenes */}
-  {Array.from({ length: 22 }, (_, index) => (
-    <Image
-      // `key` único para cada imagen, necesario para el renderizado eficiente en React
-      key={index} 
-      
-      // Ruta dinámica para cada imagen: e1.png, e2.png, ..., e23.png
-      src={`/DiseñoWeb/exposicionCliente/e${index + 1}.jpg`} 
-      
-      // Texto alternativo para accesibilidad, mostrando el número de la imagen
-      alt={`Imagen ${index + 1}`} 
-      
-      // Ancho y alto deseados en píxeles
-      width={201} 
-      height={372} 
-      
-      // Ajustar la imagen para que llene el contenedor sin distorsionarse
-      objectFit="fill"
-    />
-  ))}
-</section>
-
-
-<h2 className=" font-BebasNeue text-5xl text-title">
-          {" "}
-          <span className="text-8xl">23 <br /></span>
-          imagenes
-        </h2>
-
-        
-
-
-
-
-
-
+              <h2 className=" font-BebasNeue text-5xl text-title">
+                {" "}
+                <span className="text-8xl">
+                  23 <br />
+                </span>
+                imagenes
+              </h2>
             </div>
-
-
-            
-
-
-
           </div>
 
-           {/* FIN COMIENZO video y imagenes-------------------------------*/}
-
-
-           
-
-
+          {/* FIN COMIENZO video y imagenes-------------------------------*/}
         </div>
-{/* separacion padding -------------------------------*/}
+        {/* separacion padding -------------------------------*/}
         <div className=" p-5">
+          <h2 className=" font-BebasNeue text-5xl text-title">
+            ISOTIPOS VERSIONES
+          </h2>
 
-        <h2 className=" font-BebasNeue text-5xl text-title">
+          <section className=" flex gap-5  md:justify-start xl:justify-start mt-10  justify-center">
+            {/* Crear un arreglo de 23 elementos y mapear cada uno para generar las imágenes */}
+            {Array.from({ length: 4 }, (_, index) => (
+              <Image
+                // `key` único para cada imagen, necesario para el renderizado eficiente en React
+                key={index}
+                // Ruta dinámica para cada imagen: e1.png, e2.png, ..., e23.png
+                src={`/DiseñoWeb/exposicionCliente/isotipos/SVG/isoV${
+                  index + 1
+                }.svg`}
+                // Texto alternativo para accesibilidad, mostrando el número de la imagen
+                alt={`Imagen ${index + 1}`}
+                // Ancho y alto deseados en píxeles
+                width={100}
+                height={100}
+                // Ajustar la imagen para que llene el contenedor sin distorsionarse
+                objectFit="fill"
+              />
+            ))}
+          </section>
 
-          ISOTIPOS VERSIONES
-         
-       
-        </h2>
+          <h2 className=" font-BebasNeue text-5xl mt-20 text-title">
+            SERVICIOS DISPONIBLES
+          </h2>
 
+          <div className=" flex">
+            {/* index de imagenes 21 pack-------------------------------*/}
 
-        <section className=" flex gap-5  md:justify-start xl:justify-start mt-10  justify-center">
-  {/* Crear un arreglo de 23 elementos y mapear cada uno para generar las imágenes */}
-  {Array.from({ length: 4 }, (_, index) => (
-    <Image
-      // `key` único para cada imagen, necesario para el renderizado eficiente en React
-      key={index} 
-      
-      // Ruta dinámica para cada imagen: e1.png, e2.png, ..., e23.png
-      src={`/DiseñoWeb/exposicionCliente/isotipos/SVG/isoV${index + 1}.svg`} 
-      
-      // Texto alternativo para accesibilidad, mostrando el número de la imagen
-      alt={`Imagen ${index + 1}`} 
-      
-      // Ancho y alto deseados en píxeles
-      width={100} 
-      height={100} 
-      
-      // Ajustar la imagen para que llene el contenedor sin distorsionarse
-      objectFit="fill"
-    />
-  ))}
-</section>
+            <section className=" space-y-1 mt-5  ">
+              {/* Crear un arreglo de 23 elementos y mapear cada uno para generar las imágenes */}
+              {Array.from({ length: 8 }, (_, index) => (
+                <Image
+                  // `key` único para cada imagen, necesario para el renderizado eficiente en React
+                  key={index}
+                  // Ruta dinámica para cada imagen: e1.png, e2.png, ..., e23.png
+                  src={`/DiseñoWeb/exposicionCliente/servicios/SVG/servicios${
+                    index + 1
+                  }.svg`}
+                  // Texto alternativo para accesibilidad, mostrando el número de la imagen
+                  alt={`Imagen ${index + 1}`}
+                  // Ancho y alto deseados en píxeles
+                  width={100}
+                  height={100}
+                  // Ajustar la imagen para que llene el contenedor sin distorsionarse
+                  objectFit="fill"
+                />
+              ))}
+            </section>
 
+            {/* fin index de imagenes 21 pack-------------------------------*/}
 
-
-<h2 className=" font-BebasNeue text-5xl mt-20 text-title">
-SERVICIOS DISPONIBLES
-</h2>
-
-<div className=" flex" >
-
-<section className=" space-y-1 mt-5  ">
-  {/* Crear un arreglo de 23 elementos y mapear cada uno para generar las imágenes */}
-  {Array.from({ length: 8 }, (_, index) => (
-    <Image
-      // `key` único para cada imagen, necesario para el renderizado eficiente en React
-      key={index} 
-      
-      // Ruta dinámica para cada imagen: e1.png, e2.png, ..., e23.png
-      src={`/DiseñoWeb/exposicionCliente/servicios/SVG/servicios${index + 1}.svg`} 
-      
-      // Texto alternativo para accesibilidad, mostrando el número de la imagen
-      alt={`Imagen ${index + 1}`} 
-      
-      // Ancho y alto deseados en píxeles
-      width={100} 
-      height={100} 
-      
-      // Ajustar la imagen para que llene el contenedor sin distorsionarse
-      objectFit="fill"
-    />
-  ))}
-</section>
-
-<div >
-  <ul className="space-y-20 mt-20">
-    <li>Remplazo tapicería</li>
-    <li>Reparación relleno</li>
-    <li>Renovación estética</li>
-    <li>Tapizado: silla, sofa, cama</li>
-    <li>Tapizado: piso, techo, paneles</li>
-    <li>Refuerzo estructural</li>
-    <li>Asesoría en telas</li>
-    <li>Venta de telas</li>
-  </ul>
-</div>
-
-
-
-</div>
-
-</div>
-
-
-
-
-
-
+            <div>
+              <ul className="space-y-20 mt-20">
+                <li>Remplazo tapicería</li>
+                <li>Reparación relleno</li>
+                <li>Renovación estética</li>
+                <li>Tapizado: silla, sofa, cama</li>
+                <li>Tapizado: piso, techo, paneles</li>
+                <li>Refuerzo estructural</li>
+                <li>Asesoría en telas</li>
+                <li>Venta de telas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-
-
-
-
-
-
     </div>
   );
 };

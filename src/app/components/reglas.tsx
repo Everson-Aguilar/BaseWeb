@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from "next/image";
+
 
 const SocialMediaFormats: React.FC = () => {
   return (
@@ -56,11 +58,16 @@ const SocialMediaFormats: React.FC = () => {
       </div>
 
       {/* Diagramas */}
-      <div className='w-full md:w-1/2 p-5 bg-base rounded-lg shadow-lg'>
-        <h2 className="text-title text-2xl font-bold text-center mb-4 font-Acme">Diagramas</h2>
-        <div className="bg-message p-4 rounded-md shadow-md">
-          [Aquí van los diagramas]
-        </div>
+      <div className=' w-1/2 flex justify-center  items-center p-5'>
+        
+    
+        <Image
+                src="/DiseñoWeb/logoGris.svg"
+                alt="Logo"
+                width={800} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
+                height={800} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
+              />
+       
       </div>
     </div>
   );

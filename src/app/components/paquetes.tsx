@@ -31,6 +31,7 @@ const PanelesServicios: React.FC = () => {
           </h2>
           <p className="text-lg font-bold text-blue-800 mb-4">
             Precio: $600,000
+            <br /> *Opcional
           </p>
           <ul className="list-disc pl-5 text-blue-800">
             <li className="mb-2">Diseño de Logo e Identidad Visual</li>
@@ -52,7 +53,8 @@ const PanelesServicios: React.FC = () => {
             Segundo Mes: Diseño y Creación de Entornos 3D
           </h2>
           <p className="text-lg font-bold text-yellow-800 mb-4">
-            Precio: $800,000
+            Precio: $1,000,000
+            <br /> *Opcional
           </p>
           <ul className="list-disc pl-5 text-yellow-800">
             <li className="mb-2">Diseño Conceptual del Entorno 3D</li>
@@ -74,7 +76,8 @@ const PanelesServicios: React.FC = () => {
             Tercer Mes: Producción de Contenido Audiovisual
           </h2>
           <p className="text-lg font-bold text-green-800 mb-4">
-            Precio: $1,000,000
+            Precio: $800,000
+            <br /> *Opcional
           </p>
           <ul className="list-disc pl-5 text-green-800">
             <li className="mb-2">Creación de Animaciones y Secuencias en 3D</li>
