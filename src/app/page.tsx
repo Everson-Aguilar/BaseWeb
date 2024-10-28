@@ -369,7 +369,7 @@ export default function Home() {
           <section>
             <div className="font-Jacquard12 text-2xl ">Contacto</div>
             <address>
-              <div>aguilar3dstudio@gmail.com</div>
+              <div>eversonaguilar1@gmail.com</div>
             </address>
           </section>
           <section>

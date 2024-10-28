@@ -4,7 +4,7 @@ import React from "react";
 const PanelesServicios: React.FC = () => {
   return (
     <div>
-      <div className="p-5 text-7xl font-BebasNeue text-trend border-4 border-trend w-fit">
+      <div className="p-3 m-5 text-7xl font-BebasNeue text-trend border-4 border-trend w-fit">
         PAQUETES DISPONIBLES
       </div>
 

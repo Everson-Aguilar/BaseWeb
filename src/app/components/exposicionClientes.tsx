@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const exposicionClientes: React.FC = () => {
   return (
-    <div className="h-[1000] mt-20 mb-4 flex flex-col md:flex-row bg-base relative  items-start   ">
+    <div className="h-[1000] w-full  mt-20 mb-4 flex flex-col md:flex-row bg-base relative  items-start   ">
       <div className="   grid bg-base gap-6 p-5 w-full md:w-1/2">
-        <h2 className=" w-2/3 md:w-full font-BebasNeue text-5xl text-title ">
+        <h2 className=" w-full  md:w-full font-BebasNeue text-5xl text-title ">
           {" "}
           Creación de Réplica 3D de Muebles Reales para Contenido de Redes
           Sociales
@@ -29,7 +29,7 @@ const exposicionClientes: React.FC = () => {
         </div>
 
         <div className="  text-title p-1  font-bold text-2xl shadow-xl h-10 ">
-          mobilarios
+          Mobilarios
         </div>
 
         {/* COMIENZO imagenes exposicion-------------------------------*/}
@@ -65,7 +65,7 @@ const exposicionClientes: React.FC = () => {
           {/* FIN imagenes exposicion-------------------------------*/}
         </div>
 
-        <div className="bg-message p-6 shadow-md">
+        <div className="bg-message p-6 shadow-md w-full">
           <h2 className="text-2xl font-BebasNeue text-trend mb-4">
             Muebles 3D Realistas para Hacer Brillar tus Proyectos y tu Marca
           </h2>
