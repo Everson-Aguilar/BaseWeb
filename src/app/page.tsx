@@ -87,7 +87,7 @@ export default function Home() {
           <div className="contenedor1  ">
             <div className="absolute  z-10    p-4 h-2/5 w-2/3 ">
               <Image
-                src="/DiseñoWeb/logoGris.svg"
+                src="/DiseñoWeb/logogris.svg"
                 alt="Logo"
                 width={500} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
                 height={500} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
@@ -407,7 +407,7 @@ export default function Home() {
 }
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "subir"
+git commit -m "28/10/2024"
 git pull origin main
 git push origin main */
 

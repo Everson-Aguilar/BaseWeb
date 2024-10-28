@@ -141,8 +141,8 @@ const ComicStory: React.FC = () => {
           <Image
             src={src}
             alt={`Icono superior ${index + 1}`} // Texto alternativo para accesibilidad
-            width={80}
-            height={80}
+            width={60}
+            height={60}
           />
         </div>
       ))}
@@ -158,8 +158,8 @@ const ComicStory: React.FC = () => {
           <Image
             src={src}
             alt={`Icono inferior ${index + 1}`} // Texto alternativo para accesibilidad
-            width={80}
-            height={80}
+            width={60}
+            height={60}
           />
         </div>
       ))}

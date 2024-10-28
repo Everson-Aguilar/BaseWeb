@@ -62,7 +62,7 @@ const SocialMediaFormats: React.FC = () => {
         
     
         <Image
-                src="/DiseñoWeb/logoGris.svg"
+                src="/DiseñoWeb/logogris.svg"
                 alt="Logo"
                 width={800} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
                 height={800} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)

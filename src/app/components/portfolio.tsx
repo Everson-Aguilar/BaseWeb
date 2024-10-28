@@ -90,7 +90,7 @@ const Galeria: React.FC = () => {
 
       {/* Artista Digital */}
 
-      <div className="  ">
+      <div className=" p-5 ">
         <div className=" mt-10  text-title">
           <div className="text-trend font-BebasNeue text-xl">
             PASOS PARA CREAR ACCESORIOS COMO ARTISTA DIGITAL:
@@ -110,15 +110,15 @@ const Galeria: React.FC = () => {
 
           <span className="text-trend font-BebasNeue text-xl">TECNOLOGÍAS</span>
           <ul className="text-1xl">
-            <li>Autodesk Revit</li>
-            <li>Blender</li>
-            <li>ZBrush</li>
-            <li>Substance Painter</li>
-            <li>Unity 3D / Unreal</li>
-            <li>Adobe After Effects</li>
-            <li>Adobe Photoshop</li>
-            <li>Adobe Premiere</li>
-            <li>Adobe Illustrator</li>
+            <li>*Autodesk Revit</li>
+            <li>*Blender</li>
+            <li>*ZBrush</li>
+            <li>*Substance Painter</li>
+            <li>*Unity 3D / Unreal</li>
+            <li>*Adobe After Effects</li>
+            <li>*Adobe Photoshop</li>
+            <li>*Adobe Premiere</li>
+            <li>*Adobe Illustrator</li>
           </ul>
         </div>
       </div>

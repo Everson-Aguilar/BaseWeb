@@ -50,7 +50,7 @@ const Pack = () => {
           
           <div className="absolute w-full h-32 text-neutral-100 p-3 z-20 flex font-BebasNeue text-7xl">
             <Image
-              src="/DiseñoWeb/logoGris.svg"
+              src="/DiseñoWeb/logogris.svg"
               alt="Logo"
               width={300}
               height={300}

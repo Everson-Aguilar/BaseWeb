@@ -5,7 +5,7 @@ const exposicionClientes: React.FC = () => {
   return (
     <div className="h-[1000] mt-20 mb-4 flex flex-col md:flex-row bg-base relative  items-start   ">
       <div className="   grid bg-base gap-6 p-5 w-full md:w-1/2">
-        <h2 className=" font-BebasNeue text-5xl text-title ">
+        <h2 className=" w-2/3 md:w-full font-BebasNeue text-5xl text-title ">
           {" "}
           Creación de Réplica 3D de Muebles Reales para Contenido de Redes
           Sociales
@@ -13,7 +13,7 @@ const exposicionClientes: React.FC = () => {
 
         <div>
           <Image
-            src="/DiseñoWeb/exposicionCliente/e6.png"
+            src="/DiseñoWeb/exposicionCliente/e6.jpg"
             alt="Logo"
             width={600} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
             height={600} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
@@ -170,7 +170,7 @@ const exposicionClientes: React.FC = () => {
             ISOTIPOS VERSIONES
           </h2>
 
-          <section className=" flex gap-5  md:justify-start xl:justify-start mt-10  justify-center">
+          <section className=" flex gap-3  md:justify-start xl:justify-start mt-10  justify-center">
             {/* Crear un arreglo de 23 elementos y mapear cada uno para generar las imágenes */}
             {Array.from({ length: 4 }, (_, index) => (
               <Image
@@ -183,8 +183,8 @@ const exposicionClientes: React.FC = () => {
                 // Texto alternativo para accesibilidad, mostrando el número de la imagen
                 alt={`Imagen ${index + 1}`}
                 // Ancho y alto deseados en píxeles
-                width={100}
-                height={100}
+                width={80}
+                height={80}
                 // Ajustar la imagen para que llene el contenedor sin distorsionarse
                 objectFit="fill"
               />
