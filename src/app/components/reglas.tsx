@@ -7,7 +7,7 @@ const SocialMediaFormats: React.FC = () => {
     <div className='flex flex-col md:flex-row'>  
 
       <div className="mx-auto p-6 bg-base w-full md:w-1/2 ">
-        <h2 className="text-3xl font-BebasNeue mb-6 text-title text-center ">Formatos Comerciales en Redes Sociales y Webs</h2>
+        <h2 className="text-3xl font-BebasNeue p-5 mb-6 text-title  border-4 border-trend w-fit">Formatos Comerciales en Redes Sociales y Webs</h2>
 
         <div className="mb-8">
           <h3 className="text-xl font-semibold mb-2 text-trend font-BebasNeue">Comunes:</h3>
@@ -36,7 +36,7 @@ const SocialMediaFormats: React.FC = () => {
           </ul>
         </div>
 
-        <h2 className="text-3xl font-BebasNeue mb-4 text-title text-center">Reglas del Contenido de Redes Sociales</h2>
+        <h2 className="text-3xl font-BebasNeue mb-4 text-title text-center border-4 p-5  border-trend w-fit">Reglas del Contenido de Redes Sociales</h2>
         <ul className="list-disc list-inside ml-4 text-title">
           <li>Educación</li>
           <li>Solución de Necesidades</li>

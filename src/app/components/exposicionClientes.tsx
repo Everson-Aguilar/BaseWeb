@@ -5,7 +5,7 @@ const exposicionClientes: React.FC = () => {
   return (
     <div className="h-[1000] mt-20 mb-4 flex flex-col md:flex-row bg-base relative  items-start   ">
       <div className="   grid bg-base gap-6 p-5 w-full md:w-1/2">
-        <h2 className=" font-BebasNeue text-5xl text-title">
+        <h2 className=" font-BebasNeue text-5xl text-title ">
           {" "}
           Creación de Réplica 3D de Muebles Reales para Contenido de Redes
           Sociales

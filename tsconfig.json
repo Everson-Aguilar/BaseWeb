@@ -1,9 +1,5 @@
 {
   "compilerOptions": {
-
-    
-    
-
     "target": "es5",
     "lib": [
       "dom",
@@ -36,8 +32,9 @@
   "include": [
     "src/**/*",
     "next-env.d.ts",
-    ".next/types/**/*.ts"
-, "src/app/pages", "components-server" ],
+    ".next/types/**/*.ts",
+   
+  ],
   "exclude": [
     "node_modules"
   ]

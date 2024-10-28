@@ -47,9 +47,7 @@ const images = [
 ///////////////////////////////// ALMACENAMIENTO
 
 export default function Home() {
-  {
-    /*   FUNCIONES DE LA APLICACION & REGLAS - MENU  03 */
-  }
+
 
   // galeria funciones
 
@@ -78,9 +76,8 @@ export default function Home() {
 
   // fin galeria funciones
 
-  {
-    /* EXIT FUNCIONES DE LA APLICACION & REGLAS - MENU 03*/
-  }
+
+
 
   return (
     <div className="App ">
@@ -135,8 +132,8 @@ export default function Home() {
               <Image
                 src="/DiseñoWeb/logoGris.svg"
                 alt="Logo"
-                width={800} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
-                height={800} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
+                width={500} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
+                height={500} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
               />
 
               <h1 className="font-Staatliches text-7xl text-trend  mt-4">
