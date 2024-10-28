@@ -48,7 +48,7 @@ const Pack = () => {
             unoptimized
           />
           
-          <div className="absolute w-full h-32 text-basep-3 z-20 flex font-BebasNeue text-7xl">
+          <div className="absolute w-full h-32 text-base p-3 z-20 flex font-BebasNeue text-7xl">
             <Image
               src="/DiseñoWeb/logogris.svg"
               alt="Logo"
