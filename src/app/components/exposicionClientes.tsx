@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const exposicionClientes: React.FC = () => {
   return (
-    <div className="h-[1000] w-full  mt-20 mb-4 flex flex-col md:flex-row bg-base relative  items-start   ">
+    <div className="h-[1000] w-full  mt-20 mb-4 flex flex-col md:flex-row bg-base relative  justify-center items-start  ">
       <div className="   grid bg-base gap-6 p-5 w-full md:w-1/2">
         <h2 className=" w-full  md:w-full font-BebasNeue text-5xl text-title ">
           {" "}

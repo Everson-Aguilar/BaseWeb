@@ -20,7 +20,7 @@ const ComicStory: React.FC = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col md:flex-row bg-base p-5">
+    <div className="w-full flex flex-col md:flex-row bg-base p-5 justify-center items-center">
 
 
 
