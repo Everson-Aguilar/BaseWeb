@@ -40,7 +40,7 @@ const El_guias = () => {
               className="absolute top-2 right-2 text-message-600 hover:text-gray-800"
             >
               ✖ {/* Icono de cierre */}
-            </button>
+            </button >
             {/* Contenido del popup */}
             
             {/* Sección de redes sociales */}
@@ -80,7 +80,7 @@ const El_guias = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <div className="flex items-center">
+                <div className="flex items-center ">
                   <Image
                     src="/DiseñoWeb/redes sociales/whatsapp.svg"
                     alt="WhatsApp"

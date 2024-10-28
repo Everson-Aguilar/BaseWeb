@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 /* Definición de la fuente Quicksand */
 
 @font-face {
@@ -66,9 +72,7 @@
   font-style: normal;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 :root {
   --foreground-color: #f8fcff; /* Color del texto predeterminado */

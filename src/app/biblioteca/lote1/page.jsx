@@ -28,7 +28,7 @@ const Pack = () => {
 
   return (
    
-      <div>
+      <div >
 
       {/* Mapeo de las imágenes */}
       {imageNames.map((imageName, index) => (
@@ -44,7 +44,7 @@ const Pack = () => {
             objectFit="scale-down"
             unoptimized
           />
-          <div className="absolute w-full h-32 text-neutral-100 p-3 z-20 flex font-BebasNeue text-7xl">
+          <div className="absolute w-full h-32 text-base p-3 z-20 flex font-BebasNeue text-7xl">
             <Image
               src="/DiseñoWeb/logogris.svg"
               alt="Logo"
@@ -52,8 +52,8 @@ const Pack = () => {
               height={300}
             />
          <div>
-              <div className="text-4xl text-trend ">{globalTitle}</div>
-              <p className="text-2xl text-trend font-BebasNeue">{globalDescription}</p>
+              <div className="text-4xl  ">{globalTitle}</div>
+              <p className="text-2xl  font-BebasNeue">{globalDescription}</p>
             </div>
           </div>
           

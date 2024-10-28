@@ -407,7 +407,7 @@ export default function Home() {
 }
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "28/10/2024"
+git commit -m "29/10/2024"
 git pull origin main
 git push origin main */
 
