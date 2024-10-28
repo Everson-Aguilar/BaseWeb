@@ -17,6 +17,7 @@ import Reglas from "./components/reglas";
 import Introduccion from "./components/introduccion";
 import Exposicion from "./components/exposicionClientes";
 import PrecioServicio from "./components/paquetes";
+import Portfolio from "./components/portfolio"
 
 //fuentes
 
@@ -26,55 +27,11 @@ import "./globals.css";
 
 import "./css/estructura.css";
 import "./css/animaciones.css";
-import "./css/galeria.css";
 
-//image galeria - CONTROL MINIATURA PEQUEÑAS
 
-const images = [
-  "/DiseñoWeb/portfolio/g1.jpg",
-  "/DiseñoWeb/portfolio/g2.jpg",
-  "/DiseñoWeb/portfolio/g3.jpg",
-  "/DiseñoWeb/portfolio/g4.jpg",
-  "/DiseñoWeb/portfolio/g5.jpg",
-  "/DiseñoWeb/portfolio/g6.jpg",
-  "/DiseñoWeb/portfolio/g7.jpg",
-  "/DiseñoWeb/portfolio/g8.jpg",
-  "/DiseñoWeb/portfolio/g9.jpg",
-  "/DiseñoWeb/portfolio/g10.jpg",
-  "/DiseñoWeb/portfolio/g11.jpg",
-];
 
-///////////////////////////////// ALMACENAMIENTO
 
 export default function Home() {
-
-
-  // galeria funciones
-
-  const [error, setError] = useState(null);
-  const [confirmation, setConfirmation] = useState(false); // Estado para la confirmación
-  const [componentName, setComponentName] = useState(""); // Estado para el nombre del componente importado
-
-  const handleClick = (id: string) => {
-    const buttonNumber = parseInt(id.substring(1));
-    const componentName = `lote${buttonNumber}/page`; // Nombre de la carpeta y archivo
-
-    import(`./biblioteca/${componentName}`)
-      .then((module) => {
-        setConfirmation(true);
-        setComponentName(componentName);
-        console.log("Componente importado:", componentName); // Mensaje de impresión en la consola
-      })
-      .catch((error) => {
-        console.error(`Error al importar ${componentName}`, error); // Mensaje de alerta en la consola
-        setError(error);
-        alert(`Error al importar ${componentName}: ${error.message}`); // Alerta al usuario con el mensaje de error
-      });
-  };
-
-  const ids = images.map((_, index) => `b${index + 1}`);
-
-  // fin galeria funciones
 
 
 
@@ -381,126 +338,9 @@ export default function Home() {
          **********************************************************************************
          **********************************************************************************/}
         {/*portfolio y explicacion tecnica artistica     03-------------------------------*/}
-        <section className="base bg-base mt-10">
-          <div className=" grid3  ">
-            <div className="  w-full flex-row justify-center items-center text-end ">
-              <div className=" h-1/2 text-sm  p-3">
-                <div>
-                  <div className=" tracking-wide  text-trend font-BebasNeue text-xl">
-                    PASOS PARA CREAR ACCESORIOS COMO ARTISTA DIGITAL:
-                  </div>
-                </div>
-                <ul className=" text-title  text-1xl   ">
-                  <li>*Conceptualizaci&oacute;n y Referencias Visuales</li>
-                  <li>*Modelado 3D de Alto Pol&iacute;gono</li>
-                  <li>*Retopolog&iacute;a del Modelo</li>
-                  <li>*UV Mapping</li>
-                  <li>*Creaci&oacute;n de Texturas</li>
-                  <li>*Aplicaci&oacute;n de Texturas</li>
-                  <li>*Iluminaci&oacute;n y Renderizado</li>
-                  <li>*Ajustes y Optimizaci&oacute;n</li>
-                  <li>*Pruebas y Evaluaci&oacute;n</li>
-                  <li>*Entrega Final</li>
-                </ul>
-              </div>
-            </div>
-            <div className="   w-full flex-row justify-center  items-center   ">
-              <div className=" h-full w-full flex items-center p-5 ">
-                <Image
-                  src="/DiseñoWeb/logogris.svg"
-                  alt="Logo"
-                  width={300} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
-                  height={300} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
-                />
-              </div>
-            </div>
-            <div className=" w-full  text-end  overflow-hidden border-r-neutral-400  pr-2   border-r-2">
-              <span className=" text-trend font-BebasNeue text-xl ">
-                TECNOLOGIAS
-              </span>
-              <div className=" h-full p-3 box-border ">
-                <div className=" h-1/2 p-2">
-                  <ul className="text-xs text-title ">
-                    <li>Autodesk Revit</li>
-                    <li>Blender</li>
-                    <li>ZBrush</li>
-                    <li>Substance Painter</li>
-                    <li>Unity 3D / Unreal</li>
-                    <li>Adobe After Effects</li>
-                    <li>Adobe Photoshop</li>
-                    <li>Adobe Premier</li>
-                    <li>Adobe Illustrator</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="  box-border flex-row overflow-hidden  items-center justify-center text-center ">
-              <span className="text-trend font-BebasNeue text-xl ">
-                CONCEPTO TECNICO Y ARTISTICO!
-              </span>
-              <div className=" p-5 max-full text-xs text-title ">
-                <span className=" text-2xl text-title">!</span> Nuestro enfoque
-                combina sólidos conocimientos técnicos y una visión artística
-                detallada, asegurando que cada proyecto digital sea ejecutado
-                con el más alto nivel de profesionalismo. Tu negocio merece lo
-                mejor, y estamos aquí para ofrecerte soluciones que realmente
-                marquen la diferencia
-                <span className=" text-2xl text-title">.</span>
-              </div>
-            </div>
-          </div>
+        <section className=" mt-5"><Portfolio  /></section>
+        
 
-          <div>
-            <div className=" text-trend font-BebasNeue text-8xl">PORTFOLIO</div>
-
-            {/* galeria */}
-
-            <div>
-              {confirmation && <div>Componente importado correctamente.</div>}
-              <div className="galeria w-full h-full grid grid-cols-4 gap-4">
-                {images.map((image, index) => (
-                  <div
-                    key={index}
-                    className="relative rounded-lg overflow-hidden"
-                  >
-                    <Image
-                      src={image}
-                      alt={`Imagen ${index + 1}`}
-                      width={400}
-                      height={400}
-                    />
-                    <Link href={`/biblioteca/lote${index + 1}`} passHref>
-                      <button
-                        id={ids[index]}
-                        className="absolute h-5 w-auto top-2 right-2 bg-neutral-800 text-black px-3 py-1 rounded-md shadow-md"
-                        onClick={() => handleClick(ids[index])}
-                      >
-                        <Image
-                          src="/DiseñoWeb/ver.svg"
-                          alt="ver"
-                          layout="fill"
-                          objectFit="fill"
-                        />
-                      </button>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* fin galeria */}
-          </div>
-
-          <div>
-            <div className="imagen_relleno  mt-2 ">
-              <img
-                src="/DiseñoWeb/panel_03.jpg"
-                alt="paisaje"
-                className=" min-w-96 h-4/5  "
-              />
-            </div>
-          </div>
-        </section>
         {/*FIN portfolio y explicacion tecnica artistica 03-------------------------------*/}
         {/*********************************************************************************
          **********************************************************************************
@@ -510,7 +350,7 @@ export default function Home() {
          **********************************************************************************/}
 
         {/* componente  ==========================================================*/}
-        <section>
+        <section className=" mt-10">
           <Retiro />
         </section>
         {/*Fin componente =======================================================*/}
@@ -573,6 +413,6 @@ git push origin main */
 
 /* git-hub pasos para guardar CONSOLA (produccion)
 git add .
-git commit -m "27/10/2024"
+git commit -m "28/10/2024"
 git pull origin develop
 git push origin develop */
