@@ -18,6 +18,7 @@ import Introduccion from "./components/introduccion";
 import Exposicion from "./components/exposicionClientes";
 import PrecioServicio from "./components/paquetes";
 import Portfolio from "./components/portfolio"
+import CompetenciaComercial from "./components/competenciaComercial"
 
 //fuentes
 
@@ -71,10 +72,14 @@ export default function Home() {
 
         {/* componente vacio seccion ==========================================================*/}
         <section className=" mt-5">
-      
           <Introduccion />
         </section>
         {/*Fin componente vacio seccion =======================================================*/}
+
+        <section>
+          <CompetenciaComercial/>
+        </section>
+
 
         {/* componente exposicion seccion ==========================================================*/}
         <section>
