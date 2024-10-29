@@ -1,8 +1,12 @@
 import React from "react";
+import Image from "next/image";
 
 const MarketingDigital: React.FC = () => {
   return (
-    <div className="bg-base p-6 md:w-1/2">
+
+    <div className=" flex-row p-5 md:flex bg-base justify-center items-center">
+
+    <div className="  md:w-1/2">
       <h2 className="text-title text-5xl font-BebasNeue mb-4">
         Bienvenido a Tudigitalnegocio.com
       </h2>
@@ -133,6 +137,17 @@ const MarketingDigital: React.FC = () => {
         que se adapten a tus necesidades. Cada proyecto es especial y no creemos
         en soluciones estándar.
       </p>
+    </div>
+
+    <div className=" h-auto w-full md:w-1/2 p-5">
+    <Image
+                  src="/DiseñoWeb/panel_02.jpg" 
+                  alt="Descripción de la imagen"
+                  width={500} // Ancho deseado en píxeles (equivalente a w-15 en Tailwind CSS)
+                  height={500} // Alto deseado en píxeles (equivalente a h-15 en Tailwind CSS)
+      />
+    </div>
+
     </div>
   );
 };
