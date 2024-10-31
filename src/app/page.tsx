@@ -51,7 +51,7 @@ export default function Home() {
   const componenteRef = useRef<HTMLDivElement | null>(null);
   const [altura, setAltura] = useState(0);
   const ajusteAltura = 50; // Ajuste de altura en píxeles
-
+  
   const obtenerAltura = () => {
     if (componenteRef.current) {
       const rect = componenteRef.current.getBoundingClientRect();
@@ -61,30 +61,17 @@ export default function Home() {
     }
     return 0; // Retorna 0 si no hay referencia
   };
-
+  
   const desplazarVentana = (altura: number) => {
     window.scrollTo(0, altura - ajusteAltura); // Desplazar a la altura del componente menos el ajuste
   };
-
+  
   useEffect(() => {
     // Obtener la altura inicial al montar el componente
     const alturaInicial = obtenerAltura();
     desplazarVentana(alturaInicial);
-
-    // Agregar un listener para cuando la ventana se redimensiona
-    const handleResize = () => {
-      const nuevaAltura = obtenerAltura();
-      desplazarVentana(nuevaAltura);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    // Limpiar el listener en el unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [componenteRef]);
-
+  }, [componenteRef]); // `componenteRef` como dependencia
+  
 
   
  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++     FIN    desplazamiento Inicial Web ajustes++++++++++++++++++++++
@@ -260,7 +247,7 @@ export default function Home() {
 }
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "29/10/2024"
+git commit -m "30/10/2024"
 git pull origin main
 git push origin main */
 
