@@ -91,7 +91,7 @@ const DigitalIdentity: React.FC = () => {
                 { src: '/DiseñoWeb/iconos/servicios/ICONOS WEB- PUBLICIDAD.svg', alt: 'Publicidad', label: 'Publicidad' },
                 { src: '/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO REDES SOCIALES.svg', alt: 'Contenido Redes Sociales', label: 'Contenido Redes Sociales' },
                 { src: '/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO ENTORNO 3D.svg', alt: 'Diseño Entorno 3D', label: 'Diseño Entorno 3D' },
-                { src: '/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO ASSETS.svg', alt: 'Diseño Assets', label: 'Diseño Assets' },
+                { src: '/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO ASSETS.svg', alt: 'Diseño Videojuego', label: 'Diseño Videojuego' },
               ].map((service, index) => (
                 <div key={index} className="imagen animacion_1">
                   <Image

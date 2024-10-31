@@ -47,11 +47,10 @@ export default function Home() {
 
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++     desplazamiento Inicial Web ajustes     ++++++++++++++++++++++
   
-
   const componenteRef = useRef<HTMLDivElement | null>(null);
   const [altura, setAltura] = useState(0);
-  const ajusteAltura = 50; // Ajuste de altura en píxeles
-  
+  const ajusteAltura = 51; // Ajuste de altura en píxeles
+
   const obtenerAltura = () => {
     if (componenteRef.current) {
       const rect = componenteRef.current.getBoundingClientRect();
@@ -61,17 +60,22 @@ export default function Home() {
     }
     return 0; // Retorna 0 si no hay referencia
   };
-  
+
   const desplazarVentana = (altura: number) => {
     window.scrollTo(0, altura - ajusteAltura); // Desplazar a la altura del componente menos el ajuste
   };
-  
+
   useEffect(() => {
-    // Obtener la altura inicial al montar el componente
     const alturaInicial = obtenerAltura();
-    desplazarVentana(alturaInicial);
-  }, [componenteRef]); // `componenteRef` como dependencia
-  
+
+    // Usar setTimeout para desplazar la ventana
+    setTimeout(() => {
+      desplazarVentana(alturaInicial);
+    }, 0); // Asegúrate de que se ejecute después de que el DOM se haya actualizado
+
+    // Eliminar el efecto de resize si lo tenías previamente
+  }, []); // Cambiar a una lista de dependencias vacía para que solo se ejecute una vez al montar
+
 
   
  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++     FIN    desplazamiento Inicial Web ajustes++++++++++++++++++++++
@@ -247,7 +251,7 @@ export default function Home() {
 }
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "30/10/2024"
+git commit -m "31/10/2024"
 git pull origin main
 git push origin main */
 
@@ -256,3 +260,38 @@ git add .
 git commit -m "30/10/2024"
 git pull origin develop
 git push origin develop */
+
+
+//git fetch origin
+//git reset --hard origin/main
+     //extraer informacion de GIT HUB
+
+
+
+
+
+     /*
+      ///////////////// SUBIR CONFIG AL VPS //////////////////////////
+
+     Ejecuta el comando de construcción: Navega a la carpeta de tu proyecto y ejecuta:
+
+bash
+Copiar código
+npm run build
+Este comando generará la compilación de producción en el directorio .next.
+
+Inicia la aplicación con PM2: Una vez completada la construcción, inicia la aplicación en modo producción con PM2:
+
+bash
+Copiar código
+pm2 start npm --name "BaseWeb" -- start
+Guarda el estado en PM2: Para asegurarte de que la aplicación se inicie automáticamente después de un reinicio del servidor:
+
+bash
+Copiar código
+pm2 save
+Después de esto, tu aplicación debería ejecutarse correctamente en segundo plano.
+     
+     
+     */
+
