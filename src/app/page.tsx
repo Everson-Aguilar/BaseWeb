@@ -251,7 +251,7 @@ export default function Home() {
 }
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "31/10/2024"
+git commit -m "01/11/2024"
 git pull origin main
 git push origin main */
 
@@ -265,6 +265,21 @@ git push origin develop */
 //git fetch origin
 //git reset --hard origin/main
      //extraer informacion de GIT HUB
+
+
+     /*
+     
+
+     Ramas
+
+git branch: Muestra todas las ramas en el repositorio.
+git branch <nombre-rama>: Crea una nueva rama.
+git checkout <nombre-rama>: Cambia a la rama especificada.
+git checkout -b <nombre-rama>: Crea y cambia a una nueva rama.
+git merge <nombre-rama>: Fusiona la rama especificada en la rama actual.
+     
+     */
+
 
 
 

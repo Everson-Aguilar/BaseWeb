@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useRef, useState } from 'react';
 import Image from "next/image";
 
-const exposicionClientes: React.FC = () => {
+const ExposicionClientes: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null); // Referencia al video
+  const [isPlaying, setIsPlaying] = useState<boolean>(false); // Estado para manejar si el video está en reproducción
+
+  const togglePlayPause = () => {
+      if (videoRef.current) {
+          if (videoRef.current.paused) {
+              videoRef.current.play(); // Reanudar reproducción
+              setIsPlaying(true); // Actualizar el estado a "reproduciendo"
+          } else {
+              videoRef.current.pause(); // Pausar reproducción
+              setIsPlaying(false); // Actualizar el estado a "pausado"
+          }
+      }
+  };
+
+  // Función para asegurarse de que el video esté en pausa
+  const handleVideoLoaded = () => {
+      if (videoRef.current) {
+          videoRef.current.pause(); // Asegurarse de que el video esté en pausa al cargar
+          setIsPlaying(false); // Actualizar el estado a "pausado"
+      }
+  };
+
+
+  
   return (
     <div className="h-[1000] w-full  mt-20 mb-4 flex flex-col md:flex-row bg-base relative  justify-center items-start  ">
       <div className="   grid bg-base gap-6 p-5 w-full md:w-1/2">
@@ -116,15 +141,25 @@ const exposicionClientes: React.FC = () => {
 
           <div className="flex-row  md:flex  xl:flex   mt-5 ">
             <div>
+
               <video
+                ref={videoRef}
+                controls
                 src="/DiseñoWeb/videos/muebleContemporaneo.mp4"
-                autoPlay
-                loop
-                muted
                 className="w-full h-full  " // Ajusta el ancho al 33% (30% es un poco más específico en Tailwind)
+                onPause={() => setIsPlaying(false)} // Actualiza el estado si se pausa
+                onPlay={() => setIsPlaying(true)} // Actualiza el estado si se reproduce
+                onLoadedMetadata={handleVideoLoaded} // Pausar el video al cargar los metadatos
+                onLoadStart={handleVideoLoaded} // Asegurarse de pausar al iniciar la carga
+                autoPlay={false} // Asegurarse de que no se inicie automáticamente
               >
                 Tu navegador no soporta videos HTML5.
               </video>
+              <button onClick={togglePlayPause}>
+                
+            </button>
+             
+
             </div>
 
             <div className=" w-full ">
@@ -240,4 +275,4 @@ const exposicionClientes: React.FC = () => {
   );
 };
 
-export default exposicionClientes;
+export default ExposicionClientes;
