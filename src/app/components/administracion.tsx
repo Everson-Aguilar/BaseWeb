@@ -22,7 +22,7 @@ const Login: React.FC = () => {
           Usuario:
         </label>
         <input
-          className="bg-base border-message border-2 h-5 mb-1 w-40 rounded-lg p-1 mr-5"
+          className="text-colorBase border-message border-2 h-5 mb-1 w-40 rounded-lg p-1 mr-5"
           id="username"
           type="text"
           value={username}
@@ -34,7 +34,7 @@ const Login: React.FC = () => {
             Contraseña:
           </label>
           <input
-            className="bg-base border-message border-2 mb-1 h-5 w-40 rounded-lg p-1 mr-5"
+            className="text-colorBase border-message border-2 mb-1 h-5 w-40 rounded-lg p-1 mr-5"
             id="password"
             type="password"
             value={password}

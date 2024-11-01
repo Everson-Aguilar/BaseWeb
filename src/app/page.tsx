@@ -1,17 +1,8 @@
-
 "use client";
-
-
-
-
-
-
-
-
 
 ///////////////////////////////// ALMACENAMIENTO
 
-import React, { useEffect, useRef, useState } from 'react'; // efecto, referencia, estado
+import React, { useEffect, useRef, useState } from "react"; // efecto, referencia, estado
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,9 +16,11 @@ import Reglas from "./components/reglas";
 import Introduccion from "./components/introduccion";
 import Exposicion from "./components/exposicionClientes";
 import PrecioServicio from "./components/paquetes";
-import Portfolio from "./components/portfolio"
-import CompetenciaComercial from "./components/competenciaComercial"
-import Servicios from "./components/servicios"
+import Portfolio from "./components/portfolio";
+import CompetenciaComercial from "./components/competenciaComercial";
+import Servicios from "./components/servicios";
+import NuestraFilosofia from "./components/separadores/NuestraFilosofia";
+import SubServicios from "./components/separadores/plan";
 
 //fuentes
 
@@ -38,18 +31,12 @@ import "./globals.css";
 import "./css/estructura.css";
 import "./css/animaciones.css";
 
-
-
-
 export default function Home() {
-
-
-
   //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++     desplazamiento Inicial Web ajustes     ++++++++++++++++++++++
-  
+
   const componenteRef = useRef<HTMLDivElement | null>(null);
   const [altura, setAltura] = useState(0);
-  const ajusteAltura = 51; // Ajuste de altura en píxeles
+  const ajusteAltura = 980; // Ajuste de altura en píxeles
 
   const obtenerAltura = () => {
     if (componenteRef.current) {
@@ -76,13 +63,8 @@ export default function Home() {
     // Eliminar el efecto de resize si lo tenías previamente
   }, []); // Cambiar a una lista de dependencias vacía para que solo se ejecute una vez al montar
 
+  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++     FIN    desplazamiento Inicial Web ajustes++++++++++++++++++++++
 
-  
- //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++     FIN    desplazamiento Inicial Web ajustes++++++++++++++++++++++
-
-
-
-  
   return (
     <div className="App ">
       {/* FIN   DE RESULTAD DE BUSCADORES     */}
@@ -112,7 +94,6 @@ export default function Home() {
         {/*presentacion y servicios    01-----------------------------------------------------*/}
 
         <section>
-          
           <Administracion />
         </section>
 
@@ -123,9 +104,8 @@ export default function Home() {
         {/*Fin componente vacio seccion =======================================================*/}
 
         <section>
-          <CompetenciaComercial/>
+          <CompetenciaComercial />
         </section>
-
 
         {/* componente exposicion seccion ==========================================================*/}
         <section>
@@ -133,17 +113,34 @@ export default function Home() {
         </section>
         {/*Fin componente exposicion seccion =======================================================*/}
 
+        {/* separador NuestraFilosofia =================================================*/}
+
+
+
+        <NuestraFilosofia/>
+
+        {/*  FIN separador NuestraFilosofia =================================================*/}
+
+
+
+
+
+
         {/* presentacion y servicio 01=================================================*/}
 
-
-        <div ref={componenteRef} className=''>
-        <Servicios />
-      </div>
-        
+        <div ref={componenteRef} className="">
+          <Servicios />
+        </div>
 
         {/*FIN presentacion y servicio 01=================================================*/}
 
+        {/* separador Subservicio =================================================*/}
 
+        <div ref={componenteRef} className="">
+          <SubServicios />
+        </div>
+
+        {/*FIN separador Subservicio =================================================*/}
 
         {/*********************************************************************************
          **********************************************************************************
@@ -158,22 +155,16 @@ export default function Home() {
         </section>
         {/*Fin componente reglas seccion =======================================================*/}
 
-
-             {/* componente precio servicio ==========================================================*/}
-             <section className=" mt-20"> <PrecioServicio/></section>
+        {/* componente precio servicio ==========================================================*/}
+        <section className=" mt-20">
+          {" "}
+          <PrecioServicio />
+        </section>
         {/*Fin componente precio servicio =======================================================*/}
-
-
-
-
-
-
 
         {/* componente vacio seccion ==========================================================*/}
         <section></section>
         {/*Fin componente vacio seccion =======================================================*/}
-
-
 
         {/*********************************************************************************
          **********************************************************************************
@@ -182,8 +173,9 @@ export default function Home() {
          **********************************************************************************
          **********************************************************************************/}
         {/*portfolio y explicacion tecnica artistica     03-------------------------------*/}
-        <section className=" mt-5"><Portfolio  /></section>
-        
+        <section className=" mt-5">
+          <Portfolio />
+        </section>
 
         {/*FIN portfolio y explicacion tecnica artistica 03-------------------------------*/}
         {/*********************************************************************************
@@ -261,13 +253,11 @@ git commit -m "30/10/2024"
 git pull origin develop
 git push origin develop */
 
-
 //git fetch origin
 //git reset --hard origin/main
-     //extraer informacion de GIT HUB
+//extraer informacion de GIT HUB
 
-
-     /*
+/*
      
 
      Ramas
@@ -280,12 +270,7 @@ git merge <nombre-rama>: Fusiona la rama especificada en la rama actual.
      
      */
 
-
-
-
-
-
-     /*
+/*
       ///////////////// SUBIR CONFIG AL VPS //////////////////////////
 
      Ejecuta el comando de construcción: Navega a la carpeta de tu proyecto y ejecuta:
@@ -309,4 +294,3 @@ Después de esto, tu aplicación debería ejecutarse correctamente en segundo pl
      
      
      */
-

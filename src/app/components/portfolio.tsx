@@ -45,7 +45,7 @@ const Galeria: React.FC = () => {
   const ids = images.map((_, index) => `b${index + 1}`);
 
   return (
-    <section className=" bg-base  md:flex xl:flex ">
+    <section className=" text-colorBase   md:flex xl:flex ">
       {/* galería */}
       <div className="w-full md:w-1/2 p-5">
         <div className="text-trend font-BebasNeue text-8xl">PORTFOLIO</div>

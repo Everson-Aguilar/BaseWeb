@@ -56,7 +56,7 @@ const SocialMediaFormats: React.FC = () => {
   // FIN desplazamiento mouse
 
   return (
-    <div className="flex h-full w-full flex-col md:flex-row bg-base">
+    <div className="flex h-full w-full flex-col md:flex-row text-colorBase">
       <div className="mx-auto p-6  w-full md:w-1/2 ">
         <h2 className="text-3xl font-BebasNeue p-5 mb-6 text-title  border-4 border-trend w-fit">
           Formatos Comerciales en Redes Sociales y Webs
@@ -142,7 +142,7 @@ const SocialMediaFormats: React.FC = () => {
         onMouseMove={handleMouseMove}
         className=" select-none overflow-auto   w-full z-10 md:h-1/2 flex gap-3 p-1 cursor-grab active:cursor-grabbing"
       >
-        <div className=" relative    min-w-[350px] text-base md:w-2/6 bg-trend   mt-5">
+        <div className=" relative    min-w-[350px] text-colorBase md:w-2/6 bg-trend   mt-5">
           <div className=" absolute flex-row p-5    ">
             <h2 className="  text-8xl w-full font-BebasNeue text-cyan-100">
               {" "}
@@ -230,7 +230,7 @@ const SocialMediaFormats: React.FC = () => {
           </div>
         </div>
 
-        <div className=" relative    min-w-[350px] text-base md:w-2/6 bg-trend   mt-5">
+        <div className=" relative    min-w-[350px] text-colorBase md:w-2/6 bg-trend   mt-5">
           <div className=" absolute top-60 flex-row p-5    ">
             <h2 className="  text-8xl w-full font-BebasNeue text-cyan-100">
               {" "}
@@ -318,7 +318,7 @@ const SocialMediaFormats: React.FC = () => {
           </div>
         </div>
 
-        <div className=" relative    min-w-[350px] text-base md:w-2/6 bg-trend   mt-5">
+        <div className=" relative    min-w-[350px] text-colorBase md:w-2/6 bg-trend   mt-5">
           <div className=" absolute flex-row p-5    ">
             <h2 className="  text-5xl w-full font-BebasNeue text-cyan-100">
               {" "}

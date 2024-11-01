@@ -1,0 +1,18 @@
+/* animacion.css */
+
+@keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-marquee {
+    display: inline-flex;
+    
+    animation: marquee 50s linear infinite;
+    min-width: 80%; /* Duplicamos el ancho para el efecto continuo */
+  }
+  

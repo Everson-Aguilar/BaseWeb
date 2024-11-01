@@ -22,9 +22,10 @@ const config: Config = {
         subtitle: '#403D39',
         title: '#252422',
         trend: '#1f1f1f',
-        base: '#f8fcff',
+        colorBase: '#f8fcff',
       },
-      
+
+  
 
       maxHeight: {
         'px': '1000px', // Cambia 100px al valor deseado

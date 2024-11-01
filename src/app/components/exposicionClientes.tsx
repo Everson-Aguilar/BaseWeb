@@ -28,8 +28,8 @@ const ExposicionClientes: React.FC = () => {
 
   
   return (
-    <div className="h-[1000] w-full  mt-20 mb-4 flex flex-col md:flex-row bg-base relative  justify-center items-start  ">
-      <div className="   grid bg-base gap-6 p-5 w-full md:w-1/2">
+    <div className="h-[1000] w-full  mt-20 mb-4 flex flex-col md:flex-row text-colorBase relative  justify-center items-start  ">
+      <div className="   grid text-colorBase gap-6 p-5 w-full md:w-1/2">
         <h2 className=" w-full  md:w-full font-BebasNeue text-5xl text-title ">
           {" "}
           Creación de Réplica 3D de Muebles Reales para Contenido de Redes
@@ -49,11 +49,11 @@ const ExposicionClientes: React.FC = () => {
       </div>
 
       <div className="mt-5 ">
-        <div className=" text-5xl text-subtitle h-36 bg-trend p-3 font-BebasNeue  border-2 ">
+        <div className=" text-6xl text-subtitle h-20 bg-trend p-3 font-BebasNeue   ">
           producto hogar
         </div>
 
-        <div className="  text-title p-1  font-bold text-2xl shadow-xl h-10 ">
+        <div className="  p-1  font-BebasNeue text-4xl text-trend  shadow-xl h-10 ">
           Mobilarios
         </div>
 
@@ -91,46 +91,46 @@ const ExposicionClientes: React.FC = () => {
         </div>
 
         <div className="bg-message p-6 shadow-md w-full">
-          <h2 className="text-2xl font-BebasNeue text-trend mb-4">
+          <h2 className="text-4xl font-BebasNeue text-trend mb-4">
             Muebles 3D Realistas para Hacer Brillar tus Proyectos y tu Marca
           </h2>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <li className="p-4 bg-base rounded-lg shadow">
-              <h3 className="font-semibold text-trend">
+            <li className="p-4 text-colorBase rounded-lg shadow">
+              <h3 className="font-BebasNeue text-3xl text-trend">
                 Visuales que impactan:
               </h3>
-              <p>
+              <p className='text-trend'>
                 Atrae todas las miradas con renderizados de alta calidad que
                 suben el nivel de tus presentaciones.
               </p>
             </li>
-            <li className="p-4 bg-base rounded-lg shadow">
-              <h3 className="font-semibold text-trend">Flexibilidad total:</h3>
-              <p>
+            <li className="p-4 text-colorBase rounded-lg shadow">
+              <h3 className="font-BebasNeue text-3xl text-trend">Flexibilidad total:</h3>
+              <p className='text-trend'>
                 Ajusta colores, materiales y tamaños, o incluso rediseña el
                 producto para que encaje perfecto con tu estilo.
               </p>
             </li>
-            <li className="p-4 bg-base rounded-lg shadow">
-              <h3 className="font-semibold text-trend">
+            <li className="p-4 text-colorBase rounded-lg shadow">
+              <h3 className="font-BebasNeue text-3xl text-trend">
                 Rendimiento eficiente:
               </h3>
-              <p>
+              <p className='text-trend'>
                 Modelos ligeros que mantienen tus proyectos fluidos y rápidos.
               </p>
             </li>
-            <li className="p-4 bg-base rounded-lg shadow">
-              <h3 className="font-semibold text-trend">
+            <li className="p-4 text-colorBase rounded-lg shadow">
+              <h3 className="font-BebasNeue text-3xl text-trend">
                 Contenido para redes que engancha:
               </h3>
-              <p>
+              <p className='text-trend'>
                 Crea imágenes y animaciones que sorprendan a tu audiencia y
                 mejoren la visibilidad de tu marca.
-              </p>
+              </p >
             </li>
-            <li className="p-4 bg-base rounded-lg shadow">
-              <h3 className="font-semibold text-trend">Identidad sólida:</h3>
-              <p>
+            <li className="p-4 text-colorBase rounded-lg shadow">
+              <h3 className="font-BebasNeue text-3xl text-trend">Identidad sólida:</h3>
+              <p className='text-trend'>
                 Diseños que encajan fácil y mantienen la coherencia en todos tus
                 proyectos, dándole más fuerza a tu marca.
               </p>
@@ -257,7 +257,7 @@ const ExposicionClientes: React.FC = () => {
             {/* fin index de imagenes 21 pack-------------------------------*/}
 
             <div>
-              <ul className="space-y-20 mt-20">
+              <ul className="space-y-20 mt-20 text-trend ">
                 <li>Remplazo tapicería</li>
                 <li>Reparación relleno</li>
                 <li>Renovación estética</li>

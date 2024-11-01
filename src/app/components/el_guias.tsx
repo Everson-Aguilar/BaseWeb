@@ -18,7 +18,7 @@ const El_guias = () => {
         onClick={togglePopup} // Maneja el clic para abrir o cerrar el popup
         target="_blank"
         rel="noopener noreferrer"
-        className=" z-10 bg-trend duration-500  hover:bg-base  p-3 rounded-full shadow-2xl flex items-center justify-center cursor-pointer"
+        className=" z-10 bg-trend duration-500  hover:text-colorBase  p-3 rounded-full shadow-2xl flex items-center justify-center cursor-pointer"
       >
         {/* Imagen del botón */}
         <Image
@@ -33,7 +33,7 @@ const El_guias = () => {
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-end right-9 translate-x-[0px] z-10 top-40">
           {/* Contenedor del popup */}
-          <div className="bg-base translate-y--20 p-5   w-fit rounded-lg shadow-lg relative">
+          <div className="bg-colorBase  translate-y--20 p-5   w-fit rounded-lg shadow-lg relative">
             {/* Botón para cerrar el popup */}
             <button
               onClick={togglePopup} // Maneja el clic para cerrar el popup

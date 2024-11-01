@@ -35,7 +35,7 @@ const Pack = () => {
             objectFit="scale-down"
             unoptimized
           />
-          <div className="absolute w-full h-32 text-base p-3 z-20 flex font-BebasNeue text-7xl">
+          <div className="absolute w-full h-32 text-colorBase p-3 z-20 flex font-BebasNeue text-7xl">
             <Image
               src="/DiseñoWeb/logogris.svg"
               alt="Logo"

@@ -10,7 +10,7 @@ import "../css/animaciones.css";
 
 const DigitalIdentity: React.FC = () => {
   return (
-    <section className="base mt-40">
+    <section className="base bg-trend ">
       <div className="contenedor1">
         <div className="absolute z-10 p-4 h-2/5 w-2/3">
           <Image

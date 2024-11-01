@@ -10,6 +10,8 @@
   overflow: hidden;
   
  
+  
+ 
 }
 
 
@@ -26,8 +28,9 @@
   width: 100%;
   min-width: 412px;
   height: 915px;
-  margin-bottom: 1vh;
   flex-direction: column;
+  
+ 
 }
 
 .portada {
@@ -42,7 +45,7 @@
   min-width: 412px;
   height: 915px;
   margin-bottom: 1vh;
-  background-color: #252422;
+  background-color: #1f1f1f;
   justify-content: center;
   flex-direction: column;
 }

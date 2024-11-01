@@ -20,13 +20,13 @@ const ComicStory: React.FC = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col md:flex-row bg-base p-5 justify-center items-center">
+    <div className="w-full flex flex-col md:flex-row text-colorBase p-5 justify-center items-center">
       {/* Comics */}
       <div className="flex p-5  justify-center items-center gap-1 border text-xs md:text-1xlt xl:text-1xl font-Notable">
         {/* ladoA */}
         <section className="space-y-20 mt-16">
           <div className="relative">
-            <div className="absolute -translate-y-16   w-full p-3 border-2 bg-base border-trend text-trend   ">
+            <div className="absolute -translate-y-16   w-full p-3 border-2 bg-colorBase border-trend text-trend   ">
               - Necesitamos algo que de verdad destaque, algo que rompa con todo
               lo que hace la competencia
             </div>
@@ -40,7 +40,7 @@ const ComicStory: React.FC = () => {
           </div>
 
           <div className="relative">
-            <div className="absolute -translate-y-16  w-full p-3 border-2 bg-base border-trend text-trend">
+            <div className="absolute -translate-y-16  w-full p-3 border-2 bg-colorBase border-trend text-trend">
               -¡Los gatos son la clave del éxito!
             </div>
             <Image
@@ -52,7 +52,7 @@ const ComicStory: React.FC = () => {
           </div>
 
           <div className="relative">
-            <div className="absolute -translate-y-16  w-full p-3 border-2 bg-base border-trend text-trend">
+            <div className="absolute -translate-y-16  w-full p-3 border-2 bg-colorBase border-trend text-trend">
               -Con herramientas 3D, la única limitación es nuestra imaginación.
               ¡Conquistemos el mercado!
             </div>
@@ -68,7 +68,7 @@ const ComicStory: React.FC = () => {
         {/* ladoB */}
         <section className="space-y-20 mt-16">
           <div className="relative">
-            <div className="absolute -translate-y-16  w-full p-3 border-2 bg-base border-trend text-trend">
+            <div className="absolute -translate-y-16  w-full p-3 border-2 bg-colorBase border-trend text-trend">
               -Esto no está funcionando, tenemos que replantear todo
             </div>
             <Image
@@ -80,7 +80,7 @@ const ComicStory: React.FC = () => {
           </div>
 
           <div className="relative">
-            <div className="absolute -translate-y-16  w-full p-3 border-2 bg-base border-trend text-trend">
+            <div className="absolute -translate-y-16  w-full p-3 border-2 bg-colorBase border-trend text-trend">
               -¿Y si en vez de lo de siempre, usamos diseño de entornos 3D?
               ¡Imaginen las posibilidades!
             </div>
@@ -93,7 +93,7 @@ const ComicStory: React.FC = () => {
           </div>
 
           <div className="relative">
-            <div className="absolute -translate-y-16 w-full p-3 border-2 bg-base border-trend text-trend">
+            <div className="absolute -translate-y-16 w-full p-3 border-2 bg-colorBase border-trend text-trend">
               -Mamá, la agencia aprobó mi servicio! Ya voy al centro por tus
               aguacates.
             </div>
@@ -108,7 +108,7 @@ const ComicStory: React.FC = () => {
       </div>
 
       {/* Diagramas */}
-      <div className="h-[1400px] md:h-[1000px]  bg-gradient-to-b from-white to-blue-200 w-full p-2 bg-base">
+      <div className="h-[1400px] md:h-[1000px]  bg-gradient-to-b from-white to-blue-200 w-full p-2 text-colorBase">
         <h2 className="text-2xl font-BebasNeue text-center mb-4 text-title">
           Un estilo de vida diferente...
         </h2>
@@ -117,7 +117,7 @@ const ComicStory: React.FC = () => {
             {topIcons.map((src, index) => (
               <div
                 key={index}
-                className=" bg-base transition-all duration-300 ease-in-out h-12 w-12 xl:h-28 md:h-14 md:w-14 xl:w-28 flex justify-center items-center"
+                className=" text-colorBase transition-all duration-300 ease-in-out h-12 w-12 xl:h-28 md:h-14 md:w-14 xl:w-28 flex justify-center items-center"
               >
                 <Image
                   src={src}
@@ -133,7 +133,7 @@ const ComicStory: React.FC = () => {
             {bottomIcons.map((src, index) => (
               <div
                 key={index}
-                className=" bg-base transition-all duration-300 ease-in-out   h-12 w-12 md:h-14 md:w-14  xl:h-28 xl:w-28 flex justify-center items-center"
+                className=" text-colorBase transition-all duration-300 ease-in-out   h-12 w-12 md:h-14 md:w-14  xl:h-28 xl:w-28 flex justify-center items-center"
               >
                 <Image
                   src={src}
@@ -158,10 +158,10 @@ const ComicStory: React.FC = () => {
   <div className="flex-row justify-center items-center md:w-1/2   text-center border-2 border-trend p-4">
     <div className="flex justify-center items-center text-5xl">
       <div className="absolute h-14 w-14 border-trend border-4 rounded-full"></div>
-      <div>!</div>
+      <div className="text-trend">!</div>
     </div>
     <h2 className="font-BebasNeue text-4xl text-trend mt-5">Real</h2>
-    <div className="text-xs">
+    <div className="text-xs text-trend">
       Lo real es lo que puedes tocar, ver y sentir. En una realidad compleja,
       es fácil perderse. Hay diversos mundos en arte, ciencia y creencias. Ser
       consciente de tus decisiones es clave; puedes elegir entre sobrevivir o
@@ -173,10 +173,10 @@ const ComicStory: React.FC = () => {
   <div className="flex-row justify-center items-center md:w-1/2   text-center border-2 border-trend p-4">
     <div className="flex justify-center items-center text-5xl">
       <div className="absolute h-14 w-14 border-trend border-4 rounded-full"></div>
-      <div>!</div>
+      <div className="text-trend">!</div>
     </div>
     <h2 className="font-BebasNeue text-4xl text-trend mt-5">Virtual</h2>
-    <div className="text-xs">
+    <div className="text-xs text-trend">
       Lo virtual es más preciso y limpio que lo real, aunque carece de
       dimensión sensorial. Tus habilidades de comunicación son clave para
       destacar en la comunidad. Comparte tu filosofía de vida y aprende

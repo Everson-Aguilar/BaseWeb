@@ -4,7 +4,7 @@ import Image from "next/image";
 const MarketingDigital: React.FC = () => {
   return (
 
-    <div className=" flex-row p-5 md:flex bg-base justify-center items-center">
+    <div className=" flex-row p-5 md:flex text-colorBase justify-center items-center">
 
     <div className="  md:w-1/2">
       <h2 className="text-title text-5xl font-BebasNeue mb-4">
@@ -27,7 +27,7 @@ const MarketingDigital: React.FC = () => {
         de tu negocio.
       </p>
 
-      <div className="bg-trend text-base p-5 md:w-2/3">  
+      <div className="bg-trend text-colorBase p-5 md:w-2/3">  
       <h3 className="text-2xl font-BebasNeue mt-6 mb-2">Servicios</h3>
       <ul className="list-disc list-inside mb-4 ">
         <li>
@@ -93,7 +93,7 @@ const MarketingDigital: React.FC = () => {
         mercado mediante una comunicación efectiva y precisa.
       </p>
 
-<div className="bg-trend text-base p-5 md:w-2/3">  
+<div className="bg-trend text-colorBase p-5 md:w-2/3">  
       <h3 className=" text-2xl font-BebasNeue mt-6 mb-2">
         ¿A quiénes servimos?
       </h3>
