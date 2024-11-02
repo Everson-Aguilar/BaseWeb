@@ -11,65 +11,9 @@ import "../css/animaciones.css";
 const DigitalIdentity: React.FC = () => {
   return (
     <section className="base bg-trend ">
-      <div className="contenedor1">
-        <div className="absolute z-10 p-4 h-2/5 w-2/3">
-          <Image
-            src="/DiseñoWeb/logogris.svg"
-            alt="Logo"
-            width={500}
-            height={500}
-          />
-          <h1 className="font-Staatliches text-7xl text-trend mt-4">
-            CREA TU IDENTIDAD DIGITAL
-          </h1>
-          <div>
-            <ul className="text-5xl font-BebasNeue text-trend">
-              <li> Herramientas</li>
-              <li> Recursos</li>
-              <li> Servicios</li>
-            </ul>
-          </div>
-        </div>
 
-        <div className="absolute text-title bg-slate-300 bg-opacity-10 backdrop-blur-md box-border p-3 z-20 w-1/3 h-full right-0 text-1xl">
-          <p>
-            <strong>
-              Impulsa tu Presencia Digital con un ID &Uacute;nico
-            </strong>
-          </p>
-          <p>
-            Con nuestro <strong>ID exclusivo</strong>, facilitar&aacute;s
-            que otros accedan a tu negocio y recursos digitales. Tu ID
-            conectar&aacute; a clientes y colaboradores con tu marca,
-            mejorando tu visibilidad y presencia online.
-          </p>
-          <p>
-            <strong>
-              Consigue tu ID y abre las puertas a nuevas oportunidades
-              digitales para tu negocio!
-            </strong>
-          </p>
-        </div>
 
-        <div className="imagen relative">
-          <Image
-            src="/DiseñoWeb/panel_01.jpg"
-            alt="Diseño Ambiental"
-            layout="fill"
-            objectFit="cover"
-          />
-        </div>
-      </div>
 
-      <div className="portada w-full box-border overflow-hidden">
-        <div className="bg-slate-500 h-full">
-          <img
-            src="/DiseñoWeb/panel_04.jpg"
-            alt="Descripción de la imagen"
-            className="w-full h-full min-w-96"
-          />
-        </div>
-      </div>
 
       <div className="contenedor2">
         <div className="flex justify-center">
@@ -130,7 +74,84 @@ const DigitalIdentity: React.FC = () => {
           </div>
         </div>
       </div>
+
+
+      <div className="portada w-full box-border overflow-hidden">
+        <div className="bg-slate-500 h-full">
+          <img
+            src="/DiseñoWeb/panel_04.jpg"
+            alt="Descripción de la imagen"
+            className="w-full h-full min-w-96"
+          />
+        </div>
+      </div>
+
+
+
+
+      <div className="contenedor1">
+        <div className="absolute z-10 p-4 h-2/5 w-2/3">
+          <Image
+            src="/DiseñoWeb/logogris.svg"
+            alt="Logo"
+            width={500}
+            height={500}
+          />
+          <h1 className="font-Staatliches text-7xl text-trend mt-4">
+            CREA TU IDENTIDAD DIGITAL
+          </h1>
+          <div>
+            <ul className="text-5xl font-BebasNeue text-trend">
+              <li> Herramientas</li>
+              <li> Recursos</li>
+              <li> Servicios</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="absolute text-title bg-slate-300 bg-opacity-10 backdrop-blur-md box-border p-3 z-20 w-1/3 h-full right-0 text-1xl">
+          <p>
+            <strong>
+              Impulsa tu Presencia Digital con un ID &Uacute;nico
+            </strong>
+          </p>
+          <p>
+            Con nuestro <strong>ID exclusivo</strong>, facilitar&aacute;s
+            que otros accedan a tu negocio y recursos digitales. Tu ID
+            conectar&aacute; a clientes y colaboradores con tu marca,
+            mejorando tu visibilidad y presencia online.
+          </p>
+          <p>
+            <strong>
+              Consigue tu ID y abre las puertas a nuevas oportunidades
+              digitales para tu negocio!
+            </strong>
+          </p>
+        </div>
+
+        <div className="imagen relative">
+          <Image
+            src="/DiseñoWeb/panel_01.jpg"
+            alt="Diseño Ambiental"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+      </div>
+
+
+
+
+
+
     </section>
+
+
+
+
+
+
+
   );
 };
 

@@ -28,7 +28,7 @@ const ExposicionClientes: React.FC = () => {
 
   
   return (
-    <div className="h-[1000] w-full  mt-20 mb-4 flex flex-col md:flex-row text-colorBase relative  justify-center items-start  ">
+    <div className="h-[1000] w-full  mb-4 flex flex-col md:flex-row text-colorBase relative  justify-center items-start  ">
       <div className="   grid text-colorBase gap-6 p-5 w-full md:w-1/2">
         <h2 className=" w-full  md:w-full font-BebasNeue text-5xl text-title ">
           {" "}

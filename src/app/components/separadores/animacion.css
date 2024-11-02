@@ -1,18 +1,37 @@
-/* animacion.css */
-
+/* Animación base */
 @keyframes marquee {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+  from {
+    transform: translateX(100%);
   }
-  
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 4s linear infinite;
+  min-width: 200%; /* Duplicamos el ancho para el efecto continuo */
+}
+
+/* Ajustes para dispositivos */
+@media (max-width: 480px) {
+  /* Dispositivos móviles */
   .animate-marquee {
-    display: inline-flex;
-    
-    animation: marquee 50s linear infinite;
-    min-width: 80%; /* Duplicamos el ancho para el efecto continuo */
+    animation-duration: 8s; /* Velocidad más lenta en dispositivos móviles */
   }
-  
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Tablets */
+  .animate-marquee {
+    animation-duration: 13s; /* Velocidad intermedia en tablets */
+  }
+}
+
+@media (min-width: 769px) {
+  /* Escritorio */
+  .animate-marquee {
+    animation-duration: 15s; /* Velocidad original en escritorio */
+  }
+}

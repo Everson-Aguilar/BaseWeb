@@ -21,6 +21,8 @@ import CompetenciaComercial from "./components/competenciaComercial";
 import Servicios from "./components/servicios";
 import NuestraFilosofia from "./components/separadores/NuestraFilosofia";
 import SubServicios from "./components/separadores/plan";
+import Proyectos from "./components/separadores/proyectos";
+import Ejemplos from "./components/separadores/ejemplos";
 
 //fuentes
 
@@ -107,6 +109,15 @@ export default function Home() {
           <CompetenciaComercial />
         </section>
 
+        {/* DIVISION EJEMPLO */}
+
+        <Ejemplos/>
+
+        {/* FIN DIVISION EJEMPLO */}
+
+
+
+
         {/* componente exposicion seccion ==========================================================*/}
         <section>
           <Exposicion />
@@ -172,6 +183,15 @@ export default function Home() {
          **********************************************************************************
          **********************************************************************************
          **********************************************************************************/}
+
+
+         {/* DIVISION proyectos */}
+
+         <Proyectos/>
+
+          {/* FIN DIVISION proyectos */}
+
+
         {/*portfolio y explicacion tecnica artistica     03-------------------------------*/}
         <section className=" mt-5">
           <Portfolio />
