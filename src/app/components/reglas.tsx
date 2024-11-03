@@ -161,10 +161,19 @@ const SocialMediaFormats: React.FC = () => {
           </div>
 
           <div className="flex p-5">
+
+
+            {/* Paquetes Plan */}
+
+
             <div className=" w-2/3">
               <h2 className=" text-2xl  font-BebasNeue">
                 Crea Publicidad 3D Realista para Redes Sociales
               </h2>
+
+
+            
+              
 
               <div>
                 <h3 className=" text-1xl font-BebasNeue text-cyan-600 ">
@@ -219,6 +228,8 @@ const SocialMediaFormats: React.FC = () => {
                 </ul>
               </div>
             </div>
+
+            {/* Fin Paquetes Plan */}
 
             <div className=" border-l-4 pl-2 ">
               <span className=" text-7xl font-BebasNeue w-1/2">1 mes</span>{" "}
