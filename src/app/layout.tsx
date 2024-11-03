@@ -33,12 +33,13 @@ export default function RootLayout({
         <meta name="keywords" content="negocio digital, impulso de ventas, redes sociales, marketing digital, desarrollo web, diseño gráfico, diseño de productos, diseño de espacios, tecnologías avanzadas, soluciones económicas" />
 
         {/* Meta etiquetas para Open Graph */}
-        <meta property="og:title" content="Marketing Digital y Contenido 3D para Impulsar tu Negocio" />
-        <meta property="og:description" content="Impulsa tu negocio con Marketing Digital y visualizaciones 3D impactantes. En tudigitalnegocio.com, mejoramos la experiencia de compra de tus clientes con soluciones innovadoras. ¡Haz que tus ideas cobren vida!" />
-        <meta property="og:image" content="https://tudigitalnegocio.com/DiseñoWeb/WebRecursos/imagenLink.png" /> {/* Asegúrate de que esta ruta sea correcta */}
-        <meta property="og:url" content="https://tudigitalnegocio.com" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://tudigitalnegocio.com" /> {/* Canonical URL */}
+         <meta property="og:title" content="Marketing Digital y Contenido 3D para Impulsar tu Negocio" />
+         <meta property="og:description" content="Impulsa tu negocio con Marketing Digital y visualizaciones 3D impactantes. En tudigitalnegocio.com, mejoramos la experiencia de compra de tus clientes con soluciones innovadoras. ¡Haz que tus ideas cobren vida!" />
+         <meta property="og:image" content="https://tudigitalnegocio.com/DiseñoWeb/WebRecursos/imagenLink.png" /> {/* Asegúrate de que esta ruta sea correcta */}
+         <meta property="og:url" content="https://tudigitalnegocio.com" />
+         <meta property="og:type" content="website" />
+         <link rel="canonical" href="https://tudigitalnegocio.com" /> {/* Canonical URL */}
+
 
         {/* Meta etiquetas para Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
