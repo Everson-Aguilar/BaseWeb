@@ -18,23 +18,23 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/DiseñoWeb/logogris.svg" />
+        <link rel="icon" href="/DiseñoWeb/ico.svg" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/DiseñoWeb/logogris.svg"
+          href="/DiseñoWeb/ico.svg"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/DiseñoWeb/logogris.svg"
+          href="/DiseñoWeb/ico.svg"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/DiseñoWeb/logogris.svg"
+          href="/DiseñoWeb/ico.svg"
         />
 
         <meta

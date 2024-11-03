@@ -220,7 +220,7 @@ const ExposicionClientes: React.FC = () => {
               <video
                 ref={videoRef}
                 controls
-                src="/DiseñoWeb/videos/muebleContemporaneo.mp4"
+                src="/DiseñoWeb/videos/Video02.mp4"
                 className="w-full h-full"
                 onPause={() => setIsPlaying(false)}
                 onPlay={() => setIsPlaying(true)}
