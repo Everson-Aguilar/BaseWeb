@@ -194,7 +194,7 @@ const ExposicionClientes: React.FC = () => {
             </li>
             <li className="p-4 text-colorBase rounded-lg shadow">
               <h3 className="font-BebasNeue text-3xl text-colorBase">
-                Contenido para redes que engancha:
+                Contenido para redes sociales:
               </h3>
               <p className="text-colorBase">
                 Crea imágenes y animaciones que sorprendan a tu audiencia y
@@ -202,7 +202,7 @@ const ExposicionClientes: React.FC = () => {
               </p>
             </li>
             <li className="p-4 text-colorBase rounded-lg shadow">
-              <h3 className="font-BebasNeue text-3xl text-trend">
+              <h3 className="font-BebasNeue text-3xl text-colorBase">
                 Identidad sólida:
               </h3>
               <p className="text-colorBase">
