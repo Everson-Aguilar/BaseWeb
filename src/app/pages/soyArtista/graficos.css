@@ -1,0 +1,15 @@
+
+
+  /* botonNeumorfico.css */
+.btn-neumorfico {
+  
+  
+  box-shadow:  7px 7px 14px #dddddd,
+             -7px -7px 14px #ffffff;
+  font-weight: bold; /* Negrita */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  transition: transform 0.2s; /* Transición para efecto hover */
+}
+
+
+

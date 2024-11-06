@@ -3,26 +3,25 @@
 import Link from "next/link";
 import React from "react";
 
-//css
-
+// css
 import "../css/header.css";
 
-const Header = () => {
+// Definir el tipo de las propiedades si se aplican
+const Header: React.FC = () => {
   return (
-    <header className="  bg-trend h-16    header">
+    <header className="bg-trend h-16 header">
       <nav>
-        <ul className="header_contenido font-sans ">
+        <ul className="header_contenido font-sans">
           <li>
             <Link href="/">Inicio</Link>
           </li>
           <li>
-            <Link href="pages/mantenimiento/">Soy Artista $$$</Link>
+            <Link href="pages/soyArtista/">Soy Artista $$$</Link>
           </li>
           <li>
             <Link href="/pages/mantenimiento">Productos Visuales</Link>
           </li>
         </ul>
-      
       </nav>
     </header>
   );

@@ -11,6 +11,22 @@ const config: Config = {
   theme: {
     extend: {
 
+
+      animation: {
+        'slow-spin': 'spin 8s linear infinite',
+        'reverse-spin': 'reverse-spin 8s linear infinite',
+      },
+
+      keyframes: {
+        'reverse-spin': {
+          from: { transform: 'rotate(0deg)' },
+          to: { transform: 'rotate(-360deg)' },
+        },
+      },
+
+
+
+
       boxShadow: {
         'inner-md': 'inset 0 4px 6px rgba(0, 0, 0, 0.1)',
         'inner-lg': 'inset 0 10px 15px rgba(0, 0, 0, 0.1)',
@@ -35,16 +51,13 @@ const config: Config = {
         
       },
 
+      
+
   
 
       maxHeight: {
         'px': '1000px', // Cambia 100px al valor deseado
       },
-
-
-
-     
-
 
 
       fontFamily: {

@@ -22,3 +22,21 @@
   }
 
 
+
+  /* botonNeumorfico.css */
+.btn-neumorfico {
+  border-radius: 50px; /* Borde redondeado */
+  background: linear-gradient(145deg, #f0f0f0, #cacaca); /* Gradiente de fondo */
+  box-shadow: 35px 35px 70px #bebebe, -35px -35px 70px #ffffff; /* Sombra */
+  color: #333; /* Color del texto */
+  font-weight: bold; /* Negrita */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  transition: transform 0.2s; /* Transición para efecto hover */
+}
+
+.btn-neumorfico:hover {
+  transform: scale(1.05); /* Efecto de escalado al pasar el ratón */
+}
+
+
+

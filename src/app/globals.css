@@ -78,7 +78,7 @@
 :root {
   --foreground-color: #f8fcff; /* Color del texto predeterminado */
   --background-start-color: #f8fcff; /* Color de inicio del fondo */
-  --background-end-color: #ffffff; /* Color de fin del fondo */
+  --background-end-color: #f8fcff; /* Color de fin del fondo */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -96,12 +96,9 @@
 
 body {
 
-  background-color: #f5faff;
+  background-color: #f8fcff;
   height: max-content;
   
-
-  
- 
 
 
 
