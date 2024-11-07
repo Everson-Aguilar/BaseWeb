@@ -5,9 +5,10 @@ import Image from "next/image";
 import "../soyArtista/graficos.css";
 
 
-// componente
+// componentes
 
-import CaminoIdeal from "./caminoIdeal"
+import CaminoIdeal from "./componentes/caminoIdeal"
+
 
 
 

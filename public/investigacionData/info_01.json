@@ -1,0 +1,12 @@
+{
+    "description": "Este es el archivo info_01 con más detalles.",
+    "children": [
+      {
+        "name": "Subnodo 1"
+      },
+      {
+        "name": "Subnodo 2"
+      }
+    ]
+  }
+  
