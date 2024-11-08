@@ -5,6 +5,7 @@ import Image from "next/image";
 
 // Importar componente Rama
 import Rama from "./ramificacion/importacionRama"
+import Formulario from "./formulario"
 
 interface Carpeta {
   id: number;
@@ -19,7 +20,7 @@ const ComponenteVacio: React.FC = () => {
 
   // Datos de las carpetas
   const carpetas: Carpeta[] = [
-    { id: 1, imagen: "/DiseñoWeb/WebRecursos/carpeta.svg", nombre: "Carpeta 1", json: "info_01" },
+    { id: 1, imagen: "/DiseñoWeb/WebRecursos/carpeta.svg", nombre: "Grupos de Facebook", json: "info_01" },
     { id: 2, imagen: "/DiseñoWeb/WebRecursos/carpeta.svg", nombre: "Carpeta 2", json: "info_02" },
     { id: 3, imagen: "/DiseñoWeb/WebRecursos/carpeta.svg", nombre: "Carpeta 3", json: "info_03" },
     { id: 4, imagen: "/DiseñoWeb/WebRecursos/carpeta.svg", nombre: "Carpeta 4", json: "info_04" },
@@ -95,6 +96,11 @@ const ComponenteVacio: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <Formulario/>
+
+      
+
     </div>
   );
 };

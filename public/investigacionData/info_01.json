@@ -1,12 +1,71 @@
 {
-    "description": "Este es el archivo info_01 con más detalles.",
-    "children": [
-      {
-        "name": "Subnodo 1"
-      },
-      {
-        "name": "Subnodo 2"
-      }
-    ]
-  }
-  
+  "description": "Redes Sociales",
+  "children": [
+    {
+      "name": "Grupos Facebook",
+      "children": [
+        {
+          "name": "Arquitectura y Urbanismo ",
+          "children": [
+            {
+              "name": "Arquitectura Apasionante",
+              "children": [
+                {
+                  "name": " https://www.facebook.com/groups/arquitecturaapasionante"
+                },
+
+                {
+                  "name": "Grupo público · 61,3 mil miembros "
+                },
+
+                {
+                  "name": "Elaboración de planos arquitectura y diseño"
+                }
+              ]
+            },
+
+            {
+              "name": "DISEÑO, ARQUITECTURA, CONSTRUCCIÓN Y MADERAS",
+              "children": [
+                {
+                  "name": "https://www.facebook.com/groups/dgraficosenactcm"
+                },
+                {
+                  "name": "Grupo público · Grupo público  · 132,2 mil miembros"
+                },
+                {
+                  "name": "diseño arquitectónico interior madera, organizado, azul y blanco, plantas,  diferente y comodo."
+                }
+              ]
+            },
+
+            {
+              "name": "Renders y Arquitectura",
+              "children": [
+                {
+                  "name": "https://www.facebook.com/groups/Renders.y.Arquitectura"
+                },
+                {
+                  "name": "Grupo público · Grupo público  · 85,7 mil miembros"
+                },
+                {
+                  "name": "defectuosa, mal hecho, ordinario, contratista mas economico, es parte del diseño"
+                }
+              ]
+            }
+
+
+
+
+
+
+
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+
+
