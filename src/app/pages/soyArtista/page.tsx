@@ -4,22 +4,14 @@ import { useState } from "react";
 import Image from "next/image";
 import "../soyArtista/graficos.css";
 
-
 // componentes
 
-import CaminoIdeal from "./componentes/caminoIdeal"
-
-
-
+import CaminoIdeal from "./componentes/caminoIdeal";
+import Estadistica from "./componentes/Estadisticas";
 
 const SoyArtista: React.FC = () => {
-
-
   return (
     <div className="  text-trend h-screen">
-
-   
-
       <div className=" p-5">
         <h1 className="  relative font-BebasNeue text-5xl ">
           COMUNIDAD INTERNET GLOBAL
@@ -88,26 +80,34 @@ const SoyArtista: React.FC = () => {
           <div className=" bg-trend text-colorBase font-Notable h-full w-full p-5">
             <p>
               * Se analizará la{" "}
-              <strong>recopilación de interacciones obtenidas</strong> a partir
-              de estrategias para reconocer los patrones sociales que requiere
-              de una necesidad especifica.
+              <strong>
+                recopilación de interacciones obtenidas en las publicaciones
+              </strong>{" "}
+              a partir de estrategias para reconocer los patrones sociales que
+              requiere de una necesidad especifica.
             </p>
 
             <div className="flex gap-2 mt-16 h-4/6 w-full ">
-              <div className="bg-colorBase h-full w-2/3"></div>
-              <div className="bg-colorBase h-full w-1/3"></div>
+              <div className="bg-colorBase h-full w-2/3">
+                <Estadistica />
+              </div>
+              <div className="bg-colorBase h-full w-1/3 text-trend font-Notable p-1">
+                <h2 className="font-BebasNeue text-3xl">
+                  CONTENIDO A CREAR POR TENDENCIA
+                </h2>
+                <ol >
+                  <li><span className=" text-2xl font-BebasNeue">1.</span>Diseño personalizado arquitectura, Modern Farmhouse.</li>
+                  <li><span className=" text-2xl font-BebasNeue">2.</span>Trafficker Digital necesito.</li>
+                </ol>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-
       <div>
-        <CaminoIdeal/>
+        <CaminoIdeal />
       </div>
-
-      
-
     </div>
   );
 };

@@ -61,7 +61,10 @@ const TreeDiagram: React.FC<TreeDiagramProps> = ({ folderInfo }) => {
     height: "100%",
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
+    
+    
+   
+    
   };
 
 
@@ -75,12 +78,13 @@ const TreeDiagram: React.FC<TreeDiagramProps> = ({ folderInfo }) => {
 
 
   return (
-    <div className="shadow-xl" style={containerStyles}>
+    <div className="shadow-xl " style={containerStyles}>
       <Tree
         data={data}
         translate={{ x: 200, y: 300 }}
         orientation="vertical"
         separation={separation} // Aplica las configuraciones de separación
+        
       
       />
     </div>

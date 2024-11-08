@@ -92,7 +92,7 @@ const copiarAlPortapapeles = () => {
           {/* URL del Grupo */}
           <div>
             <label htmlFor="urlGrupo" className="block text-sm font-medium text-subtitle">
-              URL del Grupo:
+              URL de la publicacion:
             </label>
             <input
               id="urlGrupo"
