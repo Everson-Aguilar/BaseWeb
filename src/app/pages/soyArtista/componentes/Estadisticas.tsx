@@ -9,7 +9,7 @@ const data = {
   datasets: [
     {
       label: 'Tendencia 2024',
-      data: [238, 132, 0, 0, 0],
+      data: [238, 132, 687, 0, 0],
       backgroundColor: '#1f1f1f',
       
       

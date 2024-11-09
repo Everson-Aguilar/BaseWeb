@@ -98,6 +98,7 @@ const SoyArtista: React.FC = () => {
                 <ol >
                   <li><span className=" text-2xl font-BebasNeue">1.</span>Diseño personalizado arquitectura, Modern Farmhouse.</li>
                   <li><span className=" text-2xl font-BebasNeue">2.</span>Trafficker Digital necesito.</li>
+                  <li><span className=" text-2xl font-BebasNeue">3.</span>Mobilarios creativos / planos.</li>
                 </ol>
               </div>
             </div>
