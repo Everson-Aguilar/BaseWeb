@@ -23,6 +23,8 @@ import NuestraFilosofia from "./components/separadores/NuestraFilosofia";
 import SubServicios from "./components/separadores/plan";
 import Proyectos from "./components/separadores/proyectos";
 import Ejemplos from "./components/separadores/ejemplos";
+import VidaDiferente from "./components/venAvivirUnaVidaDiferente"
+
 
 //fuentes
 
@@ -81,6 +83,13 @@ export default function Home() {
 
       {/*       v              ENTER MAIN            v          */}
       {/* INFORMACION:   esta es la parte donde estan lo elementos grandes de la aplicacion!*/}
+
+      <nav>
+
+        <VidaDiferente/>
+
+
+      </nav>
 
       <main>
         {/*Ajuste Base Aplicacion     00  */}
