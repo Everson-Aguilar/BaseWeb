@@ -278,7 +278,7 @@ git push origin main */
 
 /* git-hub pasos para guardar CONSOLA (produccion)
 git add .
-git commit -m "08/10/2024"
+git commit -m "15/11/2024"
 git pull origin develop
 git push origin develop */
 
