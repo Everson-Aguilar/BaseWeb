@@ -46,6 +46,8 @@ const Galeria: React.FC = () => {
 
   return (
     <section className=" text-colorBase   md:flex xl:flex ">
+      
+
       {/* galería */}
       <div className="w-full md:w-1/2 p-5">
         <div className="text-trend font-BebasNeue text-8xl">PORTFOLIO</div>
@@ -88,6 +90,8 @@ const Galeria: React.FC = () => {
       </div>
       {/* fin galería */}
 
+
+
       {/* Artista Digital */}
 
       <div className=" p-5 ">
@@ -122,6 +126,7 @@ const Galeria: React.FC = () => {
           </ul>
         </div>
       </div>
+
     </section>
   );
 };
