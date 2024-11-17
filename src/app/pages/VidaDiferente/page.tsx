@@ -418,7 +418,7 @@ const MiComponente: React.FC = () => {
           </h2>
 
           <div className="p-10">
-            <Comentarios />
+           {/*<Comentarios /> */} 
           </div>
         </div>
       </section>
