@@ -185,7 +185,7 @@ const MiComponente: React.FC = () => {
           </h2>
 
           <div className=" text-colorBase">
-            <Galeria />
+            {/* <Galeria />*/}
           </div>
           {/* galeria */}
         </div>
