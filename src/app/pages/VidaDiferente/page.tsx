@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 //componentes
@@ -16,18 +15,14 @@ const MiComponente: React.FC = () => {
     <div>
       <section className=" relative z-0  w-screen  h-screen flex-row  md:flex justify-start items-start text-center">
         <div className=" w-screen md:w-1/2">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 5 }}
-          >
+          
             <Image
               src="/DiseñoWeb/WebRecursos/figuraWeb.png"
               alt="comic 3"
               width={800}
               height={800}
             />
-          </motion.div>
+         
 
           <div className=" relative p-5 font-BebasNeue text-6xl text-trend">
             Sal del patrón social <br /> para encontrar tu camino...
