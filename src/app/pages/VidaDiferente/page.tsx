@@ -420,6 +420,8 @@ const MiComponente: React.FC = () => {
           <div className="p-10">
            <Comentarios /> 
           </div>
+
+          
         </div>
       </section>
     </div>
