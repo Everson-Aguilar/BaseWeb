@@ -8,9 +8,9 @@ import L from 'leaflet';
 // Definir el icono verde para los marcadores
 const GreenIcon = L.icon({
   iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-  iconSize: [25, 41],  // Tamaño del ícono
-  iconAnchor: [12, 41],  // Punto de anclaje del ícono
-  popupAnchor: [0, -41],  // Desplazamiento del popup
+  iconSize: [25, 41], // Tamaño del ícono
+  iconAnchor: [12, 41], // Punto de anclaje del ícono
+  popupAnchor: [0, -41], // Desplazamiento del popup
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
 });
 
