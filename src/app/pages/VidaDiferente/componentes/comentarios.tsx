@@ -48,6 +48,15 @@ const comments: Comment[] = [
 
 const CommentsList: React.FC = () => {
   return (
+
+    <div>
+
+      <h2 className=" font-BebasNeue text-3xl text-trend ">
+            EXPECTATIVA CLIENTES{" "}
+          </h2>
+
+
+
     <div className="  mt-5 space-y-4">
       {comments.map((comment, index) => (
         <div
@@ -68,6 +77,8 @@ const CommentsList: React.FC = () => {
           </div>
         </div>
       ))}
+    </div>
+
     </div>
   );
 };
