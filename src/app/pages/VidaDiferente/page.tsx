@@ -423,10 +423,10 @@ const MiComponente: React.FC = () => {
 
       <section className="  bg-colorBase flex-row  md:flex   justify-start items-start text-start mt-10">
         <div className=" w-full md:w-1/2 text-3xl font-BebasNeue text-trend">
-          <h2 className="p-5">EXPERIENCIA LABORAL </h2>
+          <h2 className="p-5">FREELANCER LABORAL </h2>
 
           <div className=" p-10">
-           <Mapa />  
+           {/* <Mapa /> */} 
           </div>
         </div>
 
