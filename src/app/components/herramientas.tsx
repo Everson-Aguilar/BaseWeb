@@ -23,8 +23,8 @@ const VideoItem: React.FC<VideoItemProps> = ({
       </div>
       <video
         src={src}
-        width={500} // Ajusta el tamaño del video según tus necesidades
-        height={500}
+        width={400} // Ajusta el tamaño del video según tus necesidades
+        height={400}
         autoPlay
         loop
         muted

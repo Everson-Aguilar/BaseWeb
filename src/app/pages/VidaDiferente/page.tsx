@@ -43,7 +43,7 @@ const MiComponente: React.FC = () => {
           </div>
         </div>
 
-        <div className=" relative h-screen w-full  md:w-1/2 text-trend  p-5 ">
+        <div className=" relative h-screen bg:h-fill w-full  md:w-1/2 text-trend  p-5 ">
 
           <div className="relative top-1/2">
 
@@ -63,7 +63,7 @@ const MiComponente: React.FC = () => {
         </div>
       </section>
 
-      <section className=" relative mt-20 z-20 h-fill w-screen bg-trend flex-row md:flex  text-center overflow-hidden ">
+      <section className=" relative z-20 h-fill w-screen bg-trend flex-row md:flex  text-center overflow-hidden ">
         <div className=" w-screen md:w-1/3 p-5 text-start text-colorBase ">
           <h2 className=" text-8xl font-BebasNeue text-colorBase">ARTISTICO</h2>
           <p className=" -translate-y-6 font-BebasNeue text-2xl">
@@ -78,7 +78,7 @@ const MiComponente: React.FC = () => {
           />
 
           <h2 className=" text-6xl font-BebasNeue text-trend bg-colorBase">
-            ESPECIALIDAD<span className="text-8xl">(B)</span>
+            ESPECIALIDAD<span className="text-8xl"><br />(B)</span>
           </h2>
 
           <p className="mb-5">
@@ -222,7 +222,7 @@ const MiComponente: React.FC = () => {
           />
 
           <h2 className=" text-6xl font-BebasNeue text-trend bg-colorBase">
-            ESPECIALIDAD <span className="text-8xl">(A)</span>
+            ESPECIALIDAD <span className="text-8xl"><br />(A)</span>
           </h2>
 
           <p className="mb-5">

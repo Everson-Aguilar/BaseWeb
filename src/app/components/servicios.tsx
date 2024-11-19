@@ -5,7 +5,8 @@ import Image from 'next/image';
 // css
 
 import "../css/estructura.css";
-import "../css/animaciones.css";
+
+
 
 
 const DigitalIdentity: React.FC = () => {
@@ -24,7 +25,7 @@ const DigitalIdentity: React.FC = () => {
 
         <div className="flex h-1/2 max-h-full items-center justify-center">
           <div className="flex items-center justify-center">
-            <div className="grid2 box-border">
+            <div className=" grid2 box-border">
               {/* Repite este bloque para cada servicio */}
               {[
                 { src: '/DiseñoWeb/iconos/servicios/ICONOS WEB-  DESAROLLO WEB.svg', alt: 'Desarrollo Web', label: 'Desarrollo Web' },
@@ -37,7 +38,7 @@ const DigitalIdentity: React.FC = () => {
                 { src: '/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO ENTORNO 3D.svg', alt: 'Diseño Entorno 3D', label: 'Diseño Entorno 3D' },
                 { src: '/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO ASSETS.svg', alt: 'Diseño Videojuego', label: 'Diseño Videojuego' },
               ].map((service, index) => (
-                <div key={index} className="imagen animacion_1">
+                <div key={index} >
                   <Image
                     src={service.src}
                     alt={service.alt}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import "../css/animaciones.css";
+
 
 const El_guias = () => {
   // Estado para manejar si el popup está abierto o cerrado

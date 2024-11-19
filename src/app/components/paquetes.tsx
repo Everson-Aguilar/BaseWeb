@@ -27,8 +27,7 @@ const PanelesServicios: React.FC = () => {
             Primer Mes: Identidad de Marca y Planificación
           </h2>
           <p className="text-lg font-bold text-blue-800 mb-4">
-            <span className="text-green-600">Precio Local Colombia: $600,000 COP</span> 
-            <br />
+        
             <span className="text-green-600">Precio Internacional: $450 USD</span>
             <br /> * Paquete Opcional
           </p>
@@ -53,8 +52,7 @@ const PanelesServicios: React.FC = () => {
             Segundo Mes: Diseño y Creación de Entornos 3D
           </h2>
           <p className="text-lg font-bold text-yellow-800 mb-4">
-            <span className="text-green-600">Precio Local Colombia: $1,000,000 COP</span> 
-            <br />
+          
             <span className="text-green-600">Precio Internacional: $800 USD</span>
             <br /> * Paquete Opcional
           </p>
@@ -79,8 +77,7 @@ const PanelesServicios: React.FC = () => {
             Tercer Mes: Producción de Contenido Audiovisual
           </h2>
           <p className="text-lg font-bold text-green-800 mb-4">
-            <span className="text-green-600">Precio Local Colombia: $800,000 COP</span>
-            <br />
+           
             <span className="text-green-600">Precio Internacional: $450 USD</span>
             <br /> * Paquete Opcional
           </p>
