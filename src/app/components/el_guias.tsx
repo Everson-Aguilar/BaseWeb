@@ -12,20 +12,20 @@ const El_guias = () => {
   };
 
   return (
-    <div className="p-2 pr-10  z-30 flex justify-end bottom-0 fixed w-full">
+    <div className="p-5 pr-10  z-30 flex justify-end bottom-0 fixed w-full">
       {/* Botón para abrir el popup */}
       <a
         onClick={togglePopup} // Maneja el clic para abrir o cerrar el popup
         target="_blank"
         rel="noopener noreferrer"
-        className=" z-10 bg-trend duration-500  hover:text-colorBase  p-3 rounded-full shadow-2xl flex items-center justify-center cursor-pointer"
+        className=" z-10 bg-colorBase  duration-500  hover:scale-150 hover:bg-orange-400  p-3 rounded-full shadow-2xl flex items-center justify-center cursor-pointer"
       >
         {/* Imagen del botón */}
         <Image
           src="/DiseñoWeb/redes sociales/contacto.svg"
           alt="Logo"
-          width={65} // Ancho de la imagen
-          height={65} // Alto de la imagen
+          width={40} // Ancho de la imagen
+          height={40} // Alto de la imagen
         />
       </a>
 

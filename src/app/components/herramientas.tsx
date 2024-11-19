@@ -7,14 +7,21 @@ type VideoItemProps = {
 };
 
 // Componente funcional para mostrar un video con su título y descripción
-const VideoItem: React.FC<VideoItemProps> = ({ src, alt, titulo, descripcion }) => {
+const VideoItem: React.FC<VideoItemProps> = ({
+  src,
+  alt,
+  titulo,
+  descripcion,
+}) => {
   return (
     <div className="relative  ">
       <div className="absolute bottom-0 p-1">
-        <h2 className="text-2xl md:text-3xl font-BebasNeue  text-orange-400">{titulo}</h2>
+        <h2 className="text-2xl md:text-3xl font-BebasNeue  text-orange-400">
+          {titulo}
+        </h2>
         <p className="text-sm md:text-xl bg-trend opacity-70 ">{descripcion}</p>
       </div>
-      <video 
+      <video
         src={src}
         width={500} // Ajusta el tamaño del video según tus necesidades
         height={500}
@@ -97,16 +104,34 @@ const videos = [
 
 const MiComponente: React.FC = () => {
   return (
-    <div className="text-colorBase relative p-5 flex flex-wrap gap-5 justify-start items-start w-full">
-      {videos.map((video, index) => (
-        <VideoItem
-          key={index}
-          src={video.src}
-          alt={video.alt}
-          titulo={video.titulo}
-          descripcion={video.descripcion}
-        />
-      ))}
+    <div>
+      <div className=" p-5">
+        <h2 className=" text-3xl font-BebasNeue text-trend">
+          HERRAMIENTAS TECNOLOGICAS{" "}
+        </h2>
+
+        <p>
+          Creo soluciones de diseño digital avanzadas, tanto en 2D como en 3D,
+          utilizando las herramientas más comunes y poderosas de la industria.
+          Transformo ideas en experiencias visuales realistas y detalladas,
+          trabajando con programas de diseño gráfico, animación y edición
+          profesional. Mi enfoque en la precisión y la innovación asegura
+          resultados que superan las expectativas en sectores como videojuegos,
+          cine, arquitectura y más.
+        </p>
+      </div>
+
+      <div className="text-colorBase relative p-5 flex flex-wrap gap-5 justify-start items-start w-full">
+        {videos.map((video, index) => (
+          <VideoItem
+            key={index}
+            src={video.src}
+            alt={video.alt}
+            titulo={video.titulo}
+            descripcion={video.descripcion}
+          />
+        ))}
+      </div>
     </div>
   );
 };

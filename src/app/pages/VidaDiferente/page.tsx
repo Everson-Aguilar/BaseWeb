@@ -5,12 +5,14 @@ import Image from "next/image";
 
 //componentes
 
-import DiagramaCircular from "./componentes/diagramaCircular";
-import Mapa from "./componentes/mapa";
-import Comentarios from "./componentes/comentarios";
+import DiagramaCircular from "../../components/diagramaCircular";
+import Mapa from "../../components/mapa";
+import Comentarios from "../../components/comentarios";
 import Galeria from "../../components/galeria";
 import Herramientas from "../../components/herramientas"
 import Entrada from "../../components/entrada"
+import VidaDiferente from "../../components/venAvivirUnaVidaDiferente"
+import El_guias from "../../components/el_guias";
 
 const MiComponente: React.FC = () => {
   return (
@@ -18,6 +20,10 @@ const MiComponente: React.FC = () => {
 
 
     <div >
+
+      <El_guias/>
+
+      <VidaDiferente/>
 
       
 
@@ -193,7 +199,7 @@ const MiComponente: React.FC = () => {
           </div>
 
           <h2 className="  mt-40 text-3xl font-BebasNeue text-colorBase">
-            PROYECTOS
+            {/* PROYECTOS */}
           </h2>
 
           <div className=" text-colorBase">
@@ -444,10 +450,7 @@ const MiComponente: React.FC = () => {
 
       <section className=" p-5 text-trend">
 
-      <h2 className=" text-3xl font-BebasNeue text-trend">HERRAMIENTAS TECNOLOGICAS </h2>
-
-      <p>Creo soluciones de diseño digital avanzadas, tanto en 2D como en 3D, utilizando las herramientas más comunes y poderosas de la industria. Transformo ideas en experiencias visuales realistas y detalladas, trabajando con programas de diseño gráfico, animación y edición profesional. Mi enfoque en la precisión y la innovación asegura resultados que superan las expectativas en sectores como videojuegos, cine, arquitectura y más.</p>
-
+      
 
 
         <Herramientas/>

@@ -24,6 +24,10 @@ import SubServicios from "./components/separadores/plan";
 import Proyectos from "./components/separadores/proyectos";
 import Ejemplos from "./components/separadores/ejemplos";
 import VidaDiferente from "./components/venAvivirUnaVidaDiferente"
+import Herramientas from "./components/herramientas"
+import Mapa from "./components/mapa";
+
+
 
 
 //fuentes
@@ -36,38 +40,7 @@ import "./css/estructura.css";
 import "./css/animaciones.css";
 
 export default function Home() {
-  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++     desplazamiento Inicial Web ajustes     ++++++++++++++++++++++
 
-  const componenteRef = useRef<HTMLDivElement | null>(null);
-  const [altura, setAltura] = useState(0);
-  const ajusteAltura = 980; // Ajuste de altura en píxeles
-
-  const obtenerAltura = () => {
-    if (componenteRef.current) {
-      const rect = componenteRef.current.getBoundingClientRect();
-      const alturaDocument = rect.top + window.scrollY;
-      setAltura(alturaDocument);
-      return alturaDocument; // Retorna la altura calculada
-    }
-    return 0; // Retorna 0 si no hay referencia
-  };
-
-  const desplazarVentana = (altura: number) => {
-    window.scrollTo(0, altura - ajusteAltura); // Desplazar a la altura del componente menos el ajuste
-  };
-
-  useEffect(() => {
-    const alturaInicial = obtenerAltura();
-
-    // Usar setTimeout para desplazar la ventana
-    setTimeout(() => {
-      desplazarVentana(alturaInicial);
-    }, 0); // Asegúrate de que se ejecute después de que el DOM se haya actualizado
-
-    // Eliminar el efecto de resize si lo tenías previamente
-  }, []); // Cambiar a una lista de dependencias vacía para que solo se ejecute una vez al montar
-
-  //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++     FIN    desplazamiento Inicial Web ajustes++++++++++++++++++++++
 
   return (
     <div className="App ">
@@ -108,36 +81,36 @@ export default function Home() {
           <Administracion />
         </section>
 
-        {/* componente vacio seccion ==========================================================*/}
+        {/* componente INTRODUCCION==========================================================*/}
         <section className=" mt-5">
           <Introduccion />
         </section>
-        {/*Fin componente vacio seccion =======================================================*/}
+        {/*Fin INTRODUCCION =======================================================*/}
 
-        <section>
-          <CompetenciaComercial />
-        </section>
 
-        {/* DIVISION EJEMPLO */}
+        <section><Herramientas/></section>
 
-        <Ejemplos/>
+        
 
-        {/* FIN DIVISION EJEMPLO */}
+     
 
 
 
 
-        {/* componente exposicion seccion ==========================================================*/}
-        <section>
-          <Exposicion />
-        </section>
-        {/*Fin componente exposicion seccion =======================================================*/}
+  
 
         {/* separador NuestraFilosofia =================================================*/}
 
-
+        <section>
 
         <NuestraFilosofia/>
+
+
+        </section>
+
+
+
+        
 
         {/*  FIN separador NuestraFilosofia =================================================*/}
 
@@ -148,7 +121,7 @@ export default function Home() {
 
         {/* presentacion y servicio 01=================================================*/}
 
-        <div ref={componenteRef} className="">
+        <div>
           <Servicios />
         </div>
 
@@ -156,7 +129,7 @@ export default function Home() {
 
         {/* separador Subservicio =================================================*/}
 
-        <div ref={componenteRef} className="">
+        <div>
           <SubServicios />
         </div>
 
@@ -174,6 +147,9 @@ export default function Home() {
           <Reglas />
         </section>
         {/*Fin componente reglas seccion =======================================================*/}
+
+
+
 
         {/* componente precio servicio ==========================================================*/}
         <section className=" mt-20">
@@ -272,7 +248,7 @@ export default function Home() {
 }
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "06/11/2024"
+git commit -m "19/11/2024"
 git pull origin main
 git push origin main */
 
