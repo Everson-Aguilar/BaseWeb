@@ -54,7 +54,7 @@ const ComponenteVacio: React.FC = () => {
           </div>
         </div>
 
-        <div className="relative bg-trend w-full h-5/6 p-20">
+        <div className="relative bg-trend w-full h-5/6 p-20 overflow-auto">
           <div className="flex flex-wrap gap-10 justify-center md:justify-start">
             {carpetas.map((carpeta) => (
               <div key={carpeta.id} className="flex flex-col items-center">
