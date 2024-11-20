@@ -25,7 +25,7 @@ const respuesta: Respuestas = {
 const experimentalPersonal: Postulaciones[] = [
   {
     fecha: "20/11/2024",
-    postulaciones: 40,
+    postulaciones: 56,
   },
   {
     fecha: "21/11/2024",
@@ -45,7 +45,7 @@ const PostulacionesComponent: React.FC = () => {
 
 
 
-      <div className="w-fill h-fill flex-wrap">
+      <div className="w-fill h-screen overflow-scroll bg-message p-5  flex-wrap">
         {experimentalPersonal.map((postulacion, index) => (
           <section key={index} className="flex gap-5 mb-5">
             <div className="w-1/4">
@@ -55,7 +55,7 @@ const PostulacionesComponent: React.FC = () => {
                 {postulacion.fecha}
               </p>
               <div className="font-BebasNeue text-1xl">
-                <span>Postulaciones:</span> {postulacion.postulaciones}
+                <span className=" text-lime-400">Postulaciones:</span> {postulacion.postulaciones}
               </div>
             </div>
           </section>
@@ -63,8 +63,12 @@ const PostulacionesComponent: React.FC = () => {
       </div>
 
 
-      <div className=" font-BebasNeue text-3xl text-trend"> {respuesta.respuestas} </div>
+      <div className=" p-5 bg-trend text-colorBase ">
+
+      <div className=" font-BebasNeue text-3xl text-lime-400 "> {respuesta.respuestas} </div>
       <div>{respuesta.detalles}</div>
+
+      </div>
 
     </article>
   );

@@ -199,11 +199,11 @@ const MiComponente: React.FC = () => {
           </div>
 
           <h2 className="  mt-40 text-3xl font-BebasNeue text-colorBase">
-            {/* PROYECTOS */}
+           PROYECTOS 
           </h2>
 
           <div className=" text-colorBase">
-            {/* <Galeria />*/}
+             <Galeria />
           </div>
           {/* galeria */}
         </div>
@@ -426,7 +426,7 @@ const MiComponente: React.FC = () => {
           <h2 className="p-5">FREELANCER LABORAL </h2>
 
           <div className=" p-10">
-           {/* <Mapa /> */} 
+           <Mapa /> 
           </div>
         </div>
 

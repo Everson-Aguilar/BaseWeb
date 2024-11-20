@@ -10,37 +10,37 @@ interface Comment {
 const comments: Comment[] = [
   {
     name: 'yanisllorens',
-    country: 'FR',
+    country: 'France',
     rating: 4.7,
     comment: 'I think eversonaguilar has a great talent, he knows how to manage an order well and does well, for the value for money it\'s great and you will get a satisfactory result. He is not yet at the level of a top professional but if you want a very...',
   },
   {
     name: 'haishan',
-    country: 'TW',
+    country: 'Taiwan',
     rating: 5,
     comment: 'Although it is the first stage of the project, the creator is very clear about what he is doing! From 3D production to Unity applications, He know a lot, and a well-communicated fiverr user.',
   },
   {
     name: 'ankhotep',
-    country: 'VE',
+    country: 'Venezuela',
     rating: 5,
     comment: 'Everson managed to complete all the requirements with efficiency, on time. He proved to show professionalism and high attention to detail which is something I was looking for. Thanks.',
   },
   {
     name: 'cinematicmediap',
-    country: 'US',
+    country: 'United States',
     rating: 5,
     comment: 'Excelente!! 100% recomendado',
   },
   {
     name: 'omarfattah530',
-    country: 'BA',
+    country: 'Bosnia and Herzegovina',
     rating: 5,
     comment: 'Amazing work, he was willing to fix all issues for me and made an amazing environment, really would recommend him to everybody. 👏👏👏',
   },
   {
     name: 'ind1goblue',
-    country: 'DE',
+    country: 'Germany',
     rating: 5,
     comment: 'Very happy with the work done. Can highly recommend.',
   },

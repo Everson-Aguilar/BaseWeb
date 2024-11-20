@@ -1,59 +1,97 @@
-import React, { FC, useEffect, useState, useRef } from 'react';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
-// Datos de localización de ejemplo
-const locations = [
-  { id: 1, lat: 43.8486, lng: 18.3564, label: 'Bosnia y Herzegovina' },
-  { id: 2, lat: 46.6034, lng: 1.8883, label: 'Francia' },
-  { id: 3, lat: 23.6978, lng: 120.9605, label: 'Taiwán' },
-  { id: 4, lat: 6.4238, lng: -66.5897, label: 'Venezuela' },
-  { id: 5, lat: 37.0902, lng: -95.7129, label: 'Estados Unidos' },
-  { id: 6, lat: 51.1657, lng: 10.4515, label: 'Alemania' },
-];
+// Definir las dimensiones del mapa
+const mapDimensions = {
+  width: 1000, // Ancho del mapa real (en kilómetros o grados)
+  height: 500, // Alto del mapa real (en kilómetros o grados)
+};
 
-const MapComponent: FC = () => {
-  const [isClient, setIsClient] = useState(false); // Estado para verificar si es cliente
-  const mapRef = useRef<HTMLDivElement>(null); // Referencia al contenedor del mapa
+// Tipo para coordenadas
+type Coordinates = {
+  x: number;
+  y: number;
+};
 
-  // Verifica si estamos en el cliente
+const MyComponent: React.FC = () => {
+  const [points, setPoints] = useState<Coordinates[]>([]);
+
+  // Leer datos del archivo JSON al cargar el componente
   useEffect(() => {
-    setIsClient(true); // Establece que estamos en el cliente cuando el componente se monta
+    const fetchPoints = async () => {
+      try {
+        const response = await fetch('/json_data/coordenadas.json'); // Ruta al archivo JSON en la carpeta public
+        const data = await response.json();
+        setPoints(data.points); // Asegúrate de que el JSON tenga un array "points"
+      } catch (error) {
+        console.error('Error al cargar puntos:', error);
+      }
+    };
+
+    fetchPoints();
   }, []);
 
-  // Solo inicializa el mapa en el cliente
-  useEffect(() => {
-    if (isClient && mapRef.current) {
-      // Inicializa el mapa solo en el cliente
-      const map = L.map(mapRef.current).setView([20.505, -0.01], 2); // Centro y nivel de zoom
+  // Manejar clics en el mapa
+  const handleMapClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    const rect = (event.target as HTMLDivElement).getBoundingClientRect();
+    const x = event.clientX - rect.left; // Coordenada x relativa al mapa
+    const y = event.clientY - rect.top; // Coordenada y relativa al mapa
 
-      // Capa de tiles con estilo oscuro
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://carto.com/attributions">CartoDB</a>',
-      }).addTo(map);
+    setPoints([...points, { x, y }]);
+  };
 
-      // Añadir los marcadores con un icono predeterminado
-      locations.forEach((location) => {
-        const markerIcon = L.icon({
-          iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png', // Icono del marcador
-          iconSize: [25, 41], // Tamaño del icono
-          iconAnchor: [12, 41], // Puntero del icono
-          popupAnchor: [0, -41], // Ubicación del popup
-        });
-
-        L.marker([location.lat, location.lng], { icon: markerIcon })
-          .addTo(map)
-          .bindPopup(location.label); // Asocia un popup con el marcador
-      });
-    }
-  }, [isClient]); // Se ejecuta cuando `isClient` es `true`
+  // Descargar puntos como archivo JSON
+  const handleDownload = () => {
+    const blob = new Blob([JSON.stringify({ points }, null, 2)], {
+      type: 'application/json',
+    });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'savedPoints.json';
+    link.click();
+    URL.revokeObjectURL(url);
+  };
 
   return (
-    <div
-      ref={mapRef}
-      style={{ height: '800px', width: '100%' }} // Estilo del mapa
-    />
+    <div className="overflow-auto">
+      <div
+        className="relative w-[1000px] h-[500px] cursor-pointer"
+        onClick={handleMapClick}
+      >
+        <Image
+          src="/DiseñoWeb/WebRecursos/mapa/map.png"
+          alt="Mapa"
+          width={mapDimensions.width}
+          height={mapDimensions.height}
+          className="object-cover"
+        />
+
+        {/* Renderizar los puntos creados */}
+        {points.map((point, index) => (
+          <div
+            key={index}
+            className="absolute w-2.5 h-2.5 bg-lime-400 rounded-full"
+            style={{
+              top: `${(point.y / mapDimensions.height) * 100}%`,
+              left: `${(point.x / mapDimensions.width) * 100}%`,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className=' font-Notable text-xs'> click para colocar punticos!</div>
+
+      {/* Botón para descargar puntos como JSON */}
+
+      <button
+        onClick={handleDownload}
+        className="mt-4 p-2 text-sm bg-trend text-colorBase rounded shadow"
+      >
+        Descargar Coordenadas
+      </button>
+    </div>
   );
 };
 
-export default MapComponent;
+export default MyComponent;

@@ -29,6 +29,17 @@ const plataformas: PlataformaData[] = [
     tiempoRespuesta: "0-0 días",
     imagen: "/DiseñoWeb/paginasTrabajo/p2.png",  // Ruta de la imagen de Workana
   },
+
+  {
+    nombre: "magneto365",
+    descripcion:
+      "diseñador grafico, ",
+    calificacion: "★★★★★",
+    estrellas: "0-5 estrellas",
+    tiempoRespuesta: "0-0 días",
+    imagen: "/DiseñoWeb/paginasTrabajo/p3.png",  // Ruta de la imagen de Workana
+  },
+
   // Puedes agregar más plataformas aquí
 ];
 
@@ -43,9 +54,9 @@ const Plataforma: React.FC = () => {
               <Image
                 src={plataforma.imagen}
                 alt={`Imagen de ${plataforma.nombre}`}
-                width={160}  // Ancho de la imagen
-                height={160} // Alto de la imagen
-                className="object-cover"  // Asegura que la imagen cubra el contenedor
+                width={100}  // Ancho de la imagen
+                height={100} // Alto de la imagen
+                className="object-cover w-full h-full"  // Asegura que la imagen cubra el contenedor
               />
             </div>
             <div className="w-1/3">

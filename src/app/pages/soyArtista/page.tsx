@@ -63,14 +63,19 @@ const SoyArtista: React.FC = () => {
 <div className=" text-2xl text-yellow-300 w-1/2 p-5 bg-trend"> + Curriculum Competitivo <span className="text-colorBase">(Pezcando Oportunidades)</span></div>
 
 
-<div className=" text-4xl font-BebasNeue">
+<div >
 
-  concideraciona antes de postularse.
+  <div className=" text-4xl font-BebasNeue">concideraciona antes de postularse.</div>
 
-  
+  <ul>
+
+
+    <li><span className=" text-3xl font-BebasNeue w-fill bg-lime-400">1.</span>mucha competencia <span className=" font-Staatliches text-1xl  ">=</span> ser mas especifico </li>
+    <li><span className=" text-3xl font-BebasNeue w-fill bg-lime-400">2.</span>tiempo recien de la oferta <span className=" font-Staatliches text-1xl  ">=</span>  ser uno de los primero</li>
+  </ul>
     
-  1.mucha competencia = ser mas especifico
-  2.
+  
+  
   
   
 
@@ -84,10 +89,24 @@ const SoyArtista: React.FC = () => {
 
 
 
-<div className=" flex ">
+<div className=" flex-row md:flex ">
+
+  <div className=" w-full md:-1/2">
 
   <PaginasTrabajo/>
-  < ExperimentalPersonal/>
+
+
+  </div>
+
+  <div className=" w-full md:-1/2">
+
+  <ExperimentalPersonal/>
+
+
+  </div>
+
+ 
+  
 
 
  
