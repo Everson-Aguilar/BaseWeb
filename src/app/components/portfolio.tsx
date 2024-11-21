@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Image from "next/image"; // Asegúrate de que esto esté correctamente importado
-import Link from "next/link"; // Asegúrate de que esto esté correctamente importado
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion"; // Asegúrate de importar motion de framer-motion
 
 // Definición del componente
 const Galeria: React.FC = () => {
@@ -46,8 +47,6 @@ const Galeria: React.FC = () => {
 
   return (
     <section className=" text-colorBase   md:flex xl:flex ">
-      
-
       {/* galería */}
       <div className="w-full md:w-1/2 p-5">
         <div className="text-trend font-BebasNeue text-8xl">PORTFOLIO</div>
@@ -56,11 +55,23 @@ const Galeria: React.FC = () => {
           {confirmation && <div>Componente importado correctamente.</div>}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {images.map((image, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="relative rounded-lg overflow-hidden group transition-transform duration-300 transform hover:scale-105"
+                whileInView={{
+                  opacity: 1,  // Hacer visible la imagen
+                  scale: 1,    // Escalar la imagen a su tamaño original
+                }}
+                initial={{
+                  opacity: 0,  // Comienza invisible
+                  scale: 0.3,  // Comienza más pequeña
+                }}
+                transition={{
+                  duration: 0.3,         // Duración de la animación
+                  ease: "easeInOut",   // Suaviza la animación
+                }}
+                viewport={{ once: false }} // Se repite cada vez que entra o sale
               >
-                {" "}
                 {/* Contenedor agrandado al pasar el mouse */}
                 <Image
                   src={image}
@@ -83,17 +94,14 @@ const Galeria: React.FC = () => {
                     />
                   </button>
                 </Link>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </div>
       {/* fin galería */}
 
-
-
       {/* Artista Digital */}
-
       <div className=" p-5 ">
         <div className=" mt-10  text-title">
           <div className="text-trend font-BebasNeue text-xl">
@@ -126,7 +134,6 @@ const Galeria: React.FC = () => {
           </ul>
         </div>
       </div>
-
     </section>
   );
 };

@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
+// componente
+import Header from "../components/header";
+
 // Definir las dimensiones del mapa
 const mapDimensions = {
   width: 1000, // Ancho del mapa real (en kilómetros o grados)
@@ -15,6 +18,7 @@ type Coordinates = {
 
 const MyComponent: React.FC = () => {
   const [points, setPoints] = useState<Coordinates[]>([]);
+  const [isClickable, setIsClickable] = useState(false); // Estado para habilitar/deshabilitar clic
 
   // Leer datos del archivo JSON al cargar el componente
   useEffect(() => {
@@ -31,8 +35,10 @@ const MyComponent: React.FC = () => {
     fetchPoints();
   }, []);
 
-  // Manejar clics en el mapa
+  // Manejar clics en el mapa solo si isClickable es true
   const handleMapClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (!isClickable) return; // Si no es clickeable, no hace nada
+
     const rect = (event.target as HTMLDivElement).getBoundingClientRect();
     const x = event.clientX - rect.left; // Coordenada x relativa al mapa
     const y = event.clientY - rect.top; // Coordenada y relativa al mapa
@@ -80,16 +86,13 @@ const MyComponent: React.FC = () => {
         ))}
       </div>
 
-      <div className=' font-Notable text-xs'> click para colocar punticos!</div>
-
-      {/* Botón para descargar puntos como JSON */}
-
+      {/* Botón para descargar puntos como JSON 
       <button
         onClick={handleDownload}
         className="mt-4 p-2 text-sm bg-trend text-colorBase rounded shadow"
       >
         Descargar Coordenadas
-      </button>
+      </button>*/}
     </div>
   );
 };

@@ -56,7 +56,7 @@ const SocialMediaFormats: React.FC = () => {
   // FIN desplazamiento mouse
 
   return (
-    <div className="flex h-full w-full flex-col md:flex-row text-colorBase">
+    <div className=" relative flex h-full w-full flex-col md:flex-row text-colorBase">
       <div className="mx-auto p-6  w-full md:w-1/2 ">
         <h2 className="text-3xl font-BebasNeue p-5 mb-6 text-title  border-4 border-trend w-fit">
           Formatos Comerciales en Redes Sociales y Webs

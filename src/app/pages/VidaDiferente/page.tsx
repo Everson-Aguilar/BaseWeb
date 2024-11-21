@@ -2,6 +2,9 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+
 
 //componentes
 
@@ -25,7 +28,14 @@ const MiComponente: React.FC = () => {
 
       <VidaDiferente/>
 
+
       
+      <motion.div
+            whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
+            initial={{ opacity: 0 }} // Comienza invisible
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: false }} // Repite la animación cada vez que entra o sale
+          >
 
       <section className=" relative z-0   flex-row  md:flex justify-start items-start text-center">
         <div className=" w-screen md:w-1/2">
@@ -63,6 +73,15 @@ const MiComponente: React.FC = () => {
         </div>
       </section>
 
+      </motion.div>
+
+      <motion.div
+            whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
+            initial={{ opacity: 0 }} // Comienza invisible
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: false }} // Repite la animación cada vez que entra o sale
+          >
+
       <section className=" relative z-20 h-fill w-screen bg-trend flex-row md:flex  text-center overflow-hidden ">
         <div className=" w-screen md:w-1/3 p-5 text-start text-colorBase ">
           <h2 className=" text-8xl font-BebasNeue text-colorBase">ARTISTICO</h2>
@@ -78,7 +97,7 @@ const MiComponente: React.FC = () => {
           />
 
           <h2 className=" text-6xl font-BebasNeue text-trend bg-colorBase">
-            ESPECIALIDAD<span className="text-8xl"><br />(B)</span>
+            ESPECIALIDAD<span className="text-8xl"><br />(A)</span>
           </h2>
 
           <p className="mb-5">
@@ -222,7 +241,7 @@ const MiComponente: React.FC = () => {
           />
 
           <h2 className=" text-6xl font-BebasNeue text-trend bg-colorBase">
-            ESPECIALIDAD <span className="text-8xl"><br />(A)</span>
+            ESPECIALIDAD <span className="text-8xl"><br />(B)</span>
           </h2>
 
           <p className="mb-5">
@@ -421,6 +440,15 @@ const MiComponente: React.FC = () => {
         </div>
       </section>
 
+      </motion.div>
+
+      <motion.div
+            whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
+            initial={{ opacity: 0 }} // Comienza invisible
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: false }} // Repite la animación cada vez que entra o sale
+          >
+
       <section className="  bg-colorBase flex-row  md:flex   justify-start items-start text-start mt-10">
         <div className=" w-full md:w-1/2 text-3xl font-BebasNeue text-trend">
           <h2 className="p-5">FREELANCER LABORAL </h2>
@@ -447,11 +475,12 @@ const MiComponente: React.FC = () => {
 
       </section>
 
+      </motion.div>
+
 
       <section className=" p-5 text-trend">
 
       
-
 
        <Herramientas/>  
 

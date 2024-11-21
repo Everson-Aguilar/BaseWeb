@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 
-// CSS
-import "../css/header.css";
-
 const Login: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -13,40 +10,41 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="relative p-1 mb-1 min-w-[412px] flex overflow-scroll justify-end text-sm text-trend items-start h-full">
+    <div className="flex justify-center items-center  h-full p-16">
       <form
-        className="sesion_mobil flex-row items-center justify-center mr-28"
+        className="w-full sm:w-96 flex  items-center  bg-white p-6 rounded-lg shadow-lg"
         onSubmit={handleSubmit}
       >
-        <label className="mr-7 mb-1" htmlFor="username">
+        <label className="text-sm font-medium text-gray-700 mb-2 w-full text-left" htmlFor="username">
           Usuario:
         </label>
         <input
-          className="text-colorBase border-message border-2 h-5 mb-1 w-40 rounded-lg p-1 mr-5"
+          className="border border-gray-300 rounded-lg p-2 mb-4 w-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
           id="username"
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
         />
-        <div>
-          <label className="mr-1 mb-1" htmlFor="password">
-            Contraseña:
-          </label>
-          <input
-            className="text-colorBase border-message border-2 mb-1 h-5 w-40 rounded-lg p-1 mr-5"
-            id="password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <button className="sesion bg-trend text-message p-1 rounded-lg" type="submit">
-            Iniciar sesión
-          </button>
-        </div>
+        
+        <label className="text-sm font-medium text-gray-700 mb-2 w-full text-left" htmlFor="password">
+          Contraseña:
+        </label>
+        <input
+          className="border border-gray-300 rounded-lg p-2 mb-4 w-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          id="password"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+
+        <button
+          className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          type="submit"
+        >
+          Iniciar sesión
+        </button>
       </form>
     </div>
   );

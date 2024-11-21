@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';  // Importamos motion
 
 interface Comment {
   name: string;
@@ -48,37 +49,45 @@ const comments: Comment[] = [
 
 const CommentsList: React.FC = () => {
   return (
-
     <div>
+      <h2 className="font-BebasNeue text-3xl text-trend">
+        EXPECTATIVA CLIENTES{" "}
+      </h2>
 
-      <h2 className=" font-BebasNeue text-3xl text-trend ">
-            EXPECTATIVA CLIENTES{" "}
-          </h2>
-
-
-
-    <div className="  mt-5 space-y-4">
-      {comments.map((comment, index) => (
-        <div
-          key={index}
-          className="bg-message p-3 rounded-lg shadow-sm border border-gray-200 max-w-md mx-auto"
-        >
-          <div className="flex justify-between">
-            <div>
-              <h3 className="text-lg font-semibold">{comment.name}</h3>
-              <p className="text-sm text-gray-500">{comment.country}</p>
+      <div className="mt-5 space-y-4">
+        {comments.map((comment, index) => (
+          <motion.div
+            key={index}
+            className="bg-message p-3 rounded-lg shadow-sm border border-gray-200 max-w-md mx-auto"
+            whileInView={{
+              opacity: 1, // Hacer visible el comentario
+              scale: 1,   // Escalar a su tamaño original
+            }}
+            initial={{
+              opacity: 0, // Comienza invisible
+              scale: 0.8, // Comienza más pequeño
+            }}
+            transition={{
+              duration: 1,         // Duración de la animación
+              ease: "easeInOut",   // Suaviza la animación
+            }}
+            viewport={{ once: false }} // Se repite cada vez que entra o sale
+          >
+            <div className="flex justify-between">
+              <div>
+                <h3 className="text-lg font-semibold">{comment.name}</h3>
+                <p className="text-sm text-gray-500">{comment.country}</p>
+              </div>
+              <div>
+                <p className="text-yellow-500 font-semibold">{comment.rating} / 5</p>
+              </div>
             </div>
-            <div>
-              <p className="text-yellow-500 font-semibold">{comment.rating} / 5</p>
+            <div className="mt-2 text-sm text-gray-600">
+              <p>{comment.comment}</p>
             </div>
-          </div>
-          <div className="mt-2 text-sm text-gray-600">
-            <p>{comment.comment}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 };

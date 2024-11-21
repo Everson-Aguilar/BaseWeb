@@ -12,13 +12,13 @@ const El_guias = () => {
   };
 
   return (
-    <div className="p-5 pr-10  z-30 flex justify-end bottom-0 fixed w-full">
+    <div className="p-5 pr-10  z-30 flex justify-end bottom-5 fixed w-full">
       {/* Botón para abrir el popup */}
       <a
         onClick={togglePopup} // Maneja el clic para abrir o cerrar el popup
         target="_blank"
         rel="noopener noreferrer"
-        className=" z-10 bg-colorBase  duration-500  hover:scale-150 hover:bg-orange-400  p-3 rounded-full shadow-2xl flex items-center justify-center cursor-pointer"
+        className=" z-10 bg-colorBase   duration-500  hover:scale-150 hover:bg-orange-400  p-3 rounded-full shadow-2xl flex items-center justify-center cursor-pointer"
       >
         {/* Imagen del botón */}
         <Image
@@ -31,7 +31,7 @@ const El_guias = () => {
 
       {/* Condicional que muestra el popup solo si `isOpen` es `true` */}
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-end right-9 translate-x-[0px] z-10 top-40">
+        <div className="fixed inset-0 flex items-center justify-end right-5  z-10 top-10">
           {/* Contenedor del popup */}
           <div className="bg-colorBase  translate-y--20 p-5   w-fit rounded-lg shadow-lg relative">
             {/* Botón para cerrar el popup */}

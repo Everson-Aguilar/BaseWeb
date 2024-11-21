@@ -1,14 +1,12 @@
 "use client";
 
 ///////////////////////////////// ALMACENAMIENTO
-
 import React, { useEffect, useRef, useState } from "react"; // efecto, referencia, estado
 import Image from "next/image";
 import Link from "next/link";
-
+import { motion } from "framer-motion";
 //componente
 
-import Administracion from "./components/administracion";
 import Header from "./components/header";
 import El_guias from "./components/el_guias";
 import Retiro from "./components/retiro";
@@ -18,114 +16,80 @@ import Exposicion from "./components/exposicionClientes";
 import PrecioServicio from "./components/paquetes";
 import Portfolio from "./components/portfolio";
 import CompetenciaComercial from "./components/competenciaComercial";
-import Servicios from "./components/servicios";
+import Servicio from "./components/servicios";
 import NuestraFilosofia from "./components/separadores/NuestraFilosofia";
 import SubServicios from "./components/separadores/plan";
 import Proyectos from "./components/separadores/proyectos";
 import Ejemplos from "./components/separadores/ejemplos";
-import VidaDiferente from "./components/venAvivirUnaVidaDiferente"
-import Herramientas from "./components/herramientas"
+import VidaDiferente from "./components/venAvivirUnaVidaDiferente";
+import Herramientas from "./components/herramientas";
 import Mapa from "./components/mapa";
-
-
-
+import Footer from "./components/footer";
 
 //fuentes
 
 import "./globals.css";
 
-//css
-
-import "./css/estructura.css";
-
-
 export default function Home() {
-
-
   return (
     <div className="App ">
-      {/* FIN   DE RESULTAD DE BUSCADORES     */}
-
-      {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!       NAVEGACION APLICACION*/}
-
       <header>
         <Header />
       </header>
-
-      {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! EXIT  NAVEGACION APLICACION*/}
 
       {/*       v              ENTER MAIN            v          */}
       {/* INFORMACION:   esta es la parte donde estan lo elementos grandes de la aplicacion!*/}
 
       <nav>
-
-        <VidaDiferente/>
-
-
+        <VidaDiferente />
       </nav>
 
       <main>
-        {/*Ajuste Base Aplicacion     00  */}
-        <div className="bg-message h-16 w-full "></div>
-        {/*Fin base Ajuste Aplicacion 00  */}
-
-        {/*********************************************************************************
-         **********************************************************************************
-         **********************************************************************************
-         **********************************************************************************
-         **********************************************************************************
-         **********************************************************************************/}
-        {/*presentacion y servicios    01-----------------------------------------------------*/}
+        <section className=" mt-5">
+          <motion.div
+            whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
+            initial={{ opacity: 0 }} // Comienza invisible
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: false }} // Repite la animación cada vez que entra o sale
+          >
+            <Introduccion />
+          </motion.div>
+        </section>
 
         <section>
-          <Administracion />
+          <motion.div
+            whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
+            initial={{ opacity: 0 }} // Comienza invisible
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: false }} // Repite la animación cada vez que entra o sale
+          ></motion.div>
         </section>
-
-        {/* componente INTRODUCCION==========================================================*/}
-        <section className=" mt-5">
-          <Introduccion />
-        </section>
-        {/*Fin INTRODUCCION =======================================================*/}
-
-
-        <section><Herramientas/></section>
-
-        
-
-     
-
-
-
-
-  
 
         {/* separador NuestraFilosofia =================================================*/}
 
         <section>
-
-        <NuestraFilosofia/>
-
-
+          <motion.div
+            whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
+            initial={{ opacity: 0 }} // Comienza invisible
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: false }} // Repite la animación cada vez que entra o sale
+          >
+            <NuestraFilosofia />
+          </motion.div>
         </section>
-
-
-
-        
 
         {/*  FIN separador NuestraFilosofia =================================================*/}
 
-
-
-
-
-
-        {/* presentacion y servicio 01=================================================*/}
-
         <div>
-          <Servicios />
+          <motion.div
+            whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
+            initial={{ opacity: 0 }} // Comienza invisible
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: false }} // Repite la animación cada vez que entra o sale
+          >
+            <Servicio />
+          </motion.div>
         </div>
-
-        {/*FIN presentacion y servicio 01=================================================*/}
 
         {/* separador Subservicio =================================================*/}
 
@@ -135,108 +99,69 @@ export default function Home() {
 
         {/*FIN separador Subservicio =================================================*/}
 
-        {/*********************************************************************************
-         **********************************************************************************
-         **********************************************************************************
-         **********************************************************************************
-         **********************************************************************************
-         **********************************************************************************/}
-
-        {/* componente reglas seccion ==========================================================*/}
         <section className="mt-20">
-          <Reglas />
+          <motion.div
+            whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
+            initial={{ opacity: 0 }} // Comienza invisible
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: false }} // Repite la animación cada vez que entra o sale
+          >
+            <Reglas />
+          </motion.div>
         </section>
-        {/*Fin componente reglas seccion =======================================================*/}
 
-
-
-
-        {/* componente precio servicio ==========================================================*/}
         <section className=" mt-20">
           {" "}
-          <PrecioServicio />
+          <motion.div
+            whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
+            initial={{ opacity: 0 }} // Comienza invisible
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: false }} // Repite la animación cada vez que entra o sale
+          >
+            <PrecioServicio />
+          </motion.div>
         </section>
-        {/*Fin componente precio servicio =======================================================*/}
 
-        {/* componente vacio seccion ==========================================================*/}
         <section></section>
-        {/*Fin componente vacio seccion =======================================================*/}
 
-        {/*********************************************************************************
-         **********************************************************************************
-         **********************************************************************************
-         **********************************************************************************
-         **********************************************************************************
-         **********************************************************************************/}
+        {/* DIVISION proyectos */}
 
+        <Proyectos />
 
-         {/* DIVISION proyectos */}
+        {/* FIN DIVISION proyectos */}
 
-         <Proyectos/>
-
-          {/* FIN DIVISION proyectos */}
-
-
-        {/*portfolio y explicacion tecnica artistica     03-------------------------------*/}
         <section className=" mt-5">
-          <Portfolio />
+          <motion.div
+            whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
+            initial={{ opacity: 0 }} // Comienza invisible
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: false }} // Repite la animación cada vez que entra o sale
+          >
+            <Portfolio />
+          </motion.div>
         </section>
 
-        {/*FIN portfolio y explicacion tecnica artistica 03-------------------------------*/}
-        {/*********************************************************************************
-         **********************************************************************************
-         **********************************************************************************
-         **********************************************************************************
-         **********************************************************************************
-         **********************************************************************************/}
-
-        {/* componente  ==========================================================*/}
         <section className=" mt-10">
-          <Retiro />
+          <motion.div
+            whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
+            initial={{ opacity: 0 }} // Comienza invisible
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: false }} // Repite la animación cada vez que entra o sale
+          >
+            <Retiro />
+          </motion.div>
         </section>
-        {/*Fin componente =======================================================*/}
       </main>
 
       {/*       v              EXIT MAIN            v          */}
-
-      {/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$--POLITICA--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */}
 
       <div>
         <El_guias />
       </div>
 
-      <footer className=" footer z-40  w-full mt-10  text-message ">
-        <div className="p-5 text-xs">
-          <section>
-            <div className="font-Jacquard12 text-2xl ">Contacto</div>
-            <address>
-              <div>eversonaguilar1@gmail.com</div>
-            </address>
-          </section>
-          <section>
-            <div className="font-Jacquard12 text-2xl">Redes Sociales</div>
-            <ul className="flex space-x-4">
-              <li>
-                <a href="#">Facebook</a>
-              </li>
-              <li>
-                <a href="#">Twitter</a>
-              </li>
-              <li>
-                <a href="#">Instagram</a>
-              </li>
-              <li>
-                <a href="#">LinkedIn</a>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <p className="text-center">
-              © 2024 tudigitalnegocio.com. Todos los derechos reservados.
-            </p>
-          </section>
-        </div>
-      </footer>
+      <section>
+        <Footer />
+      </section>
 
       {/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$--FIN   POLITICA--$$$$$$$$$$$$$$$$$$$$$$$$$ */}
     </div>

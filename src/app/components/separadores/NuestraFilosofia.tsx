@@ -5,7 +5,7 @@ import "./animacion.css";
 
 const Plan: React.FC = () => {
   return (
-    <div className="flex overflow-hidden h-40 items-center justify-center w-full min-w-[415px] bg-trend">
+    <div className=" relative flex overflow-hidden h-40 items-center justify-center w-full bg-trend">
       <div className="animate-marquee whitespace-nowrap text-colorBase font-BebasNeue text-9xl">
         <span>Nuestro flujo de trabajo</span>
         
