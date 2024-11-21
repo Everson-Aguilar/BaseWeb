@@ -55,6 +55,11 @@ export default function RootLayout({
         />
 
         <meta
+          name="google-site-verification"
+          content="daR2rx0nZddsl8gDz_kHUaH19e8t0TcH2pUhtzEYXBA"
+        />
+
+        <meta
           property="og:title"
           content="Marketing Digital y Contenido 3D para Impulsar tu Negocio"
         />
