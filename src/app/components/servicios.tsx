@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const EmptyComponent: React.FC = () => {
   return (
-    <div className=" relative flex-row   md:flex  w-screen bg-trend">
+    <div className=" relative flex-row  md:flex  w-screen bg-trend">
       <div className=" w-full md:w-1/3  ">
         <div className=" md:h-4/6 text-center ">
           <div className="text-colorBase  translate-y-5 justify-center text-3xl font-Staatliches">
@@ -26,7 +26,7 @@ const EmptyComponent: React.FC = () => {
                   {
                     src: "/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO DE PRODUCTOS.svg",
                     alt: "Diseño Productos",
-                    label: "Diseño Productos",
+                    label: "Diseño  Productos",
                   },
                   {
                     src: "/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO DE INTERIORISMO.svg",
@@ -66,7 +66,7 @@ const EmptyComponent: React.FC = () => {
                       width={80}
                       height={80}
                     />
-                    <div className=" absolute  font-Acme text-sm text-neutral-300 flex ">
+                    <div className=" absolute w-5 font-Acme text-sm text-neutral-300 flex ">
                       {service.label}
                     </div>
                   </div>
@@ -78,14 +78,14 @@ const EmptyComponent: React.FC = () => {
 
         {/* 01 */}
         <div className=" relative  md:h-1/3 flex text-center justify-center items-center p-5  ">
-          <div className="  font-BebasNeue border-8 border-colorBase text-5xl text-colorBase items-center justify-center">
+          <div className="  font-BebasNeue border-4 border-colorBase text-4xl text-colorBase items-center justify-center">
             {" "}
             La digitalización es el futuro. Lleva tu negocio al siguiente nivel
             ahora.
           </div>
 
           <div className=" w-4/6 text-xs text-colorBase p-1">
-            <span className=" text-7xl">!</span>Pasar al mundo digital es un desafío, pero vale la pena. Estamos aquí para apoyarte y ayudarte a crecer. ¡Juntos lo lograremos!
+            <span className=" text-5xl">!</span>Pasar al mundo digital es un desafío, pero vale la pena. Estamos aquí para apoyarte y ayudarte a crecer. ¡Juntos lo lograremos!
           </div>
         </div>
       </div>
@@ -129,7 +129,7 @@ const EmptyComponent: React.FC = () => {
             CREA TU IDENTIDAD DIGITAL
           </h1>
           <div>
-            <ul className=" text-3xl md:text-5xl font-BebasNeue text-trend">
+            <ul className=" text-3xl md:text-5xl pb-4 font-BebasNeue text-trend">
               <li> Herramientas</li>
               <li> Recursos</li>
               <li> Servicios</li>
