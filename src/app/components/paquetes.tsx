@@ -1,83 +1,73 @@
-// src/components/PanelesServicios.tsx
-import React from "react";
+import React from 'react'
 
-const PanelesServicios: React.FC = () => {
+const Packages: React.FC = () => {
   return (
-    <div>
-      <header className="p-3 m-5 text-7xl font-BebasNeue text-trend border-4 border-trend w-fit">
+    <main className="container mx-auto p-6">
+      {/* Título principal */}
+      <h2 className="text-7xl font-BebasNeue text-trend border-b-4 border-trend p-3 mb-8 text-center">
         AVAILABLE PACKAGES
-      </header>
+      </h2>
 
-      <section className="p-20">
-        <p>
-          We offer a comprehensive and strategic approach to help your business
-          stand out in the market. Our packages are designed to guide you through
-          each stage of building your brand, from creating a solid visual identity
-          to producing impactful audiovisual content. Each month, we will focus on
-          key aspects that will lay the foundation of your brand and boost your
-          presence in the digital space. With a commitment to quality and creativity,
-          we are here to turn your ideas into visual realities that connect with
-          your audience.
-        </p>
-      </section>
-
-      <section className="p-8 flex flex-col md:flex-row gap-5">
-        {/* First Month: Active (Blue) */}
-        <article className="border border-blue-500 rounded-lg p-6 bg-blue-100 shadow-md max-w-md mx-auto my-6 text-left">
-          <h2 className="text-2xl font-semibold mb-2 text-blue-900">
-            First Month: Brand Identity and Planning
-          </h2>
-          <p className="text-lg font-bold text-blue-800 mb-4">
-            <span className="text-green-600">International Price: $450 USD</span>
-            <br /> * Optional Package
+      <section className="flex flex-wrap justify-center gap-8">
+        {/* Paquete 1: Piezas Modulares */}
+        <article className="bg-colorBase shadow-xl rounded-lg p-6 w-full md:w-1/3">
+          <h3 className="text-3xl font-semibold text-trend mb-4">Modular Construction Pieces</h3>
+          <p className="text-lg text-gray-700 mb-4">
+            Create the base of your 3D environment with custom-built modular pieces. Perfect for quick prototyping or detailed designs.
           </p>
-          <ul className="list-disc pl-5 text-blue-800">
-            <li className="mb-2">Logo and Visual Identity Design</li>
-            <li className="mb-2">Development of Business Philosophy and Artistic Style</li>
-            <li className="mb-2">Creation of Images, Iconography, and Symbolism</li>
-            <li className="mb-2">Definition of Brand Manual</li>
-            <li className="mb-2">Content Strategy and Planning for Month Two</li>
+          <ul className="list-disc list-inside text-gray-600 mb-4">
+            <li>Flexible modular pieces for versatile designs.</li>
+            <li>Easy to integrate into existing 3D scenes.</li>
+            <li>Ideal for fast development of environments.</li>
           </ul>
+          <h2 className="text-xl font-semibold text-green-700 mb-4">
+            Price: <span className="font-bold">$200 - $450</span>
+          </h2>
+          <button className="bg-trend text-white py-2 px-6 rounded-lg hover:bg-opacity-90 w-full">
+            Get This Package
+          </button>
         </article>
 
-        {/* Second Month: Disabled (Yellow) */}
-        <article className="border border-yellow-500 rounded-lg p-6 bg-yellow-100 shadow-md max-w-md mx-auto my-6 text-left opacity-50">
-          <h2 className="text-2xl font-semibold mb-2 text-yellow-900">
-            Second Month: 3D Environment Design and Creation
-          </h2>
-          <p className="text-lg font-bold text-yellow-800 mb-4">
-            <span className="text-green-600">International Price: $800 USD</span>
-            <br /> * Optional Package
+        {/* Paquete 2: Pack de Modelos 3D */}
+        <article className="bg-trend shadow-xl rounded-lg p-6 w-full md:w-1/3">
+          <h3 className="text-3xl font-semibold text-colorBase mb-4">3D Models Pack</h3>
+          <p className="text-lg text-gray-700 mb-4">
+            Fill your 3D environment with a variety of models that feed into the story of the environment. Ideal for enhancing the narrative and adding depth to the world youre building.
           </p>
-          <ul className="list-disc pl-5 text-yellow-800">
-            <li className="mb-2">3D Environment Concept Design</li>
-            <li className="mb-2">3D Modeling and Texturing</li>
-            <li className="mb-2">Lighting and Environment Composition</li>
-            <li className="mb-2">Design Review and Adjustments based on Brand Identity</li>
-            <li className="mb-2">Preparation for Audiovisual Production in Month Three</li>
+          <ul className="list-disc list-inside text-gray-600 mb-4">
+            <li>Includes a variety of models that enhance the story of the environment.</li>
+            <li>Custom textures to match your projects aesthetic.</li>
+            <li>Optimized for performance without sacrificing detail.</li>
           </ul>
+          <h2 className="text-xl font-semibold text-green-700 mb-4">
+            Price: <span className="font-bold">$600 - $800</span>
+          </h2>
+          <button className="bg-colorBase text-trend py-2 px-6 rounded-lg hover:bg-opacity-90 w-full">
+            Get This Package
+          </button>
         </article>
 
-        {/* Third Month: Disabled (Green) */}
-        <article className="border border-green-500 rounded-lg p-6 bg-green-100 shadow-md max-w-md mx-auto my-6 text-left opacity-50">
-          <h2 className="text-2xl font-semibold mb-2 text-green-900">
-            Third Month: Audiovisual Content Production
-          </h2>
-          <p className="text-lg font-bold text-green-800 mb-4">
-            <span className="text-green-600">International Price: $450 USD</span>
-            <br /> * Optional Package
+        {/* Paquete 3: Análisis Arquitectónico */}
+        <article className="bg-colorBase shadow-xl rounded-lg p-6 w-full md:w-1/3">
+          <h3 className="text-3xl font-semibold text-trend mb-4">Architectural Analysis</h3>
+          <p className="text-lg text-gray-700 mb-4">
+            Enhance the realism of your 3D environment with a detailed architectural analysis. This service focuses on circulation, logical systems, and functional zoning to significantly improve gameplay and make the virtual space feel more immersive and believable.
           </p>
-          <ul className="list-disc pl-5 text-green-800">
-            <li className="mb-2">Creation of Animations and 3D Sequences</li>
-            <li className="mb-2">Production of Promotional Videos and Graphics</li>
-            <li className="mb-2">Editing of Audiovisual Content for Advertising</li>
-            <li className="mb-2">Optimization of Content for Social Media and Websites</li>
-            <li className="mb-2">Content Distribution Strategies</li>
+          <ul className="list-disc list-inside text-gray-600 mb-4">
+            <li>Improves realism by optimizing architectural flow.</li>
+            <li>Enhances gameplay through logical and functional spatial planning.</li>
+            <li>Creates a more immersive, believable environment for players.</li>
           </ul>
+          <h2 className="text-xl font-semibold text-green-700 mb-4">
+            Price: <span className="font-bold">$800 - $1000</span>
+          </h2>
+          <button className="bg-trend text-white py-2 px-6 rounded-lg hover:bg-opacity-90 w-full">
+            Get This Package
+          </button>
         </article>
       </section>
-    </div>
-  );
-};
+    </main>
+  )
+}
 
-export default PanelesServicios;
+export default Packages
