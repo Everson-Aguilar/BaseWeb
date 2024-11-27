@@ -4,62 +4,62 @@ import Image from "next/image";
 
 const EmptyComponent: React.FC = () => {
   return (
-    <div className=" relative flex-row  md:flex  w-screen bg-trend">
-      <div className=" w-full md:w-1/3  ">
-        <div className=" md:h-4/6 text-center ">
-          <div className="text-colorBase  translate-y-5 justify-center text-3xl font-Staatliches">
-            servicios disponibles
+    <aside className=" relative flex-row  md:flex  w-screen bg-trend">
+      <section className=" w-full md:w-1/3  ">
+        <text className=" md:h-4/6 text-center ">
+          <h2 className="text-colorBase  translate-y-5 justify-center text-3xl font-Staatliches">
+            Available Services
             <section>
-              <div className=" mb-10 relative pt-5 flex-wrap flex justify-center items-center text-center gap-20">
-                {/* Repite este bloque para cada servicio */}
+              <section className=" mb-10 relative pt-5 flex-wrap flex justify-center items-center text-center gap-20">
+                {/* Repeat this block for each service */}
                 {[
                   {
                     src: "/DiseñoWeb/iconos/servicios/ICONOS WEB-  DESAROLLO WEB.svg",
-                    alt: "Desarrollo Web",
-                    label: "Desarrollo Web",
+                    alt: "Web Development",
+                    label: "Web Development",
                   },
                   {
                     src: "/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO GRAFICO.svg",
-                    alt: "Diseño Gráfico",
-                    label: "Diseño Gráfico",
+                    alt: "Graphic Design",
+                    label: "Graphic Design",
                   },
                   {
                     src: "/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO DE PRODUCTOS.svg",
-                    alt: "Diseño Productos",
-                    label: "Diseño  Productos",
+                    alt: "Product Design",
+                    label: "Product Design",
                   },
                   {
                     src: "/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO DE INTERIORISMO.svg",
-                    alt: "Diseño Interiorismo",
-                    label: "Diseño Interiorismo",
+                    alt: "Interior Design",
+                    label: "Interior Design",
                   },
                   {
                     src: "/DiseñoWeb/iconos/servicios/ICONOS WEB- MARKETING DIGITAL.svg",
-                    alt: "Marketing Digital",
-                    label: "Marketing Digital",
+                    alt: "Digital Marketing",
+                    label: "Digital Marketing",
                   },
                   {
                     src: "/DiseñoWeb/iconos/servicios/ICONOS WEB- PUBLICIDAD.svg",
-                    alt: "Publicidad",
-                    label: "Publicidad",
+                    alt: "Advertising",
+                    label: "Advertising",
                   },
                   {
                     src: "/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO REDES SOCIALES.svg",
-                    alt: "Contenido brRedes Sociales",
-                    label: " Redes Sociales",
+                    alt: "Social Media Content",
+                    label: "Social Media",
                   },
                   {
                     src: "/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO ENTORNO 3D.svg",
-                    alt: "Diseño Entorno 3D",
-                    label: "Diseño Entorno 3D",
+                    alt: "3D Environment Design",
+                    label: "3D Environment Design",
                   },
                   {
                     src: "/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO ASSETS.svg",
-                    alt: "Diseño Videojuego",
-                    label: "Diseño Videojuego",
+                    alt: "Video Game Design",
+                    label: "Video Game Design",
                   },
                 ].map((service, index) => (
-                  <div key={index}>
+                  <figure key={index}>
                     <Image
                       src={service.src}
                       alt={service.alt}
@@ -69,54 +69,49 @@ const EmptyComponent: React.FC = () => {
                     <div className=" absolute w-5 font-Acme text-sm text-neutral-300 flex ">
                       {service.label}
                     </div>
-                  </div>
+                  </figure>
                 ))}
-              </div>
+              </section>
             </section>
-          </div>
-        </div>
+          </h2>
+        </text>
 
         {/* 01 */}
-        <div className=" relative  md:h-1/3 flex text-center justify-center items-center p-5  ">
-          <div className="  font-BebasNeue border-4 border-colorBase text-4xl text-colorBase items-center justify-center">
+        <section className=" relative  md:h-1/3 flex text-center justify-center items-center p-5  ">
+          <h2 className="  font-BebasNeue border-4 border-colorBase text-4xl text-colorBase items-center justify-center">
             {" "}
-            La digitalización es el futuro. Lleva tu negocio al siguiente nivel
-            ahora.
-          </div>
+            Contact us and discover how, with our tools and expertise, we can create an innovative and unique design for your professional projects.
+          </h2>
 
-          <div className=" w-4/6 text-xs text-colorBase p-1">
-            <span className=" text-5xl">!</span>Pasar al mundo digital es un desafío, pero vale la pena. Estamos aquí para apoyarte y ayudarte a crecer. ¡Juntos lo lograremos!
-          </div>
-        </div>
-      </div>
+          <text className=" w-4/6 text-xs text-colorBase p-1">
+            <span className=" text-5xl">!</span> From architectural plans to modern houses, buildings, bridges, parks, plazas, forests, mountains, and urban landscapes, we craft customized solutions that blend functionality and aesthetics to make your project stand out!
+          </text>
+        </section>
+      </section>
 
       {/* 02 */}
 
-      <div className="  relative  overflow-hidden md:w-1/3   ">
-
-      
-        
-      <Image
+      <figure className="  relative  overflow-hidden md:w-1/3   ">
+        <Image
           src="/DiseñoWeb/panel_04.jpg"
-          alt="Diseño Ambiental"
+          alt="Environmental Design"
           layout="fill"
           objectFit="cover"
         />
-      
-      </div>
+      </figure>
 
       {/* 03 */}
 
-      <div className=" relative w-full md:w-1/3  bg-opacity-10 backdrop-blur-md flex ">
+      <figure className=" relative w-full md:w-1/3  bg-opacity-10 backdrop-blur-md flex ">
         <Image
           src="/DiseñoWeb/panel_01.jpg"
-          alt="Diseño Ambiental"
+          alt="Environmental Design"
           layout="fill"
           objectFit="cover"
         />
 
-        <div className=" overflow-scroll relative  w-3/5 p-5">
-          <div className=" h-full  md:h-1/2 flex justify-center items-center ">
+        <figure className=" relative  w-3/5 p-5">
+          <div className=" h-fill  flex justify-center items-center ">
             <Image
               src="/DiseñoWeb/logogris.svg"
               alt="Logo"
@@ -125,38 +120,35 @@ const EmptyComponent: React.FC = () => {
             />
           </div>
 
-          <h1 className="  font-Staatliches text-4xl md:text-7xl text-trend mt-4">
-            CREA TU IDENTIDAD DIGITAL
+          <h1 className="  font-Staatliches text-3xl md:text-6xl text-trend mt-1">
+            3D Environment Design Services.
           </h1>
-          <div>
-            <ul className=" text-3xl md:text-5xl pb-4 font-BebasNeue text-trend">
-              <li> Herramientas</li>
-              <li> Recursos</li>
-              <li> Servicios</li>
+          <h2>
+            <ul className=" text-2xl md:text-2xl pb-4 font-BebasNeue text-trend">
+              <li> Video Games</li>
+              <li> Architecture</li>
+              <li> Cinematic Productions</li>
+              <li> Marketing Solutions</li>
+              <li>3D printing</li>
+              <li> VR</li>
             </ul>
-          </div>
-        </div>
+          </h2>
+        </figure>
 
-        <div className=" relative w-1/3 text-xs p-5 bg-opacity-10 backdrop-blur-md ">
-          {" "}
+        <aside className=" relative w-1/3 text-xs md:text-base p-5 bg-opacity-10 backdrop-blur-md ">
           <p>
-            <strong>Impulsa tu Presencia Digital con un ID &Uacute;nico</strong>
+            <strong>In our</strong> <span className="text-2xl">studio,</span> we specialize in <strong>custom 3D environment design,</strong>
+            creating immersive and functional spaces for <strong>video games,</strong>
+            <strong>architecture,</strong> and entertainment. We offer a comprehensive approach,
+            from concept to execution, blending detailed artistry with
+            innovative technical solutions. Our designs focus on user
+            experience, tailored to meet each client’s needs. Whether it’s a
+            natural, urban, or futuristic environment, our team transforms ideas
+            into captivating, high-quality <strong>virtual worlds.</strong>
           </p>
-          <p>
-            Con nuestro <strong>ID exclusivo</strong>, facilitar&aacute;s que
-            otros accedan a tu negocio y recursos digitales. Tu ID
-            conectar&aacute; a clientes y colaboradores con tu marca, mejorando
-            tu visibilidad y presencia online.
-          </p>
-          <p>
-            <strong>
-              Consigue tu ID y abre las puertas a nuevas oportunidades digitales
-              para tu negocio!
-            </strong>
-          </p>
-        </div>
-      </div>
-    </div>
+        </aside>
+      </figure>
+    </aside>
   );
 };
 

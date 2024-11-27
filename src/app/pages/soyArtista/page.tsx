@@ -9,7 +9,7 @@ import "../soyArtista/graficos.css";
 import CaminoIdeal from "./componentes/caminoIdeal";
 import Estadistica from "./componentes/Estadisticas";
 import PaginasTrabajo from "../../components/PaginasTrabajo";
-import ExperimentalPersonal from "../../components/postulaciones";
+
 
 const SoyArtista: React.FC = () => {
   return (
@@ -98,13 +98,7 @@ const SoyArtista: React.FC = () => {
 
   </div>
 
-  <div className=" w-full md:-1/2">
-
-  <ExperimentalPersonal/>
-
-
-  </div>
-
+ 
  
   
 

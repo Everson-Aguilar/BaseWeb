@@ -2,12 +2,16 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+
+
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Marketing Digital y Contenido 3D para Impulsar tu Negocio",
+  title: "3D Environment Design Services || Video Games, Architecture, Cinematic Productions, VR, and Marketing Solutions",
   description:
-    "Impulsa tu negocio con Marketing Digital y visualizaciones 3D impactantes. En tudigitalnegocio.com, mejoramos la experiencia de compra de tus clientes con soluciones innovadoras. ¡Haz que tus ideas cobren vida!",
+  "Ofrecemos servicios profesionales de diseño de entornos 3D para una amplia gama de aplicaciones, incluyendo videojuegos, arquitectura, cine, realidad virtual (VR) y marketing digital. Nuestro equipo crea **entornos 3D realistas**, **paisajes virtuales**, y **escenarios inmersivos** que transforman la experiencia visual de tus proyectos. Utilizamos **modelado 3D**, **texturización avanzada**, y **animación de entornos** para darle vida a tus ideas. Además, nos especializamos en **diseño de interiores 3D**, **visualización arquitectónica** y **simulaciones VR** para crear **experiencias interactivas** únicas. Aumenta el impacto visual de tu marca y mejora la experiencia de tus clientes con soluciones innovadoras en **diseño digital 3D**."
+
 };
 
 export default function RootLayout({
@@ -18,6 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+
+      
+  
+
+
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"

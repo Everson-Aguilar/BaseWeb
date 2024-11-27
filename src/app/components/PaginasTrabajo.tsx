@@ -24,7 +24,7 @@ const plataformas: PlataformaData[] = [
     nombre: "computrabajo",
     descripcion:
       "marketing contenido, diseño 3d, diseño industrial, estanderia, 3D, dibujante, delineador",
-    calificacion: "★★★★★",
+    calificacion: "★★★",
     estrellas: "0-5 estrellas",
     tiempoRespuesta: "0-0 días",
     imagen: "/DiseñoWeb/paginasTrabajo/p2.png",  // Ruta de la imagen de Workana
@@ -34,11 +34,22 @@ const plataformas: PlataformaData[] = [
     nombre: "magneto365",
     descripcion:
       "diseñador grafico, ",
-    calificacion: "★★★★★",
+    calificacion: "★★★",
     estrellas: "0-5 estrellas",
     tiempoRespuesta: "0-0 días",
     imagen: "/DiseñoWeb/paginasTrabajo/p3.png",  // Ruta de la imagen de Workana
   },
+
+  {
+    nombre: "cad crowd",
+    descripcion:
+      "diseño industrial, mecanico, marketing, cad,   ",
+    calificacion: "★★★★★",
+    estrellas: "0-5 estrellas",
+    tiempoRespuesta: "0-0 días",
+    imagen: "/DiseñoWeb/paginasTrabajo/p4.png",  // Ruta de la imagen de Workana
+  }
+
 
   // Puedes agregar más plataformas aquí
 ];

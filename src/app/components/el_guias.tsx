@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-
-const El_guias = () => {
+const Contact = () => {
   // Estado para manejar si el popup está abierto o cerrado
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,18 +11,19 @@ const El_guias = () => {
   };
 
   return (
-    <div className="p-5 pr-10  z-30 flex justify-end bottom-5 fixed w-full">
+    <button className="p-5 pr-10 z-30 flex justify-end bottom-5 fixed w-full">
       {/* Botón para abrir el popup */}
       <a
         onClick={togglePopup} // Maneja el clic para abrir o cerrar el popup
         target="_blank"
         rel="noopener noreferrer"
-        className=" z-10 bg-colorBase   duration-500  hover:scale-150 hover:bg-orange-400  p-3 rounded-full shadow-2xl flex items-center justify-center cursor-pointer"
+        className="z-10 bg-colorBase duration-500 hover:scale-150 hover:bg-orange-400 p-3 rounded-full shadow-2xl flex items-center justify-center cursor-pointer"
+        aria-label="Abrir canales de redes sociales"
       >
         {/* Imagen del botón */}
         <Image
           src="/DiseñoWeb/redes sociales/contacto.svg"
-          alt="Logo"
+          alt="Logo de contacto"
           width={40} // Ancho de la imagen
           height={40} // Alto de la imagen
         />
@@ -31,41 +31,47 @@ const El_guias = () => {
 
       {/* Condicional que muestra el popup solo si `isOpen` es `true` */}
       {isOpen && (
-        <div className="fixed inset-0 flex items-center justify-end right-5  z-10 top-10">
+        <nav
+          className="fixed inset-0 flex items-center justify-end right-5 z-10 top-10"
+          aria-live="assertive"
+        >
           {/* Contenedor del popup */}
-          <div className="bg-colorBase  translate-y--20 p-5   w-fit rounded-lg shadow-lg relative">
+          <div className="bg-colorBase translate-y--20 p-5 w-fit rounded-lg shadow-lg relative">
             {/* Botón para cerrar el popup */}
             <button
               onClick={togglePopup} // Maneja el clic para cerrar el popup
               className="absolute top-2 right-2 text-message-600 hover:text-gray-800"
+              aria-label="Cerrar el popup de redes sociales"
             >
               ✖ {/* Icono de cierre */}
-            </button >
+            </button>
             {/* Contenido del popup */}
-            
+
             {/* Sección de redes sociales */}
-            <div className="flex flex-col items-center space-y-4 ">
-            <h2 className="text-lg font-semibold mb-4 mt-5 ">Canales</h2>
+            <div className="flex flex-col items-center space-y-4">
+              <p className="text-lg font-semibold mb-4 mt-5">Canales</p>
 
               {/* Facebook */}
               <a
                 href="https://www.facebook.com/profile.php?id=61566448797288"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
               >
-                <Image 
-                  src="/DiseñoWeb/redes sociales/facebook.svg" // Asegúrate de tener esta imagen en tu carpeta `public/icons`
+                <Image
+                  src="/DiseñoWeb/redes sociales/facebook.svg"
                   alt="Facebook"
                   width={45}
                   height={45}
-                  
                 />
               </a>
+
               {/* Instagram */}
               <a
                 href="https://www.instagram.com/tudigitalnegocio/profilecard/?igsh=ZWZudHA3dmNxbW5q"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
               >
                 <Image
                   src="/DiseñoWeb/redes sociales/instagram.svg"
@@ -74,43 +80,44 @@ const El_guias = () => {
                   height={50}
                 />
               </a>
+
               {/* WhatsApp */}
               <a
                 href="https://wa.me/573052158161"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="WhatsApp"
               >
-                <div className="flex items-center ">
+                <div className="flex items-center">
                   <Image
                     src="/DiseñoWeb/redes sociales/whatsapp.svg"
                     alt="WhatsApp"
                     width={50}
                     height={50}
                   />
-                  
                 </div>
               </a>
 
-               {/* TikTok */}
-
+              {/* TikTok */}
               <a
                 href="http://tiktok.com/@tudigitalnegocio"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="TikTok"
               >
                 <Image
                   src="/DiseñoWeb/redes sociales/tiktok.svg"
-                  alt="tik tok"
+                  alt="TikTok"
                   width={50}
                   height={50}
                 />
               </a>
             </div>
           </div>
-        </div>
+        </nav>
       )}
-    </div>
+    </button>
   );
 };
 
-export default El_guias;
+export default Contact;

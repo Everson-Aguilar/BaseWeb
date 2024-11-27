@@ -3,35 +3,42 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
-// Definir el tipo de las propiedades si se aplican
+// Define the component with appropriate types if necessary
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className=  "bg-trend h-fill w-full z-30 h-fill top-0 fixed">
-      <nav className="flex text-colorBase   items-center justify-between px-4">
-        {/* Logo o título */}
-        <div className="  font-LibreBarcode128 text-3xl">TuDigitalNegocio.com</div>
+    <header className="bg-trend h-fill w-full z-30 top-0 fixed">
+      <nav className="flex text-colorBase items-center justify-between px-4">
+        {/* Logo or title */}
+        <div className="font-LibreBarcode128 text-3xl">TuDigitalNegocio.com</div>
 
-        {/* Menú de navegación para pantallas grandes */}
+        {/* Navigation menu for large screens */}
         <ul className="hidden md:flex space-x-4 font-sans">
           <li>
-            <Link className="hover:text-orange-400" href="/">Inicio</Link>
+            <Link className="hover:text-orange-400" href="/">
+              Home
+            </Link>
           </li>
           <li>
-            <Link className="hover:text-orange-400" href="/pages/soyArtista/">Soy Artista $$$</Link>
+            <Link className="hover:text-orange-400" href="/pages/soyArtista/">
+              I’m an Artist $$$
+            </Link>
           </li>
           <li>
-            <Link className="hover:text-orange-400" href="/pages/mantenimiento">Productos Visuales</Link>
+            <Link className="hover:text-orange-400" href="/pages/mantenimiento">
+              Visual Products
+            </Link>
           </li>
         </ul>
 
-        {/* Menú hamburguesa para pantallas pequeñas */}
+        {/* Hamburger menu for small screens */}
         <button
-          className="md:hidden  "
+          className="md:hidden"
           onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,6 +46,7 @@ const Header: React.FC = () => {
             viewBox="0 0 24 24"
             stroke="currentColor"
             className="w-6 h-6"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -50,17 +58,17 @@ const Header: React.FC = () => {
         </button>
       </nav>
 
-      {/* Menú desplegable para pantallas pequeñas */}
+      {/* Dropdown menu for small screens */}
       {isMenuOpen && (
-        <ul className=" relative md:hidden bg-trend z-20  text-colorBase space-y-2 p-4">
-          <li className="hover:text-orange-400 ">
-            <Link href="/">Inicio</Link>
+        <ul className="relative md:hidden bg-trend z-20 text-colorBase space-y-2 p-4">
+          <li className="hover:text-orange-400">
+            <Link href="/">Home</Link>
           </li>
-          <li className="hover:text-orange-400 ">
-            <Link href="/pages/soyArtista/">Soy Artista $$$</Link>
-          </li >
-          <li className="hover:text-orange-400  ">
-            <Link href="/pages/mantenimiento">Productos Visuales</Link>
+          <li className="hover:text-orange-400">
+            <Link href="/pages/soyArtista/">I’m an Artist $$$</Link>
+          </li>
+          <li className="hover:text-orange-400">
+            <Link href="/pages/mantenimiento">Visual Products</Link>
           </li>
         </ul>
       )}

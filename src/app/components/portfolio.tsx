@@ -48,12 +48,12 @@ const Galeria: React.FC = () => {
   return (
     <section className=" text-colorBase   md:flex xl:flex ">
       {/* galería */}
-      <div className="w-full md:w-1/2 p-5">
-        <div className="text-trend font-BebasNeue text-8xl">PORTFOLIO</div>
+      <section className="w-full md:w-1/2 p-5">
+        <h2 className="text-trend font-BebasNeue text-8xl">PORTFOLIO</h2>
 
         <div>
-          {confirmation && <div>Componente importado correctamente.</div>}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+          {confirmation && <div>Component imported successfully.</div>}
+          <section className="grid grid-cols-2 md:grid-cols-4 gap-2">
             {images.map((image, index) => (
               <motion.div
                 key={index}
@@ -96,44 +96,45 @@ const Galeria: React.FC = () => {
                 </Link>
               </motion.div>
             ))}
-          </div>
+          </section>
         </div>
-      </div>
+      </section>
       {/* fin galería */}
 
       {/* Artista Digital */}
-      <div className=" p-5 ">
-        <div className=" mt-10  text-title">
-          <div className="text-trend font-BebasNeue text-xl">
-            PASOS PARA CREAR ACCESORIOS COMO ARTISTA DIGITAL:
-          </div>
-          <ul className="text-1xl">
-            <li>*Conceptualización y Referencias Visuales</li>
-            <li>*Modelado 3D de Alto Polígono</li>
-            <li>*Retopologización del Modelo</li>
-            <li>*UV Mapping</li>
-            <li>*Creación de Texturas</li>
-            <li>*Aplicación de Texturas</li>
-            <li>*Iluminación y Renderizado</li>
-            <li>*Ajustes y Optimización</li>
-            <li>*Pruebas y Evaluación</li>
-            <li>*Entrega Final</li>
-          </ul>
+      <article className="p-5">
+  <text className="mt-10 text-title">
+    <h2 className="text-trend font-BebasNeue text-xl">
+      STEPS TO CREATE ACCESSORIES AS A DIGITAL ARTIST:
+    </h2>
+    <ul className="text-1xl">
+      <li>*Conceptualization and Visual References</li>
+      <li>*High-Poly 3D Modeling</li>
+      <li>*Retopology of the Model</li>
+      <li>*UV Mapping</li>
+      <li>*Texture Creation</li>
+      <li>*Texture Application</li>
+      <li>*Lighting and Rendering</li>
+      <li>*Adjustments and Optimization</li>
+      <li>*Testing and Evaluation</li>
+      <li>*Final Delivery</li>
+    </ul>
 
-          <span className="text-trend font-BebasNeue text-xl">TECNOLOGÍAS</span>
-          <ul className="text-1xl">
-            <li>*Autodesk Revit</li>
-            <li>*Blender</li>
-            <li>*ZBrush</li>
-            <li>*Substance Painter</li>
-            <li>*Unity 3D / Unreal</li>
-            <li>*Adobe After Effects</li>
-            <li>*Adobe Photoshop</li>
-            <li>*Adobe Premiere</li>
-            <li>*Adobe Illustrator</li>
-          </ul>
-        </div>
-      </div>
+    <h2 className="text-trend font-BebasNeue text-xl">TECHNOLOGIES</h2>
+    <ul className="text-1xl">
+      <li>*Autodesk Revit</li>
+      <li>*Blender</li>
+      <li>*ZBrush</li>
+      <li>*Substance Painter</li>
+      <li>*Unity 3D / Unreal</li>
+      <li>*Adobe After Effects</li>
+      <li>*Adobe Photoshop</li>
+      <li>*Adobe Premiere</li>
+      <li>*Adobe Illustrator</li>
+    </ul>
+  </text>
+</article>
+
     </section>
   );
 };
