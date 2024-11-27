@@ -6,9 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
-    
-    
+    "lint": "next lint",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@nextui-org/navbar": "^2.0.33",
@@ -30,6 +29,7 @@
     "mysql2": "^3.10.3",
     "next": "^14.2.4",
     "next-google-fonts": "^2.2.0",
+    "next-sitemap": "^4.2.3",
     "nodemailer": "^6.9.14",
     "ol": "^10.2.1",
     "pigeon-maps": "^0.21.6",
