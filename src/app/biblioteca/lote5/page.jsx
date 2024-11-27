@@ -3,10 +3,11 @@
 // pages/Pack.js
 import Image from "next/image";
 
-// Título y descripción globales para todas las imágenes
-const globalTitle = "BIENVENIDO";
+// Global title and description for all images
+const globalTitle = "WELCOME";
 const globalDescription =
-  "''El interior de una casa junto al diseño de iluminacion, puede hacer un buen ambiente y misterioso.''";
+  "''The interior of a house along with lighting design can create a good and mysterious atmosphere.''";
+
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'
 const imageNames = ["g1.jpg", "g2.jpg", "g3.jpg", "g4.jpg"];

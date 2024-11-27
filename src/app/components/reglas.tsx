@@ -1,7 +1,7 @@
 import React from "react";
 
 //component 
-import SubServicies from "./subServicies";
+import SubServices from "./subServices";
 
 const SocialMediaFormats: React.FC = () => {
 
@@ -67,7 +67,7 @@ const SocialMediaFormats: React.FC = () => {
       </article>
 
       <section className="w-full md:w-1/2 h-full">
-        <SubServicies />
+        <SubServices />
       </section>
     </section>
   );

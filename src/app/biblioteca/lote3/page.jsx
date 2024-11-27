@@ -4,9 +4,10 @@
 import Image from "next/image";
 
 
-// Título y descripción globales para todas las imágenes
-const globalTitle = "CASA FAMILIAR-BAÑO";
-const globalDescription = "''la soledad cuando no estan los padres en casa.''";
+// Global title and description for all images
+const globalTitle = "FAMILY HOUSE-BATHROOM";
+const globalDescription = "''The loneliness when the parents are not at home.''";
+
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'
 const imageNames = [

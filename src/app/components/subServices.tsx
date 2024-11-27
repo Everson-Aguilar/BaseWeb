@@ -50,7 +50,7 @@ const PackageList: React.FC = () => {
 
     <>
 
-    <h2 className=" font-BebasNeue text-4xl text-trend">SubServicies</h2>
+    <h2 className=" font-BebasNeue text-4xl text-trend">SubServices</h2>
 
     <section className="flex h-screen overflow-scroll flex-wrap justify-center gap-5">
       {packages.map((pkg: Package, index: number) => (

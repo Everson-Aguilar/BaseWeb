@@ -7,8 +7,9 @@ import Image from "next/image";
 
 
 // Título y descripción globales para todas las imágenes
-const globalTitle = "ENTORNO NATURAL";
-const globalDescription = "''Un entorno natural con inspiración asiática con estilo personalizado''";
+const globalTitle = "NATURAL ENVIRONMENT";
+const globalDescription = "''A natural environment with Asian inspiration and a personalized style''";
+
 
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'

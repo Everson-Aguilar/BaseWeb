@@ -3,10 +3,11 @@
 // pages/Pack.js
 import Image from "next/image";
 
-// Título y descripción globales para todas las imágenes
-const globalTitle = "MOBILARIOS EXCLUSIVOS";
+// Global title and description for all images
+const globalTitle = "EXCLUSIVE FURNITURE";
 const globalDescription =
-  "''No te limites a crear cosas distintas, en otras parte del mundo, son famosas.''";
+  "''Don't limit yourself to creating different things, in other parts of the world, they are famous.''";
+
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'
 const imageNames = ["g1.jpg"];

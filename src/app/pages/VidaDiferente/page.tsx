@@ -4,506 +4,458 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-
-
 //componentes
 
-import DiagramaCircular from "../../components/diagramaCircular";
-import Mapa from "../../components/mapa";
-import Comentarios from "../../components/comentarios";
-import Galeria from "../../components/galeria";
-import Herramientas from "../../components/herramientas"
-import Entrada from "../../components/entrada"
-import VidaDiferente from "../../components/venAvivirUnaVidaDiferente"
-import El_guias from "../../components/el_guias";
+import CircularDiagram from "../../components/diagramaCircular";
+import Maps from "../../components/mapa";
+import Comments from "../../components/comentarios";
+import Galery from "../../components/galeria";
+import Tools from "../../components/herramientas";
+import Door from "../../components/entrada";
+import MeettheFounder from "../../components/venAvivirUnaVidaDiferente";
+import Contact from "../../components/el_guias";
 
 const MiComponente: React.FC = () => {
   return (
+    <>
+      <Contact />
 
+      <MeettheFounder />
 
-
-    <div >
-
-      <El_guias/>
-
-      <VidaDiferente/>
-
-
-      
       <motion.div
-            whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
-            initial={{ opacity: 0 }} // Comienza invisible
-            transition={{ duration: 1, ease: "easeInOut" }}
-            viewport={{ once: false }} // Repite la animación cada vez que entra o sale
-          >
-
-      <section className=" relative z-0   flex-row  md:flex justify-start items-start text-center">
-        <div className=" w-screen md:w-1/2">
-          
+        whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
+        initial={{ opacity: 0 }} // Comienza invisible
+        transition={{ duration: 1, ease: "easeInOut" }}
+        viewport={{ once: false }} // Repite la animación cada vez que entra o sale
+      >
+        <section className=" relative z-0   flex-row  md:flex justify-start items-start text-center">
+          <figure className=" w-screen md:w-1/2">
             <Image
               src="/DiseñoWeb/WebRecursos/figuraWeb.png"
               alt="comic 3"
               width={800}
               height={800}
             />
-         
 
-          <div className=" relative p-5 font-BebasNeue text-6xl text-trend">
-            Sal del patrón social <br /> para encontrar tu camino...
-          </div>
-        </div>
+            <h2 className=" relative p-5 font-BebasNeue text-6xl text-trend">
+              Step out of the social pattern <br /> to find your way...
+            </h2>
+          </figure>
 
-        <div className=" relative h-screen bg:h-fill w-full  md:w-1/2 text-trend  p-5 ">
-
-          <div className="relative top-1/2">
-
-          <h2 className=" md:w-1/2 text-2xl font-BebasNeue">
-            {" "}
-            Everson Aguilar.
-          </h2>
-          <p>
-            Soy <strong>un explorador,</strong> y me dedico a investigar cómo se
-            vive la vida desde una perspectiva lo más natural posible. Fiel a mi
-            filosofía de vida, que se resume en pocas palabras: observar y
-            apreciar tanto lo dulce como lo amargo de la existencia, siempre
-            desde la mirada del espectador... La clave es aprender a observar, a
-            saber observar, sin dejarse envolver por una realidad distorsionada.
-          </p>
-        </div>
-        </div>
-      </section>
-
+          <section className=" relative h-screen bg:h-fill w-full  md:w-1/2 text-trend  p-5 ">
+            <div className="relative top-1/2">
+              <h2 className=" md:w-1/2 text-2xl font-BebasNeue">
+                {" "}
+                Everson Aguilar.
+              </h2>
+              <p>
+                I am an explorer, and I dedicate myself to researching how life
+                is lived from as natural a perspective as possible. True to my
+                life philosophy, which can be summed up in a few words: to
+                observe and appreciate both the sweet and the bitter aspects of
+                existence, always from the perspective of the spectator... The
+                key is to learn to observe, to know how to observe, without
+                being enveloped by a distorted reality.
+              </p>
+            </div>
+          </section>
+        </section>
       </motion.div>
 
       <motion.div
-            whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
-            initial={{ opacity: 0 }} // Comienza invisible
-            transition={{ duration: 1, ease: "easeInOut" }}
-            viewport={{ once: false }} // Repite la animación cada vez que entra o sale
-          >
+        whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
+        initial={{ opacity: 0 }} // Comienza invisible
+        transition={{ duration: 1, ease: "easeInOut" }}
+        viewport={{ once: false }} // Repite la animación cada vez que entra o sale
+      >
+        <section className=" relative z-20 h-fill w-screen bg-trend flex-row md:flex  text-center overflow-hidden ">
+          <div className=" w-screen md:w-1/3 p-5 text-start text-colorBase ">
+            <h2 className=" text-8xl font-BebasNeue text-colorBase">
+              ARTISTIC
+            </h2>
+            <p className=" -translate-y-6 font-BebasNeue text-2xl">
+              Observe why things are...
+            </p>
 
-      <section className=" relative z-20 h-fill w-screen bg-trend flex-row md:flex  text-center overflow-hidden ">
-        <div className=" w-screen md:w-1/3 p-5 text-start text-colorBase ">
-          <h2 className=" text-8xl font-BebasNeue text-colorBase">ARTISTICO</h2>
-          <p className=" -translate-y-6 font-BebasNeue text-2xl">
-            Observar del porque son las cosas...
-          </p>
-
-          <Image
-            src="/DiseñoWeb/WebRecursos/Artistico.png"
-            alt="comic 3"
-            width={1200}
-            height={1200}
-          />
-
-          <h2 className=" text-6xl font-BebasNeue text-trend bg-colorBase">
-            ESPECIALIDAD<span className="text-8xl"><br />(A)</span>
-          </h2>
-
-          <p className="mb-5">
-            <span className=" text-2xl font-BebasNeue">
-              Diseñador de Ambiente,
-            </span>{" "}
-            especializado en modelado, texturizado, esculpido, animación, render
-            fotorrealista y retopología. Con una habilidad destacada para crear
-            entornos detallados y funcionales, se enfrenta a cada proyecto con
-            enfoque estratégico y adaptabilidad. Capaz de manejar situaciones de
-            alta presión y gestionar el estrés, siempre está listo para aprender
-            rápidamente y superar nuevos desafíos en el mundo 3D.
-          </p>
-
-          <h2 className=" text-3xl font-BebasNeue text-colorBase">
-            HABILIDADES
-          </h2>
-
-          <table className="font-Quicksand w-full border-collapse">
-            <thead>
-              <tr>
-                <th className="border border-colorBase p-2 text-left">
-                  Tecnicas
-                </th>
-                <th className="border border-colorBase p-2 text-left">
-                  Evaluación
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Conceptualización y Referencias Visuales
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Modelado 3D de Alto Polígono
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Retopologización del Modelo
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">UV Mapping</td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Creación de Texturas
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Aplicación de Texturas
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Iluminación y Renderizado
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Ajustes y Optimización
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Pruebas y Evaluación
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">Entrega Final</td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h2 className="  mt-10 text-3xl font-BebasNeue text-colorBase">
-            EDUCACION
-          </h2>
-          <p>
-            Soy <strong>un explorador,</strong> dedicado a investigar la vida
-            desde una perspectiva lo más auténtica posible. Mi filosofía de vida
-            se resume en una simple idea: observar y apreciar tanto lo dulce
-            como lo amargo de la existencia, siempre desde la mirada del
-            espectador. La clave está en aprender a observar, a percibir con
-            claridad, sin dejarse atrapar por una realidad distorsionada.
-          </p>
-
-          <div>
-            {" "}
-            <DiagramaCircular />{" "}
-          </div>
-        </div>
-
-        <div className=" relative w-screen md:w-1/3 h-fill flex-row justify-center items-center font-BebasNeue bg-trend text-trend">
-          <div className=" flex justify-center items-center  p-7 bg-colorBase h-fill w-fill">
             <Image
-              src="/DiseñoWeb/logoGris.svg"
+              src="/DiseñoWeb/WebRecursos/Artistico.png"
               alt="comic 3"
-              width={100}
-              height={100}
+              width={1200}
+              height={1200}
             />
-            <span className=" text-5xl"> 2</span> PERSPECTIVA DE VER LA VIDA{" "}
-            <span className=" text-5xl">(Arte y Orden)</span>
+
+            <h2 className=" text-6xl font-BebasNeue text-trend bg-colorBase">
+              SPECIALTY
+              <span className="text-8xl">
+                <br />
+                (A)
+              </span>
+            </h2>
+
+            <p className="mb-5">
+              <span className=" text-2xl font-BebasNeue">
+                Environment Designer,
+              </span>{" "}
+              Specialized in modeling, texturing, sculpting, animation,
+              photorealistic rendering, and retopology. With a strong ability to
+              create detailed and functional environments, he approaches each
+              project with a strategic focus and adaptability. Capable of
+              handling high-pressure situations and managing stress, he is
+              always ready to learn quickly and overcome new challenges in the
+              3D world..
+            </p>
+
+            <h2 className=" text-3xl font-BebasNeue text-colorBase">SKILLS</h2>
+
+            <table className="font-Quicksand w-full border-collapse">
+              <thead>
+                <tr>
+                  <th className="border border-colorBase p-2 text-left">
+                    Techniques
+                  </th>
+                  <th className="border border-colorBase p-2 text-left">
+                    Assessment
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border border-colorBase p-2">
+                    Conceptualization and Visual References
+                  </td>
+                  <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                  <td className="border border-colorBase p-2">
+                    High-Polygon 3D Modeling
+                  </td>
+                  <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                  <td className="border border-colorBase p-2">
+                    Model Retopology
+                  </td>
+                  <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                  <td className="border border-colorBase p-2">UV Mapping</td>
+                  <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                  <td className="border border-colorBase p-2">
+                    Texture Creation
+                  </td>
+                  <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                  <td className="border border-colorBase p-2">
+                    Texture Application
+                  </td>
+                  <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                  <td className="border border-colorBase p-2">
+                    Lighting and Rendering
+                  </td>
+                  <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                  <td className="border border-colorBase p-2">
+                    Adjustments and Optimization
+                  </td>
+                  <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                  <td className="border border-colorBase p-2">
+                    Testing and Evaluation
+                  </td>
+                  <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                  <td className="border border-colorBase p-2">
+                    Final Delivery
+                  </td>
+                  <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 className="mt-10 text-3xl font-BebasNeue text-colorBase">
+              EDUCATION
+            </h2>
+            <p>
+              I am <strong>an explorer,</strong> dedicated to investigating life
+              from the most authentic perspective possible. My life philosophy
+              can be summed up in a simple idea: to observe and appreciate both
+              the sweet and the bitter aspects of existence, always from the
+              perspective of the observer. The key is learning to observe, to
+              perceive clearly, without getting caught in a distorted reality.
+            </p>
+
+            <section>
+              {" "}
+              <CircularDiagram />{" "}
+            </section>
           </div>
 
-          <h2 className="  mt-40 text-3xl font-BebasNeue text-colorBase">
-           PROYECTOS 
-          </h2>
+          <section className="relative w-screen md:w-1/3 h-fill flex-row justify-center items-center font-BebasNeue bg-trend text-trend">
+            <figure className="flex justify-center items-center p-7 bg-colorBase h-fill w-fill">
+              <Image
+                src="/DiseñoWeb/logoGris.svg"
+                alt="comic 3"
+                width={100}
+                height={100}
+              />
+              <span className="text-5xl"> 2</span> PERSPECTIVE ON LIFE{" "}
+              <span className="text-5xl">(Art and Order)</span>
+            </figure>
 
-          <div className=" text-colorBase">
-             <Galeria />
-          </div>
-          {/* galeria */}
-        </div>
+            <h2 className="mt-40 text-3xl font-BebasNeue text-colorBase">
+              PROJECTS
+            </h2>
 
-        <div className=" w-screen md:w-1/3  p-5  text-start text-colorBase  ">
-          <h2 className=" text-8xl font-BebasNeue text-colorBase">ORDEN</h2>
-          <p className=" -translate-y-6 font-BebasNeue text-2xl">
-            Planificar el buen camino...
-          </p>
+            <section className="text-colorBase">
+              <Galery />
+            </section>
+            {/* gallery */}
+          </section>
 
-          <Image
-            src="/DiseñoWeb/WebRecursos/Orden.png"
-            alt="comic 3"
-            width={1200}
-            height={1200}
-          />
+          <section className="w-screen md:w-1/3 p-5 text-start text-colorBase">
+  <h2 className="text-8xl font-BebasNeue text-colorBase">ORDER</h2>
+  <p className="-translate-y-6 font-BebasNeue text-2xl">
+    Plan the right path...
+  </p>
 
-          <h2 className=" text-6xl font-BebasNeue text-trend bg-colorBase">
-            ESPECIALIDAD <span className="text-8xl"><br />(B)</span>
-          </h2>
+  <Image
+    src="/DiseñoWeb/WebRecursos/Orden.png"
+    alt="comic 3"
+    width={1200}
+    height={1200}
+  />
 
-          <p className="mb-5">
-            <span className="text-2xl font-BebasNeue">
-              Desarrollador Full-Stack,
-            </span>{" "}
-            especializado en la creación de aplicaciones web robustas y
-            escalables, manejando tanto el desarrollo front-end como back-end.
-            Con un enfoque en tecnologías modernas como Next.js, optimización
-            del rendimiento, creación de componentes reutilizables, y una
-            profunda comprensión de la arquitectura web, aporta soluciones
-            estratégicas y funcionales que transforman proyectos en experiencias
-            excepcionales. Capacitado para gestionar estados, integración de
-            APIs, seguridad y despliegue de aplicaciones de manera eficiente,
-            siempre adaptándose a nuevos desafíos con aprendizaje constante y
-            soluciones innovadoras.
-          </p>
+  <h2 className="text-6xl font-BebasNeue text-trend bg-colorBase">
+    SPECIALTY{" "}
+    <span className="text-8xl">
+      <br />
+      (B)
+    </span>
+  </h2>
 
-          <h2 className="text-3xl font-BebasNeue text-colorBase">
-            HABILIDADES
-          </h2>
+  <p className="mb-5">
+    <span className="text-2xl font-BebasNeue">
+      Full-Stack Developer,
+    </span>{" "}
+    specialized in creating robust and scalable web applications, handling both front-end and back-end development. With a focus on modern technologies like Next.js, performance optimization, creating reusable components, and a deep understanding of web architecture, I provide strategic and functional solutions that transform projects into exceptional experiences. Skilled in managing states, API integration, security, and deployment of applications efficiently, always adapting to new challenges with constant learning and innovative solutions.
+  </p>
 
-          <table className="font-Quicksand w-full border-collapse">
-            <thead>
-              <tr>
-                <th className="border border-colorBase p-2">
-                  Habilidades Técnicas
-                </th>
-                <th className="border border-colorBase p-2">Evaluación</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Desarrollo con Next.js
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Enrutamiento y Navegación (Routing) con Next.js
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Desarrollo Full Stack (Backend y Frontend)
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Integración con APIs (RESTful y GraphQL)
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Manejo de Bases de Datos (SQL y NoSQL)
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Desarrollo de Servidores y Configuración de VPS
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Creación de Interfaces de Usuario (UI Design)
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Desarrollo de Componentes Reutilizables en React
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Optimización de Rendimiento en el Frontend
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Desarrollo y Consumo de APIs Externas
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Autenticación y Seguridad Web (JWT, OAuth)
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Implementación de Web Services y Microservicios
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Diseño de Arquitectura de Aplicaciones Web
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Gestión de Estados en React (useState, Redux, Context API)
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Despliegue de Aplicaciones en Plataformas como Vercel,
-                  Netlify, o Heroku
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Configuración y Optimización de Servidores
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Manejo de Versiones con Git y GitHub
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Desarrollo de Funcionalidades Interactivas y Dinámicas
-                  (Animaciones, Formularios, etc.)
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Creación de Aplicaciones Responsivas (Mobile-First Design)
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Pruebas y Depuración en el Desarrollo Web
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Desarrollo de Aplicaciones con Componentes Estilizados
-                  (Tailwind CSS, Styled Components)
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Uso de Frameworks y Librerías para Componentes (Material-UI,
-                  Chakra UI, etc.)
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Gestión de Estados y Contextos en Aplicaciones Web
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Optimización SEO para Aplicaciones Web
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Desarrollo de Páginas Estáticas y Dinámicas con Next.js
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td className="border border-colorBase p-2">
-                  Desarrollo de Páginas con SSR (Server-Side Rendering) y SSG
-                  (Static Site Generation)
-                </td>
-                <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+  <h2 className="text-3xl font-BebasNeue text-colorBase">
+    SKILLS
+  </h2>
 
+  <table className="font-Quicksand w-full border-collapse">
+    <thead>
+      <tr>
+        <th className="border border-colorBase p-2">
+          Technical Skills
+        </th>
+        <th className="border border-colorBase p-2">Evaluation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Development with Next.js
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Routing and Navigation with Next.js
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Full Stack Development (Backend and Frontend)
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          API Integration (RESTful and GraphQL)
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Database Management (SQL and NoSQL)
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Server Development and VPS Configuration
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          User Interface Design (UI Design)
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Reusable Component Development in React
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Frontend Performance Optimization
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Development and Consumption of External APIs
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Web Authentication and Security (JWT, OAuth)
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Implementation of Web Services and Microservices
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Web Application Architecture Design
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          State Management in React (useState, Redux, Context API)
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Application Deployment on Platforms like Vercel, Netlify, or Heroku
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Server Configuration and Optimization
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Version Control with Git and GitHub
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Interactive and Dynamic Feature Development (Animations, Forms, etc.)
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Responsive Web Applications (Mobile-First Design)
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Web Development Testing and Debugging
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Styled Component Development (Tailwind CSS, Styled Components)
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Framework and Library Usage for Components (Material-UI, Chakra UI, etc.)
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          State and Context Management in Web Applications
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          SEO Optimization for Web Applications
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          Static and Dynamic Page Development with Next.js
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+      <tr>
+        <td className="border border-colorBase p-2">
+          SSR (Server-Side Rendering) and SSG (Static Site Generation) Pages
+        </td>
+        <td className="border border-colorBase p-2">⭐⭐⭐⭐⭐</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+        </section>
       </motion.div>
 
       <motion.div
-            whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
-            initial={{ opacity: 0 }} // Comienza invisible
-            transition={{ duration: 1, ease: "easeInOut" }}
-            viewport={{ once: false }} // Repite la animación cada vez que entra o sale
-          >
+        whileInView={{ opacity: 1 }} // Se vuelve visible cuando entra en el viewport
+        initial={{ opacity: 0 }} // Comienza invisible
+        transition={{ duration: 1, ease: "easeInOut" }}
+        viewport={{ once: false }} // Repite la animación cada vez que entra o sale
+      >
+        <section className="  bg-colorBase flex-row  md:flex   justify-start items-start text-start mt-10">
+          <div className=" w-full md:w-1/2 text-3xl font-BebasNeue text-trend">
+            <h2 className="p-5">FREELANCER WORK </h2>
 
-      <section className="  bg-colorBase flex-row  md:flex   justify-start items-start text-start mt-10">
-        <div className=" w-full md:w-1/2 text-3xl font-BebasNeue text-trend">
-          <h2 className="p-5">FREELANCER LABORAL </h2>
-
-          <div className=" p-10">
-           <Mapa /> 
-          </div>
-        </div>
-
-        <div className=" h-full  w-full md:w-1/2  ">
-          
-
-          <div className="p-10">
-           <Comentarios /> 
+            <div className=" p-10">
+              <Maps />
+            </div>
           </div>
 
-
-        </div>
-
-        
- 
-
-
-
-      </section>
-
+          <div className=" h-full  w-full md:w-1/2  ">
+            <div className="p-10">
+              <Comments />
+            </div>
+          </div>
+        </section>
       </motion.div>
-
 
       <section className=" p-5 text-trend">
-
-      
-
-       <Herramientas/>  
-
+        <Tools />
       </section>
 
       <section>
-
-        <Entrada/>
-
-
+        <Door />
       </section>
-
-
-
-      
-
-        
-
-    </div>
-
-
-
-
+    </>
   );
 };
 

@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-// componente
-import Header from "../components/header";
+
 
 // Definir las dimensiones del mapa
 const mapDimensions = {

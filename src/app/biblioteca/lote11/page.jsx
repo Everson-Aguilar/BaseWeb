@@ -3,10 +3,11 @@
 // pages/Pack.js
 import Image from "next/image";
 
-// Título y descripción globales para todas las imágenes
-const globalTitle = "PLANTAS BELLAS";
+// Global title and description for all images
+const globalTitle = "BEAUTIFUL PLANTS";
 const globalDescription =
-  "''Las planta son muy importante hasta en el arte, en inaceptable no amar lo vivo.''";
+  "''Plants are very important, even in art; it’s unacceptable not to love the living.''";
+
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'
 const imageNames = [

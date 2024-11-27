@@ -3,10 +3,11 @@
 // pages/Pack.js
 import Image from "next/image";
 
-// Título y descripción globales para todas las imágenes
-const globalTitle = "DESPUES-PLAYA";
+// Global title and description for all images
+const globalTitle = "AFTER-BEACH";
 const globalDescription =
-  "''Colores suave para tu interior transmite comodidad.''";
+  "''Soft colors for your interior convey comfort.''";
+
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'
 const imageNames = [

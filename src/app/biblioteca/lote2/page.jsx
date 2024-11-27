@@ -4,9 +4,10 @@
 import Image from "next/image";
 
 
-// Título y descripción globales para todas las imágenes
-const globalTitle = "INTERIOR APOCALIPTICO";
-const globalDescription = "''Interior apocalíptico, sobreviviente con adicción al alcohol.''";
+// Global title and description for all images
+const globalTitle = "APOCALYPTIC INTERIOR";
+const globalDescription = "''Apocalyptic interior, survivor with an alcohol addiction.''";
+
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'
 const imageNames = [

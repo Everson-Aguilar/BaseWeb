@@ -3,10 +3,10 @@
 // pages/Pack.js
 import Image from "next/image";
 
-// Título y descripción globales para todas las imágenes
-const globalTitle = "LOS MICRODETALLES";
+// Global title and description for all images
+const globalTitle = "THE MICRODETAILS";
 const globalDescription =
-  "''Es la clave de un buen resultado, nunca le dejes de dar rosas.''";
+  "''It’s the key to a good result, never stop giving roses.''";
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'
 const imageNames = [

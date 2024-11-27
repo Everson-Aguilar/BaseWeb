@@ -48,11 +48,11 @@ const Galeria: React.FC = () => {
   return (
     <section>
       {/* galería */}
-      <div className="w-full p-5">
-        <div className="text-trend font-BebasNeue text-8xl">PORTFOLIO</div>
+      <section className="w-full p-5">
+        <h2 className="text-trend font-BebasNeue text-8xl">PORTFOLIO</h2>
 
         <div>
-          {confirmation && <div>Componente importado correctamente.</div>}
+          {confirmation && <div>Component imported successfully.</div>}
 
           {/* Contenedor Flexbox */}
           <div className="flex flex-wrap justify-center gap-1">
@@ -101,7 +101,7 @@ const Galeria: React.FC = () => {
             ))}
           </div>
         </div>
-      </div>
+      </section>
       {/* fin galería */}
     </section>
   );

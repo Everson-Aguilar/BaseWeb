@@ -3,10 +3,11 @@
 // pages/Pack.js
 import Image from "next/image";
 
-// Título y descripción globales para todas las imágenes
-const globalTitle = "MEDALLA DE HONOR";
+// Global title and description for all images
+const globalTitle = "MEDAL OF HONOR";
 const globalDescription =
-  "''Siempre es agradable llevar un vieja confiable para los problemas.''";
+  "''It's always nice to have an old reliable for problems.''";
+
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'
 const imageNames = ["g1.jpg", "g2.jpg", "g3.jpg", "g4.jpg", "g5.jpg"];

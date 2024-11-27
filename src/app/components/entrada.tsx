@@ -6,14 +6,14 @@ import Link from 'next/link';
 const BusinessBanner = () => {
   return (
     <div className="flex flex-col justify-center items-center h-fill text-center p-5">
-      <Link href="/"> {/* Cambia "/" a la ruta que deseas redirigir */}
+      <Link href="/"> {/* Change "/" to the route you want to redirect to */}
         <button className="text-lg bg-trend p-5 text-colorBase rounded-lg hover:bg-orange-600 transition">
-          Ven y mira mi agencia de marketing digital.
+          Come and check out my 3D design agency studio
         </button>
       </Link>
       <div>
         <Image 
-          src="/DiseñoWeb/logogris.svg" // Asegúrate de tener esta imagen en la carpeta "public"
+          src="/DiseñoWeb/logogris.svg" // Make sure this image is in the "public" folder
           alt="Logo"
           width={150}
           height={150}

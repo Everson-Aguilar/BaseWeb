@@ -1,123 +1,122 @@
-// Componente para cada Video con su título y descripción
+// Component for each video with its title and description
 type VideoItemProps = {
   src: string;
   alt: string;
-  titulo: string;
-  descripcion: string;
+  title: string;
+  description: string;
 };
 
-// Componente funcional para mostrar un video con su título y descripción
+// Functional component to display a video with its title and description
 const VideoItem: React.FC<VideoItemProps> = ({
   src,
   alt,
-  titulo,
-  descripcion,
+  title,
+  description,
 }) => {
   return (
-    <div className="relative  ">
+    <div className="relative">
       <div className="absolute bottom-0 p-1">
-        <h2 className="text-2xl md:text-3xl font-BebasNeue  text-orange-400">
-          {titulo}
+        <h2 className="text-2xl md:text-3xl font-BebasNeue text-orange-400">
+          {title}
         </h2>
-        <p className="text-sm md:text-xl bg-trend opacity-70 ">{descripcion}</p>
+        <p className="text-sm md:text-xl bg-trend opacity-70">{description}</p>
       </div>
       <video
         src={src}
-        width={400} // Ajusta el tamaño del video según tus necesidades
+        width={400} // Adjust the video size as needed
         height={400}
         autoPlay
         loop
         muted
-        className="block pointer-events-none "
+        className="block pointer-events-none"
         aria-label={alt}
       />
     </div>
   );
 };
 
-// Array de objetos con la información de los videos
+// Array of objects with video information
 const videos = [
   {
     src: "/DiseñoWeb/WebRecursos/animacion_herramientas/v1.mp4",
-    alt: "esculpido 3d",
-    titulo: "Zbrush",
-    descripcion:
-      "ZBrush es un software de modelado 3D y escultura digital utilizado en videojuegos, películas y diseño 3D.",
+    alt: "3D sculpting",
+    title: "Zbrush",
+    description:
+      "ZBrush is a 3D modeling and digital sculpting software used in video games, movies, and 3D design.",
   },
   {
     src: "/DiseñoWeb/WebRecursos/animacion_herramientas/v2.mp4",
-    alt: "modelado 3d",
-    titulo: "Blender",
-    descripcion:
-      "Blender es una herramienta de animación y modelado 3D, con capacidades de texturización y renderizado.",
+    alt: "3D modeling",
+    title: "Blender",
+    description:
+      "Blender is a 3D animation and modeling tool, with texturing and rendering capabilities.",
   },
   {
     src: "/DiseñoWeb/WebRecursos/animacion_herramientas/v3.mp4",
-    alt: "Renderizado en Unreal Engine",
-    titulo: "Render",
-    descripcion:
-      "Renderiza imágenes y escenas 3D realistas en tiempo real con Unreal Engine.",
+    alt: "Rendering in Unreal Engine",
+    title: "Render",
+    description:
+      "Renders realistic 3D images and scenes in real-time with Unreal Engine.",
   },
   {
     src: "/DiseñoWeb/WebRecursos/animacion_herramientas/v4.mp4",
-    alt: "Edición de Video",
-    titulo: "Adobe Premiere",
-    descripcion:
-      "Adobe Premiere es un software de edición de video profesional utilizado para el montaje de imágenes en movimiento.",
+    alt: "Video editing",
+    title: "Adobe Premiere",
+    description:
+      "Adobe Premiere is a professional video editing software used for assembling moving images.",
   },
   {
     src: "/DiseñoWeb/WebRecursos/animacion_herramientas/v5.mp4",
-    alt: "Programación",
-    titulo: "Next.js/Node.js",
-    descripcion:
-      "Next.js y Node.js son herramientas para crear aplicaciones web rápidas y escalables con JavaScript.",
+    alt: "Programming",
+    title: "Next.js/Node.js",
+    description:
+      "Next.js and Node.js are tools for creating fast and scalable web applications with JavaScript.",
   },
   {
     src: "/DiseñoWeb/WebRecursos/animacion_herramientas/v6.mp4",
-    alt: "Diseño 2D",
-    titulo: "Photoshop",
-    descripcion:
-      "Photoshop es el programa líder en edición y diseño gráfico 2D para imágenes y fotografía.",
+    alt: "2D design",
+    title: "Photoshop",
+    description:
+      "Photoshop is the leading program for 2D graphic editing and design for images and photography.",
   },
   {
     src: "/DiseñoWeb/WebRecursos/animacion_herramientas/v7.mp4",
-    alt: "Arquitectura",
-    titulo: "Revit",
-    descripcion:
-      "Revit es un software de modelado para arquitectura, ingeniería y construcción con BIM.",
+    alt: "Architecture",
+    title: "Revit",
+    description:
+      "Revit is a modeling software for architecture, engineering, and construction with BIM.",
   },
   {
     src: "/DiseñoWeb/WebRecursos/animacion_herramientas/v8.mp4",
-    alt: "Animación 2D",
-    titulo: "After Effects",
-    descripcion:
-      "After Effects es un software para crear efectos visuales y composiciones en animación 2D y 3D.",
+    alt: "2D animation",
+    title: "After Effects",
+    description:
+      "After Effects is software for creating visual effects and compositions in 2D and 3D animation.",
   },
   {
     src: "/DiseñoWeb/WebRecursos/animacion_herramientas/v9.mp4",
-    alt: "Texturizado",
-    titulo: "Substance Painter",
-    descripcion:
-      "Substance Painter es una herramienta avanzada para texturizar modelos 3D en tiempo real.",
+    alt: "Texturing",
+    title: "Substance Painter",
+    description:
+      "Substance Painter is an advanced tool for real-time texturing of 3D models.",
   },
 ];
 
-const MiComponente: React.FC = () => {
+const MyComponent: React.FC = () => {
   return (
     <div>
-      <div className=" p-5">
-        <h2 className=" text-3xl font-BebasNeue text-trend">
-          HERRAMIENTAS TECNOLOGICAS{" "}
+      <div className="p-5">
+        <h2 className="text-3xl font-BebasNeue text-trend">
+          TECHNOLOGICAL TOOLS{" "}
         </h2>
 
         <p>
-          Creo soluciones de diseño digital avanzadas, tanto en 2D como en 3D,
-          utilizando las herramientas más comunes y poderosas de la industria.
-          Transformo ideas en experiencias visuales realistas y detalladas,
-          trabajando con programas de diseño gráfico, animación y edición
-          profesional. Mi enfoque en la precisión y la innovación asegura
-          resultados que superan las expectativas en sectores como videojuegos,
-          cine, arquitectura y más.
+          I create advanced digital design solutions, both in 2D and 3D, using
+          the most common and powerful tools in the industry. I transform ideas
+          into realistic and detailed visual experiences, working with graphic
+          design, animation, and professional editing software. My focus on
+          precision and innovation ensures results that exceed expectations in
+          fields such as video games, cinema, architecture, and more.
         </p>
       </div>
 
@@ -127,8 +126,8 @@ const MiComponente: React.FC = () => {
             key={index}
             src={video.src}
             alt={video.alt}
-            titulo={video.titulo}
-            descripcion={video.descripcion}
+            title={video.title}
+            description={video.description}
           />
         ))}
       </div>
@@ -136,4 +135,5 @@ const MiComponente: React.FC = () => {
   );
 };
 
-export default MiComponente;
+export default MyComponent;
+

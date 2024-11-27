@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';  // Importamos motion
+import { motion } from 'framer-motion';  // Import motion
 
 interface Comment {
   name: string;
@@ -19,7 +19,7 @@ const comments: Comment[] = [
     name: 'haishan',
     country: 'Taiwan',
     rating: 5,
-    comment: 'Although it is the first stage of the project, the creator is very clear about what he is doing! From 3D production to Unity applications, He know a lot, and a well-communicated fiverr user.',
+    comment: 'Although it is the first stage of the project, the creator is very clear about what he is doing! From 3D production to Unity applications, he knows a lot, and is a well-communicated Fiverr user.',
   },
   {
     name: 'ankhotep',
@@ -31,7 +31,7 @@ const comments: Comment[] = [
     name: 'cinematicmediap',
     country: 'United States',
     rating: 5,
-    comment: 'Excelente!! 100% recomendado',
+    comment: 'Excellent!! 100% recommended',
   },
   {
     name: 'omarfattah530',
@@ -49,29 +49,29 @@ const comments: Comment[] = [
 
 const CommentsList: React.FC = () => {
   return (
-    <div>
+    <section>
       <h2 className="font-BebasNeue text-3xl text-trend">
-        EXPECTATIVA CLIENTES{" "}
+        CLIENT EXPECTATIONS{" "}
       </h2>
 
-      <div className="mt-5 space-y-4">
+      <section className="mt-5 space-y-4">
         {comments.map((comment, index) => (
           <motion.div
             key={index}
             className="bg-message p-3 rounded-lg shadow-sm border border-gray-200 max-w-md mx-auto"
             whileInView={{
-              opacity: 1, // Hacer visible el comentario
-              scale: 1,   // Escalar a su tamaño original
+              opacity: 1, // Make the comment visible
+              scale: 1,   // Scale to its original size
             }}
             initial={{
-              opacity: 0, // Comienza invisible
-              scale: 0.8, // Comienza más pequeño
+              opacity: 0, // Start invisible
+              scale: 0.8, // Start smaller
             }}
             transition={{
-              duration: 1,         // Duración de la animación
-              ease: "easeInOut",   // Suaviza la animación
+              duration: 1,         // Duration of the animation
+              ease: "easeInOut",   // Smooth out the animation
             }}
-            viewport={{ once: false }} // Se repite cada vez que entra o sale
+            viewport={{ once: false }} // Repeat every time it enters or exits
           >
             <div className="flex justify-between">
               <div>
@@ -87,8 +87,8 @@ const CommentsList: React.FC = () => {
             </div>
           </motion.div>
         ))}
-      </div>
-    </div>
+      </section>
+    </section>
   );
 };
 

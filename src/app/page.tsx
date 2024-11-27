@@ -9,9 +9,9 @@ import Contact from "./components/el_guias";
 import Introductions from "./components/introduccion";
 import Rules from "./components/reglas";
 import Sell from "./components/retiro";
-import SubServicies from "./components/paquetes";
+import SubServices from "./components/paquetes";
 import Portfolio from "./components/portfolio";
-import Servicies from "./components/servicios";
+import Services from "./components/servicios";
 import CreateWorlds from "./components/separadores/NuestraFilosofia";
 import DesingTheImpacts from "./components/separadores/plan";
 import Pack from "./components/separadores/proyectos";
@@ -82,7 +82,7 @@ const Home: React.FC = () => {
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: false }}
           >
-            <Servicies />
+            <Services />
           </motion.div>
         </section>
 
@@ -118,7 +118,7 @@ const Home: React.FC = () => {
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: false }}
           >
-            <SubServicies />
+            <SubServices />
           </motion.div>
         </section>
 
@@ -176,7 +176,7 @@ export default Home;
 }
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "21/11/2024"
+git commit -m "27/11/2024"
 git pull origin main
 git push origin main */
 

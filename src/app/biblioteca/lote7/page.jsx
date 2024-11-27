@@ -3,10 +3,11 @@
 // pages/Pack.js
 import Image from "next/image";
 
-// Título y descripción globales para todas las imágenes
-const globalTitle = "UN BUEN DESORDEN";
+// Global title and description for all images
+const globalTitle = "A GOOD MESS";
 const globalDescription =
-  "''No todo lo bonito debe verse bien, la rareza siempre es mas emocionante.''";
+  "''Not everything beautiful should look perfect, the unusual is always more exciting.''";
+
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'
 const imageNames = ["g1.jpg", "g2.jpg"];

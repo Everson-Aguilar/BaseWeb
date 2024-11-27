@@ -49,7 +49,7 @@ const Contact = () => {
 
             {/* Sección de redes sociales */}
             <div className="flex flex-col items-center space-y-4">
-              <p className="text-lg font-semibold mb-4 mt-5">Canales</p>
+              <p className="text-lg font-semibold mb-4 mt-5">channels</p>
 
               {/* Facebook */}
               <a

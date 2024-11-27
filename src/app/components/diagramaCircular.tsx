@@ -2,11 +2,10 @@ import React from 'react';
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
-  { name: '1. Autodidacta', value: 1000 },
-  { name: '2.Talleres ', value: 400 },
-  { name: '3.Formación Profesional', value: 700 },
-  { name: '4.Mentores ', value: 500 },
-  
+  { name: '1. Self-taught', value: 1000 },
+  { name: '2. Workshops', value: 400 },
+  { name: '3. Professional Training', value: 700 },
+  { name: '4. Mentors', value: 500 },
 ];
 
 const CircularDiagram = () => {

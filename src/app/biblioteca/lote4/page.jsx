@@ -4,9 +4,10 @@
 import Image from "next/image";
 
 
-// Título y descripción globales para todas las imágenes
-const globalTitle = "CAJA SUMINISTRO";
-const globalDescription = "''siempre es bueno tener municiones de mas para tus diseño de videojuego.''";
+// Global title and description for all images
+const globalTitle = "SUPPLY BOX";
+const globalDescription = "''It's always good to have extra ammo for your video game design.''";
+
 
 // Array de nombres de archivo de imágenes dentro de '/DiseñoWeb/portfolio/g1/'
 const imageNames = [
