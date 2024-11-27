@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Header from "./components/header";
 import Contact from "./components/el_guias";
 import Introductions from "./components/introduccion";
+import Tools from "./components/herramientas";
 import Rules from "./components/reglas";
 import Sell from "./components/retiro";
 import SubServices from "./components/paquetes";
@@ -57,6 +58,17 @@ const Home: React.FC = () => {
             initial={{ opacity: 0 }}
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: false }}
+          >
+            <Tools />
+          </motion.div>
+        </section>
+
+        <section>
+          <motion.div
+            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            viewport={{ once: false }}
           ></motion.div>
         </section>
 
@@ -71,7 +83,7 @@ const Home: React.FC = () => {
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: false }}
           >
-            <CreateWorlds/>
+            <CreateWorlds />
           </motion.div>
         </section>
 
@@ -167,9 +179,6 @@ const Home: React.FC = () => {
 };
 
 export default Home;
-
-
-
 
 {
   /*  GUARDAR Y SUBIR APLICACION   */

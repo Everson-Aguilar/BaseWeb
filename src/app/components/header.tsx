@@ -23,8 +23,8 @@ const Header: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link className="hover:text-orange-400" href="/pages/soyArtista/">
-              I’m an Artist $$$
+            <Link className="hover:text-orange-400" href="/pages/contenido/">
+            How to create a 3D environment
             </Link>
           </li>
           <li>

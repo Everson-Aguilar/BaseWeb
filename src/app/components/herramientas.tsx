@@ -105,7 +105,7 @@ const videos = [
 const MyComponent: React.FC = () => {
   return (
     <div>
-      <div className="p-5">
+      <div className="p-10">
         <h2 className="text-3xl font-BebasNeue text-trend">
           TECHNOLOGICAL TOOLS{" "}
         </h2>
