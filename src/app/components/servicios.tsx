@@ -7,8 +7,8 @@ const EmptyComponent: React.FC = () => {
     <aside className=" relative flex-row  md:flex  w-screen bg-trend">
       <section className=" w-full md:w-1/3  ">
         <text className=" md:h-4/6 text-center ">
-          <h2 className="text-colorBase  translate-y-5 justify-center text-3xl font-Staatliches">
-            Available Services
+          <h2 className="text-colorBase  translate-y-5 justify-center text-3xl font-Staatliches ">
+            <span className="border-b-2">Available Services</span>
             <section>
               <section className=" mb-10 relative pt-5 flex-wrap flex justify-center items-center text-center gap-20">
                 {/* Repeat this block for each service */}
@@ -51,12 +51,12 @@ const EmptyComponent: React.FC = () => {
                   {
                     src: "/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO ENTORNO 3D.svg",
                     alt: "3D Environment Design",
-                    label: "3D Environment Design",
+                    label: "3D Environment ",
                   },
                   {
                     src: "/DiseñoWeb/iconos/servicios/ICONOS WEB- DISEÑO ASSETS.svg",
                     alt: "Video Game Design",
-                    label: "Video Game Design",
+                    label: "Video Game ",
                   },
                 ].map((service, index) => (
                   <figure key={index}>
@@ -66,7 +66,7 @@ const EmptyComponent: React.FC = () => {
                       width={80}
                       height={80}
                     />
-                    <div className=" absolute w-5 font-Acme text-sm text-neutral-300 flex ">
+                    <div className=" bg-pink-600 p-1  mt-5 absolute w-fill font-Acme text-xs hover:bg-orange-400 rounded-full text-neutral-300 flex ">
                       {service.label}
                     </div>
                   </figure>
@@ -77,8 +77,8 @@ const EmptyComponent: React.FC = () => {
         </text>
 
         {/* 01 */}
-        <section className=" relative  md:h-1/3 flex text-center justify-center items-center p-5  ">
-          <h2 className="  font-BebasNeue border-4 border-colorBase text-4xl text-colorBase items-center justify-center">
+        <section className=" relative  md:h-1/3 flex text-center justify-center items-center p-5   ">
+          <h2 className="  font-BebasNeue border-4 border-colorBase text-4xl text-colorBase items-center justify-center mt-20">
             {" "}
             Contact us and discover how, with our tools and expertise, we can create an innovative and unique design for your professional projects.
           </h2>
@@ -91,7 +91,17 @@ const EmptyComponent: React.FC = () => {
 
       {/* 02 */}
 
-      <figure className="  relative  overflow-hidden md:w-1/3   ">
+      <figure className="  relative   md:w-1/3  h-screen  ">
+
+      <figure className="absolute z-20 md:scale-125 scale-95 bottom-20 ">
+        <Image
+              src="/DiseñoWeb/letters/letter-04.svg"
+              alt="environment"
+              width={1000}
+              height={1000}
+            />
+        </figure>
+
         <Image
           src="/DiseñoWeb/panel_04.jpg"
           alt="Environmental Design"
@@ -135,18 +145,12 @@ const EmptyComponent: React.FC = () => {
           </h2>
         </figure>
 
-        <aside className=" relative w-1/3 text-xs md:text-base p-5 bg-opacity-10 backdrop-blur-md ">
-          <p>
-            <strong>In our</strong> <span className="text-2xl">studio,</span> we specialize in <strong>custom 3D environment design,</strong>
-            creating immersive and functional spaces for <strong>video games,</strong>
-            <strong>architecture,</strong> and entertainment. We offer a comprehensive approach,
-            from concept to execution, blending detailed artistry with
-            innovative technical solutions. Our designs focus on user
-            experience, tailored to meet each client’s needs. Whether it’s a
-            natural, urban, or futuristic environment, our team transforms ideas
-            into captivating, high-quality <strong>virtual worlds.</strong>
-          </p>
-        </aside>
+        <aside className="relative w-full md:w-1/3 p-5 bg-colorBase text-trend bg-opacity-30 backdrop-blur-md rounded-lg">
+  <p className="text-lg md:text-xl leading-relaxed">
+    <strong className="text-2xl">We create immersive 3D environments</strong> for video games, architecture, and entertainment. Our team blends creativity with cutting-edge technical solutions to craft <strong>high-quality virtual worlds</strong> that prioritize user experience. Whether natural, urban, or futuristic, we bring your ideas to life with style and precision.
+  </p>
+</aside>
+
       </figure>
     </aside>
   );

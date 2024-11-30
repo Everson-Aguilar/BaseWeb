@@ -110,28 +110,18 @@ const Home: React.FC = () => {
           <h2 id="rules" className="sr-only">
             Rules
           </h2>
-          <motion.div
-            whileInView={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            viewport={{ once: false }}
-          >
+          
             <Rules />
-          </motion.div>
+          
         </section>
 
         <section className="mt-20" aria-labelledby="pricing">
           <h2 id="pricing" className="sr-only">
             Pricing
           </h2>
-          <motion.div
-            whileInView={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            viewport={{ once: false }}
-          >
+          
             <SubServices />
-          </motion.div>
+         
         </section>
 
         {/* Projects Section */}

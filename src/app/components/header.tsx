@@ -3,11 +3,18 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
-// Define the component with appropriate types if necessary
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // Lista de rutas
+  const routes = [
+    { href: "/", label: "Home" },
+    { href: "/pages/contenido/", label: "How to create a 3D environment" },
+    { href: "/pages/shop/", label: "Visual Products" },
+    { href: "/pages/mantenimiento/", label: "I’m an Artist $$$" }, // Opcional para dropdown
+  ];
 
   return (
     <header className="bg-trend h-fill w-full z-30 top-0 fixed">
@@ -15,23 +22,13 @@ const Header: React.FC = () => {
         {/* Logo or title */}
         <div className="font-LibreBarcode128 text-3xl">TuDigitalNegocio.com</div>
 
-        {/* Navigation menu for large screens */}
-        <ul className="hidden md:flex space-x-4 font-sans">
-          <li>
-            <Link className="hover:text-orange-400" href="/">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:text-orange-400" href="/pages/contenido/">
-            How to create a 3D environment
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:text-orange-400" href="/pages/mantenimiento">
-              Visual Products
-            </Link>
-          </li>
+        {/* Navigation menu */}
+        <ul className={`md:flex ${isMenuOpen ? "block" : "hidden"} space-y-2 md:space-y-0 md:space-x-4 font-sans`}>
+          {routes.map((route, index) => (
+            <li key={index} className="hover:text-orange-400">
+              <Link href={route.href}>{route.label}</Link>
+            </li>
+          ))}
         </ul>
 
         {/* Hamburger menu for small screens */}
@@ -57,21 +54,6 @@ const Header: React.FC = () => {
           </svg>
         </button>
       </nav>
-
-      {/* Dropdown menu for small screens */}
-      {isMenuOpen && (
-        <ul className="relative md:hidden bg-trend z-20 text-colorBase space-y-2 p-4">
-          <li className="hover:text-orange-400">
-            <Link href="/">Home</Link>
-          </li>
-          <li className="hover:text-orange-400">
-            <Link href="/pages/soyArtista/">I’m an Artist $$$</Link>
-          </li>
-          <li className="hover:text-orange-400">
-            <Link href="/pages/mantenimiento">Visual Products</Link>
-          </li>
-        </ul>
-      )}
     </header>
   );
 };

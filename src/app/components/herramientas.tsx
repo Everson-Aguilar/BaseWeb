@@ -1,3 +1,6 @@
+import Image from "next/image"; // Importa el componente Image de Next.js
+
+
 // Component for each video with its title and description
 type VideoItemProps = {
   src: string;
@@ -104,8 +107,18 @@ const videos = [
 
 const MyComponent: React.FC = () => {
   return (
-    <div>
-      <div className="p-10">
+    <section className="relative">
+
+<figure className="absolute z-20 md:top-1/4 md:scale-150 scale-110 right-40 bottom-0 translate-y-40 ">
+        <Image
+              src="/DiseñoWeb/letters/letter-03.svg"
+              alt="environment"
+              width={500}
+              height={500}
+            />
+        </figure>
+
+      <article className="p-10">
         <h2 className="text-3xl font-BebasNeue text-trend">
           TECHNOLOGICAL TOOLS{" "}
         </h2>
@@ -118,9 +131,9 @@ const MyComponent: React.FC = () => {
           precision and innovation ensures results that exceed expectations in
           fields such as video games, cinema, architecture, and more.
         </p>
-      </div>
+      </article>
 
-      <div className="text-colorBase relative p-5 flex flex-wrap gap-5 justify-start items-start w-full">
+      <figure className="text-colorBase relative p-5 flex flex-wrap gap-5 justify-start items-start w-full">
         {videos.map((video, index) => (
           <VideoItem
             key={index}
@@ -130,8 +143,8 @@ const MyComponent: React.FC = () => {
             description={video.description}
           />
         ))}
-      </div>
-    </div>
+      </figure>
+    </section>
   );
 };
 

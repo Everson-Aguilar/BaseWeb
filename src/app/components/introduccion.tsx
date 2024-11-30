@@ -103,11 +103,43 @@ const ComicStory: React.FC = () => {
       </div>
 
       {/* Diagrams */}
-      <div className="h-[1400px] md:h-[1000px] bg-gradient-to-b from-white to-blue-200 w-full p-2 text-colorBase">
+      <section className=" relative h-[1400px] md:h-[1000px] bg-gradient-to-b from-white to-blue-200 w-full p-2 text-colorBase">
+     
+     
+
+      <figure className="absolute z-20 md:top-1/4 top-20 scale-150 md:right-16  ">
+        <Image
+              src="/DiseñoWeb/letters/letter-02.svg"
+              alt="emocional"
+              width={100}
+              height={100}
+            />
+        </figure>
+
+      <figure className="absolute z-20 md:top-1/4 md:scale-150 scale-110 top-1/4 ">
+        <Image
+              src="/DiseñoWeb/letters/letter-01.svg"
+              alt="environment"
+              width={500}
+              height={500}
+            />
+        </figure>
+
+
+        <figure className="absolute ">
+        <Image
+              src="/DiseñoWeb/letters/letter-01.svg"
+              alt="environment"
+              width={1500}
+              height={1500}
+            />
+        </figure>
+
+
         <h2 className="text-2xl font-BebasNeue text-center mb-4 text-title">
           A different lifestyle...
         </h2>
-        <div className="relative flex justify-center items-center bg-slate-300 bg-opacity-30 backdrop-blur-md p-4 rounded-md h-2/4 shadow-lg z-10">
+        <div className="relative flex justify-center items-center bg-slate-300 bg-opacity-10 backdrop-blur-md p-4 rounded-md h-2/4 shadow-lg z-10">
           <div className="absolute top-10 flex justify-center items-center gap-2 p-2 xl:p-5">
             {topIcons.map((src, index) => (
               <div
@@ -148,7 +180,7 @@ const ComicStory: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex w-full md:flex-row p-5 gap-5">
+        <article className="flex w-full md:flex-row p-5 gap-5">
           <div className="flex-row justify-center items-center md:w-1/2 text-center border-2 border-trend p-4">
             <div className="flex justify-center items-center text-5xl">
               <div className="absolute h-14 w-14 border-trend border-4 rounded-full"></div>
@@ -170,8 +202,8 @@ const ComicStory: React.FC = () => {
               Virtual is more precise and clean than the real, although it lacks sensory dimension. Your communication skills are crucial to stand out in the community. Share your life philosophy and continuously learn. You are on a path of change, living in the present that shapes your future. Explore the paths of information and guide those who need it with your experiences.
             </p>
           </div>
-        </div>
-      </div>
+        </article>
+      </section>
     </div>
   );
 };

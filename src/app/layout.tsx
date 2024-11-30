@@ -8,10 +8,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "3D Environment Design Services || Video Games, Architecture, Cinematic Productions, VR, and Marketing Solutions",
+  title: "3D Environment Design LATAM | Video Games, VR, Architecture & Marketing",
   description:
-  "Ofrecemos servicios profesionales de diseño de entornos 3D para una amplia gama de aplicaciones, incluyendo videojuegos, arquitectura, cine, realidad virtual (VR) y marketing digital. Nuestro equipo crea **entornos 3D realistas**, **paisajes virtuales**, y **escenarios inmersivos** que transforman la experiencia visual de tus proyectos. Utilizamos **modelado 3D**, **texturización avanzada**, y **animación de entornos** para darle vida a tus ideas. Además, nos especializamos en **diseño de interiores 3D**, **visualización arquitectónica** y **simulaciones VR** para crear **experiencias interactivas** únicas. Aumenta el impacto visual de tu marca y mejora la experiencia de tus clientes con soluciones innovadoras en **diseño digital 3D**."
-
+  "Transform your projects with realistic 3D environment design for video games, architecture, film, and VR. We create immersive scenes, unique visualizations, and virtual landscapes. Discover innovative solutions to elevate your brand with high-quality 3D modeling and simulations."
 };
 
 export default function RootLayout({
