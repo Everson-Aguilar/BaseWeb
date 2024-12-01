@@ -10,7 +10,7 @@ const EmptyComponent: React.FC = () => {
           <h2 className="text-colorBase  translate-y-5 justify-center text-3xl font-Staatliches ">
             <span className="border-b-2">Available Services</span>
             <section>
-              <section className=" mb-10 relative pt-5 flex-wrap flex justify-center items-center text-center gap-20">
+              <section className=" mb-10 mt-20 relative pt-5 flex-wrap flex justify-center items-center text-center gap-20">
                 {/* Repeat this block for each service */}
                 {[
                   {
@@ -77,8 +77,8 @@ const EmptyComponent: React.FC = () => {
         </div>
 
         {/* 01 */}
-        <section className=" relative  md:h-1/3 flex text-center justify-center items-center p-5   ">
-          <h2 className="  font-BebasNeue border-4 border-colorBase text-4xl text-colorBase items-center justify-center mt-20">
+        <section className=" relative  md:h-1/3 flex  p-5   ">
+          <h2 className=" p-5 font-BebasNeue border-4  border-colorBase text-3xl text-colorBase  m-5">
             {" "}
             Contact us and discover how, with our tools and expertise, we can create an innovative and unique design for your professional projects.
           </h2>
@@ -146,7 +146,7 @@ const EmptyComponent: React.FC = () => {
         </figure>
 
         <aside className="relative w-full md:w-1/3 p-5 overflow-hidden bg-colorBase text-trend bg-opacity-30 backdrop-blur-md rounded-lg">
-  <p className="text-lg md:text-xl leading-relaxed">
+  <p className="text-lg md:text-sm leading-relaxed">
     <strong className="text-1xl">We create immersive 3D environments</strong> for video games, architecture, and entertainment. Our team blends creativity with cutting-edge technical solutions to craft <strong>high-quality virtual worlds</strong> that prioritize user experience. Whether natural, urban, or futuristic, we bring your ideas to life with style and precision.
   </p>
 </aside>
