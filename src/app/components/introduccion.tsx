@@ -21,125 +21,33 @@ const ComicStory: React.FC = () => {
 
   return (
     <div className="w-full flex flex-col md:flex-row text-colorBase p-5 justify-center items-center">
-      {/* Comics */}
-      <div className="flex p-5 justify-center items-center gap-1 border text-xs md:text-1xlt xl:text-1xl font-Notable">
-        {/* sideA */}
-        <section className="space-y-20 mt-16">
-          <article className="relative">
-            <p className="absolute -translate-y-16 w-full p-3 border-2 bg-colorBase border-trend text-trend">
-              - We need something that truly stands out, something that breaks away from everything the competition does.
-            </p>
-            <Image
-              src="/DiseñoWeb/comic/comic1.jpg"
-              alt="comic 1"
-              width={300}
-              height={300}
-            />
-          </article>
 
-          <article className="relative">
-            <p className="absolute -translate-y-16 w-full p-3 border-2 bg-colorBase border-trend text-trend">
-              - Cats are the key to success!
-            </p>
-            <Image
-              src="/DiseñoWeb/comic/comic3.jpg"
-              alt="comic 3"
-              width={300}
-              height={300}
-            />
-          </article>
-
-          <article className="relative">
-            <p className="absolute -translate-y-16 w-full p-3 border-2 bg-colorBase border-trend text-trend">
-              - With 3D tools, the only limit is our imagination. Lets conquer the market!
-            </p>
-            <Image
-              src="/DiseñoWeb/comic/comic5.jpg"
-              alt="comic 5"
-              width={300}
-              height={300}
-            />
-          </article>
-        </section>
-
-        {/* sideB */}
-        <section className="space-y-20 mt-16">
-          <article className="relative">
-            <p className="absolute -translate-y-16 w-full p-3 border-2 bg-colorBase border-trend text-trend">
-              - This isnt working; we need to rethink everything.
-            </p>
-            <Image
-              src="/DiseñoWeb/comic/comic2.jpg"
-              alt="comic 2"
-              width={300}
-              height={300}
-            />
-          </article>
-
-          <article className="relative">
-            <p className="absolute -translate-y-16 w-full p-3 border-2 bg-colorBase border-trend text-trend">
-              - What if instead of the usual, we use 3D environment design? Imagine the possibilities!
-            </p>
-            <Image
-              src="/DiseñoWeb/comic/comic4.jpg"
-              alt="comic 4"
-              width={300}
-              height={300}
-            />
-          </article>
-
-          <article className="relative">
-            <p className="absolute -translate-y-16 w-full p-3 border-2 bg-colorBase border-trend text-trend">
-              - Mom, the agency approved my service! Im heading to the center to grab your avocados.
-            </p>
-            <Image
-              src="/DiseñoWeb/comic/comic6.jpg"
-              alt="comic 6"
-              width={300}
-              height={300}
-            />
-          </article>
-        </section>
-      </div>
+      <div className=" text-8xl relative text-trend font-SixCaps"> With our  help, we can bring the <span className="border-b-2 border-b-rose-600"> idea in your mind to life.</span> Go ahead, <span className=" text-orange-600 font-PermanentMarker"> invent!</span></div>
 
       {/* Diagrams */}
       <section className=" relative h-[1400px] md:h-[1000px] bg-gradient-to-b from-white to-blue-200 w-full p-2 text-colorBase">
-     
-     
-
-      <figure className="absolute z-20 md:top-1/4 top-20 scale-150 md:right-16  ">
-        <Image
-              src="/DiseñoWeb/letters/letter-02.svg"
-              alt="emocional"
-              width={100}
-              height={100}
-            />
+        <figure className="absolute z-20 md:top-1/4 top-20 scale-150 md:right-16  ">
+          <Image
+            src="/DiseñoWeb/letters/letter-02.svg"
+            alt="emocional"
+            width={100}
+            height={100}
+          />
         </figure>
 
-      <figure className="absolute z-20 md:top-1/4 md:scale-150 scale-110 top-1/4 ">
-        <Image
-              src="/DiseñoWeb/letters/letter-01.svg"
-              alt="environment"
-              width={500}
-              height={500}
-            />
+        <figure className="absolute z-20 md:top-1/4 md:scale-150 scale-110 top-1/4 ">
+          <Image
+            src="/DiseñoWeb/letters/letter-01.svg"
+            alt="environment"
+            width={300}
+            height={300}
+          />
         </figure>
 
-
-        <figure className="absolute ">
-        <Image
-              src="/DiseñoWeb/letters/letter-01.svg"
-              alt="environment"
-              width={1500}
-              height={1500}
-            />
-        </figure>
-
-
-        <h2 className="text-2xl font-BebasNeue text-center mb-4 text-title">
+        <h2 className="text-2xl font-BebasNeue text-center mb-4 mt-5 text-title">
           A different lifestyle...
         </h2>
-        <div className="relative flex justify-center items-center bg-slate-300 bg-opacity-10 backdrop-blur-md p-4 rounded-md h-2/4 shadow-lg z-10">
+        <div className="relative flex justify-center items-center bg-slate-300 bg-opacity-10 backdrop-blur-xl p-4 rounded-md h-2/4 shadow-lg z-10">
           <div className="absolute top-10 flex justify-center items-center gap-2 p-2 xl:p-5">
             {topIcons.map((src, index) => (
               <div

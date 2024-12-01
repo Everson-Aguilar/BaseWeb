@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image"; // Importa el componente Image de Next.js
 
 //componente
 
@@ -11,24 +12,43 @@ const SplitLayout: React.FC = () => {
 
     <main className=" h-screen flex flex-col bg-colorBase p-5">
       {/* Parte superior: dividida verticalmente */}
-      <section className="flex flex-1">
-        <div className=" text-8xl text-trend  flex-1 flex font-BebasNeue items-center justify-center border border-gray-300">
-          <h1 className="scale-350">SHOP</h1>
-        </div>
-        <section className="flex-1 font-BebasNeue text-5xl text-trend  flex items-center justify-center border border-gray-300">
-          <span className="text-8xl">3D</span>
+      <section className=" relative flex-row md:flex flex-1">
+
+        <section className=" relative h-full text-8xl text-colorBase w-full md:w-1/2 flex font-BebasNeue items-center justify-center border border-gray-300">
+        
+          <h1 className=" absolute scale-350">SHOP</h1>
+
+          <figure>
+
+          <Image
+              src="/DiseñoWeb/shop/market.jpg"
+              alt="Logo"
+              width={800}
+              height={800}
+            />
+
+
+          </figure>
+
+        </section>
+
+        
+
+        <section className=" overflow-hidden relative h-full  w-full md:w-1/2 font-BebasNeue text-5xl text-trend md:justify-center md:items-center  flex  border border-gray-300">
+          <span className="  text-8xl">3D</span>
           <h2>Environment/parts</h2>
-          <h3 className="text-orange-400 scale-250">
+          <h3 className="absolute text-orange-400 scale-250 left-1/2  ">
             {" "}
             <br />
             ART LATAM
           </h3>
         </section>
+
       </section>
 
       {/* Parte inferior: 1/4 de la altura */}
-      <article className="h-1/4 flex items-center justify-center bg-trend border shadow-2xl border-gray-300 p-5">
-        <p className="text-lg leading-relaxed text-colorBase">
+      <article className=" relative h-fill flex  h-fil bg-trend border shadow-2xl border-gray-300 p-5">
+        <p className="text-sm  leading-relaxed text-colorBase">
           <span className="font-semibold text-orange-400 ">
             Diseños exclusivos con estilo artístico exclusivo Latam, mano
             artística latinoamericana con historia rica de emociones,
@@ -48,7 +68,7 @@ const SplitLayout: React.FC = () => {
           </span>{" "}
           destacando la exclusividad de tu compra.
         </p>
-      </article>
+      </article> 
 
       
 

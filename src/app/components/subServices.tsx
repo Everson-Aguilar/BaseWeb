@@ -69,6 +69,24 @@ const PackageList: React.FC = () => {
     scrollContainerRef.current.scrollLeft = scrollLeft - deltaX;
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setIsDragging(true);
+    setStartX(e.touches[0].clientX);
+    if (scrollContainerRef.current) {
+      setScrollLeft(scrollContainerRef.current.scrollLeft);
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isDragging || !scrollContainerRef.current) return;
+    const deltaX = e.touches[0].clientX - startX;
+    scrollContainerRef.current.scrollLeft = scrollLeft - deltaX;
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
   return (
     <>
       <h2 className="font-BebasNeue text-4xl text-trend border-b-2">SubServices</h2>
@@ -79,18 +97,21 @@ const PackageList: React.FC = () => {
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         {packages.map((pkg: Package, index: number) => (
           <div
             key={index}
-            className="relative min-w-[350px] text-colorBase md:w-2/6 bg-trend mt-5 p-4 rounded-lg shadow-lg select-none "
+            className="relative min-w-[350px] text-colorBase md:w-2/6 bg-trend mt-5 p-4 rounded-lg shadow-lg select-none"
           >
             <Image
               src={pkg.image}
               alt={pkg.title}
-              width={500}  // Ajusta el ancho según el diseño
-              height={200} // Ajusta la altura según el diseño
-              className="w-full h-fill object-cover rounded-lg  pointer-events-none"
+              width={500}
+              height={200}
+              className="w-full h-fill object-cover rounded-lg pointer-events-none"
             />
             <h3 className="text-xl font-bold mt-3">{pkg.title}</h3>
             <p className="text-sm text-gray-600 mt-1">{pkg.description}</p>

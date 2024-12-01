@@ -20,14 +20,20 @@ const Header: React.FC = () => {
     <header className="bg-trend h-fill w-full z-30 top-0 fixed">
       <nav className="flex text-colorBase items-center justify-between px-4">
         {/* Logo or title */}
-        <div className="font-LibreBarcode128 text-3xl">TuDigitalNegocio.com</div>
+        <div className="font-LibreBarcode128 text-3xl border-b-2 border-orange-400">TuDigitalNegocio.com</div>
 
         {/* Navigation menu */}
-        <ul className={`md:flex ${isMenuOpen ? "block" : "hidden"} space-y-2 md:space-y-0 md:space-x-4 font-sans`}>
+        <ul className={`md:flex ${isMenuOpen ? "block" : "hidden"} space-y-2 md:space-y-0 md:space-x-4 font-sans bg-orange-400`}>
           {routes.map((route, index) => (
-            <li key={index} className="hover:text-orange-400">
+
+            
+
+           
+            <li key={index} className="hover:text-orange-400 p-1" >
+              <span className=" text-5xl">.</span>
               <Link href={route.href}>{route.label}</Link>
             </li>
+            
           ))}
         </ul>
 

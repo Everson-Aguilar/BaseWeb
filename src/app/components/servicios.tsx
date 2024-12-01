@@ -6,7 +6,7 @@ const EmptyComponent: React.FC = () => {
   return (
     <aside className=" relative flex-row  md:flex  w-screen bg-trend">
       <section className=" w-full md:w-1/3  ">
-        <text className=" md:h-4/6 text-center ">
+        <div className=" md:h-4/6 text-center ">
           <h2 className="text-colorBase  translate-y-5 justify-center text-3xl font-Staatliches ">
             <span className="border-b-2">Available Services</span>
             <section>
@@ -74,7 +74,7 @@ const EmptyComponent: React.FC = () => {
               </section>
             </section>
           </h2>
-        </text>
+        </div>
 
         {/* 01 */}
         <section className=" relative  md:h-1/3 flex text-center justify-center items-center p-5   ">
@@ -83,9 +83,9 @@ const EmptyComponent: React.FC = () => {
             Contact us and discover how, with our tools and expertise, we can create an innovative and unique design for your professional projects.
           </h2>
 
-          <text className=" w-4/6 text-xs text-colorBase p-1">
+          <h2 className=" w-4/6 text-xs text-colorBase p-1">
             <span className=" text-5xl">!</span> From architectural plans to modern houses, buildings, bridges, parks, plazas, forests, mountains, and urban landscapes, we craft customized solutions that blend functionality and aesthetics to make your project stand out!
-          </text>
+          </h2>
         </section>
       </section>
 
@@ -120,7 +120,7 @@ const EmptyComponent: React.FC = () => {
           objectFit="cover"
         />
 
-        <figure className=" relative  w-3/5 p-5">
+        <figure className=" relative overflow-hidden  w-3/5 p-5">
           <div className=" h-fill  flex justify-center items-center ">
             <Image
               src="/DiseñoWeb/logogris.svg"
@@ -145,9 +145,9 @@ const EmptyComponent: React.FC = () => {
           </h2>
         </figure>
 
-        <aside className="relative w-full md:w-1/3 p-5 bg-colorBase text-trend bg-opacity-30 backdrop-blur-md rounded-lg">
+        <aside className="relative w-full md:w-1/3 p-5 overflow-hidden bg-colorBase text-trend bg-opacity-30 backdrop-blur-md rounded-lg">
   <p className="text-lg md:text-xl leading-relaxed">
-    <strong className="text-2xl">We create immersive 3D environments</strong> for video games, architecture, and entertainment. Our team blends creativity with cutting-edge technical solutions to craft <strong>high-quality virtual worlds</strong> that prioritize user experience. Whether natural, urban, or futuristic, we bring your ideas to life with style and precision.
+    <strong className="text-1xl">We create immersive 3D environments</strong> for video games, architecture, and entertainment. Our team blends creativity with cutting-edge technical solutions to craft <strong>high-quality virtual worlds</strong> that prioritize user experience. Whether natural, urban, or futuristic, we bring your ideas to life with style and precision.
   </p>
 </aside>
 

@@ -103,7 +103,7 @@ const Galeria: React.FC = () => {
 
       {/* Artista Digital */}
       <article className="p-5">
-  <text className="mt-10 text-title">
+  <div className="mt-10 text-title">
     <h2 className="text-trend font-BebasNeue text-xl">
       STEPS TO CREATE ACCESSORIES AS A DIGITAL ARTIST:
     </h2>
@@ -132,7 +132,7 @@ const Galeria: React.FC = () => {
       <li>*Adobe Premiere</li>
       <li>*Adobe Illustrator</li>
     </ul>
-  </text>
+  </div>
 </article>
 
     </section>
