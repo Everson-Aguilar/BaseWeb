@@ -82,13 +82,13 @@ const ProductPanel: React.FC = () => {
   return (
     <>
       <Header />
-      <main className="relative flex mt-40 p-4 w-full mx-auto gap-6">
+      <main className="relative flex   p-4 w-full mx-auto gap-6">
 
   
 
         {/* Listado de productos */}
         {products.map((product, index) => (
-          <div key={index} className=" border border-gray-300 rounded-lg shadow-lg p-4">
+          <section key={index} className=" border border-gray-300 rounded-lg shadow-lg p-4">
 
 <figure>
 
@@ -129,11 +129,11 @@ const ProductPanel: React.FC = () => {
             <article className="mb-3">
               <h3 className="text-lg font-Staatliches">Detalles Técnicos:</h3>
               <ul className="text-sm">
-                <li>Polígonos: {product.technicalDetails.polygons}</li>
-                <li>Tamaño: {product.technicalDetails.size}</li>
-                <li>Formatos de archivo: {product.technicalDetails.fileFormat.join(", ")}</li>
-                <li>Compatibilidad: {product.technicalDetails.compatibility.join(", ")}</li>
-                <li>Accesorios: {product.technicalDetails.accessories.join(", ")}</li>
+                <li> <strong>Polígonos:</strong> {product.technicalDetails.polygons}</li>
+                <li><strong>Tamaño:</strong> {product.technicalDetails.size}</li>
+                <li><strong>Formatos de archivo:</strong> {product.technicalDetails.fileFormat.join(", ")}</li>
+                <li><strong>Compatibilidad:</strong> {product.technicalDetails.compatibility.join(", ")}</li>
+                <li><strong>Accesorios: </strong>{product.technicalDetails.accessories.join(", ")}</li>
               </ul>
             </article>
 
@@ -141,7 +141,7 @@ const ProductPanel: React.FC = () => {
             <section className="buyer-info">
               <p className="font-Staatliches text-2xl">Comprado por: {product.buyerName}</p>
             </section>
-          </div>
+          </section>
         ))}
       </main>
     </>

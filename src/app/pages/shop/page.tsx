@@ -22,7 +22,7 @@ const SplitLayout: React.FC = () => {
 
           <Image
               src="/DiseñoWeb/shop/market.jpg"
-              alt="Logo"
+              alt="marketplace"
               width={800}
               height={800}
             />
@@ -75,7 +75,7 @@ const SplitLayout: React.FC = () => {
     </main>
 
 
-    <section className=" h-screen"> <Products/></section>
+    <section><Products/></section>
 
 
     </div>
