@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/header";
+import Image from "next/image"; // Importa el componente Image de Next.js
 
 // Definición de tipos para los datos del producto
 interface TechnicalDetails {
@@ -57,31 +58,66 @@ const ProductPanel: React.FC = () => {
       },
       buyerName: "Ana Gómez",
     },
+
+    {
+      title: "Nuevo Entorno 3D",
+      description: "Un entorno innovador para proyectos creativos.",
+      price: "$249",
+      isFeatured: false,
+      specialDescription: "Destacado por su diseño moderno y funcionalidad.",
+      usage: ["Arquitectura", "Visualizaciones"],
+      technicalDetails: {
+        polygons: 75000,
+        accessories: ["Cámara avanzada", "Sombras dinámicas"],
+        size: "15MB",
+        fileFormat: ["FBX", "GLTF"],
+        compatibility: ["Unreal Engine", "Blender"],
+      },
+      buyerName: "Ana Gómez",
+    }
+
+
   ];
 
   return (
     <>
       <Header />
-      <main className="relative mt-40 p-4 w-full max-w-4xl mx-auto grid grid-cols-1 gap-6">
+      <main className="relative flex mt-40 p-4 w-full mx-auto gap-6">
+
+  
+
         {/* Listado de productos */}
         {products.map((product, index) => (
-          <div key={index} className="product-container border border-gray-300 rounded-lg shadow-lg p-4">
+          <div key={index} className=" border border-gray-300 rounded-lg shadow-lg p-4">
+
+<figure>
+
+<Image
+    src="/DiseñoWeb/shop/product.png"
+    alt="products"
+    width={500}
+    height={500}
+  />
+
+
+</figure>
+
             {/* Título y Descripción */}
             <article className="title-description mb-3">
-              <h1 className="text-xl font-bold">{product.title}</h1>
-              <p className="text-sm">{product.description}</p>
-              <p className="font-semibold mt-2">Precio: {product.price}</p>
+              <h1 className="text-5xl font-Staatliches">{product.title}</h1>
+              <p className="text-sm font-Staatliches">{product.description}</p>
+              <p className="font-BebasNeue text-5xl">Precio: {product.price}</p>
             </article>
 
             {/* Detalles Especiales */}
             <article className="special-description mb-3">
-              <h3 className="text-lg font-semibold">¿Por qué es especial?</h3>
+              <h3 className="text-lg font-Staatliches">¿Por qué es especial?</h3>
               <p className="text-sm">{product.specialDescription}</p>
             </article>
 
             {/* Usos */}
             <article className="usage mb-3">
-              <h3 className="text-lg font-semibold">Usos:</h3>
+              <h3 className="text-lg font-Staatliches">Usos:</h3>
               <ul className="text-sm">
                 {product.usage.map((use, idx) => (
                   <li key={idx}>{use}</li>
@@ -90,8 +126,8 @@ const ProductPanel: React.FC = () => {
             </article>
 
             {/* Detalles Técnicos */}
-            <article className="technical-details mb-3">
-              <h3 className="text-lg font-semibold">Detalles Técnicos:</h3>
+            <article className="mb-3">
+              <h3 className="text-lg font-Staatliches">Detalles Técnicos:</h3>
               <ul className="text-sm">
                 <li>Polígonos: {product.technicalDetails.polygons}</li>
                 <li>Tamaño: {product.technicalDetails.size}</li>
@@ -103,7 +139,7 @@ const ProductPanel: React.FC = () => {
 
             {/* Información del comprador */}
             <section className="buyer-info">
-              <p className="font-semibold text-sm">Comprado por: {product.buyerName}</p>
+              <p className="font-Staatliches text-2xl">Comprado por: {product.buyerName}</p>
             </section>
           </div>
         ))}

@@ -11,7 +11,7 @@ const Contact = () => {
   };
 
   return (
-    <button className="p-5 pr-10 z-30 flex justify-end bottom-5 fixed w-full">
+    <nav className="p-5 pr-10 z-30 flex justify-end bottom-5 fixed w-full">
       {/* Botón para abrir el popup */}
       <a
         onClick={togglePopup} // Maneja el clic para abrir o cerrar el popup
@@ -116,7 +116,7 @@ const Contact = () => {
           </div>
         </nav>
       )}
-    </button>
+    </nav>
   );
 };
 

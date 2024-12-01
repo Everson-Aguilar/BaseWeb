@@ -29,7 +29,7 @@ const Header: React.FC = () => {
             
 
            
-            <li key={index} className="hover:text-orange-400 p-1" >
+            <li key={index} className="hover:text-rose-600 p-1" >
               <span className=" text-5xl">.</span>
               <Link href={route.href}>{route.label}</Link>
             </li>

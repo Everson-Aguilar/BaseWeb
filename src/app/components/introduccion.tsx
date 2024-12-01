@@ -24,8 +24,19 @@ const ComicStory: React.FC = () => {
 
       <div className=" text-8xl relative text-trend font-SixCaps"> With our  help, we can bring the <span className="border-b-2 border-b-rose-600"> idea in your mind to life.</span> Go ahead, <span className=" text-orange-600 font-PermanentMarker"> invent!</span></div>
 
+      <figure className="absolute z-20 md:top-36 md:scale-250 scale-110 top-[800px] ">
+          <Image
+            src="/DiseñoWeb/letters/letter-01.svg"
+            alt="environment"
+            width={300}
+            height={300}
+          />
+        </figure>
+
+
+
       {/* Diagrams */}
-      <section className=" relative h-[1400px] md:h-[1000px] bg-gradient-to-b from-white to-blue-200 w-full p-2 text-colorBase">
+      <section className=" relative h-[1400px] md:h-[1000px] bg-gradient-to-b overflow-hidden from-white to-blue-200 w-full p-2 text-colorBase">
         <figure className="absolute z-20 md:top-1/4 top-20 scale-150 md:right-16  ">
           <Image
             src="/DiseñoWeb/letters/letter-02.svg"
@@ -35,14 +46,7 @@ const ComicStory: React.FC = () => {
           />
         </figure>
 
-        <figure className="absolute z-20 md:top-1/4 md:scale-150 scale-110 top-1/4 ">
-          <Image
-            src="/DiseñoWeb/letters/letter-01.svg"
-            alt="environment"
-            width={300}
-            height={300}
-          />
-        </figure>
+      
 
         <h2 className="text-2xl font-BebasNeue text-center mb-4 mt-5 text-title">
           A different lifestyle...
@@ -80,7 +84,7 @@ const ComicStory: React.FC = () => {
             ))}
           </div>
 
-          <div className="flex justify-center items-center rounded-full w-60 h-60 panel">
+          <div className="flex justify-center items-center rounded-full w-60 h-full panel">
             <div className="absolute bg-trend h-1 w-60"></div>
             <div className="absolute font-BebasNeue text-4xl text-trend">
               Real <br /> Virtual
