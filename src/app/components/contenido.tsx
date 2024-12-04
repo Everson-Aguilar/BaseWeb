@@ -13,22 +13,15 @@ interface Content {
 
 const contentList: Content[] = [
   {
-    title: "Cultura LATAM en tus Videojuegos: ¡Es Hora de Dejar de Imitar y Empezar a Crear con Orgullo Latino!",
-    objective: "Revitalizar la industria del videojuego con la esencia auténtica de LATAM.",
-    summary: "El diseño latinoamericano está lleno de emociones, colores vibrantes y una esencia única que muchos extranjeros intentan copiar. Es hora de integrar esta esencia en un mundo distorsionado, dejando atrás lo imitativo y abrazando lo auténtico, lo vibrante, lo que nos define como latinoamericanos.",
-    image: "/images/survival.jpg",
-    ContentStatus: "disponible",
-    link: "/content/", // URL personalizada
-  },
-
-  {
-    title: "The Art of Survival",
-    objective: "Unveiling the truth behind social distortion.",
-    summary: "An approach to identifying and escaping the false realities of our era.",
-    image: "/images/survival.jpg",
-    ContentStatus: "investigating...",
-    link: "/content/the-art-of-survival", // URL personalizada
-  },
+    title: "LATAM Culture in Your Video Games: It's Time to Stop Imitating and Start Creating with Latin Pride!",
+    objective: "Revitalize the video game industry with the authentic essence of LATAM.",
+    summary: "Latin American design is full of emotions, vibrant colors, and a unique essence that many outsiders try to replicate. It's time to integrate this essence into a distorted world, leaving behind imitation and embracing what is authentic, vibrant, and defines us as Latin Americans.",
+    image: "/contenido/MiniContenido/c1.png",
+    ContentStatus: "available",
+    link: "/content/" // Custom URL
+  }
+  
+ 
 ];
 
 const ContentContainer: React.FC = () => {
@@ -51,7 +44,7 @@ const ContentContainer: React.FC = () => {
           <Link href={content.link} key={index}> {/* Usamos la propiedad 'link' para la URL personalizada */}
             <article className="bg-trend text-colorBase p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
               {/* Image Section */}
-              <div className="relative h-48 w-full mb-4">
+              <figure className="relative h-80 w-full mb-4">
                 <Image
                   src={content.image}
                   alt={content.title}
@@ -59,7 +52,7 @@ const ContentContainer: React.FC = () => {
                   objectFit="cover"
                   className="rounded-lg"
                 />
-              </div>
+              </figure>
               {/* Text Section */}
               <h2 className="text-2xl font-bold mb-2">{content.title}</h2>
               <p className="text-orange-400 font-semibold mb-2">{content.objective}</p>

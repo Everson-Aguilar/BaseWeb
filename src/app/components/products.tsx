@@ -82,13 +82,13 @@ const ProductPanel: React.FC = () => {
   return (
     <>
       <Header />
-      <main className="relative flex   p-4 w-full mx-auto gap-6">
+      <main className="relative md:flex  flex-row  p-4 w-full mx-auto gap-6">
 
   
 
         {/* Listado de productos */}
         {products.map((product, index) => (
-          <section key={index} className=" border border-gray-300 rounded-lg shadow-lg p-4">
+          <section key={index} className=" border rounded-lg shadow-lg p-4">
 
 <figure>
 

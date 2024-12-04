@@ -16,7 +16,7 @@ const SplitLayout: React.FC = () => {
 
         <section className=" relative h-full text-8xl text-colorBase w-full md:w-1/2 flex font-BebasNeue items-center justify-center border border-gray-300">
         
-          <h1 className=" absolute scale-350">SHOP</h1>
+          <h1 className=" absolute scale-200 md:scale-350">SHOP</h1>
 
           <figure>
 

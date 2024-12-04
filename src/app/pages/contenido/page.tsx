@@ -1,9 +1,12 @@
 import React from 'react';
-import Content from '../../components/contenido'
+
 
 //componente
 
+
 import Header from "../../components/header";
+
+import Content from '../../components/contenido'
 
 
 
@@ -29,7 +32,7 @@ const FirstAidKit: React.FC = () => {
     <section className="bg-trend text-colorBase py-12 px-6 md:px-12">
       {/* Title with animation */}
       <div className="text-center mb-8">
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4 text-gradient animate__animated animate__fadeIn">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4  mt-5 text-gradient animate__animated animate__fadeIn">
           The Art of Survival: First Aid Kit for Chaos
         </h1>
         <p className="text-lg md:text-xl text-gray-300">

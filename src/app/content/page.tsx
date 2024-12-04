@@ -3,38 +3,46 @@ import Image from "next/image";
 
 // imagenes
 
-const images = [
-  { src: "/images/nature1.jpg", alt: "Naturaleza 1", width: 200, height: 200 },
-  { src: "/images/nature2.jpg", alt: "Naturaleza 2", width: 200, height: 200 },
-  { src: "/images/nature3.jpg", alt: "Naturaleza 3", width: 200, height: 200 },
-  { src: "/images/nature4.jpg", alt: "Naturaleza 4", width: 200, height: 200 },
-  { src: "/images/nature3.jpg", alt: "Naturaleza 5", width: 200, height: 200 },
-  { src: "/images/nature4.jpg", alt: "Naturaleza 6", width: 200, height: 200 },
-  { src: "/images/nature4.jpg", alt: "Naturaleza 7", width: 200, height: 200 },
-];
-
 const CulturaLATAM: React.FC = () => {
   return (
-    <section className="p-5 bg-trend text-colorBase ">
-      <h1 className="text-7xl font-BebasNeue mb-6 text-center">
-        Cultura <span className="bg-orange-400">LATAM </span>en tus Videojuegos:
-        ¡Es Hora de Dejar de Imitar y Empezar a Crear con Orgullo Latino!
-      </h1>
+    <section className=" relative p-5 bg-trend text-colorBase ">
+      <section className="relative h-1/2   ">
+        <h1 className=" relative pt-24  z-20 p-5 text-7xl font-BebasNeue mb-6 text-center">
+          <span className="text-orange-400">Cultura </span>
+          <span className="bg-orange-400 p-5">LATAM </span>{" "}
+          <span className="bg-trend p-2">
+            en tus Videojuegos: ¡Es Hora de Dejar de Imitar y Empezar a Crear
+            con Orgullo Latino!
+          </span>
+        </h1>
 
-      <p className="text-sm   leading-relaxed mb-6">
-        <span className=" text-7xl text-orange-400">!</span>El arte
-        latinoamericano se distingue por su alma vibrante, llena de energía,
-        pasión y un espíritu único. ¡Somos un torbellino de colores, historia y
-        tradiciones que nos definen! A diferencia de otras culturas más serias o
-        frías, en LATAM somos conocidos por nuestra viveza, alegría y esa
-        “malicia” encantadora que nos hace tan auténticos. ¿Imaginas integrar
-        este estilo tan vivo y dinámico en tus diseños? ¡Podría hacer que tu
-        proyecto se destaque por su desorden, pero de una forma llamativa,
-        creativa y única!
-      </p>
+        <p className="relative z-20 text-sm  p-5 leading-relaxed mb-6">
+          <span className=" text-7xl  text-orange-400">!</span>En LATAM somos
+          conocidos por nuestra viveza, alegría y esa “malicia” encantadora que
+          nos hace tan auténticos. ¿Imaginas integrar este estilo tan vivo y
+          dinámico en tus diseños? ¡Podría hacer que tu proyecto se destaque por
+          su desorden, pero de una forma llamativa, creativa y única!
+        </p>
 
-      <section className=" flex gap-5">
-        <section className="md:w-1/2 border-2 p-5 border-colorBase">
+        <div className="absolute top-0 h-full w-full bg-gradient-to-b from-trend rotate-180 to-transparent z-10"></div>
+
+        <Image
+          src="contenido\cap01/latamOpti.png" // Ruta relativa desde la carpeta `public`
+          alt="latinoamerica"
+          layout="fill"
+          className="absolute top-0"
+        />
+
+        <section className="relative z-10 top-0 p-5">
+          <p>
+            {" "}
+            imagen tomada por{" "}
+            <span className=" text-orange-400 ">tudigitalnegocio.com</span>
+          </p>
+        </section>
+      </section>
+      <section className=" relative flex-row md:flex gap-5 space-y-5">
+        <section className="md:w-1/2 border-2 p-5 mt-5  border-colorBase">
           <h2 className=" text-4xl font-BebasNeue">
             ¿Qué hace único al Arte LATAM?
           </h2>
@@ -159,215 +167,82 @@ const CulturaLATAM: React.FC = () => {
           </p>
         </section>
       </section>
-
-      <figure className=" flex p-5 shadow-xl">
-        <section>
-          <Image
-            src="contenido\cap01/latamOpti.png" // Ruta relativa desde la carpeta `public`
-            alt="latinoamerica"
-            width={800}
-            height={1000}
-          />
-
-          <p>
-            {" "}
-            imagen tomada por{" "}
-            <span className=" text-orange-400">tudigitalnegocio.com</span>
-          </p>
-        </section>
-
-        <section>a</section>
-      </figure>
-
+      <figure className="  flex p-5 shadow-xl"></figure>
       <h2 className=" text-4xl mt-10 font-BebasNeue">
         BASE DE UN ENTORNO LATINOAMERICANO:
       </h2>
 
-      <section>
-        <ol className=" border-2 border-colorBase p-5 gap-5 overflow-auto">
-          <section>
-            <article className="flex gap-4 ">
-              {images.map((image, index) => (
-                <figure key={index} className="relative w-full h-auto">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={image.width}
-                    height={image.height}
-                    className="rounded-lg shadow-lg bg-orange-400"
-                  />
-                </figure>
-              ))}
-            </article>
-          </section>
+      <article>
 
-          <section className=" flex  p-5 gap-24 ">
-            {/* Naturaleza */}
-            <section className="w-full md:w-1/2">
-              <li className="text-4xl text-trend font-BebasNeue border-orange-400 border-2 bg-orange-400 shadow-2xl rounded-xl">
-                Naturaleza, es la base de la esencia.
-              </li>
+     
+  <h2>Sur de Barranquilla: Un Pueblo Disfrazado de Ciudad</h2>
+  
+  <div>
+    <h3 className="text-orange-400 text-2xl">División Cultural Basada en la Economía</h3>
+    <p>
+      En el sur de Barranquilla, las personas humildes son comunes y vibrantes. Su vestimenta ligera y sus costumbres reflejan un estilo de vida adaptado al clima caliente. La falta de tecnología avanzada y las casas reconstruidas con materiales básicos, como ladrillos rojos y ventanas de metal, son indicadores de pobreza avanzada.
+    </p>
+    <p>
+      <strong className="underline">PUNTO CLAVE:</strong> Casas con materiales básicos, ladrillos rojos y rejas son representativas. Las rejas son un símbolo clave, como si fueran canarios atrapados.
+    </p>
+  </div>
+  
+  <div>
+    <h3 className="text-orange-400 text-2xl">Atmósfera y Ambiente</h3>
+    <p>
+      El ruido constante, la música en cada esquina y los grupitos que ven fútbol son parte esencial del sur. Las calles son siempre bulliciosas, con tiendas en cada esquina. Los colores cálidos, el calor y las brisas fuertes dan la sensación de estar en una playa.
+    </p>
+    <p>
+      <strong className="underline">PUNTO CLAVE:</strong> La atmósfera es de playa sin agua. Los árboles de mango son una obligación, deben estar presentes.
+    </p>
+  </div>
+  
+  <div>
+    <h3 className="text-orange-400 text-2xl">Estilo de Vida</h3>
+    <p>
+      La gente es vibrante, fiestera, sociable y humilde. A menudo trabajan en fábricas y llevan vidas de sacrificio. Las casas están acumuladas y las calles sucias, pero hay arte natural en todo. Los niños crecen rápido, y la juventud se vive al máximo con pocos recursos, mucho alcohol y algunas veces delincuencia.
+    </p>
+    <p>
+      <strong className="underline">PUNTO CLAVE:</strong> Callejones con casas de dos pisos, rejas y baldosas rojas de cuadritos son fundamentales.
+    </p>
+  </div>
+  
+  <div>
+    <h3 className="text-orange-400 text-2xl">Relaciones Sociales</h3>
+    <p>
+      Los patrones sociales agrupan a las personas en islas de intereses comunes. Hay una fidelidad a los grupos y una fuerte división social. Los problemas sociales son enfrentados de manera comunitaria; los actos delictivos como el robo son riesgosos debido a la respuesta violenta.
+    </p>
+    <p>
+      <strong className="underline">PUNTO CLAVE:</strong> Las caletas, tiendas paisas con camionetas 4x4 y la esencia comunitaria son características únicas.
+    </p>
+  </div>
+  
+  <div>
+    <h3 className="text-orange-400 text-2xl">Estilo y Arquitectura</h3>
+    <p>
+      Las casas tienen arreglos caseros, son viejitas y hechas por albañiles locales. Los mobiliarios son para clima caliente, y las rejas son una constante. Los callejones son icónicos, representando la esencia de los pueblos dentro de la ciudad.
+    </p>
+    <p>
+      <strong className="underline">PUNTO CLAVE:</strong> Árboles de mango, rejas, baldosas de arcilla, casas pegadas y el ambiente de playa son elementos esenciales.
+    </p>
+  </div>
+  
+  <div>
+    <h3 className="text-orange-400 text-2xl">Detalles Adicionales</h3>
+    <p>
+      Las personas son interesantes y vibrantes, aunque faltan disciplina en educación y negocios. La delincuencia juvenil, las caletas y los tenderos paisas son parte del paisaje social y cultural del sur. Las mujeres tienen una belleza única adaptada al ambiente cálido, con una genética destacable.
+    </p>
+    <p>
+      <strong className="underline">PUNTO CLAVE:</strong> La combinación de características sociales, culturales y económicas hace del sur de Barranquilla un lugar vibrante y único.
+    </p>
+  </div>
 
-              <ul className="border-2 border-colorBase p-5 bg-colorBase inner-lg mt-3">
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group">
-                  Montañas
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Mesetas
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Llanuras
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Volcanes
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Valle
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Islas
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Desiertos
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Selvas
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Delta
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Playas
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Cañones
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-              </ul>
-            </section>
 
-            {/* Plantas y animales */}
-            <section>
-              <li className="text-4xl text-trend font-BebasNeue border-orange-400 border-2  bg-orange-400 shadow-2xl rounded-xl">
-                Plantas y animales
-              </li>
-            </section>
 
-            {/* Estilo arquitectónico */}
-            <section>
-              <li className="text-4xl text-trend font-BebasNeue border-orange-400 border-2  bg-orange-400 shadow-2xl rounded-xl">
-                Su estilo arquitectónico es muy representativo.
-              </li>
-              <ul className="border-2 border-colorBase p-5 bg-colorBase inner-lg mt-3">
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group">
-                  Estilo Colonial
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Estilo Neocolonial
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Estilo Vernáculo
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Estilo Patagónico
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Estilo Modernista o Contemporáneo
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Estilo Mexicano Tradicional
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Estilo Andino
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-                <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                  Estilo Tropical (Caribeño)
-                  <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                </li>
-              </ul>
-            </section>
+    
 
-            {/* Atmósfera */}
-            <section>
-              <li className="text-4xl text-trend font-BebasNeue border-orange-400 border-2  bg-orange-400 shadow-2xl rounded-xl">
-                La atmósfera.
-              </li>
-            </section>
+      </article>
 
-            {/* Mas */}
-            <section>
-              <ol className="flex pl-6 text-lg border-2 border-orange-400 p-5 gap-5">
-                {/* Los objetos comunes */}
-                <section>
-                  <li className="text-4xl text-trend font-BebasNeue border-orange-400 border-2 bg-orange-400 shadow-2xl rounded-xl">
-                    Los objetos comunes que suelen usar los habitantes.
-                  </li>
-                  <ul className="border-2 border-colorBase p-5 bg-colorBase inner-lg mt-3">
-                    <li className="text-orange-400 text-2xl font-BebasNeue relative group">
-                      Hay muchas cosas comunes que usan, eso puede ser una buena
-                      representación de la vida de los individuos.
-                      <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                    </li>
-                  </ul>
-                </section>
-
-                {/* La pobreza y métodos caseros */}
-                <section>
-                  <li className="text-4xl text-trend font-BebasNeue border-orange-400 border-2  bg-orange-400 shadow-2xl rounded-xl">
-                    La pobreza y métodos caseros.
-                  </li>
-                  <ul className="border-2 border-colorBase p-5 bg-colorBase inner-lg mt-3">
-                    <li className="text-orange-400 text-2xl font-BebasNeue relative group">
-                      La pobreza, los métodos caseros para poder crear una vida
-                      sostenible, es un detalle muy importante.
-                      <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                    </li>
-                  </ul>
-                </section>
-
-                {/* Sucesos ordinarios */}
-                <section>
-                  <li className="text-4xl text-trend font-BebasNeue border-orange-400 border-2 bg-orange-400 shadow-2xl rounded-xl">
-                    Los sucesos ordinarios.
-                  </li>
-                  <ul className="border-2 border-colorBase p-5 bg-colorBase inner-lg mt-3">
-                    <li className="text-orange-400 text-2xl font-BebasNeue relative group">
-                      La suciedad, el deporte como el fútbol, billares. Hay que
-                      exponer esos objetos que entretienen a los
-                      latinoamericanos, exponer el conformismo de las personas
-                      latinoamericanas, personas que no salen de lo habitual y
-                      siguen esa tendencia común.
-                      <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                    </li>
-                    <li className="text-orange-400 text-2xl font-BebasNeue relative group mt-2">
-                      Como somos muy unidos, las mismas cosas que nos
-                      entretienen nos representan.
-                      <span className="absolute left-0 bottom-0 w-0 h-1 bg-red-700 transition-all duration-500 ease-out group-hover:w-full"></span>
-                    </li>
-                  </ul>
-                </section>
-              </ol>
-            </section>
-          </section>
-        </ol>
-      </section>
     </section>
   );
 };
