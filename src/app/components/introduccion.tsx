@@ -23,15 +23,18 @@ const ComicStory: React.FC = () => {
     <div className="w-full flex flex-col md:flex-row text-colorBase p-5 justify-center items-center">
 
       <div className=" text-8xl relative text-trend font-SixCaps"> With our  help, we can bring the <span className="border-b-2 border-b-rose-600"> idea in your mind to life.</span> Go ahead, <span className=" text-orange-600 font-PermanentMarker"> invent!</span></div>
+     
 
-      <figure className="absolute z-20 md:top-36 md:scale-250 scale-110 top-[800px] ">
-          <Image
-            src="/DiseñoWeb/letters/letter-01.svg"
-            alt="environment"
-            width={300}
-            height={300}
+     <figure>
+     <Image
+            src="/DiseñoWeb/letters/letter-02.svg"
+            alt="emocional"
+            width={100}
+            height={100}
           />
-        </figure>
+
+     </figure>
+    
 
 
 

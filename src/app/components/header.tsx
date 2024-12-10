@@ -13,7 +13,7 @@ const Header: React.FC = () => {
     { href: "/", label: "Home" },
     { href: "/pages/contenido/", label: "How to create a 3D environment" },
     { href: "/pages/shop/", label: "Visual Products" },
-    { href: "/pages/mantenimiento/", label: "I’m an Artist $$$" }, // Opcional para dropdown
+    { href: "/pages/jobs/", label: "jobs" }, // Opcional para dropdown
   ];
 
   return (

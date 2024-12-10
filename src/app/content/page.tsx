@@ -1,33 +1,41 @@
 import React from "react";
 import Image from "next/image";
+import { Metadata } from "next";
 
-// imagenes
+
+
+// Definiendo los metadatos
+export const metadata: Metadata = {
+  title: "How to Create a Latin American 3D Environment",
+  description:
+    "Functionality, Composition, history , These principles will make our design more dynamic, attractive, and enjoyable. LATAM places are surreal, full of energy and magic. For a dull and gray world, a magical environment could be a great choice to convey emotions, powerful vibes, and history through every detail.",
+};
 
 const CulturaLATAM: React.FC = () => {
   return (
-    <section className=" relative p-5 bg-trend text-colorBase ">
-      <section className="relative h-1/2   ">
-        <h1 className=" relative pt-24  z-20 p-5 text-7xl font-BebasNeue mb-6 text-center">
-          <span className="text-orange-400">Cultura </span>
+    <section className="relative p-5 bg-trend text-colorBase">
+      <section className="relative h-1/2">
+        <h1 className="relative pt-24 z-20 p-5 text-7xl font-BebasNeue mb-6 text-center">
+          <span className="text-orange-400">Culture </span>
           <span className="bg-orange-400 p-5">LATAM </span>{" "}
           <span className="bg-trend p-2">
-            en tus Videojuegos: ¡Es Hora de Dejar de Imitar y Empezar a Crear
-            con Orgullo Latino!
+            in Your Video Games: Its Time to Stop Imitating and Start Creating
+            with Latino Pride!
           </span>
         </h1>
 
-        <p className="relative z-20 text-sm  p-5 leading-relaxed mb-6">
-          <span className=" text-7xl  text-orange-400">!</span>En LATAM somos
-          conocidos por nuestra viveza, alegría y esa “malicia” encantadora que
-          nos hace tan auténticos. ¿Imaginas integrar este estilo tan vivo y
-          dinámico en tus diseños? ¡Podría hacer que tu proyecto se destaque por
-          su desorden, pero de una forma llamativa, creativa y única!
+        <p className="relative z-20 text-sm p-5 leading-relaxed mb-6">
+          <span className="text-7xl text-orange-400">!</span> In LATAM, we are
+          known for our liveliness, joy, and that charming “mischief” that makes
+          us so authentic. Can you imagine integrating this vibrant and dynamic
+          style into your designs? It could make your project stand out with
+          chaos, but in a bold, creative, and unique way!
         </p>
 
         <div className="absolute top-0 h-full w-full bg-gradient-to-b from-trend rotate-180 to-transparent z-10"></div>
 
         <Image
-          src="contenido\cap01/latamOpti.png" // Ruta relativa desde la carpeta `public`
+          src="contenido\cap01/latamOpti.png" // Relative path from the `public` folder
           alt="latinoamerica"
           layout="fill"
           className="absolute top-0"
@@ -36,75 +44,71 @@ const CulturaLATAM: React.FC = () => {
         <section className="relative z-10 top-0 p-5">
           <p>
             {" "}
-            imagen tomada por{" "}
-            <span className=" text-orange-400 ">tudigitalnegocio.com</span>
+            Image taken by{" "}
+            <span className="text-orange-400">tudigitalnegocio.com</span>
           </p>
         </section>
       </section>
-      <section className=" relative flex-row md:flex gap-5 space-y-5">
-        <section className="md:w-1/2 border-2 p-5 mt-5  border-colorBase">
-          <h2 className=" text-4xl font-BebasNeue">
-            ¿Qué hace único al Arte LATAM?
+      <section className="relative flex-row md:flex gap-5 space-y-5">
+        <section className="md:w-1/2 border-2 p-5 mt-5 border-colorBase">
+          <h2 className="text-4xl font-BebasNeue">
+            What Makes LATAM Art Unique?
           </h2>
 
           <ul>
             <li>
-              Variedad de colores llamativos que capturan la atención de
-              inmediato.
+              A variety of eye-catching colors that grab attention immediately.
             </li>
             <li>
-              Fuertes influencias indígenas que marcan nuestras raíces y
-              simbolismos.
+              Strong indigenous influences that define our roots and symbolism.
             </li>
             <li>
-              Transformación del arte europeo, ¡lo hacemos a nuestra manera, con
-              un toque único!
+              Transformation of European art, we do it our way, with a unique
+              twist!
             </li>
             <li>
-              Detalles que combinan elementos de todo el mundo, pero siempre
-              reinterpretados a nuestro estilo.
+              Details that blend elements from all over the world, always
+              reinterpreted in our style.
             </li>
             <li>
-              Diseños naturales y tropicales que nos conectan con la calidez de
-              nuestra tierra.
+              Natural and tropical designs that connect us with the warmth of
+              our land.
             </li>
             <li>
-              Un estilo fantasioso, simbólico, surrealista, fusionado con la
-              naturaleza.
+              A fantasy, symbolic, surrealist style fused with nature.
             </li>
             <li>
-              Una gran carga simbólica que representa nuestra identidad como
-              latinoamericanos.
+              A strong symbolic load that represents our identity as
+              Latin-Americans.
             </li>
             <li>
-              Un profundo componente religioso que impregna nuestras tradiciones
-              y la vida cotidiana.
+              A profound religious component that permeates our traditions and
+              daily life.
             </li>
             <li>
-              Somos unidos, amigables, habladores y siempre nos apoyamos como
-              una gran familia.
+              We are united, friendly, talkative, and always support each other
+              like one big family.
             </li>
           </ul>
 
           <p>
-            La esencia latinoamericana no solo se refleja en nuestras obras de
-            arte, sino en la forma en que vivimos y nos conectamos con los
-            demás. ¡Es hora de plasmar esa energía en tus diseños y crear algo
-            que trascienda, que capture la vibrante esencia de LATAM!
+            The essence of Latin America is not only reflected in our works of
+            art but also in the way we live and connect with others. Its time
+            to capture that energy in your designs and create something that
+            transcends, that captures the vibrant essence of LATAM!
           </p>
         </section>
 
         <section className="md:w-1/2 border-2 p-5 border-colorBase">
-          <h2 className=" text-4xl font-BebasNeue">
-            ¿Cómo la aplicamos correctamente a nuestro diseño?
+          <h2 className="text-4xl font-BebasNeue">
+            How Do We Apply It Correctly to Our Designs?
           </h2>
 
           <p>
-            Como cualquier otro estilo que te gustaría agregar a tu diseño, es
-            importante tener muy buena información para colocarlo en el diseño,
-            y exponer la realidad de cómo es el estilo LATAM. Como artista,
-            siempre me baso en tres aspectos al diseñar cualquier cosa, me
-            parece fundamental:
+            Like any other style you want to add to your design, it’s important
+            to have the right information to accurately represent the LATAM
+            style. As an artist, I always base my designs on three key aspects,
+            and I believe these are essential:
           </p>
 
           <ul className="m-5">
@@ -113,7 +117,7 @@ const CulturaLATAM: React.FC = () => {
                 1.
               </span>
               <span className="transition-all duration-500 ease-out bg-orange-400 w-1/4 flex justify-center items-center hover:translate-x-10">
-                Funcionalidad
+                Functionality
               </span>
             </li>
             <li className="flex mt-5">
@@ -121,7 +125,7 @@ const CulturaLATAM: React.FC = () => {
                 2.
               </span>
               <span className="transition-all duration-500 ease-out bg-orange-400 w-1/4 flex justify-center items-center hover:translate-x-10">
-                Composición
+                Composition
               </span>
             </li>
             <li className="flex mt-5">
@@ -129,119 +133,116 @@ const CulturaLATAM: React.FC = () => {
                 3.
               </span>
               <span className="transition-all duration-500 ease-out bg-orange-400 w-1/4 flex justify-center items-center hover:translate-x-10">
-                Historia
+                History
               </span>
             </li>
           </ul>
 
           <p>
-            Estas bases harán que nuestro diseño sea más dinámico, entretenido y
-            útil, agradable al estar, y es que los lugares LATAM son
-            surrealistas y son una zona de mucha vibra. Para un mundo gris y
-            sobrio, un entorno mágico puede ser una muy buena opción para
-            transmitir emociones, vibras muy fuertes e historia a través de cada
-            detalle del entorno.
+            These principles will make our design more dynamic, engaging, and
+            enjoyable. LATAM places are surreal, full of energy, and magical. For
+            a dull and grey world, a magical environment could be a great option
+            to convey emotions, powerful vibes, and history through every detail.
           </p>
 
           <p>
-            No todo debe ser bonito y bueno; el arte LATAM tiene su lado oscuro,
-            estética fuerte, porque somos muy groseros. No hay comparación de
-            cómo transmitimos el mal, ahí también lo podemos reflejar. El arte
-            LATAM es un multiplicador de emociones, no tenemos pudor ni nos
-            contenemos para expresarnos, somos naturales, sociables, muy
-            criticones y necios, somos muy ruidosos y fiesteros.
+            Not everything has to be pretty and good; LATAM art has its dark side
+            with a strong aesthetic because we are direct. We don’t hold back
+            when expressing the bad, and that can also be reflected. LATAM art is
+            an emotional amplifier, we have no shame, we express ourselves
+            naturally, we are sociable, talkative, and loud, we love to party.
           </p>
 
           <p>
-            Hay diferentes tipos de complejidad en el diseño de un lugar, pero
-            te explicaré las bases que puedes implementar para así obtener la
-            mínima esencia latina. Ya es tu decisión qué tan latino quieres
-            colocarlo.
+            There are different types of complexity in designing a place, but I
+            will explain the basic principles you can implement to capture the
+            minimum essence of Latin culture. The extent of “Latino” you want to
+            add is up to you.
           </p>
 
           <p>
-            También hay diferentes tipos de emociones a transmitir. Yo, en lo
-            personal, te enseñaré del lado artístico mío, el realista, el
-            neutro, en el que pocos son felices y son cegados por la distorsión
-            de patrones sociales. La vida no es tan bonita del todo.
+            There are also different types of emotions to convey. Personally, I
+            will teach you my artistic approach: the realistic, the neutral, where
+            few are happy and are blinded by the distortion of social patterns.
+            Life is not always as beautiful as it seems.
           </p>
         </section>
       </section>
-      <figure className="  flex p-5 shadow-xl"></figure>
-      <h2 className=" text-4xl mt-10 font-BebasNeue">
-        BASE DE UN ENTORNO LATINOAMERICANO:
+      <figure className="flex p-5 shadow-xl"></figure>
+      <h2 className="text-4xl mt-10 font-BebasNeue">
+        BASE OF A LATIN AMERICAN ENVIRONMENT:
       </h2>
+
+      
 
       <article>
 
-     
-  <h2>Sur de Barranquilla: Un Pueblo Disfrazado de Ciudad</h2>
+  <h2>South Barranquilla: A Town Disguised as a City</h2>
   
   <div>
-    <h3 className="text-orange-400 text-2xl">División Cultural Basada en la Economía</h3>
+    <h3 className="text-orange-400 text-2xl">Cultural Division Based on Economy</h3>
     <p>
-      En el sur de Barranquilla, las personas humildes son comunes y vibrantes. Su vestimenta ligera y sus costumbres reflejan un estilo de vida adaptado al clima caliente. La falta de tecnología avanzada y las casas reconstruidas con materiales básicos, como ladrillos rojos y ventanas de metal, son indicadores de pobreza avanzada.
+      In the south of Barranquilla, humble people are common and vibrant. Their light clothing and customs reflect a lifestyle adapted to the hot climate. The lack of advanced technology and houses rebuilt with basic materials, like red bricks and metal windows, are indicators of advanced poverty.
     </p>
     <p>
-      <strong className="underline">PUNTO CLAVE:</strong> Casas con materiales básicos, ladrillos rojos y rejas son representativas. Las rejas son un símbolo clave, como si fueran canarios atrapados.
+      <strong className="underline">KEY POINT:</strong> Houses made of basic materials, red bricks, and bars are representative. The bars are a key symbol, as if they were canaries trapped inside.
     </p>
   </div>
   
   <div>
-    <h3 className="text-orange-400 text-2xl">Atmósfera y Ambiente</h3>
+    <h3 className="text-orange-400 text-2xl">Atmosphere and Environment</h3>
     <p>
-      El ruido constante, la música en cada esquina y los grupitos que ven fútbol son parte esencial del sur. Las calles son siempre bulliciosas, con tiendas en cada esquina. Los colores cálidos, el calor y las brisas fuertes dan la sensación de estar en una playa.
+      The constant noise, music on every corner, and groups watching football are essential parts of the south. The streets are always bustling, with stores on every corner. The warm colors, heat, and strong breezes give the sensation of being at a beach.
     </p>
     <p>
-      <strong className="underline">PUNTO CLAVE:</strong> La atmósfera es de playa sin agua. Los árboles de mango son una obligación, deben estar presentes.
-    </p>
-  </div>
-  
-  <div>
-    <h3 className="text-orange-400 text-2xl">Estilo de Vida</h3>
-    <p>
-      La gente es vibrante, fiestera, sociable y humilde. A menudo trabajan en fábricas y llevan vidas de sacrificio. Las casas están acumuladas y las calles sucias, pero hay arte natural en todo. Los niños crecen rápido, y la juventud se vive al máximo con pocos recursos, mucho alcohol y algunas veces delincuencia.
-    </p>
-    <p>
-      <strong className="underline">PUNTO CLAVE:</strong> Callejones con casas de dos pisos, rejas y baldosas rojas de cuadritos son fundamentales.
+      <strong className="underline">KEY POINT:</strong> The atmosphere is like a beach without water. Mango trees are a must—they must be present.
     </p>
   </div>
   
   <div>
-    <h3 className="text-orange-400 text-2xl">Relaciones Sociales</h3>
+    <h3 className="text-orange-400 text-2xl">Lifestyle</h3>
     <p>
-      Los patrones sociales agrupan a las personas en islas de intereses comunes. Hay una fidelidad a los grupos y una fuerte división social. Los problemas sociales son enfrentados de manera comunitaria; los actos delictivos como el robo son riesgosos debido a la respuesta violenta.
+      People are vibrant, party-loving, social, and humble. They often work in factories and lead lives of sacrifice. The houses are crowded, and the streets are dirty, but theres natural art everywhere. Children grow up quickly, and youth is lived to the fullest with few resources, much alcohol, and sometimes crime.
     </p>
     <p>
-      <strong className="underline">PUNTO CLAVE:</strong> Las caletas, tiendas paisas con camionetas 4x4 y la esencia comunitaria son características únicas.
-    </p>
-  </div>
-  
-  <div>
-    <h3 className="text-orange-400 text-2xl">Estilo y Arquitectura</h3>
-    <p>
-      Las casas tienen arreglos caseros, son viejitas y hechas por albañiles locales. Los mobiliarios son para clima caliente, y las rejas son una constante. Los callejones son icónicos, representando la esencia de los pueblos dentro de la ciudad.
-    </p>
-    <p>
-      <strong className="underline">PUNTO CLAVE:</strong> Árboles de mango, rejas, baldosas de arcilla, casas pegadas y el ambiente de playa son elementos esenciales.
+      <strong className="underline">KEY POINT:</strong> Alleys with two-story houses, bars, and red checkered tiles are fundamental.
     </p>
   </div>
   
   <div>
-    <h3 className="text-orange-400 text-2xl">Detalles Adicionales</h3>
+    <h3 className="text-orange-400 text-2xl">Social Relationships</h3>
     <p>
-      Las personas son interesantes y vibrantes, aunque faltan disciplina en educación y negocios. La delincuencia juvenil, las caletas y los tenderos paisas son parte del paisaje social y cultural del sur. Las mujeres tienen una belleza única adaptada al ambiente cálido, con una genética destacable.
+      Social patterns group people into islands of common interests. Theres loyalty to the groups, and a strong social division. Social problems are faced communally; criminal acts like theft are risky due to the violent response.
     </p>
     <p>
-      <strong className="underline">PUNTO CLAVE:</strong> La combinación de características sociales, culturales y económicas hace del sur de Barranquilla un lugar vibrante y único.
+      <strong className="underline">KEY POINT:</strong> The caletas, paisa stores with 4x4 trucks, and the communal essence are unique characteristics.
+    </p>
+  </div>
+  
+  <div>
+    <h3 className="text-orange-400 text-2xl">Style and Architecture</h3>
+    <p>
+      The houses have homemade fixes, are old, and built by local bricklayers. The furniture is suited for hot climates, and the bars are a constant. The alleys are iconic, representing the essence of towns within the city.
+    </p>
+    <p>
+      <strong className="underline">KEY POINT:</strong> Mango trees, bars, clay tiles, houses connected, and the beach-like atmosphere are essential elements.
+    </p>
+  </div>
+  
+  <div>
+    <h3 className="text-orange-400 text-2xl">Additional Details</h3>
+    <p>
+      The people are interesting and vibrant, although there is a lack of discipline in education and business. Juvenile delinquency, caletas, and paisa shopkeepers are part of the social and cultural landscape of the south. Women have a unique beauty adapted to the hot environment, with remarkable genetics.
+    </p>
+    <p>
+      <strong className="underline">KEY POINT:</strong> The combination of social, cultural, and economic characteristics makes the south of Barranquilla a vibrant and unique place.
     </p>
   </div>
 
+</article>
 
 
-    
 
-      </article>
 
     </section>
   );

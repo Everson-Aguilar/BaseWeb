@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 // Components
 import Header from "./components/header";
@@ -25,6 +26,9 @@ import "./globals.css";
 const Home: React.FC = () => {
   return (
     <>
+
+
+
       <header>
         <Header />
       </header>
@@ -175,7 +179,7 @@ export default Home;
 }
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "01/11/2024"
+git commit -m "04/12/2024"
 git pull origin main
 git push origin main */
 

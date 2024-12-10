@@ -20,93 +20,71 @@ interface ProductData {
   usage: string[];
   technicalDetails: TechnicalDetails;
   buyerName: string;
+  images: string[]; // Nueva propiedad para las imágenes del producto
+  constructionStatus: string; // Nueva propiedad para el estado de construcción
 }
 
 const ProductPanel: React.FC = () => {
   // Array con varios productos
   const products: ProductData[] = [
     {
-      title: "Entorno 3D exclusivo",
-      description: "Este entorno 3D está diseñado para brindar una experiencia única.",
-      price: "$199",
-      isFeatured: true,
-      specialDescription:
-        "Este entorno es especialmente destacado por su complejidad y detallado diseño.",
+      title: "Palacio griego + Latin",
+      description: "Base de supervivencia o centro de refugio",
+      price: "$240",
+      isFeatured: false,
+      specialDescription: "No",
       usage: ["Juegos", "Animaciones", "Simulaciones"],
       technicalDetails: {
         polygons: 50000,
-        accessories: ["Cámara", "Luces", "Texturas"],
-        size: "10MB",
+        accessories: ["Cámara", "Luces", "Texturas", "Assets"],
+        size: "4.9gb",
         fileFormat: ["FBX", "OBJ"],
-        compatibility: ["Unreal Engine", "Unity"],
+        compatibility: ["Unreal Engine"],
       },
-      buyerName: "Juan Pérez",
+      buyerName: "Disponible",
+      images: ["/DiseñoWeb/shop/products/p1.jpg"],
+      constructionStatus: "En construcción...", // Estado de construcción
     },
-    {
-      title: "Nuevo Entorno 3D",
-      description: "Un entorno innovador para proyectos creativos.",
-      price: "$249",
-      isFeatured: false,
-      specialDescription: "Destacado por su diseño moderno y funcionalidad.",
-      usage: ["Arquitectura", "Visualizaciones"],
-      technicalDetails: {
-        polygons: 75000,
-        accessories: ["Cámara avanzada", "Sombras dinámicas"],
-        size: "15MB",
-        fileFormat: ["FBX", "GLTF"],
-        compatibility: ["Unreal Engine", "Blender"],
-      },
-      buyerName: "Ana Gómez",
-    },
-
-    {
-      title: "Nuevo Entorno 3D",
-      description: "Un entorno innovador para proyectos creativos.",
-      price: "$249",
-      isFeatured: false,
-      specialDescription: "Destacado por su diseño moderno y funcionalidad.",
-      usage: ["Arquitectura", "Visualizaciones"],
-      technicalDetails: {
-        polygons: 75000,
-        accessories: ["Cámara avanzada", "Sombras dinámicas"],
-        size: "15MB",
-        fileFormat: ["FBX", "GLTF"],
-        compatibility: ["Unreal Engine", "Blender"],
-      },
-      buyerName: "Ana Gómez",
-    }
-
-
   ];
 
   return (
     <>
       <Header />
-      <main className="relative md:flex  flex-row  p-4 w-full mx-auto gap-6">
-
-  
-
+      <main className="relative bg-colorBase md:flex flex-row p-4 w-full mx-auto gap-6">
         {/* Listado de productos */}
         {products.map((product, index) => (
-          <section key={index} className=" border rounded-lg shadow-lg p-4">
+          <section key={index} className="border-4 pr-5 pl-5">
+            <figure className="relative w-full flex justify-center items-center mb-2 mt-2">
 
-<figure>
+            <h2 className=" absolute z-20 bg-colorBase text-2xl">{product.constructionStatus}</h2>
 
-<Image
-    src="/DiseñoWeb/shop/product.png"
-    alt="products"
-    width={500}
-    height={500}
-  />
+              <Image
+                src="/DiseñoWeb/shop/product.png"
+                alt="products"
+                width={450}
+                height={450}
+                className="relative"
+              />
 
-
-</figure>
+              {/* Renderizar las imágenes adicionales del producto */}
+              <figure className="absolute top-0 p-5">
+                {product.images.map((image, idx) => (
+                  <Image
+                    key={idx}
+                    src={image}
+                    alt={`Imagen ${idx + 1} de ${product.title}`}
+                    width={210}
+                    height={0}
+                  />
+                ))}
+              </figure>
+            </figure>
 
             {/* Título y Descripción */}
             <article className="title-description mb-3">
-              <h1 className="text-5xl font-Staatliches">{product.title}</h1>
+              <h1 className="text-3xl font-Staatliches">{product.title}</h1>
               <p className="text-sm font-Staatliches">{product.description}</p>
-              <p className="font-BebasNeue text-5xl">Precio: {product.price}</p>
+              <p className="font-BebasNeue text-5xl text-green-500">Precio: {product.price}</p>
             </article>
 
             {/* Detalles Especiales */}
@@ -129,17 +107,38 @@ const ProductPanel: React.FC = () => {
             <article className="mb-3">
               <h3 className="text-lg font-Staatliches">Detalles Técnicos:</h3>
               <ul className="text-sm">
-                <li> <strong>Polígonos:</strong> {product.technicalDetails.polygons}</li>
-                <li><strong>Tamaño:</strong> {product.technicalDetails.size}</li>
-                <li><strong>Formatos de archivo:</strong> {product.technicalDetails.fileFormat.join(", ")}</li>
-                <li><strong>Compatibilidad:</strong> {product.technicalDetails.compatibility.join(", ")}</li>
-                <li><strong>Accesorios: </strong>{product.technicalDetails.accessories.join(", ")}</li>
+                <li>
+                  <strong>Polígonos:</strong> {product.technicalDetails.polygons}
+                </li>
+                <li>
+                  <strong>Tamaño:</strong> {product.technicalDetails.size}
+                </li>
+                <li>
+                  <strong>Formatos de archivo:</strong>{" "}
+                  {product.technicalDetails.fileFormat.join(", ")}
+                </li>
+                <li>
+                  <strong>Compatibilidad:</strong>{" "}
+                  {product.technicalDetails.compatibility.join(", ")}
+                </li>
+                <li>
+                  <strong>Accesorios: </strong>
+                  {product.technicalDetails.accessories.join(", ")}
+                </li>
               </ul>
             </article>
 
             {/* Información del comprador */}
             <section className="buyer-info">
-              <p className="font-Staatliches text-2xl">Comprado por: {product.buyerName}</p>
+              <p className="font-Staatliches text-2xl">
+                Comprado por: {product.buyerName}
+              </p>
+            </section>
+
+            {/* Estado de Construcción */}
+            <section className="construction-status mb-3">
+              <h3 className="text-lg font-Staatliches">Estado de Construcción:</h3>
+              
             </section>
           </section>
         ))}

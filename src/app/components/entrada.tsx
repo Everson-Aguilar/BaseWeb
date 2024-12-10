@@ -8,7 +8,7 @@ const BusinessBanner = () => {
     <div className="flex flex-col justify-center items-center h-fill text-center p-5">
       <Link href="/"> {/* Change "/" to the route you want to redirect to */}
         <button className="text-lg bg-trend p-5 text-colorBase rounded-lg hover:bg-orange-600 transition">
-          Come and check out my 3D design agency studio
+        My professionalism, click here.
         </button>
       </Link>
       <div>
