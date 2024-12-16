@@ -13,12 +13,12 @@ export const metadata: Metadata = {
 
 const CulturaLATAM: React.FC = () => {
   return (
-    <section className="relative p-5 bg-trend text-colorBase">
+    <section className="relative  bg-trend text-colorBase">
       <section className="relative h-1/2">
-        <h1 className="relative pt-24 z-20 p-5 text-7xl font-BebasNeue mb-6 text-center">
+        <h1 className="relative pt-24 z-20  text-7xl font-BebasNeue mb-6 text-center">
           <span className="text-orange-400">Culture </span>
           <span className="bg-orange-400 p-5">LATAM </span>{" "}
-          <span className="bg-trend p-2">
+          <span className="p-2">
             in Your Video Games: Its Time to Stop Imitating and Start Creating
             with Latino Pride!
           </span>

@@ -19,6 +19,15 @@ const contentList: Content[] = [
     image: "/contenido/MiniContenido/c1.png",
     ContentStatus: "available",
     link: "/content/" // Custom URL
+  },
+
+  {
+    title: "The south of Latin America is industrial",
+    objective: "to make the south known",
+    summary: "The southern part of Barranquilla blends industrial areas with residential zones, featuring a mix of factories, warehouses, and homes, showcasing economic activity alongside daily life.",
+    image: "/contenido/MiniContenido/c2.png",
+    ContentStatus: "Update",
+    link: "/content/UnLugarEstrategico/" // Custom URL
   }
   
  

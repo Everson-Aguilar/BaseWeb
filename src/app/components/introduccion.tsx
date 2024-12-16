@@ -20,17 +20,17 @@ const ComicStory: React.FC = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col md:flex-row text-colorBase p-5 justify-center items-center">
+    <div className="w-full relative  flex flex-col md:flex-row text-colorBase p-5 justify-center items-center">
 
-      <div className=" text-8xl relative text-trend font-SixCaps"> With our  help, we can bring the <span className="border-b-2 border-b-rose-600"> idea in your mind to life.</span> Go ahead, <span className=" text-orange-600 font-PermanentMarker"> invent!</span></div>
+      <div className=" z-10  text-8xl relative text-trend font-SixCaps"> With our  help, we can bring the <span className="border-b-2 border-b-rose-600"> idea in your mind to life.</span> Go ahead, <span className=" text-orange-600 font-PermanentMarker"> invent!</span></div>
      
 
-     <figure>
+     <figure className="absolute  left-52 z-0 -translate-y-24 ">
      <Image
-            src="/DiseñoWeb/letters/letter-02.svg"
+            src="/contenido/flag/flag01.png"
             alt="emocional"
-            width={100}
-            height={100}
+            width={500}
+            height={500}
           />
 
      </figure>
