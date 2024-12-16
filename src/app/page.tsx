@@ -8,6 +8,7 @@ import Head from "next/head";
 import Header from "./components/header";
 import Contact from "./components/el_guias";
 import Introductions from "./components/introduccion";
+import Workflow from "./components/workflow";
 import Tools from "./components/herramientas";
 import Rules from "./components/reglas";
 import Sell from "./components/retiro";
@@ -42,6 +43,8 @@ const Home: React.FC = () => {
           <MeettheFounder />
         </nav>
 
+
+
         <section className="mt-5" aria-labelledby="introduction">
           <h2 id="introduction" className="sr-only">
             Introduction
@@ -55,6 +58,15 @@ const Home: React.FC = () => {
             <Introductions />
           </motion.div>
         </section>
+
+        <section>
+
+          <Workflow />
+
+
+        </section>
+
+
 
         <section>
           <motion.div
