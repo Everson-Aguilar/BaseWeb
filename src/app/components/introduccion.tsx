@@ -22,7 +22,7 @@ const ComicStory: React.FC = () => {
   return (
     <div className="w-full relative  flex flex-col md:flex-row text-colorBase p-5 justify-center items-center">
 
-      <div className=" z-10  text-8xl relative text-trend font-SixCaps"> With our  help, we can bring the <span className="border-b-2 border-b-rose-600"> idea in your mind to life.</span> Go ahead, <span className=" text-orange-600 font-PermanentMarker"> invent!</span></div>
+      <div className=" z-10  text-8xl relative text-blue-400 font-SixCaps mb-60"> With our  help, we can bring the <span className="border-b-2 border-b-neutral-800"> idea in your mind to life.</span> Go ahead, <span className=" text-orange-600 font-PermanentMarker"> invent!</span></div>
      
 
      <figure className="absolute  left-52 z-0 -translate-y-24 ">
@@ -55,7 +55,7 @@ const ComicStory: React.FC = () => {
           A different lifestyle...
         </h2>
         <div className="relative flex justify-center items-center bg-slate-300 bg-opacity-10 backdrop-blur-xl p-4 rounded-md h-2/4 shadow-lg z-10">
-          <div className="absolute top-10 flex justify-center items-center gap-2 p-2 xl:p-5">
+          <div className="absolute md:top-5 top-40 flex justify-center items-center gap-2 p-2 xl:p-5">
             {topIcons.map((src, index) => (
               <div
                 key={index}
@@ -71,7 +71,7 @@ const ComicStory: React.FC = () => {
             ))}
           </div>
 
-          <div className="absolute bottom-10 flex justify-center items-center gap-2 p-2 xl:p-5">
+          <div className="absolute md:bottom-5 bottom-40 flex justify-center items-center gap-2 p-2 xl:p-5">
             {bottomIcons.map((src, index) => (
               <div
                 key={index}

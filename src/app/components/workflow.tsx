@@ -45,8 +45,11 @@ const ModelDescription: React.FC = () => {
         </section>
 
         {/* Espacio vacío a la derecha para imágenes */}
-        <section className="w-full md:w-full flex justify-center items-center bg-gray-100">
-          <figure>
+        <section className="w-full flex-row  bg-gray-100">
+
+          <h2 className='text-3xl text-orange-400 p-5 '>UPDATES</h2>
+
+          <figure className=' flex justify-center items-center'>
             <Image
               src="trabajos/Cliente_01/step01.jpg"
               alt="Ref Ilustration"
