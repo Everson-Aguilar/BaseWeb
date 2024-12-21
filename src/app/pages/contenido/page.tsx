@@ -18,8 +18,6 @@ export const metadata: Metadata = {
 const FirstAidKit: React.FC = () => {
   return (
     <>
-       
-
       <header>
         <Header />
       </header>
@@ -92,6 +90,17 @@ const FirstAidKit: React.FC = () => {
             so the darkness doesnt return. Its up to you to recreate those small
             sanctuaries for those in need, to give them a place to rest and
             heal.
+          </p>
+
+          <p className="transition-all duration-300 ease-in-out hover:text-orange-400">
+            Stories like this are what your projects need, not just in one
+            place, its a magical feeling to convey. My style is Caribbean, and I
+            identify with it. If you want to join, you re welcome. I simply want
+            you to create a great design for your worlds. Make your game a place
+            different from the usual, convey that emotion, sensations, and
+            atmosphere. From there, it depends on how much you can captivate
+            your players. On this journey, I will guide you to create something
+            exciting...
           </p>
         </article>
       </section>

@@ -1,7 +1,21 @@
 import React from 'react';
 import Image from "next/image";
 
+// componente
+import Game_of_luck from "./game_of_luck";
+
 const ModelDescription: React.FC = () => {
+  // Array con las imágenes en orden cronológico
+  const updateImages = [
+    
+    { src: "trabajos/Cliente_01/step02.jpg", alt: "Update 01" },
+    { src: "trabajos/Cliente_01/step03.jpg", alt: "Update 02" },
+    { src: "trabajos/Cliente_01/step04.jpg", alt: "Update 03" },
+    { src: "trabajos/Cliente_01/step05.jpg", alt: "Update 04" },
+    { src: "trabajos/Cliente_01/step06.jpg", alt: "Update 05" },
+    // Agrega más imágenes según sea necesario
+  ];
+
   return (
     <section className="container mx-auto p-4">
       {/* Título */}
@@ -36,8 +50,8 @@ const ModelDescription: React.FC = () => {
 
           <figure>
             <Image
-              src="trabajos/Cliente_01/ref_jesus.jpg"
-              alt="Ref Ilustration"
+              src="trabajos/Cliente_01/step01.jpg"
+              alt="Ref Illustration"
               width={300}
               height={300}
             />
@@ -45,19 +59,72 @@ const ModelDescription: React.FC = () => {
         </section>
 
         {/* Espacio vacío a la derecha para imágenes */}
-        <section className="w-full flex-row  bg-gray-100">
+        <section className="w-full flex-row bg-gray-100  ">
 
-          <h2 className='text-3xl text-orange-400 p-5 '>UPDATES</h2>
+        
 
-          <figure className=' flex justify-center items-center'>
+          <h2 className=" flex text-3xl font-BebasNeue text-orange-400  p-5">
+
+          <figure>
             <Image
-              src="trabajos/Cliente_01/step01.jpg"
-              alt="Ref Ilustration"
-              width={600}
-              height={600}
+              src="/DiseñoWeb/WebRecursos/ico.ico"
+              alt="icono"
+              width={30}
+              height={30}
             />
           </figure>
+
+
+            UPDATES</h2>
+
+          <section className=' h-[400px] md:h-[600px] overflow-scroll '>
+
+          {/* Iterar sobre las imágenes del array */}
+          {updateImages.map((image, index) => (
+            <figure key={index} className="flex justify-center items-center ">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={600}
+                height={600}
+              />
+            </figure>
+
+
+          ))}
+
+</section>
+
+
+
+          <p className="flex text-2xl p-5"> <span className='text-3xl text-orange-400 font-BebasNeue'>tudigitalnegocio.com</span> &nbsp; &nbsp; &nbsp; <span className=' border-2 text-trend p-2'> price: <span className="text-orange-400">350$</span> </span> </p>
+
+          <section className="flex gap-5 p-3">
+            <strong>Tiempo:</strong>
+            <div className="bg-orange-400 text-colorBase font-BebasNeue w-36 flex justify-center items-center">lunes</div>
+            <div className="bg-orange-400 text-colorBase font-BebasNeue w-36 flex justify-center items-center">Martes</div>
+            <div className="bg-orange-400 text-colorBase font-BebasNeue w-36 flex justify-center items-center">Miercoles</div>
+            <div className="bg-trend text-colorBase font-BebasNeue w-36 flex justify-center items-center">Jueves</div>
+            <div className="bg-trend text-colorBase font-BebasNeue w-36 flex justify-center items-center">Viernes</div>
+          </section>
+
+          <section className="border-t-2 border-trend bg-orange-400">
+            <div>
+              <p>
+                <strong className="p-3 rounded-sm">Enviar Archivo a:</strong>admin@tudigitalnegocio.com
+              </p>
+            </div>
+            <div>
+              <p>
+                <strong className="p-3 rounded-sm">Explicacion:</strong>A partir de un archivo base, crea una propuesta con las indicaciones
+              </p>
+            </div>
+          </section>
         </section>
+      </section>
+
+      <section>
+        <Game_of_luck />
       </section>
     </section>
   );
