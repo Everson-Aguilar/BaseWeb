@@ -126,6 +126,11 @@ const ModelDescription: React.FC = () => {
       <section>
         <Game_of_luck />
       </section>
+
+      
+
+
+
     </section>
   );
 };

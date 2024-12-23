@@ -59,7 +59,7 @@ const Home: React.FC = () => {
           </motion.div>
         </section>
 
-        <section>
+       <section>
 
           <Workflow />
 
@@ -191,7 +191,7 @@ export default Home;
 }
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "17/12/2024"
+git commit -m "21/12/2024"
 git pull origin main
 git push origin main */
 
