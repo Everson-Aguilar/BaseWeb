@@ -191,7 +191,7 @@ export default Home;
 }
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "21/12/2024"
+git commit -m "23/12/2024"
 git pull origin main
 git push origin main */
 
@@ -200,6 +200,13 @@ git add .
 git commit -m "19/11/2024"
 git pull origin develop
 git push origin develop */
+
+
+//--------------------------
+
+
+
+
 
 //git fetch origin
 //git reset --hard origin/main
