@@ -1,0 +1,31 @@
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Agregar sombra si lo deseas */
+  z-index: 100; /* Asegurarse de que esté encima de otros elementos */
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.activeWindow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.clock {
+  color: #fff;
+  font-size: 14px;
+}
