@@ -1,0 +1,25 @@
+.explorer {
+  background-color: #2e2e2e;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 16px;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.list-item:hover {
+  color: #1e90ff;
+  text-decoration: underline;
+}

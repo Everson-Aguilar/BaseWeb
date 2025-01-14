@@ -11,6 +11,7 @@ const Header: React.FC = () => {
   // Lista de rutas
   const routes = [
     { href: "/", label: "Home" },
+    { href: "/pages/404/", label: "Programming" },
     { href: "/pages/contenido/", label: "How to create a 3D environment" },
     { href: "/pages/shop/", label: "Visual Products" },
     { href: "/pages/jobs/", label: "jobs" }, // Opcional para dropdown
@@ -25,15 +26,10 @@ const Header: React.FC = () => {
         {/* Navigation menu */}
         <ul className={`md:flex ${isMenuOpen ? "block" : "hidden"} space-y-2 md:space-y-0 md:space-x-4 font-sans bg-orange-400`}>
           {routes.map((route, index) => (
-
-            
-
-           
             <li key={index} className="hover:text-rose-600 p-1" >
               <span className=" text-5xl">.</span>
               <Link href={route.href}>{route.label}</Link>
             </li>
-            
           ))}
         </ul>
 
