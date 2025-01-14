@@ -1,5 +1,12 @@
 'use client'
 
+
+//components
+
+import Workflow from "../../components/workflow";
+
+
+
 import { useEffect, useState } from 'react';
 
 interface UrlsData {
@@ -118,6 +125,24 @@ const UrlsList: React.FC = () => {
           Copiar lista en JSON
         </button>
       </div>
+
+
+
+
+      <section>
+
+<Workflow />
+
+
+</section>
+
+
+
+
+
+
+
+
     </section>
   );
 };

@@ -21,7 +21,7 @@ const Packages: React.FC = () => {
             <li>Ideal for fast development of environments.</li>
           </ul>
           <h2 className="text-xl font-semibold text-green-700 mb-4">
-            Price: <span className="font-bold">$200 - $450</span>
+            Price: <span className="font-bold">Write to me</span>
           </h2>
           <button className="bg-trend text-white py-2 px-6 rounded-lg hover:bg-opacity-90 w-full">
             Get This Package
@@ -40,7 +40,7 @@ const Packages: React.FC = () => {
             <li>Optimized for performance without sacrificing detail.</li>
           </ul>
           <h2 className="text-xl font-semibold text-green-700 mb-4">
-            Price: <span className="font-bold">$600 - $800</span>
+            Price: <span className="font-bold">Write to me</span>
           </h2>
           <button className="bg-colorBase text-trend py-2 px-6 rounded-lg hover:bg-opacity-90 w-full">
             Get This Package
@@ -59,7 +59,7 @@ const Packages: React.FC = () => {
             <li>Creates a more immersive, believable environment for players.</li>
           </ul>
           <h2 className="text-xl font-semibold text-green-700 mb-4">
-            Price: <span className="font-bold">$800 - $1000</span>
+            Price: <span className="font-bold">Write to me</span>
           </h2>
           <button className="bg-trend text-white py-2 px-6 rounded-lg hover:bg-opacity-90 w-full">
             Get This Package

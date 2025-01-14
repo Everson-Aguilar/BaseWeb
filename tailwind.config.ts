@@ -35,7 +35,7 @@ const config: Config = {
 
       colors: {
         message: '#F1F2F1',
-        subtitle: '#403D39',
+        subtitle: '#474b4d',
         title: '#252422',
         trend: '#1f1f1f',
         colorBase: '#f8fcff',

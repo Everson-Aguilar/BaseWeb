@@ -8,7 +8,6 @@ import Head from "next/head";
 import Header from "./components/header";
 import Contact from "./components/el_guias";
 import Introductions from "./components/introduccion";
-import Workflow from "./components/workflow";
 import Tools from "./components/herramientas";
 import Rules from "./components/reglas";
 import Sell from "./components/retiro";
@@ -59,12 +58,7 @@ const Home: React.FC = () => {
           </motion.div>
         </section>
 
-       <section>
-
-          <Workflow />
-
-
-        </section>
+      
 
 
 
@@ -191,13 +185,13 @@ export default Home;
 }
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "23/12/2024"
+git commit -m "14/01/2024"
 git pull origin main
 git push origin main */
 
 /* git-hub pasos para guardar CONSOLA (produccion)
 git add .
-git commit -m "19/11/2024"
+git commit -m "23/12/2024"
 git pull origin develop
 git push origin develop */
 

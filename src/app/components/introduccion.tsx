@@ -39,7 +39,7 @@ const ComicStory: React.FC = () => {
 
 
       {/* Diagrams */}
-      <section className=" relative h-[1400px] md:h-[1000px] bg-gradient-to-b overflow-hidden from-white to-blue-200 w-full p-2 text-colorBase">
+      <section className=" relative h-[1400px] md:h-[1000px] bg-gradient-to-b overflow-hidden from-white to-subtitle w-full p-2 text-colorBase">
         <figure className="absolute z-20 md:top-1/4 top-20 scale-150 md:right-16  ">
           <Image
             src="/DiseñoWeb/letters/letter-02.svg"

@@ -75,19 +75,7 @@
 
 
 
-:root {
-  --foreground-color: #f8fcff; /* Color del texto predeterminado */
-  --background-start-color: #f8fcff; /* Color de inicio del fondo */
-  --background-end-color: #f8fcff; /* Color de fin del fondo */
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-color: #fff; /* Color del texto en modo oscuro */
-    --background-start-color: #000; /* Color de inicio del fondo en modo oscuro */
-    --background-end-color: #000; /* Color de fin del fondo en modo oscuro */
-  }
-}
 
 
 ::-webkit-scrollbar {
@@ -96,7 +84,7 @@
 
 body {
 
-  background-color: #f8fcff;
+  background-color: #474b4d;
   height: max-content;
   
 
