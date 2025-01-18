@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-// componente
-import Game_of_luck from "./game_of_luck";
+
+
 
 const ModelDescription: React.FC = () => {
 
@@ -63,11 +63,14 @@ const ModelDescription: React.FC = () => {
         {/* Información a la izquierda */}
         <section className="space-y-4 border-4 h-96 border-orange-400 p-5 w-full mb-5  overflow-scroll">
 
+
+           {/* COMIENZO texto */}
+
           <section>
 
 
 
-          {/* COMIENZO texto */}
+         
 
 
           
@@ -192,7 +195,7 @@ const ModelDescription: React.FC = () => {
 
           {/* Contenedor que se muestra cuando isOpen es true */}
       {isOpen && (
-        <section className="absolute bg-trend h-full w-full z-10 ">
+        <section className="absolute bg-trend h-full w-full z-10 overflow-scroll ">
           <button onClick={toggleContenedor}  className=" absolute bg-colorBase p-5  m-5 hover:scale-105  rounded-full right-0">X</button>
 
 
@@ -201,7 +204,7 @@ const ModelDescription: React.FC = () => {
 
 {/* agreement */}
 
-<section className="text-colorBase p-5 overflow-scroll h-full">
+<section className="text-colorBase p-5  h-full">
   <p className="text-orange-400 text-2xl font-BebasNeue">Task Scope</p>
   <ul>
     <li>
@@ -253,6 +256,183 @@ const ModelDescription: React.FC = () => {
     </li>
   </ul>
 </section>
+
+
+<section className="text-colorBase p-5  h-full">
+  <p className="text-orange-400 text-2xl font-BebasNeue">Reference Materials & Guidelines</p>
+  <ul>
+    <li>
+      <strong className="text-orange-400">Inspirational Source Material:</strong>
+      <ul>
+        <li>* The Lord of the Rings trilogy films, especially scenes depicting Mordor and Barad-dûr.</li>
+        <li>* Concept art from the Lord of the Rings franchise focusing on the architecture and design elements of Mordor.</li>
+        <li>* The design elements from the Mount & Blade II: Bannerlord game, particularly its campaign map and environment textures.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Architectural Inspirations:</strong>
+      <ul>
+        <li>* Gothic and neo-Gothic styles, as well as medieval fortresses, which should guide the monumental and oppressive architecture of Barad-dûr.</li>
+        <li>* The use of dark, weathered stone and iron in fictional or historical structures like castles and fortresses.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Textures & Materials:</strong>
+      <ul>
+        <li>* Textures used in Mount & Blade II: Bannerlord for creating realistic stone, metal, and organic surfaces in environments.</li>
+        <li>* The dark and twisted textures from fantasy and medieval settings, such as charred rock, rusted metal, and ancient stone.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Design Constraints:</strong>
+      <ul>
+        <li>* The fortress should appear as if it has been in place for millennia, showing signs of age, decay, and resilience.</li>
+        <li>* Every element should evoke the theme of power, domination, and darkness.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Provided Reference Files:</strong>
+      <ul>
+        <li>* Concept art and renders of Mordors architecture, including Barad-dûr.</li>
+        <li>* 3D models of Gondor towns, castles, and villages in FBX format, serving as templates for scale and style.</li>
+        <li>* Textures and materials for Mordor environments that can be applied to the project.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Visual References:</strong>
+      <ul>
+        <li>* Scene stills from Lord of the Rings depicting Mordor landscapes and architecture.</li>
+        <li>* In-game screenshots from Mount & Blade II: Bannerlord to observe the style and integration of buildings in the landscape.</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section className="text-colorBase p-5  h-full">
+  <p className="text-orange-400 text-2xl font-BebasNeue">Architecture and Spaces of Barad-dûr</p>
+  <ul>
+    <li>
+      <strong className="text-orange-400">Architectural Style:</strong>
+      <ul>
+        <li>* Dark and oppressive: Reflects power and evil.</li>
+        <li>* Monumental and colossal: Designed to visually dominate its surroundings.</li>
+        <li>* Gothic and neo-Gothic inspiration: Exaggerated and aggressive elements.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Construction Materials:</strong>
+      <ul>
+        <li>* Black stone: Solid structural base, symbolizing evil.</li>
+        <li>* Dark iron: Reinforcements and sharp ornamental details.</li>
+        <li>* Magical materials: Linked to the One Ring, making it nearly indestructible.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">General Structure:</strong>
+      <ul>
+        <li>* Broad and solid base: Embedded in Mordor’s rock for stability.</li>
+        <li>* Colossal central tower: Dominant in height, narrowing toward the top.</li>
+        <li>* Minor towers: Surround the central structure, connected by passages and bridges.</li>
+        <li>* Walls: High, thick, and covered with sharp battlements.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Architectural Details:</strong>
+      <ul>
+        <li>* Sharp spires and pinnacles: Designed to appear aggressive, pointing skyward.</li>
+        <li>* Battlements and parapets: Decorated with jagged shapes and spikes.</li>
+        <li>* Elevated bridges: Connect different sections of the tower, enhancing complexity.</li>
+        <li>* Gates and entrances: Large black iron gates, protected by magic and guards.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Symbolic Elements:</strong>
+      <ul>
+        <li>* The Eye of Sauron: Represented at the peak, either as a symbol or physical structure.</li>
+        <li>* Asymmetric design: Reflects the chaos and disproportion of Sauron’s power.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Relationship with the Environment:</strong>
+      <ul>
+        <li>* Integration with the landscape: Built directly into Mordor’s volcanic terrain.</li>
+        <li>* Strategic location: Close to Mount Doom to oversee the surroundings.</li>
+        <li>* Natural defense: Surrounded by ravines, moats, and hostile terrain.</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section className="text-colorBase p-5 h-full">
+  <p className="text-orange-400 text-2xl font-BebasNeue">Spaces of Barad-dûr</p>
+  <ul>
+    <li>
+      <strong className="text-orange-400">Defensive Spaces:</strong>
+      <ul>
+        <li>* Outer Walls: High and thick, with battlements for archers and watchtowers.</li>
+        <li>* Moats and Ravines: Natural or artificial obstacles surrounding the fortress to impede access.</li>
+        <li>* Main Gates: Large black iron doors, heavily protected by magic and soldiers.</li>
+        <li>* Towers and Bastions: Smaller towers strategically located to defend the perimeter.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Military Spaces:</strong>
+      <ul>
+        <li>* Troop Halls: Areas dedicated to housing orcs, uruk-hai, and other soldiers.</li>
+        <li>* Armories: Spaces for storing weapons, armor, and war supplies.</li>
+        <li>* Stables: For war creatures like wargs or dark mounts.</li>
+        <li>* Training Grounds: Zones where soldiers practice combat and training.</li>
+        <li>* Prisons and Dungeons: Underground jails for prisoners or traitors.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Administrative Spaces:</strong>
+      <ul>
+        <li>* Command Chamber: A central hall for strategic meetings, where Sauron issued orders or war plans were discussed.</li>
+        <li>* Dark Libraries: Archives of forbidden knowledge, magical texts, and historical records about Sauron and the One Ring.</li>
+        <li>* Audience Halls: Where Sauron’s lieutenants, like the Nazgûl, reported or received orders.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Symbolic Spaces:</strong>
+      <ul>
+        <li>* Tower Summit (The Eye of Sauron): A ritual or symbolic space where the Eye manifests, constantly watching the land.</li>
+        <li>* Throne Halls: Though Sauron lacks a physical body at this point, a ceremonial space would represent his power.</li>
+        <li>* Dark Altar: A place for magical rituals or reinforcing the connection between the One Ring and Barad-dûr.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Functional Spaces:</strong>
+      <ul>
+        <li>* Passages and Tunnels: Networks of dark corridors connecting different sections of the fortress.</li>
+        <li>* Storage Rooms: Spaces to store food, water, and other essential supplies for the armies.</li>
+        <li>* Furnaces and Forges: Workshops for creating weapons and armor, likely operated by enslaved orcs.</li>
+        <li>* Wells and Cisterns: Ensuring a water supply inside the fortress.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Underground Spaces:</strong>
+      <ul>
+        <li>* Deep Dungeons: Even more dangerous prisons for high-value enemies or torture chambers.</li>
+        <li>* Catacombs and Crypts: Places to store ancient remains or relics related to Sauron’s servants.</li>
+        <li>* Dark Factories: Underground areas for crafting weapons and war machinery in infernal conditions.</li>
+      </ul>
+    </li>
+    <li>
+      <strong className="text-orange-400">Magical Spaces:</strong>
+      <ul>
+        <li>* Ring Chamber: Though the One Ring does not reside in Barad-dûr, a space to strengthen its magical connection with the fortress would exist.</li>
+        <li>* Enchantment Rooms: Dedicated to dark magic practice and controlling Mordor’s forces.</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+
 
 
 
@@ -346,9 +526,6 @@ const ModelDescription: React.FC = () => {
         </section>
       </section>
 
-      <section>
-        <Game_of_luck />
-      </section>
     </section>
   );
 };
