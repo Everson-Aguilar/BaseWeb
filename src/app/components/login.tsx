@@ -37,7 +37,7 @@ export default function LoginButton() {
     const user = users.find((user) => user.username === username && user.password === password);
 
     if (user) {
-      router.push('/pages/mantenimiento/'); // ✅ Redirige correctamente en Next.js 14
+      router.push('/pages/admin/'); // ✅ Redirige correctamente en Next.js 14
     } else {
       setError('Usuario o contraseña incorrectos');
     }

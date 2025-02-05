@@ -25,3 +25,5 @@ export async function GET() {
     return NextResponse.json({ error: 'Error al obtener los usuarios de MongoDB' }, { status: 500 });
   }
 }
+
+

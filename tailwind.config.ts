@@ -38,7 +38,7 @@ const config: Config = {
         subtitle: '#474b4d',
         title: '#252422',
         trend: '#1f1f1f',
-        colorBase: '#f8fcff',
+        colorBase: '#6d6d6d',
       },
 
       scale: {
