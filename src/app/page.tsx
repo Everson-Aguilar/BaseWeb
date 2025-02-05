@@ -2,10 +2,11 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Head from "next/head";
+
 
 // Components
 import Header from "./components/header";
+import Login from "./components/login"
 import Contact from "./components/el_guias";
 import Introductions from "./components/introduccion";
 import Tools from "./components/herramientas";
@@ -32,6 +33,9 @@ const Home: React.FC = () => {
       <header>
         <Header />
       </header>
+
+      <section> <Login/> </section>
+
 
       <main>
         <nav role="navigation" aria-label="Contact Section">
@@ -180,12 +184,12 @@ const Home: React.FC = () => {
 
 export default Home;
 
-{
+
   /*  GUARDAR Y SUBIR APLICACION   */
-}
+
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "14/01/2024"
+git commit -m "04/02/2025"
 git pull origin main
 git push origin main */
 
