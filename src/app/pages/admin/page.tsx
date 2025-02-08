@@ -28,7 +28,7 @@ const Admin: React.FC = () => {
           <Verification/>
 
           </div>
-          <div className="p-5 w-full mb-5 md:w-1/3 bg-zinc-800 h-[700px]">
+          <div className="p-5 w-full mb-5 md:w-1/3 bg-zinc-800 h-[700px] overflow-scroll">
 
             <Control/>
 

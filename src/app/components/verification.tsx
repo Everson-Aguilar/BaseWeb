@@ -23,7 +23,7 @@ const initialEnvios = [
   },
 ];
 
-const EmptyComponent: React.FC = () => {
+const Verification: React.FC = () => {
   const [links, setLinks] = useState(initialLinks);
   const [envios, setEnvios] = useState(initialEnvios);
 
@@ -101,4 +101,4 @@ const EmptyComponent: React.FC = () => {
   );
 };
 
-export default EmptyComponent;
+export default Verification;
