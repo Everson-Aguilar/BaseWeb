@@ -14,6 +14,8 @@ const Header: React.FC = () => {
     { href: "/pages/contenido/", label: "How to create a 3D environment" },
     { href: "/pages/shop/", label: "Visual Products" },
     { href: "/pages/jobs/", label: "jobs" }, // Opcional para dropdown
+   
+
   ];
 
   return (

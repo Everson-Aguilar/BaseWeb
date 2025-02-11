@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+  // eliminar
 
 
 // Components
@@ -20,6 +21,11 @@ import DesingTheImpacts from "./components/separadores/plan";
 import Pack from "./components/separadores/proyectos";
 import MeettheFounder from "./components/venAvivirUnaVidaDiferente";
 import Footer from "./components/footer";
+
+
+
+
+
 
 // Styles
 import "./globals.css";
@@ -45,6 +51,8 @@ const Home: React.FC = () => {
         <nav role="navigation" aria-label="About the Author">
           <MeettheFounder />
         </nav>
+
+        
 
 
 
@@ -138,6 +146,24 @@ const Home: React.FC = () => {
          
         </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         {/* Projects Section */}
         <section aria-labelledby="projects">
           <h2 id="projects" className="sr-only">
@@ -189,7 +215,7 @@ export default Home;
 
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "08/02/2025"
+git commit -m "09/02/2025"
 git pull origin main
 git push origin main */
 
