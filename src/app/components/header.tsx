@@ -11,24 +11,22 @@ const Header: React.FC = () => {
   // Lista de rutas
   const routes = [
     { href: "/", label: "Home" },
-    { href: "/pages/contenido/", label: "How to create a 3D environment" },
-    { href: "/pages/shop/", label: "Visual Products" },
     { href: "/pages/jobs/", label: "jobs" }, // Opcional para dropdown
    
 
   ];
 
   return (
-    <header className="bg-trend h-fill w-full z-30 top-0 fixed">
-      <nav className="flex text-colorBase items-center justify-between ">
+    <header className="bg-trend h-fill w-full z-30 top-0 fixed  ">
+      <nav className="flex text-colorBase  p-1  justify-between ">
         {/* Logo or title */}
-        <div className="font-LibreBarcode128 text-3xl border-b-2 border-orange-400">TuDigitalNegocio.com</div>
+        <div className="font-LibreBarcode128  text-3xl border-b-2 border-orange-400">TuDigitalNegocio.com</div>
 
         {/* Navigation menu */}
-        <ul className={`md:flex ${isMenuOpen ? "block" : "hidden"} w-1/2 space-y-2 md:space-y-0 md:space-x-4 font-sans bg-subtitle`}>
+        <ul className={`md:flex ${isMenuOpen ? "block" : "hidden"} w-1/2 gap-5  font-sans  justify-end pr-5`}>
           {routes.map((route, index) => (
-            <li key={index} className="hover:text-rose-600 p-1" >
-              <span className=" text-5xl">.</span>
+            <li key={index} className="hover:bg-neutral-200 p-1 bg-neutral-800 rounded-3xl m-1 flex justify-center " >
+              
               <Link href={route.href}>{route.label}</Link>
             </li>
           ))}

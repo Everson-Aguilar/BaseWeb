@@ -52,7 +52,7 @@ const FreelancerProfile = () => {
     <>
       
         {editable ? (
-          <div>
+          <div className="p-5">
             {Object.keys(freelancer).map((key) =>
               ["id", "usuario", "anos_experiencia", "calificacion", "proyectos_completados"].includes(key) ? null : (
                 <div key={key}>
@@ -108,42 +108,50 @@ const FreelancerProfile = () => {
             </button>
           </div>
         ) : (
-          <section className="space-y-4 border border-subtitle p-5 m-5">
-            <h2 className="text-4xl font-bold">{freelancer.nombre_completo}</h2>
-            <p className="text-neutral-900">{freelancer.descripcion}</p>
-            <p className="text-subtitle">
-              <strong>Email:</strong> {freelancer.email}
+          <section className="space-y-4 border-4  p-5 m-5">
+            <h2 className="text-8xl text-colorBase shadow-inner-md font-BebasNeue p-5 border-b-4 ">{freelancer.nombre_completo}</h2>
+            <p className="text-colorBase border-4 p-5 h-36 shadow-inner-md">{freelancer.descripcion}</p>
+
+            <section className=" space-y-2 font-Staatliches shadow-lg p-5 ">
+            <p className="text-subtitle ">
+              <strong className="font-VT323 text-3xl">-Email:</strong> {freelancer.email}
             </p>
             <p className="text-subtitle">
-              <strong>Portafolio:</strong>{" "}
+              <strong className="font-VT323 text-3xl">-Portafolio:</strong>{" "}
               <a href={freelancer.portafolio} className="text-subtitle underline">
                 {freelancer.portafolio}
               </a>
             </p>
-            <p className="text-subtitle">
-              <strong>Ubicación:</strong> {freelancer.ubicacion}
+            <p className="text-subtitle ">
+              <strong className="font-VT323 text-3xl">-Ubicación:</strong> {freelancer.ubicacion}
             </p>
             <p className="text-subtitle">
-              <strong>Años de experiencia:</strong> {freelancer.anos_experiencia}
+              <strong className="font-VT323 text-3xl">-Años de experiencia:</strong> {freelancer.anos_experiencia}
             </p>
             <p className="text-subtitle">
-              <strong>Calificación:</strong> {freelancer.calificacion} / 5
+              <strong className="font-VT323 text-3xl">-Calificación:</strong> {freelancer.calificacion} / 5
             </p>
             <p className="text-subtitle">
-              <strong>Proyectos Completados:</strong> {freelancer.proyectos_completados}
+              <strong className="font-VT323 text-3xl">-Proyectos Completados:</strong> {freelancer.proyectos_completados}
             </p>
             <p className="text-subtitle">
-              <strong>Especialidades:</strong> {freelancer.especialidades.join(", ")}
+              <strong className="font-VT323 text-3xl">-Especialidades:</strong> {freelancer.especialidades.join(", ")}
             </p>
             <p className="text-subtitle">
-              <strong>Software:</strong> {freelancer.software.join(", ")}
+              <strong className="font-VT323 text-3xl">-Software:</strong> {freelancer.software.join(", ")}
             </p>
             <p className="text-subtitle">
-              <strong>Idiomas:</strong> {freelancer.idiomas.join(", ")}
+              <strong className="font-VT323 text-3xl">-Idiomas:</strong> {freelancer.idiomas.join(", ")}
             </p>
             <p className="text-subtitle">
-              <strong>Disponibilidad:</strong> {freelancer.disponibilidad}
+              <strong className="font-VT323 text-3xl">-Disponibilidad:</strong> {freelancer.disponibilidad}
             </p>
+
+
+
+            </section>
+
+
             <button onClick={() => setEditable(true)} className="bg-subtitle text-white px-4 py-2 rounded-md">
               Editar
             </button>
