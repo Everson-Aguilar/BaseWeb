@@ -215,7 +215,7 @@ export default Home;
 
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "11/02/2025"
+git commit -m "18/03/2025"
 git pull origin main
 git push origin main */
 
