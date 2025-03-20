@@ -18,11 +18,19 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": "./",
+
+
     "paths": {
       "components/*": [
         "./src/components/*"
+        
+        
       ]
+
+      
     },
+
+    
     "plugins": [
       {
         "name": "next"

@@ -11,7 +11,8 @@ const Header: React.FC = () => {
   // Lista de rutas
   const routes = [
     { href: "/", label: "Home" },
-    { href: "/pages/jobs/", label: "jobs" }, // Opcional para dropdown
+    { href: "/pages/jobsProduction/", label: "production work" },
+    { href: "/pages/jobsExploration/", label: "exploration work" },
    
 
   ];

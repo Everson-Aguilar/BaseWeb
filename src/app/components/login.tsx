@@ -12,7 +12,7 @@ export default function LoginButton() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch('/api/connect'); // Verifica que esta ruta es correcta
+        const response = await fetch('/api/admin'); // Verifica que esta ruta es correcta
         if (!response.ok) {
           throw new Error('Error al obtener los usuarios');
         }
