@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
+import Image from "next/image";
+
 import { useRouter } from 'next/navigation'; // ✅ CORRECTO para App Router
+import Registration from "./user_registration"
 
 export default function LoginButton() {
   const router = useRouter(); // ✅ Ahora sí funciona en Next.js 14 con App Router
@@ -39,29 +42,47 @@ export default function LoginButton() {
     if (user) {
       router.push('/pages/admin/'); // ✅ Redirige correctamente en Next.js 14
     } else {
-      setError('Usuario o contraseña incorrectos');
+      setError(' ! Usuario o contraseña incorrectos');
     }
   };
 
   return (
     <div className="fixed z-40 bottom-32 right-0 m-6">
+
+      
+
+
       <button
-        className="bg-message text-base p-2 rounded-full w-24 h-24 flex justify-center items-center duration-500 hover:scale-125 hover:bg-orange-400"
+
+      
+
+
+        className="bg-message hover:bg-orange-400 text-base p-2 rounded-full w-24 h-24 flex justify-center items-center duration-500 hover:scale-125 "
         onClick={() => setShowLogin(true)}
       >
-        Iniciar sesión
+        <span className='translate-y-16 font-BebasNeue text-message'>Iniciar sesión</span>
+
+        <Image
+          src="/DiseñoWeb/logogris.svg"
+          alt="ver"
+          layout="fill"
+          objectFit="fill"
+        />
+
+
       </button>
+
       {showLogin && (
-        <div className="fixed top-0 right-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-message p-5 rounded-lg shadow-lg relative w-96">
+        <div className="fixed  top-0 right-0 w-full h-full bg-black bg-opacity-50 flex  justify-center items-center">
+          <div className="bg-subtitle p-5 rounded-lg shadow-lg relative w-96">
             <button
-              className="absolute top-2 right-2 text-xl"
+              className="absolute top-2 right-2 text-xl text-colorBase"
               onClick={() => setShowLogin(false)}
             >
               ✖
             </button>
-            <p className="text-center mb-4 text-lg font-bold">Inicio de Sesión</p>
-            <label className="block mb-2">
+            <p className="text-center mb-4 text-lg font-bold text-colorBase shadow-xl mt-5">Inicio de Sesión</p>
+            <label className="block mb-2 text-colorBase">
               Usuario:
               <input
                 type="text"
@@ -70,7 +91,7 @@ export default function LoginButton() {
                 onChange={(e) => setUsername(e.target.value)}
               />
             </label>
-            <label className="block mb-4">
+            <label className="block mb-4 text-colorBase">
               Contraseña:
               <input
                 type="password"
@@ -79,13 +100,29 @@ export default function LoginButton() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </label>
-            {error && <p className="text-red-500 text-center mb-4">{error}</p>}
-            <button className="w-full bg-blue-500 text-white p-2 rounded" onClick={handleLogin}>
+            {error && <p className="text-lime-500 text-center mb-4">{error}</p>}
+            <button className="bg-subtitle p-2 rounded-2xl m-3  shadow-xl border-neutral-200 border-2 text-neutral-200 hover:bg-lime-500" onClick={handleLogin}>
               Acceder
             </button>
+
+
+            <Registration/>
+
+
           </div>
+
+          
+
+
+
+
         </div>
       )}
+
+
+     
+
+
     </div>
   );
 }

@@ -4,7 +4,7 @@ import React from "react";
 
 //components
 
-import Task from "../../components/tasks"
+import Tasks from "../../components/tasks"
 
 import Verification from "../../components/verification"
 
@@ -20,7 +20,7 @@ const Admin: React.FC = () => {
         <section className="md:flex h-5/6 gap-5">
           <div className="p-5 w-full mb-5 md:w-1/3 bg-colorBase h-[700px]">
 
-            <Task/>
+            <Tasks/>
 
           </div>
           <div className="p-5 w-full mb-5 md:w-1/3 bg-zinc-800 h-[700px]">

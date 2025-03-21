@@ -50,9 +50,10 @@ export default function HistoryPage() {
             <li className=" bg-subtitle p-2 rounded-2xl " key={item._id}> {/* Asigna una clave única a cada elemento para optimizar el renderizado */}
               <strong className="border-b-2 font-Staatliches ">* {item.platform}</strong> - {item.email} - {" "}
               <a href={item.profileLink} target="_blank" rel="noopener noreferrer">
-                Ver perfil {/* Enlace al perfil del usuario en una nueva pestaña */}
+                Ver perfil  {/* Enlace al perfil del usuario en una nueva pestaña */}
               </a>
             </li>
+           
           ))}
         </ul>
       )}
