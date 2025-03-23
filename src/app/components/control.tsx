@@ -1,12 +1,11 @@
-
-import { useEffect, useState, useRef } from "react";
-import Freelancer from "./freelancer"
-
+import { useEffect, useState } from "react";
+import Freelancer from "./freelancer";
 
 // Definimos la interfaz User para tipar los datos de los usuarios
 interface User {
   _id: string; // Se necesita el ID del usuario para hacer las solicitudes
   username: string; // Nombre del usuario
+  password: string;
   email: string; // Correo electrónico del usuario
   portfolio: string; // Enlace a su portafolio
   software: string; // Software que usa el usuario
@@ -21,6 +20,8 @@ const UsersList = () => {
   const [loading, setLoading] = useState(true);
   // Estado para manejar errores en la solicitud
   const [error, setError] = useState<string | null>(null);
+  // Estado para almacenar la contraseña del usuario
+  const [password, setPassword] = useState<string>("");
 
   // useEffect se ejecuta al montar el componente para obtener la lista de usuarios
   useEffect(() => {
@@ -53,7 +54,7 @@ const UsersList = () => {
       const response = await fetch("/api/accept_user", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(user),
+        body: JSON.stringify({ ...user, password }), // Incluimos la contraseña
       });
 
       // Si la solicitud es exitosa, eliminamos al usuario de la lista en el frontend
@@ -72,7 +73,7 @@ const UsersList = () => {
       const response = await fetch("/api/admin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(user),
+        body: JSON.stringify({ ...user, password }), // Incluimos la contraseña
       });
 
       // Si la solicitud es exitosa, eliminamos al usuario de la lista en el frontend
@@ -112,80 +113,53 @@ const UsersList = () => {
   if (error) return <p className="text-red-500">{error}</p>;
 
   return (
+    <div>
+      <h2 className="font-Staatliches text-colorBase mb-3">Freelancer</h2>
+      <div><Freelancer/></div>
 
-    <div >
+      <h2 className="font-Staatliches text-colorBase mt-10 mb-3">Lista de Usuarios</h2>
 
+      <div className="scrollbar-custom p-4 text-sm text-colorBase">
+        <ul className="space-y-2 border-t-2 border-b-2 border-colorBase mt-3 mb-5">
+          {users.map((user) => (
+            <li key={user._id} className="p-2 shadow">
+              {/* Mostramos la información del usuario */}
+              <p><strong>Usuario:</strong> {user.username}</p>
+              <p><strong>password:</strong> {user.password}</p>
+              <p><strong>Email:</strong> {user.email}</p>
+              <p><strong>Portafolio:</strong> {user.portfolio}</p>
+              <p><strong>Software:</strong> {user.software}</p>
+              <p><strong>Años de Experiencia:</strong> {user.years_experience}</p>
 
-<h2 className=" font-Staatliches text-colorBase  mb-3">
-        Freelancer
-      </h2>
-
-    <div><Freelancer/></div>
-
-
-
-<h2 className=" font-Staatliches  text-colorBase  mt-10  mb-3">
-        Lista de Usuarios
-      </h2>
-
-
-    <div className=" scrollbar-custom p-4  text-sm text-colorBase ">
-      
-
-      <ul className="space-y-2 border-t-2 border-b-2 border-colorBase mt-3 mb-5 ">
-        {users.map((user) => (
-          <li key={user._id} className=" p-2 shadow">
-            {/* Mostramos la información del usuario */}
-            <p>
-              <strong>Usuario:</strong> {user.username}
-            </p>
-            <p>
-              <strong>Email:</strong> {user.email}
-            </p>
-            <p>
-              <strong>Portafolio:</strong> {user.portfolio}
-            </p>
-            <p>
-              <strong>Software:</strong> {user.software}
-            </p>
-            <p>
-              <strong>Años de Experiencia:</strong> {user.years_experience}
-            </p>
-            {/* Botones de acción */}
-            <div className="mt-2 flex  gap-5  ">
-              <button
-                onClick={() => {
-                  handleAccept(user);
-                  handleReject(user._id);
-                }}
-                className="hover:scale-150 hover:bg-lime-500 transition duration-300 ease-in-out bg-subtitle p-2"
-              >
-                Aceptar
-              </button>
-              <button
-                onClick={() => handleReject(user._id)}
-                className=" hover:scale-150 hover:bg-lime-500 transition duration-300 ease-in-out bg-subtitle p-2 "
-              >
-                Rechazar
-              </button>
-              <button
-                onClick={() => handleAcceptAdmin(user)}
-                className=" hover:scale-150 hover:bg-lime-500 transition duration-300 ease-in-out bg-subtitle p-2 "
-              >
-                Admin
-              </button>
-            </div>
-          </li>
-        ))}
-      </ul>
+              {/* Botones de acción */}
+              <div className="mt-2 flex gap-5">
+                <button
+                  onClick={() => {
+                    handleAccept(user);
+                    handleReject(user._id);
+                  }}
+                  className="hover:scale-150 hover:bg-lime-500 transition duration-300 ease-in-out bg-subtitle p-2"
+                >
+                  Aceptar
+                </button>
+                <button
+                  onClick={() => handleReject(user._id)}
+                  className="hover:scale-150 hover:bg-lime-500 transition duration-300 ease-in-out bg-subtitle p-2"
+                >
+                  Rechazar
+                </button>
+                <button
+                  onClick={() => handleAcceptAdmin(user)}
+                  className="hover:scale-150 hover:bg-lime-500 transition duration-300 ease-in-out bg-subtitle p-2"
+                >
+                  Admin
+                </button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
-
-  
-
-
-    </div>
-
-
   );
 };
 

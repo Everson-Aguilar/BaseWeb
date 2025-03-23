@@ -3,6 +3,7 @@ import { useState } from "react";
 const Register = () => {
   const [formData, setFormData] = useState({
     username: "",
+    password: "",
     email: "",
     portfolio: "",
     software: "",
@@ -10,6 +11,8 @@ const Register = () => {
   });
 
   const [message, setMessage] = useState("");
+  
+  const [showPassword, setShowPassword] = useState(false); // Estado para mostrar/ocultar contraseña
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -30,6 +33,7 @@ const Register = () => {
         setMessage("User successfully registered!");
         setFormData({
           username: "",
+          password: "",
           email: "",
           portfolio: "",
           software: "",
@@ -57,6 +61,27 @@ const Register = () => {
           onChange={handleChange}
           required
         />
+
+        {/* Campo de contraseña con botón de mostrar/ocultar */}
+        <div className="relative">
+          <input
+            className="p-1 bg-neutral-200 w-full pr-10"
+            type={showPassword ? "text" : "password"}
+            name="password"
+            placeholder="Password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+          <button
+            type="button"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {showPassword ? "🙈" : "👁️"} 
+          </button>
+        </div>
+
         <input
           className="p-1 bg-neutral-200"
           type="email"
