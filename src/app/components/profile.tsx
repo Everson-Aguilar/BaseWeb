@@ -1,165 +1,145 @@
-"use client";
+'use client'
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-interface Freelancer {
-  id: number;
-  usuario: string;
-  nombre_completo: string;
+interface User {
+  _id: string;
+  username: string;
   email: string;
-  portafolio: string;
-  software: string[];
-  anos_experiencia: number;
-  calificacion: number;
-  proyectos_completados: number;
-  descripcion: string;
-  idiomas: string[];
-  ubicacion: string;
-  disponibilidad: string;
-  especialidades: string[];
+  portfolio: string;
+  software: string;
+  years_experience: string;
+  assigned_email: string;
+  projects_added: string[] | null;
+  pending_send: string[] | null;
+  score: number;
+  payment_status: string;
 }
 
-const FreelancerProfile = () => {
-  const [editable, setEditable] = useState(false);
-  const [freelancer, setFreelancer] = useState<Freelancer>({
-    id: 1,
-    usuario: "juanperez",
-    nombre_completo: "Juan Pérez",
-    email: "juan@example.com",
-    portafolio: "https://juan3d.com",
-    software: ["Blender", "Maya"],
-    anos_experiencia: 5,
-    calificacion: 4.8,
-    proyectos_completados: 12,
-    descripcion: "Modelador 3D especializado en entornos realistas y diseño modular.",
-    idiomas: ["Español", "Inglés"],
-    ubicacion: "España",
-    disponibilidad: "Tiempo completo",
-    especialidades: ["Modelado 3D", "Texturizado", "Optimización para juegos"],
+const UsersList = () => {
+  const [adminUsers, setAdminUsers] = useState<User[]>([]);
+  const [freelancers, setFreelancers] = useState<User[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [email_ID, setEmail_ID] = useState<string | null>(() => {
+    // Recuperar `email_ID` de sessionStorage si está disponible
+    return sessionStorage.getItem("email_ID");
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFreelancer((prev) => ({
-      ...prev,
-      [name]: ["especialidades", "software", "idiomas"].includes(name)
-        ? value.split(",").map((item) => item.trim())
-        : value,
-    }));
-  };
+  // Obtener el email desde la API solo si no está en sessionStorage
+  useEffect(() => {
+    if (email_ID) return; // Si ya está guardado, no hace falta llamar a la API
+
+    const fetchEmail = async () => {
+      try {
+        const response = await fetch("/api/live");
+        const data = await response.json();
+        if (data.email) {
+          setEmail_ID(data.email);
+          sessionStorage.setItem("email_ID", data.email); // Guardar en sessionStorage
+        }
+      } catch (err) {
+        setError("Error obteniendo el email");
+      }
+    };
+
+    fetchEmail();
+  }, [email_ID]);
+
+  // Obtener los usuarios cuando el email_ID esté disponible
+  useEffect(() => {
+    if (!email_ID) return; // No ejecutar si no hay `email_ID`
+
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch("/api/admin_users");
+        if (!response.ok) throw new Error("Error al obtener los datos");
+
+        const data = await response.json();
+
+        // Filtrar solo si es necesario
+        setAdminUsers(data.adminUsers.filter((user: User) => user.email === email_ID));
+        setFreelancers(data.freelancers.filter((user: User) => user.email === email_ID));
+      } catch (err) {
+        setError("Error al obtener los datos de usuarios");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUsers();
+  }, [email_ID]);
+
+  // Eliminar los datos después de 5 segundos y limpiar `localStorage`
+  useEffect(() => {
+    let isMounted = true; // Variable para controlar si el componente está montado
+
+    const deleteData = async () => {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      if (isMounted) { // Solo elimina si el componente está montado
+        try {
+          const response = await fetch("/api/live", { method: "DELETE" });
+          if (!response.ok) throw new Error("Error al eliminar los datos");
+          console.log("Datos eliminados exitosamente");
+        } catch (err) {
+          console.error("Error al eliminar los datos:", err);
+        }
+      }
+    };
+
+    deleteData();
+
+    // Cleanup function: asegúrate de que la eliminación no ocurra si el componente se desmonta
+    return () => {
+      isMounted = false;
+    };
+  }, []); // El array vacío asegura que solo se ejecute una vez al montar el componente
+
+  if (loading) return <p>Cargando...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
-    <>
-      
-        {editable ? (
-          <div className="p-5">
-            {Object.keys(freelancer).map((key) =>
-              ["id", "usuario", "anos_experiencia", "calificacion", "proyectos_completados"].includes(key) ? null : (
-                <div key={key}>
-                  <label className="block text-sm font-bold mb-1">
-                    {key.replace("_", " ").toUpperCase()}
-                  </label>
-                  {key === "descripcion" ? (
-                    <textarea
-                      name={key}
-                      value={freelancer[key as keyof Freelancer] as string}
-                      onChange={handleChange}
-                      maxLength={300}
-                      rows={4}
-                      className="w-full p-2 border rounded-md"
-                    />
-                  ) : (
-                    <input
-                      type="text"
-                      name={key}
-                      value={
-                        Array.isArray(freelancer[key as keyof Freelancer])
-                          ? (freelancer[key as keyof Freelancer] as string[]).join(", ")
-                          : (freelancer[key as keyof Freelancer] as string)
-                      }
-                      onChange={handleChange}
-                      maxLength={
-                        key === "email" ? 100 :
-                        key === "portafolio" ? 150 :
-                        key === "ubicacion" || key === "disponibilidad" ? 50 :
-                        key === "especialidades" || key === "software" || key === "idiomas" ? 100 : undefined
-                      }
-                      className="w-full p-2 border rounded-md"
-                    />
-                  )}
-                  <span className="block text-xs text-gray-500 mt-1">
-                    {key === "descripcion"
-                      ? "Máximo 300 caracteres"
-                      : key === "email"
-                      ? "Máximo 100 caracteres"
-                      : key === "portafolio"
-                      ? "Máximo 150 caracteres"
-                      : key === "ubicacion" || key === "disponibilidad"
-                      ? "Máximo 50 caracteres"
-                      : key === "especialidades" || key === "software" || key === "idiomas"
-                      ? "Máximo 100 caracteres"
-                      : ""}
-                  </span>
-                </div>
-              )
-            )}
-            <button onClick={() => setEditable(false)} className="bg-subtitle text-white px-4 py-2 rounded-md">
-              Guardar
-            </button>
-          </div>
-        ) : (
-          <section className="space-y-4 border-4  p-5 m-5">
-            <h2 className="text-8xl text-colorBase shadow-inner-md font-BebasNeue p-5 border-b-4 ">{freelancer.nombre_completo}</h2>
-            <p className="text-colorBase border-4 p-5 h-36 shadow-inner-md">{freelancer.descripcion}</p>
+    <div>
+      <h2>Administradores</h2>
+      <ul>
+        {adminUsers.map(user => (
+          <li key={user._id}>
+            <p><strong>Usuario:</strong> {user.username}</p>
+            <p><strong>Email:</strong> {user.email}</p>
+            <p><strong>Software:</strong> {user.software}</p>
+            <p><strong>Años de Experiencia:</strong> {user.years_experience}</p>
+            <p><strong>Portafolio:</strong> {user.portfolio}</p>
+            
+            <p><strong>Correo Asignado:</strong> {user.assigned_email || "No asignado"}</p>
+            <p><strong>Proyectos Agregados:</strong> {Array.isArray(user.projects_added) && user.projects_added.length > 0 ? user.projects_added.join(", ") : "Ninguno"}</p>
+            <p><strong>Envío Pendiente:</strong> {Array.isArray(user.pending_send) && user.pending_send.length > 0 ? user.pending_send.join(", ") : "Nada pendiente"}</p>
+            <p><strong>Puntaje:</strong> {user.score}</p>
+            <p><strong>Estado de Pago:</strong> {user.payment_status}</p>
+          </li>
+        ))}
+      </ul>
 
-            <section className=" space-y-2 font-Staatliches shadow-lg p-5 ">
-            <p className="text-subtitle ">
-              <strong className="font-VT323 text-3xl">-Email:</strong> {freelancer.email}
-            </p>
-            <p className="text-subtitle">
-              <strong className="font-VT323 text-3xl">-Portafolio:</strong>{" "}
-              <a href={freelancer.portafolio} className="text-subtitle underline">
-                {freelancer.portafolio}
-              </a>
-            </p>
-            <p className="text-subtitle ">
-              <strong className="font-VT323 text-3xl">-Ubicación:</strong> {freelancer.ubicacion}
-            </p>
-            <p className="text-subtitle">
-              <strong className="font-VT323 text-3xl">-Años de experiencia:</strong> {freelancer.anos_experiencia}
-            </p>
-            <p className="text-subtitle">
-              <strong className="font-VT323 text-3xl">-Calificación:</strong> {freelancer.calificacion} / 5
-            </p>
-            <p className="text-subtitle">
-              <strong className="font-VT323 text-3xl">-Proyectos Completados:</strong> {freelancer.proyectos_completados}
-            </p>
-            <p className="text-subtitle">
-              <strong className="font-VT323 text-3xl">-Especialidades:</strong> {freelancer.especialidades.join(", ")}
-            </p>
-            <p className="text-subtitle">
-              <strong className="font-VT323 text-3xl">-Software:</strong> {freelancer.software.join(", ")}
-            </p>
-            <p className="text-subtitle">
-              <strong className="font-VT323 text-3xl">-Idiomas:</strong> {freelancer.idiomas.join(", ")}
-            </p>
-            <p className="text-subtitle">
-              <strong className="font-VT323 text-3xl">-Disponibilidad:</strong> {freelancer.disponibilidad}
-            </p>
-
-
-
-            </section>
-
-
-            <button onClick={() => setEditable(true)} className="bg-subtitle text-white px-4 py-2 rounded-md">
-              Editar
-            </button>
-          </section>
-        )}
-      
-    </>
+      <h2>Freelancers</h2>
+      <ul>
+        {freelancers.map(user => (
+          <li key={user._id}>
+            <p><strong>Usuario:</strong> {user.username}</p>
+            <p><strong>Email:</strong> {user.email}</p>
+            <p><strong>Software:</strong> {user.software}</p>
+            <p><strong>Años de Experiencia:</strong> {user.years_experience}</p>
+            <p><strong>Portafolio:</strong> {user.portfolio}</p>
+            
+            <p><strong>Correo Asignado:</strong> {user.assigned_email || "No asignado"}</p>
+            <p><strong>Proyectos Agregados:</strong> {Array.isArray(user.projects_added) && user.projects_added.length > 0 ? user.projects_added.join(", ") : "Ninguno"}</p>
+            <p><strong>Envío Pendiente:</strong> {Array.isArray(user.pending_send) && user.pending_send.length > 0 ? user.pending_send.join(", ") : "Nada pendiente"}</p>
+            <p><strong>Puntaje:</strong> {user.score}</p>
+            <p><strong>Estado de Pago:</strong> {user.payment_status}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
-export default FreelancerProfile;
+export default UsersList;

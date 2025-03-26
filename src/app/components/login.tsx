@@ -6,15 +6,14 @@ import Registration from "./user_registration";
 export default function LoginButton() {
   const router = useRouter();
   const [showLogin, setShowLogin] = useState(false);
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [confirmationMessage, setConfirmationMessage] = useState("");
 
   const handleLogin = async () => {
-    const userData = { username, password };
-   
-
+    const userData = { email, password };
+    
     try {
       const response = await fetch("/api/admin_users", {
         method: "POST",
@@ -27,15 +26,27 @@ export default function LoginButton() {
       const data = await response.json();
 
       if (response.ok) {
-        // Si la respuesta es correcta, redirige según el tipo de usuario
-        setConfirmationMessage(data.message); // Mostrar el mensaje de confirmación
-        setError(""); // Limpiar cualquier mensaje de error
+        setConfirmationMessage(data.message); 
+        setError(""); 
 
-        // Dependiendo del tipo de usuario, redirige a la página correspondiente
+        // Enviar correo del usuario a /api/live
+        try {
+          await fetch("/api/live", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email }),
+          });
+        } catch (liveError) {
+          console.error("Error al enviar datos a /api/live:", liveError);
+        }
+
+        // Redirigir según el tipo de usuario
         if (data.userType === "admin") {
-          router.push("/pages/admin/"); // Redirigir al panel de admin
+          router.push("/pages/admin/");
         } else if (data.userType === "freelancer") {
-          router.push("/pages/freelancer/"); // Redirigir al panel de freelancer
+          router.push("/pages/freelancer/");
         }
       } else {
         setError(data.message || "¡Usuario o contraseña incorrectos!");
@@ -56,7 +67,6 @@ export default function LoginButton() {
         <span className="translate-y-16 font-BebasNeue text-message">
           Iniciar sesión
         </span>
-
         <Image
           src="/DiseñoWeb/logogris.svg"
           alt="ver"
@@ -64,7 +74,6 @@ export default function LoginButton() {
           objectFit="fill"
         />
       </button>
-
       {showLogin && (
         <div className="fixed top-0 right-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
           <div className="bg-subtitle p-5 rounded-lg shadow-lg relative w-96">
@@ -82,8 +91,8 @@ export default function LoginButton() {
               <input
                 type="text"
                 className="w-full border p-2 rounded"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </label>
             <label className="block mb-4 text-colorBase">
@@ -96,14 +105,13 @@ export default function LoginButton() {
               />
             </label>
             {error && <p className="text-lime-500 text-center mb-4">{error}</p>}
-            {confirmationMessage && <p className="text-green-500 text-center mb-4">{confirmationMessage}</p>} {/* Mostrar confirmación */}
+            {confirmationMessage && <p className="text-green-500 text-center mb-4">{confirmationMessage}</p>}
             <button
               className="bg-subtitle p-2 rounded-2xl m-3 shadow-xl border-neutral-200 border-2 text-neutral-200 hover:bg-lime-500"
               onClick={handleLogin}
             >
               Acceder
             </button>
-
             <Registration />
           </div>
         </div>

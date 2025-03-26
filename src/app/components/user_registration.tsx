@@ -2,12 +2,20 @@ import { useState } from "react";
 
 const Register = () => {
   const [formData, setFormData] = useState({
+    // tipo de informacion datos basicos
     username: "",
     password: "",
     email: "",
     portfolio: "",
     software: "",
     years_experience: "",
+
+    // tipo de informacion datos estadisticos
+    assigned_email: "",           // Correo asignado (vacío al principio)
+    projects_added: [],           // Proyectos agregados (vacío al principio)
+    pending_send: [],             // Envío pendiente (vacío al principio)   // Registro pendiente (por defecto en "pendiente")
+    score: 0,                     // Puntaje inicial
+    payment_status: "pending",    // Estado de pago (por defecto "pendiente")
   });
 
   const [message, setMessage] = useState("");
@@ -38,6 +46,12 @@ const Register = () => {
           portfolio: "",
           software: "",
           years_experience: "",
+          assigned_email: "",
+          projects_added: [],
+          pending_send: [],
+    
+          score: 0,
+          payment_status: "pending",
         });
       } else {
         setMessage("Error registering user.");
@@ -62,7 +76,6 @@ const Register = () => {
           required
         />
 
-        {/* Campo de contraseña con botón de mostrar/ocultar */}
         <div className="relative">
           <input
             className="p-1 bg-neutral-200 w-full pr-10"

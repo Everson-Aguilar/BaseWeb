@@ -22,6 +22,10 @@ import Pack from "./components/separadores/proyectos";
 import MeettheFounder from "./components/venAvivirUnaVidaDiferente";
 import Footer from "./components/footer";
 
+//clean
+
+import CleanStorage from "./components/clean_storage"
+
 
 
 
@@ -36,9 +40,19 @@ const Home: React.FC = () => {
 
 
 
+    <CleanStorage/>
+
+
+    
+
+
+
       <header>
         <Header />
       </header>
+
+
+
 
       <section> <Login/> </section>
 
@@ -215,7 +229,7 @@ export default Home;
 
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "21/03/2025"
+git commit -m "23/03/2025"
 git pull origin main
 git push origin main */
 
