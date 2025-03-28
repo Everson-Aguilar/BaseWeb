@@ -36,7 +36,7 @@ const SessionExpired = () => {
   const message = secondsElapsed >= 10 ? "Session Expired" : "Loading...";
 
   return (
-    <div className="fixed w-screen flex items-center justify-center h-screen bg-colorBase">
+    <div className="fixed z-20 w-screen flex items-center justify-center h-screen bg-colorBase">
       <div className="text-center p-6 bg-neutral-800 shadow-lg rounded-lg w-80">
         <h2 className="text-xl font-semibold text-colorBase">{message}</h2>
 

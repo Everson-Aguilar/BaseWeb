@@ -2,28 +2,26 @@ import { useState } from "react";
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    // tipo de informacion datos basicos
     username: "",
     password: "",
     email: "",
     portfolio: "",
     software: "",
     years_experience: "",
-
-    // tipo de informacion datos estadisticos
-    assigned_email: "",           // Correo asignado (vacío al principio)
-    projects_added: [],           // Proyectos agregados (vacío al principio)
-    pending_send: [],             // Envío pendiente (vacío al principio)   // Registro pendiente (por defecto en "pendiente")
-    score: 0,                     // Puntaje inicial
-    payment_status: "pending",    // Estado de pago (por defecto "pendiente")
+    assigned_email: "",
+    score: 0,
+    payment_status: "pending",
+    webData: [{ webName: "", LinkWeb: "", verificationWeb: false, horafechaWeb: "" }],
+    sendData: [{ LinkSend: "", verificationSend: false, horafechaSend: "" }],
+    projectData: [{ sendProject: false, verificationProject: false, horafechaProject: "" }],
   });
 
   const [message, setMessage] = useState("");
-  
-  const [showPassword, setShowPassword] = useState(false); // Estado para mostrar/ocultar contraseña
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -47,11 +45,11 @@ const Register = () => {
           software: "",
           years_experience: "",
           assigned_email: "",
-          projects_added: [],
-          pending_send: [],
-    
           score: 0,
           payment_status: "pending",
+          webData: [{ webName: "", LinkWeb: "", verificationWeb: false, horafechaWeb: "" }],
+          sendData: [{ LinkSend: "", verificationSend: false, horafechaSend: "" }],
+          projectData: [{ sendProject: false, verificationProject: false, horafechaProject: "" }],
         });
       } else {
         setMessage("Error registering user.");
@@ -91,7 +89,7 @@ const Register = () => {
             className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600"
             onClick={() => setShowPassword(!showPassword)}
           >
-            {showPassword ? "🙈" : "👁️"} 
+            {showPassword ? "🙈" : "👁️"}
           </button>
         </div>
 
@@ -128,6 +126,7 @@ const Register = () => {
           value={formData.years_experience}
           onChange={handleChange}
         />
+
         <button
           className="bg-subtitle p-2 rounded-2xl m-3 border-neutral-200 border-2 text-neutral-200 hover:bg-lime-500 shadow-xl"
           type="submit"
