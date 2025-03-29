@@ -110,6 +110,9 @@ const UsersList = () => {
   if (loading) return <p>Cargando...</p>;
   if (error) return <p>Error: {error}</p>;
 
+
+  
+
   return (
     <section className="relative flex-row md:flex text-subtitle bg-neutral-200 h-full w-screen">
       <section className="shadow-xl p-5 h-screen overflow-scroll w-full md:w-1/3 min-w-60">
