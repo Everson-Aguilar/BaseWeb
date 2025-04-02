@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const SessionExpired = () => {
   const [isSessionExpired, setIsSessionExpired] = useState(false);
@@ -19,7 +19,7 @@ const SessionExpired = () => {
     // Set up a timeout to reload the page once after 5 seconds
     if (isSessionExpired) {
       const timeout = setTimeout(() => {
-        setSecondsElapsed(prev => prev + 1);
+        setSecondsElapsed((prev) => prev + 1);
         setProgress((prev) => Math.min(prev + 10, 100)); // Increase the progress by 10 each time until it reaches 100
       }, 500);
 
@@ -44,15 +44,14 @@ const SessionExpired = () => {
           <div className="mt-4">
             {/* Progress bar */}
             <div className="relative pt-1">
-              <div className="flex mb-2 items-center justify-between">
-              </div>
+              <div className="flex mb-2 items-center justify-between"></div>
               <div className="flex mb-2">
                 <div className="w-full bg-subtitle rounded-full h-2.5">
                   <div
                     className="bg-lime-500 h-2.5 rounded-full transition-all duration-300"
                     style={{ width: `${progress}%` }}
                   ></div>
-                  <p className='text-colorBase'>Verifying credentials</p>
+                  <p className="text-colorBase">Verifying credentials</p>
                 </div>
               </div>
             </div>

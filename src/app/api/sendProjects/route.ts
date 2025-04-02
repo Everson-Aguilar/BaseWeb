@@ -1,3 +1,4 @@
+
 import { NextResponse } from 'next/server';
 import { connectToDatabase } from '../../lib/mongodb';
 
@@ -7,7 +8,7 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     
-    const result = await db.collection('accept_user').insertOne(body);
+    const result = await db.collection('sendProjects').insertOne(body);
 
     return NextResponse.json({ message: 'Registro guardado', id: result.insertedId }, { status: 201 });
   } catch (error) {

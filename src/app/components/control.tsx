@@ -12,9 +12,6 @@ interface User {
   assigned_email: string;
   score: number;
   payment_status: string;
-  webData: { webName: string; LinkWeb: string; verificationWeb: boolean; horafechaWeb: string; }[];
-  sendData: { LinkSend: string; verificationSend: boolean; horafechaSend: string; }[];
-  projectData: { sendProject: boolean; verificationProject: boolean; horafechaProject: string; }[];
 }
 
 const UsersList = () => {
@@ -97,18 +94,6 @@ const UsersList = () => {
               <p><strong>Años de Experiencia:</strong> {user.years_experience}</p>
               <p><strong>Puntaje:</strong> {user.score}</p>
               <p><strong>Estado de Pago:</strong> {user.payment_status}</p>
-              <p><strong>Webs Asociadas:</strong></p>
-              {user.webData.map((web, index) => (
-                <p key={index}>{web.webName} - {web.LinkWeb} - {web.verificationWeb ? "Verificado" : "No verificado"}</p>
-              ))}
-              <p><strong>Datos de Envío:</strong></p>
-              {user.sendData.map((send, index) => (
-                <p key={index}>{send.LinkSend} - {send.verificationSend ? "Verificado" : "No verificado"}</p>
-              ))}
-              <p><strong>Datos del Proyecto:</strong></p>
-              {user.projectData.map((project, index) => (
-                <p key={index}>{project.sendProject ? "Enviado" : "No enviado"} - {project.verificationProject ? "Verificado" : "No verificado"}</p>
-              ))}
               <div className="mt-2 flex gap-5">
                 <button onClick={() => handleAccept(user)} className="hover:bg-lime-500 p-2">Aceptar</button>
                 <button onClick={() => handleReject(user._id)} className="hover:bg-red-500 p-2">Rechazar</button>

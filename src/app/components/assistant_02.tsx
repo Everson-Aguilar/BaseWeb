@@ -16,7 +16,7 @@ const Assistant: React.FC = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await fetch('/api/message');
+        const response = await fetch('/api/message_02');
         if (!response.ok) throw new Error('Error al obtener los mensajes');
 
         const jsonResponse = await response.json();
@@ -52,7 +52,7 @@ const Assistant: React.FC = () => {
       } else {
         setTimeout(() => {
           setCurrentMessageIndex((prev) => (prev + 1) % messages.length);
-        }, 10000);
+        }, 15000);
       }
     };
 

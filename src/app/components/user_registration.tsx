@@ -11,9 +11,6 @@ const Register = () => {
     assigned_email: "",
     score: 0,
     payment_status: "pending",
-    webData: [{ webName: "", LinkWeb: "", verificationWeb: false, horafechaWeb: "" }],
-    sendData: [{ LinkSend: "", verificationSend: false, horafechaSend: "" }],
-    projectData: [{ sendProject: false, verificationProject: false, horafechaProject: "" }],
   });
 
   const [message, setMessage] = useState("");
@@ -47,9 +44,6 @@ const Register = () => {
           assigned_email: "",
           score: 0,
           payment_status: "pending",
-          webData: [{ webName: "", LinkWeb: "", verificationWeb: false, horafechaWeb: "" }],
-          sendData: [{ LinkSend: "", verificationSend: false, horafechaSend: "" }],
-          projectData: [{ sendProject: false, verificationProject: false, horafechaProject: "" }],
         });
       } else {
         setMessage("Error registering user.");

@@ -7,8 +7,8 @@ export async function POST(req: Request) {
     const db = await connectToDatabase();
     const body = await req.json();
 
-    // Insertar en la colección "registrations"
-    const result = await db.collection('registrations').insertOne(body);
+    
+    const result = await db.collection('sends').insertOne(body);
 
     return NextResponse.json({ message: 'Registro guardado', id: result.insertedId }, { status: 201 });
   } catch (error) {

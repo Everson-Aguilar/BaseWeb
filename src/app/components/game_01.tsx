@@ -23,7 +23,7 @@ const Game01 = () => {
 
   const toggleCasilla = (index: number) => {
     if (blockedCasillas[index]) return;
-    
+
     if (index !== nextAllowed) {
       setHighlighted(nextAllowed);
       setTimeout(() => setHighlighted(null), 1000);
@@ -43,20 +43,58 @@ const Game01 = () => {
     }));
   };
 
-  const handleSubmit = (index: number, event: React.FormEvent) => {
+  const handleSubmit = async (index: number, event: React.FormEvent) => {
     event.preventDefault();
+
+    const linkValue = formValues[index]?.trim();
+    if (!linkValue) {
+      alert("El campo no puede estar vacío");
+      return;
+    }
+
+    const email_ID = sessionStorage.getItem("email_ID");
+    if (!email_ID) {
+      alert("No hay usuario autenticado");
+      return;
+    }
+
     const expirationTime = Date.now() + 24 * 60 * 60 * 1000;
-    
-    setBlockedCasillas((prev) => ({
-      ...prev,
-      [index]: expirationTime,
-    }));
-    
-    setNextAllowed(index + 1);
-    setOpenCasillas((prev) => ({
-      ...prev,
-      [index]: false,
-    }));
+
+    // Datos a enviar a la API
+    const sendData = {
+      LinkSend: linkValue,
+      verificationSend: false, // Siempre inicia en false
+      horafechaSend: new Date().toISOString(),
+      email_ID,
+    };
+
+    try {
+      const response = await fetch("/api/sends/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(sendData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Error al enviar los datos");
+      }
+
+      setBlockedCasillas((prev) => ({
+        ...prev,
+        [index]: expirationTime,
+      }));
+
+      setNextAllowed(index + 1);
+      setOpenCasillas((prev) => ({
+        ...prev,
+        [index]: false,
+      }));
+    } catch (error) {
+      alert("Hubo un problema al enviar los datos");
+      console.error(error);
+    }
   };
 
   const getTimeRemaining = (endTime: number | null) => {
@@ -76,7 +114,7 @@ const Game01 = () => {
   };
 
   return (
-    <div className="  flex-row items-center space-y-10">
+    <div className="flex-row items-center space-y-10">
       <div className="flex flex-wrap gap-2 justify-center items-start text-center w-full">
         {casillas.map((casilla) => {
           const timeLeft = getTimeRemaining(blockedCasillas[casilla]);
@@ -104,11 +142,15 @@ const Game01 = () => {
                       placeholder="Ingresa un enlace"
                       value={formValues[casilla] || ""}
                       onChange={(e) => handleInputChange(casilla, e.target.value)}
-                      className="p-2 border rounded-md  bg-neutral-200"
+                      className="p-2 border rounded-md bg-neutral-200"
                     />
-                    <button type="submit" className="px-4 py-2 bg-colorBase text-neutral-200 rounded-md hover:bg-lime-500 transition">Enviar</button>
+                    <button type="submit" className="px-4 py-2 bg-colorBase text-neutral-200 rounded-md hover:bg-lime-500 transition">
+                      Enviar
+                    </button>
                   </form>
-                  <button onClick={() => toggleCasilla(casilla)} className="mt-2 px-4 py-1 text-white rounded-md">X</button>
+                  <button onClick={() => toggleCasilla(casilla)} className="mt-2 px-4 py-1 text-white rounded-md">
+                    X
+                  </button>
                 </div>
               )}
             </div>

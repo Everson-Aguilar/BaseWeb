@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Explorer_task from "./explorer_tasks";
 import ProjectsInterest from "./Projects _of_interest";
+import Production from "./workProduction"
+import Earrings from "./earrings"
 
 interface User {
   _id: string;
@@ -15,25 +17,6 @@ interface User {
   assigned_email: string;
   score: number;
   payment_status: string;
-
-  webData: {
-    webName: string;
-    LinkWeb: string;
-    verificationWeb: boolean; // false por defecto
-    horafechaWeb: string; // hora del envio y fecha
-  }[];
-
-  sendData: {
-    LinkSend: string;
-    verificationSend: boolean;
-    horafechaSend: string;
-  }[];
-
-  projectData: {
-    sendProject: boolean;
-    verificationProject: boolean;
-    horafechaProject: string;
-  }[];
 }
 
 const UsersList = () => {
@@ -110,13 +93,10 @@ const UsersList = () => {
   if (loading) return <p>Cargando...</p>;
   if (error) return <p>Error: {error}</p>;
 
-
-  
-
   return (
     <section className="relative flex-row md:flex text-subtitle bg-neutral-200 h-full w-screen">
       <section className="shadow-xl p-5 h-screen overflow-scroll w-full md:w-1/3 min-w-60">
-        <h2 className="font-BebasNeue text-5xl border-colorBase border-b-2">Perfil</h2>
+        <h2 className="font-BebasNeue text-8xl border-colorBase border-b-2">Perfil</h2>
         <ul>
           {freelancers.map((user) => (
             <li key={user._id} className="space-y-3">
@@ -128,23 +108,23 @@ const UsersList = () => {
               <p><strong>Años de Experiencia:</strong> {user.years_experience}</p>
               <p><strong>Portafolio:</strong> {user.portfolio}</p>
               <p><strong>Correo Asignado:</strong> {user.assigned_email || "No asignado"}</p>
-              <h3 className="font-bold">Datos Web:</h3>
-              {user.webData.map((web, index) => (
-                <p key={index}>{web.webName} - {web.LinkWeb} - {web.verificationWeb ? "Verificado" : "No verificado"} - {web.horafechaWeb}</p>
-              ))}
-              <h3 className="font-bold">Datos de Envío:</h3>
-              {user.sendData.map((send, index) => (
-                <p key={index}>{send.LinkSend} - {send.verificationSend ? "Verificado" : "No verificado"} - {send.horafechaSend}</p>
-              ))}
-              <h3 className="font-bold">Datos de Proyectos:</h3>
-              {user.projectData.map((project, index) => (
-                <p key={index}>{project.sendProject ? "Enviado" : "No enviado"} - {project.verificationProject ? "Verificado" : "No verificado"} - {project.horafechaProject}</p>
-              ))}
             </li>
           ))}
         </ul>
+
+
+        <h2 className="font-BebasNeue text-5xl border-colorBase border-b-2 mt-10 mb-10">Acciones Registradas</h2>
+
+        <div className="relative"><Earrings/></div>
+
+
       </section>
-      <div className="w-full">
+
+      
+
+      <div className=" relative h-[800px] w-full ">
+      <h2 className="  font-BebasNeue text-6xl border-colorBase border-b-2">Participa en proyectos grandes</h2>
+        <Production/>
         <Explorer_task />
       </div>
       <div><ProjectsInterest /></div>
