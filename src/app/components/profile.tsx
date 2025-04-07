@@ -122,7 +122,7 @@ const UsersList = () => {
 
       
 
-      <div className=" relative h-[800px] w-full ">
+      <div className=" relative h-full w-full ">
       <h2 className="  font-BebasNeue text-6xl border-colorBase border-b-2">Participa en proyectos grandes</h2>
         <Production/>
         <Explorer_task />

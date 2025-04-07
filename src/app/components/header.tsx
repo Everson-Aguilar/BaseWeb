@@ -21,7 +21,7 @@ const Header: React.FC = () => {
     <header className="bg-trend h-fill w-full z-30 top-0 fixed  ">
       <nav className="flex text-colorBase  p-1  justify-between ">
         {/* Logo or title */}
-        <div className="font-LibreBarcode128  text-3xl border-b-2 border-orange-400">TuDigitalNegocio.com</div>
+        <div className="font-LibreBarcode128  text-3xl border-b-2 border-green">TuDigitalNegocio.com</div>
 
         {/* Navigation menu */}
         <ul className={`md:flex ${isMenuOpen ? "block" : "hidden"} w-1/2 gap-5  font-sans  justify-end pr-5`}>

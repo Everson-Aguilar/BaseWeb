@@ -39,6 +39,7 @@ const config: Config = {
         title: '#252422',
         trend: '#1f1f1f',
         colorBase: '#6d6d6d',
+        green: '#9eff02',
       },
 
       scale: {

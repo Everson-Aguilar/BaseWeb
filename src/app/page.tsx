@@ -66,9 +66,6 @@ const Home: React.FC = () => {
           <MeettheFounder />
         </nav>
 
-        
-
-
 
         <section className="mt-5" aria-labelledby="introduction">
           <h2 id="introduction" className="sr-only">
@@ -229,7 +226,7 @@ export default Home;
 
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "28/03/2025"
+git commit -m "01/04/2025"
 git pull origin main
 git push origin main */
 

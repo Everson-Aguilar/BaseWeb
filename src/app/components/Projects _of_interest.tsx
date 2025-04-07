@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import Assistant_02 from "./assistant_02";
 
 export default function ProjectForm() {
@@ -20,7 +20,7 @@ export default function ProjectForm() {
     }));
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
     setFormData((prevData) => ({
@@ -29,7 +29,7 @@ export default function ProjectForm() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitted(false);
 
@@ -100,3 +100,5 @@ export default function ProjectForm() {
     </div>
   );
 }
+
+export const getEmailID = (): string => sessionStorage.getItem("email_ID") || "";

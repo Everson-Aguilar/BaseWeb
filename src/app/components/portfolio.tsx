@@ -46,10 +46,10 @@ const Galeria: React.FC = () => {
   const ids = images.map((_, index) => `b${index + 1}`);
 
   return (
-    <section className=" text-colorBase   md:flex xl:flex ">
+    <section className=" text-green   md:flex xl:flex ">
       {/* galería */}
       <section className="w-full md:w-1/2 p-5">
-        <h2 className="text-trend font-BebasNeue text-8xl">PORTFOLIO</h2>
+        <h2 className="text-green font-BebasNeue text-8xl">PORTFOLIO</h2>
 
         <div>
           {confirmation && <div>Component imported successfully.</div>}
@@ -103,8 +103,8 @@ const Galeria: React.FC = () => {
 
       {/* Artista Digital */}
       <article className="p-5">
-  <div className="mt-10 text-title">
-    <h2 className="text-trend font-BebasNeue text-xl">
+  <div className="mt-10 text-green border-l-4 border-green  pl-5">
+    <h2 className="text-green font-BebasNeue text-xl">
       STEPS TO CREATE ACCESSORIES AS A DIGITAL ARTIST:
     </h2>
     <ul className="text-1xl">
@@ -120,8 +120,8 @@ const Galeria: React.FC = () => {
       <li>*Final Delivery</li>
     </ul>
 
-    <h2 className="text-trend font-BebasNeue text-xl">TECHNOLOGIES</h2>
-    <ul className="text-1xl">
+    <h2 className="text-green font-BebasNeue text-xl">TECHNOLOGIES</h2>
+    <ul className="text-1xl ">
       <li>*Autodesk Revit</li>
       <li>*Blender</li>
       <li>*ZBrush</li>

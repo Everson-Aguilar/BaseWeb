@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full bg-trend text-colorBase mt-10">
+    <footer className="w-full bg-trend text-green mt-10">
       <div className="max-w-6xl mx-auto p-5 text-sm">
         {/* Contact */}
         <section className="mb-5">
@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
           <address className="not-italic">
             <a
               href="mailto:eversonaguilar1@gmail.com"
-              className="hover:underline text-orange-400"
+              className="hover:underline text-green"
             >
               eversonaguilar1@gmail.com
             </a>

@@ -119,11 +119,11 @@ const MyComponent: React.FC = () => {
         </figure>
 
       <article className="p-10">
-        <h2 className="text-3xl font-BebasNeue text-trend">
+        <h2 className="text-3xl font-BebasNeue text-green">
           TECHNOLOGICAL TOOLS{" "}
         </h2>
 
-        <p>
+        <p className="text-green">
           I create advanced digital design solutions, both in 2D and 3D, using
           the most common and powerful tools in the industry. I transform ideas
           into realistic and detailed visual experiences, working with graphic
@@ -133,7 +133,7 @@ const MyComponent: React.FC = () => {
         </p>
       </article>
 
-      <figure className="text-colorBase relative p-5 flex flex-wrap gap-5 justify-start items-start w-full">
+      <figure className="text-green relative p-5 flex flex-wrap gap-5 justify-start items-start w-full">
         {videos.map((video, index) => (
           <VideoItem
             key={index}

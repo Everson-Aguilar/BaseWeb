@@ -3,7 +3,7 @@
 
 const RefundPolicy = () => {
   return (
-    <section className="mt-5 max-w-3xl mx-auto p-6 bg-message shadow-lg rounded-lg">
+    <section className="mt-5 max-w-3xl mx-auto p-6 bg-green shadow-lg rounded-lg">
       <header>
         <h2 className="text-3xl font-BebasNeue text-center text-title mb-4">
           Changed Your Mind? Sell Your Design!

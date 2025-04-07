@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Background } from "./components/background";
 
 
 
@@ -93,7 +94,15 @@ export default function RootLayout({
           content="Imagen de Marketing Digital y Contenido 3D"
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className=  {inter.className}>
+      <section><Background/> </section>
+        
+        {children}
+      
+       </body>
+
+     
+
     </html>
   );
 }

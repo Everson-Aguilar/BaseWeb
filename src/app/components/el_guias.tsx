@@ -17,7 +17,7 @@ const Contact = () => {
         onClick={togglePopup} // Maneja el clic para abrir o cerrar el popup
         target="_blank"
         rel="noopener noreferrer"
-        className="z-10 bg-message duration-500 hover:scale-150 hover:bg-orange-400 p-3 rounded-full shadow-2xl flex items-center justify-center cursor-pointer"
+        className="z-10 bg-green duration-500 hover:scale-150 hover:bg-orange-400 p-3 rounded-full shadow-2xl flex items-center justify-center cursor-pointer"
         aria-label="Abrir canales de redes sociales"
       >
         {/* Imagen del botón */}
@@ -36,7 +36,7 @@ const Contact = () => {
           aria-live="assertive"
         >
           {/* Contenedor del popup */}
-          <div className="bg-message -translate-y-32 p-5 w-fit rounded-lg shadow-lg relative">
+          <div className="bg-green -translate-y-32 p-5 w-fit rounded-lg shadow-lg relative">
             {/* Botón para cerrar el popup */}
             <button
               onClick={togglePopup} // Maneja el clic para cerrar el popup
