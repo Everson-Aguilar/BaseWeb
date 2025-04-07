@@ -50,7 +50,7 @@ const comments: Comment[] = [
 const CommentsList: React.FC = () => {
   return (
     <section>
-      <h2 className="font-BebasNeue text-3xl text-trend">
+      <h2 className="font-BebasNeue text-3xl text-green p-5">
         CLIENT EXPECTATIONS{" "}
       </h2>
 

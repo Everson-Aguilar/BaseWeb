@@ -59,7 +59,8 @@ const MyComponent: React.FC = () => {
   };
 
   return (
-    <div className="overflow-auto">
+    <div className="overflow-auto  ">
+      <h2 className='text-8xl font-BebasNeue text-green'>international</h2>
       <div
         className="relative w-[1000px] h-[500px] cursor-pointer"
         onClick={handleMapClick}

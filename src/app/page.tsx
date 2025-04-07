@@ -2,17 +2,19 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-  // eliminar
 
+// eliminar
 
 // Components
 import Header from "./components/header";
-import Login from "./components/login"
+import Login from "./components/login";
 import Contact from "./components/el_guias";
 import Introductions from "./components/introduccion";
 import Tools from "./components/herramientas";
 import Rules from "./components/reglas";
 import Sell from "./components/retiro";
+import Maps from "../../components/mapa";
+import Comments from "../../components/comentarios";
 import SubServices from "./components/paquetes";
 import Portfolio from "./components/portfolio";
 import Services from "./components/servicios";
@@ -24,12 +26,7 @@ import Footer from "./components/footer";
 
 //clean
 
-import CleanStorage from "./components/clean_storage"
-
-
-
-
-
+import CleanStorage from "./components/clean_storage";
 
 // Styles
 import "./globals.css";
@@ -37,25 +34,16 @@ import "./globals.css";
 const Home: React.FC = () => {
   return (
     <>
-
-
-
-    <CleanStorage/>
-
-
-    
-
-
+      <CleanStorage />
 
       <header>
         <Header />
       </header>
 
-
-
-
-      <section> <Login/> </section>
-
+      <section>
+        {" "}
+        <Login />{" "}
+      </section>
 
       <main>
         <nav role="navigation" aria-label="Contact Section">
@@ -65,7 +53,6 @@ const Home: React.FC = () => {
         <nav role="navigation" aria-label="About the Author">
           <MeettheFounder />
         </nav>
-
 
         <section className="mt-5" aria-labelledby="introduction">
           <h2 id="introduction" className="sr-only">
@@ -80,10 +67,6 @@ const Home: React.FC = () => {
             <Introductions />
           </motion.div>
         </section>
-
-      
-
-
 
         <section>
           <motion.div
@@ -143,37 +126,17 @@ const Home: React.FC = () => {
           <h2 id="rules" className="sr-only">
             Rules
           </h2>
-          
-            <Rules />
-          
+
+          <Rules />
         </section>
 
         <section className="mt-20" aria-labelledby="pricing">
           <h2 id="pricing" className="sr-only">
             Pricing
           </h2>
-          
-            <SubServices />
-         
+
+          <SubServices />
         </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         {/* Projects Section */}
         <section aria-labelledby="projects">
@@ -221,12 +184,11 @@ const Home: React.FC = () => {
 
 export default Home;
 
-
-  /*  GUARDAR Y SUBIR APLICACION   */
+/*  GUARDAR Y SUBIR APLICACION   */
 
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "01/04/2025"
+git commit -m "07/04/2025"
 git pull origin main
 git push origin main */
 
@@ -236,12 +198,7 @@ git commit -m "23/12/2024"
 git pull origin develop
 git push origin develop */
 
-
 //--------------------------
-
-
-
-
 
 //git fetch origin
 //git reset --hard origin/main

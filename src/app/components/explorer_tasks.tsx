@@ -8,7 +8,7 @@ const Explorer_task = () => {
       <div>
 
 
-      <h2 className="font-BebasNeue  text-8xl drop-shadow-md">
+      <h2 className="font-BebasNeue  text-8xl drop-shadow-md text-green">
         EXPLORER TASK
       </h2>
       

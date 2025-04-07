@@ -94,8 +94,8 @@ const UsersList = () => {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <section className="relative flex-row md:flex text-subtitle bg-neutral-200 h-full w-screen">
-      <section className="shadow-xl p-5 h-screen overflow-scroll w-full md:w-1/3 min-w-60">
+    <section className="relative flex-row md:flex text-subtitle  h-full w-screen">
+      <section className="shadow-xl p-5 h-screen overflow-scroll w-full md:w-1/3 min-w-60 bg-trend ">
         <h2 className="font-BebasNeue text-8xl border-colorBase border-b-2">Perfil</h2>
         <ul>
           {freelancers.map((user) => (
@@ -123,11 +123,11 @@ const UsersList = () => {
       
 
       <div className=" relative h-full w-full ">
-      <h2 className="  font-BebasNeue text-6xl border-colorBase border-b-2">Participa en proyectos grandes</h2>
+      <h2 className="  font-BebasNeue text-6xl border-colorBase border-b-2 text-green">Participa en proyectos grandes</h2>
         <Production/>
         <Explorer_task />
       </div>
-      <div><ProjectsInterest /></div>
+      <div className="bg-trend p-3"><ProjectsInterest /></div>
     </section>
   );
 };

@@ -1,7 +1,10 @@
 import React from "react";
 
-//component 
-import SubServices from "./subServices";
+import Maps from "../../app/components/mapa";
+import Comments from "../../app/components/comentarios";
+
+
+
 
 const SocialMediaFormats: React.FC = () => {
 
@@ -66,8 +69,12 @@ const SocialMediaFormats: React.FC = () => {
         </ul>
       </article>
 
-      <section className="w-full md:w-1/2 h-full">
-        <SubServices />
+      <section className="w-full md:w-1/2 h-full"> 
+
+        <div className="p-5"><Maps/></div>
+        <div><Comments/></div>
+        
+       
       </section>
     </section>
   );

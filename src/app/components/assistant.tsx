@@ -62,8 +62,8 @@ const Assistant: React.FC = () => {
   }, [messages, currentMessageIndex]);
 
   return (
-    <div className=" flex items-center p-4">
-      <div className="flex justify-center items-center border-4 text-5xl h-20 w-20 border-colorBase rounded-full">!</div>
+    <div className=" flex items-center p-4 text-green">
+      <div className="flex justify-center items-center border-4 text-5xl h-20 w-20 border-green rounded-full">!</div>
       <div className="w-full text-lg whitespace-pre-wrap">
         <span dangerouslySetInnerHTML={{ __html: displayText || 'Cargando...' }} />
         {currentLinks.length > 0 && (

@@ -62,7 +62,7 @@ const Assistant: React.FC = () => {
 
   return (
     <div className=" w-full border-l-4 border-colorBase md:w-60 flex items-center p-4">
-      <div className="flex justify-center items-center border-4 text-5xl h-20 w-20 ">*</div>
+      <div className="flex justify-center items-center text-5xl h-20 w-20 ">*</div>
       <div className="w-full text-lg whitespace-pre-wrap">
         <span dangerouslySetInnerHTML={{ __html: displayText || 'Cargando...' }} />
        
