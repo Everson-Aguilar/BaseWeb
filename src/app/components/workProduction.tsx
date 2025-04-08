@@ -34,7 +34,20 @@ export default function ProjectPage() {
       const fetchData = async () => {
         setLoading(true);
         try {
-          const res = await fetch("/api/carry_out"); // Llamada a la API
+
+
+
+          const res = await fetch("/api/carry_out", {
+            method: "GET",
+            headers: {
+              "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
+              "Content-Type": "application/json",
+            },
+          });
+          
+
+
+
           const result = await res.json();
           console.log("Respuesta de la API (fetchData):", result);
 
@@ -85,10 +98,14 @@ export default function ProjectPage() {
       const response = await fetch("/api/sendProjects", {
         method: "POST",
         headers: {
+          "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ ...project, email_ID }),
       });
+      
+
+
       const result = await response.json();
       if (!response.ok) {
         throw new Error(result.message || "Error al enviar los datos");

@@ -18,7 +18,8 @@ export default function LoginButton() {
       const response = await fetch("/api/admin_users", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          'x-api-key': process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? '',
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(userData),
       });
@@ -34,7 +35,8 @@ export default function LoginButton() {
           await fetch("/api/live", {
             method: "POST",
             headers: {
-              "Content-Type": "application/json",
+              'x-api-key': process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? '',
+              'Content-Type': 'application/json',
             },
             body: JSON.stringify({ email }),
           });

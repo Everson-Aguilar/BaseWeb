@@ -22,7 +22,16 @@ const UsersList = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch("/api/new_users");
+        const response = await fetch("/api/new_users", {
+          method: "GET",
+          headers: {
+            "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
+            "Content-Type": "application/json",
+          },
+        });
+        
+
+
         const result = await response.json();
         result.success ? setUsers(result.data) : setError("Error al obtener los usuarios.");
       } catch {
@@ -37,11 +46,18 @@ const UsersList = () => {
   const handleReject = async (userId: string) => {
     try {
       await new Promise(resolve => setTimeout(resolve, 3000));
+
       const response = await fetch("/api/delete_user", {
         method: "DELETE",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({ userId }),
       });
+      
+
+
       if (response.ok) setUsers(users.filter(user => user._id !== userId));
     } catch (error) {
       console.error("Error al rechazar usuario", error);
@@ -50,11 +66,19 @@ const UsersList = () => {
 
   const handleAccept = async (user: User) => {
     try {
+
+
       const response = await fetch("/api/accept_user", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(user),
       });
+      
+
+
       if (response.ok) await handleReject(user._id);
     } catch (error) {
       console.error("Error al aceptar usuario", error);
@@ -63,11 +87,18 @@ const UsersList = () => {
 
   const handleAcceptAdmin = async (user: User) => {
     try {
+
       const response = await fetch("/api/admin", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(user),
       });
+      
+
+
       if (response.ok) await handleReject(user._id);
     } catch (error) {
       console.error("Error al aceptar usuario como admin", error);

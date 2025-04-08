@@ -60,10 +60,13 @@ const Game01 = () => {
       const response = await fetch("/api/sends/", {
         method: "POST",
         headers: {
+          "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
           "Content-Type": "application/json",
         },
         body: JSON.stringify(sendData),
       });
+      
+
 
       if (!response.ok) {
         throw new Error("Error al enviar los datos");

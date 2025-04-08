@@ -45,10 +45,12 @@ export default function ProjectForm() {
       const response = await fetch("/api/registerWeb", {
         method: "POST",
         headers: {
+          "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
           "Content-Type": "application/json",
         },
         body: JSON.stringify(newEntry),
       });
+      
 
       if (response.ok) {
         setSubmitted(true);

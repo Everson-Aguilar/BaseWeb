@@ -9,7 +9,18 @@ const Earrings = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/earrings");
+
+        const response = await fetch("/api/earrings", {
+          method: "GET",
+          headers: {
+            "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
+            "Content-Type": "application/json",
+          },
+        });
+        
+
+
+        
         const result = await response.json();
 
         if (!result.success) throw new Error(result.message || "Error al obtener datos");

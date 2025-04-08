@@ -36,9 +36,13 @@ const AdminPanel: React.FC = () => {
       // Se envía la solicitud al backend usando fetch
       const response = await fetch("/api/task", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(newItem),
       });
+      
 
       if (response.ok) {
         alert("✅ Tarea publicada con éxito");

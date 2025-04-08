@@ -32,7 +32,18 @@ const UsersList = () => {
 
     const fetchEmail = async () => {
       try {
-        const response = await fetch("/api/live");
+
+
+        const response = await fetch("/api/live", {
+          method: "GET",
+          headers: {
+            "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
+            "Content-Type": "application/json",
+          },
+        });
+
+
+
         const data = await response.json();
         if (data.email) {
           setEmail_ID(data.email);
@@ -51,7 +62,20 @@ const UsersList = () => {
 
     const fetchUsers = async () => {
       try {
-        const response = await fetch("/api/admin_users");
+
+       
+
+        const response = await fetch("/api/admin_users", {
+          method: "GET",
+          headers: {
+            "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
+            "Content-Type": "application/json",
+          },
+        });
+
+
+
+
         if (!response.ok) throw new Error("Error al obtener los datos");
 
         const data = await response.json();
@@ -75,7 +99,20 @@ const UsersList = () => {
       await new Promise((resolve) => setTimeout(resolve, 1000));
       if (isMounted) {
         try {
-          const response = await fetch("/api/live", { method: "DELETE" });
+
+          const response = await fetch("/api/live", {
+            method: "DELETE",
+            headers: {
+              "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
+              "Content-Type": "application/json",
+            },
+          });
+
+          
+
+
+
+
           if (!response.ok) throw new Error("Error al eliminar los datos");
           console.log("Datos eliminados exitosamente");
         } catch (err) {

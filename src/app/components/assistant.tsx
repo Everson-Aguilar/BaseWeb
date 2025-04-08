@@ -16,7 +16,15 @@ const Assistant: React.FC = () => {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await fetch('/api/message');
+        const response = await fetch('/api/message', {
+  method: "GET",
+  headers: {
+    "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
+    "Content-Type": "application/json",
+  },
+});
+
+        
         if (!response.ok) throw new Error('Error al obtener los mensajes');
 
         const jsonResponse = await response.json();

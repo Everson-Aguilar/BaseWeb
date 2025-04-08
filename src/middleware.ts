@@ -6,7 +6,7 @@ export function middleware(req: NextRequest) {
     const publicKey = process.env.NEXT_PUBLIC_API_KEY_CLIENT;
 
     if (apiKey !== publicKey) {
-      return new NextResponse('Bloqueado', { status: 401 });
+      return new NextResponse('page not found', { status: 401 });
     }
   }
 

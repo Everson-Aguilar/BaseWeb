@@ -20,7 +20,16 @@ const UsersList = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch("/api/freelancer");
+        const response = await fetch("/api/freelancer", {
+          method: "GET",
+          headers: {
+            "x-api-key": process.env.NEXT_PUBLIC_API_KEY_CLIENT ?? "",
+            "Content-Type": "application/json",
+          },
+        });
+        
+
+
         const result = await response.json();
         if (result.success) {
           setUsers(result.data);
