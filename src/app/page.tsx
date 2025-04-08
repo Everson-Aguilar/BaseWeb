@@ -13,8 +13,6 @@ import Introductions from "./components/introduccion";
 import Tools from "./components/herramientas";
 import Rules from "./components/reglas";
 import Sell from "./components/retiro";
-import Maps from "../../components/mapa";
-import Comments from "../../components/comentarios";
 import SubServices from "./components/paquetes";
 import Portfolio from "./components/portfolio";
 import Services from "./components/servicios";

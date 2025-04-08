@@ -1,5 +1,10 @@
 "use client"; // Indica que este es un componente de cliente en Next.js
 
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+
+
 import { useEffect, useState } from "react";
 import Contact from "./el_guias"; // Importa el componente Contact
 
@@ -64,10 +69,15 @@ export default function ProjectPage() {
     }
 
     // Obtener proyectos almacenados localmente
-    const storedProjects = JSON.parse(localStorage.getItem(`acceptedProjects_${email_ID}`) || "[]");
+    const storedProjects = JSON.parse(
+      localStorage.getItem(`acceptedProjects_${email_ID}`) || "[]"
+    );
     if (!storedProjects.includes(project.title)) {
       storedProjects.push(project.title);
-      localStorage.setItem(`acceptedProjects_${email_ID}`, JSON.stringify(storedProjects));
+      localStorage.setItem(
+        `acceptedProjects_${email_ID}`,
+        JSON.stringify(storedProjects)
+      );
     }
 
     try {
@@ -95,9 +105,17 @@ export default function ProjectPage() {
     const email_ID = sessionStorage.getItem("email_ID");
     if (!email_ID) return data;
 
-    const storedProjects: string[] = JSON.parse(localStorage.getItem(`acceptedProjects_${email_ID}`) || "[]");
+    const storedProjects: string[] = JSON.parse(
+      localStorage.getItem(`acceptedProjects_${email_ID}`) || "[]"
+    );
     return data.filter((project) => !storedProjects.includes(project.title));
   };
+
+
+  // dirigir a pagina de produccion
+  const router = useRouter();
+
+
 
   return (
     <div>
@@ -114,8 +132,19 @@ export default function ProjectPage() {
 
         {Visible && (
           <div className="flex-row md:flex border-b-8 border-t-8 border-subtitle">
-            <div className="w-full md:w-1/2 bg-subtitle flex justify-center items-center">
-              <div className="h-80 w-80 bg-colorBase"></div> {/* Espacio visual vacío */}
+            <div className="  w-full md:w-1/2 bg-subtitle flex justify-center items-center">
+              <button 
+              onClick={() => router.push("/pages/mantenimiento/")}
+               className=" relative h-80 w-80   ">
+                <Image
+                  src="/DiseñoWeb/iconos/industrial.svg"
+                  alt="ver"
+                  layout="fill"
+                  objectFit="fill"
+                  className="hover:scale-105 rounded-full shadow-2xl"
+                />
+              </button>{" "}
+              {/* Espacio visual vacío */}
             </div>
 
             {loading ? (
@@ -139,9 +168,9 @@ export default function ProjectPage() {
                       <strong>Fecha límite:</strong> {item.time}
                     </p>
                     <p>
-                      <strong>Verificación:</strong> {item.verification ? "Sí" : "No"}
+                      <strong>Verificación:</strong>{" "}
+                      {item.verification ? "Sí" : "No"}
                     </p>
-
                     <button
                       className="mt-2 bg-subtitle text-neutral-200 p-2 rounded hover:bg-lime-500"
                       onClick={() => handleAccept(item)} // Aceptar proyecto

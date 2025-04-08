@@ -12,8 +12,6 @@ const Header: React.FC = () => {
   const routes = [
     { href: "/", label: "Home" },
    
-   
-   
 
   ];
 
