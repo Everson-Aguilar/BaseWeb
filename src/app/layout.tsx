@@ -3,15 +3,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Background } from "./components/background";
 
-
-
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "3D Environment Design LATAM | Video Games, VR, Architecture & Marketing",
+  title:
+    "MakMapa-Professional 3D Environment Design Services: Maps, Cities, Rooms, Parks, Architecture & More",
   description:
-  "Transform your projects with realistic 3D environment design for video games, architecture, film, and VR. We create immersive scenes, unique visualizations, and virtual landscapes. Discover innovative solutions to elevate your brand with high-quality 3D modeling and simulations."
+    "We create custom 3D environments with detail and unique visual style: interactive maps, rooms, cities, parks, terrains, and architectural spaces. Perfect for video games, virtual reality, visualization, and cinematic marketing. We tell stories through immersive and functional digital worlds.",
 };
 
 export default function RootLayout({
@@ -34,7 +32,7 @@ export default function RootLayout({
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="Imagen representativa de marketing digital y contenido 3D para impulsar tu negocio"
+          content="Preview image of 3D environments and design services"
         />
 
         {/* Favicons */}
@@ -64,26 +62,26 @@ export default function RootLayout({
 
         <meta
           property="og:title"
-          content="Marketing Digital y Contenido 3D para Impulsar tu Negocio"
+          content="MAkMAPA - Professional 3D Environment Design Services: Maps, Cities, Rooms, Parks, Architecture & More"
         />
         <meta
           property="og:description"
-          content="Impulsa tu negocio con Marketing Digital y visualizaciones 3D impactantes. En tudigitalnegocio.com, mejoramos la experiencia de compra de tus clientes con soluciones innovadoras. ¡Haz que tus ideas cobren vida!"
+          content="We design custom 3D environments: maps, rooms, cities, parks, terrain, and architecture. Ideal for games, VR, visualization, and cinematic marketing."
         />
 
-        <meta property="og:url" content="https://tudigitalnegocio.com" />
+        <meta property="og:url" content="https://makmata.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Tu Digital Negocio" />
-        <link rel="canonical" href="https://tudigitalnegocio.com" />
+        <meta property="og:site_name" content="MAkMAPA" />
+        <link rel="canonical" href="https://makmata.com" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Marketing Digital y Contenido 3D para Impulsar tu Negocio"
+          content="MAkMAPA - 3D Environment Design for Games, VR & Architecture"
         />
         <meta
           name="twitter:description"
-          content="Impulsa tu negocio con Marketing Digital y visualizaciones 3D impactantes."
+          content="Custom 3D design for maps, cities, rooms, parks, and more. Tailored for games, virtual reality, architecture, and cinematic storytelling."
         />
         <meta
           name="twitter:image"
@@ -91,18 +89,16 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image:alt"
-          content="Imagen de Marketing Digital y Contenido 3D"
+          content="3D digital environment design showcase"
         />
       </head>
-      <body className=  {inter.className}>
-      <section><Background/> </section>
-        
+      <body className={inter.className}>
+        <section>
+          <Background />
+        </section>
+
         {children}
-      
-       </body>
-
-     
-
+      </body>
     </html>
   );
 }

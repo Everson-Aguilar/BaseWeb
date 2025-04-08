@@ -160,11 +160,11 @@ const UsersList = () => {
       
 
       <div className=" relative h-full w-full ">
-      <h2 className="  font-BebasNeue text-6xl border-colorBase border-b-2 text-green">Participa en proyectos grandes</h2>
-        <Production/>
-        <Explorer_task />
+      <h2 className=" md:mt-0 mt-20  font-BebasNeue text-6xl border-colorBase border-b-2 text-green">Participa en proyectos grandes</h2>
+        <section > <Production/></section>
+        <section className="md:mt-0 mt-80  "></section><Explorer_task />  
       </div>
-      <div className="bg-trend p-3"><ProjectsInterest /></div>
+      <div className="bg-trend p-3 md:mt-0 mt-80"><ProjectsInterest /></div>
     </section>
   );
 };

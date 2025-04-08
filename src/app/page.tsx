@@ -12,7 +12,7 @@ import Contact from "./components/el_guias";
 import Introductions from "./components/introduccion";
 import Tools from "./components/herramientas";
 import Rules from "./components/reglas";
-import Sell from "./components/retiro";
+import Note from "./components/note";
 import SubServices from "./components/paquetes";
 import Portfolio from "./components/portfolio";
 import Services from "./components/servicios";
@@ -168,7 +168,7 @@ const Home: React.FC = () => {
             transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: false }}
           >
-            <Sell />
+            <Note />
           </motion.div>
         </section>
       </main>
@@ -186,7 +186,7 @@ export default Home;
 
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "07/04/2025"
+git commit -m "08/04/2025"
 git pull origin main
 git push origin main */
 
