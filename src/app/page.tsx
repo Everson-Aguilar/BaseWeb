@@ -36,6 +36,9 @@ const Home: React.FC = () => {
 
       <header>
         <Header />
+
+        <div className=" text-3xl">casa</div>
+
       </header>
 
       <section>
@@ -186,8 +189,8 @@ export default Home;
 
 /* git-hub pasos para guardar CONSOLA (prueba)
 git add .
-git commit -m "10/04/2025"
-git pull origin main                            // actualizar vps
+git commit -m "11/04/2025"
+git pull origin main                            
 git push origin main */
 
 /* git-hub pasos para guardar CONSOLA (produccion)
