@@ -1,12 +1,10 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import ProfileFreelancer from "../../components/profile";
 
-// Importa Session_expired dinámicamente para evitar problemas con sessionStorage
-const Session_expired = dynamic(() => import("../../components/session_expired"), {
-  ssr: false,
-});
+// Carga dinámica para evitar errores SSR
+const ProfileFreelancer = dynamic(() => import("../../components/profile"), { ssr: false });
+const Session_expired = dynamic(() => import("../../components/session_expired"), { ssr: false });
 
 const Profile = () => {
   return (
@@ -34,3 +32,4 @@ const Profile = () => {
 };
 
 export default Profile;
+
