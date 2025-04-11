@@ -8,31 +8,28 @@ const SessionExpired = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Check if the session has expired (if there's no email_ID in sessionStorage)
-    const emailID = sessionStorage.getItem("email_ID");
-    if (!emailID) {
-      setIsSessionExpired(true);
-    } else {
-      setIsSessionExpired(false);
+    // Verifica si estamos en el cliente antes de acceder a sessionStorage
+    if (typeof window !== "undefined") {
+      const emailID = sessionStorage.getItem("email_ID");
+      setIsSessionExpired(!emailID);
     }
+  }, []);
 
-    // Set up a timeout to reload the page once after 5 seconds
+  useEffect(() => {
     if (isSessionExpired) {
       const timeout = setTimeout(() => {
         setSecondsElapsed((prev) => prev + 1);
-        setProgress((prev) => Math.min(prev + 10, 100)); // Increase the progress by 10 each time until it reaches 100
+        setProgress((prev) => Math.min(prev + 10, 100));
       }, 500);
 
-      // Clean up the timeout when the component unmounts
       return () => clearTimeout(timeout);
     }
-  }, [isSessionExpired, secondsElapsed, progress]); // Added `progress` to the dependencies array
+  }, [isSessionExpired, secondsElapsed, progress]);
 
   if (!isSessionExpired) {
-    return null; // Don't display the component if the session hasn't expired
+    return null;
   }
 
-  // Change the message after 10 seconds
   const message = secondsElapsed >= 10 ? "Session Expired" : "Loading...";
 
   return (
