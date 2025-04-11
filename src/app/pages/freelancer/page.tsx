@@ -1,5 +1,8 @@
 //componente importado
 
+"use client";
+
+
 import ProfileFreelancer from "../../components/profile";
 import Session_expired from "../../components/session_expired";
 
