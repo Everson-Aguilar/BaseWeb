@@ -22,7 +22,7 @@ const ComicStory: React.FC = () => {
   return (
     <div className="w-full relative  flex flex-col md:flex-row text-green p-5 justify-center items-center">
 
-      <div className=" md:w-1/2 w-full z-10  text-8xl relative text-green font-BebasNeue mb-60"> 3D Map Construction System with <span className="border-b-2 border-b-green"> Professional Artists.</span> <span className=" text-orange-600 font-PermanentMarker"> create something original</span></div>
+      <div className=" md:w-1/2 w-full z-10  text-5xl pt-5  relative text-green font-BebasNeue mb-60"> 3D Map Construction System with <span className="border-b-2 border-b-green"> Professional Artists.</span> <span className=" text-orange-600 font-PermanentMarker"> create something original</span></div>
      
 
      <figure className="absolute  left-52 z-0 -translate-y-24 ">
