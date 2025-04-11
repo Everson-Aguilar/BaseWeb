@@ -41,7 +41,7 @@ const Home: React.FC = () => {
 
       </header>
 
-      <div className=" relative text-3xl">casa</div>
+    
 
       <section>
         {" "}
