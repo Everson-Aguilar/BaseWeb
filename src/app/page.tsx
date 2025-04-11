@@ -36,12 +36,7 @@ const Home: React.FC = () => {
 
       <header>
         <Header />
-
-        
-
       </header>
-
-    
 
       <section>
         {" "}
@@ -194,27 +189,6 @@ git add .
 git commit -m "11/04/2025"
 git pull origin main                            
 git push origin main */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* git-hub pasos para guardar CONSOLA (produccion)
 git add .
